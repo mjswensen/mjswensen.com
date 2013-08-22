@@ -1,0 +1,29 @@
+header
+  @include fixed
+  .gravatar
+    display: inline-block
+    width: ($gravatar-dimension + $gravatar-border-width * 2)
+    height: ($gravatar-dimension + $gravatar-border-width * 2)
+    border-radius: ($gravatar-dimension / 2 + $gravatar-border-width)
+    background-color: $main
+    border: $gravatar-border-width solid $dark-gray
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    overflow: hidden
+    img
+      width: $gravatar-dimension
+      height: $gravatar-dimension
+      opacity: 0.75
+      -webkit-transition: opacity 0.2s ease
+      transition: opacity 0.2s ease
+    &:hover img
+      opacity: 1
+  .name,
+  .about
+    @include accent
+    font-size: 24px
+    vertical-align: 16px
+  .name
+    color: $dark-gray
+  .about
+    color: $light-gray

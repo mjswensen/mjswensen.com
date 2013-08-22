@@ -1,0 +1,44 @@
+@import url("http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Merriweather:400,700,400italic,700italic")
+
+@font-face
+  font-family: "Bebas Neue Regular"
+  src: url("BebasNeue-webfont.eot")
+  src: url("BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("BebasNeue-webfont.woff") format("woff"), url("BebasNeue-webfont.ttf") format("truetype"), url("BebasNeue-webfont.svg#bebas_neueregular") format("svg")
+  font-weight: normal
+  font-style: normal
+
+@mixin accent
+  font-family: "Bebas Neue Regular", sans-serif// TODO: add stack
+  font-weight: normal
+  font-style: normal
+
+@mixin sans($bold: false, $italic: false)
+  font-family: "Ubuntu", sans-serif// TODO: add stack
+  @if $bold == true
+    font-weight: 700
+  @else
+    font-weight: 400
+  @if $italic == true
+    font-style: italic
+  @else
+    font-style: normal
+
+@mixin serif($bold: false, $italic: false)
+  font-family: "Merriweather", serif// TODO: add stack
+  @if $bold == true
+    font-weight: 700
+  @else
+    font-weight: 400
+  @if $italic == true
+    font-style: italic
+  @else
+    font-style: normal
+
+h1,
+h2,
+h3
+  @include sans(true)
+
+p,
+li
+  @include serif

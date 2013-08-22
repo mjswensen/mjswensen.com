@@ -1,0 +1,14 @@
+body, html
+  background-color: $lighter-gray
+
+hr
+  border: 0
+  height: 1px
+  width: 100%
+  max-width: ($fixed-width + $space * 2)
+  &.top
+    margin: $space 0 0
+    background-image: -webkit-linear-gradient(left, $light-gray, transparent)
+  &.bottom
+    margin: 0 0 $space
+    background-image: -webkit-linear-gradient(left, white, transparent)

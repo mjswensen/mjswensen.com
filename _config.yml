@@ -1,0 +1,4 @@
+name: mjswensen.com
+markdown: redcarpet
+pygments: true
+exxclude: [_styles]
