@@ -60,14 +60,40 @@ h3 {
   font-weight: 700;
   font-style: normal; }
 
-p,
-li {
+body {
   font-family: "Merriweather", serif;
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px; }
+
+h1 {
+  font-size: 2em;
+  line-height: 44px; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 44px; }
+
+h3 {
+  font-size: 1.125em;
+  line-height: 44px; }
+
+h1, h2, h3 {
+  margin: 0 0 22px;
+  color: #2e2e2e; }
+  h1 small, h2 small, h3 small {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #3d3d3d; }
+
+p {
+  margin: 0 0 22px;
+  color: #2e2e2e; }
 
 body, html {
-  background-color: #ebe3d5; }
+  background-color: #e6e2db; }
 
 hr {
   border: 0;
@@ -76,7 +102,7 @@ hr {
   max-width: 750px; }
   hr.top {
     margin: 25px 0 0;
-    background-image: -webkit-linear-gradient(left, #cdc6b9, transparent); }
+    background-image: -webkit-linear-gradient(left, #ccc5b7, transparent); }
   hr.bottom {
     margin: 0 0 25px;
     background-image: -webkit-linear-gradient(left, white, transparent); }
@@ -90,8 +116,8 @@ header {
     width: 58px;
     height: 58px;
     border-radius: 29px;
-    background-color: #563859;
-    border: 4px solid #3c3c3c;
+    background-color: #553758;
+    border: 4px solid #3d3d3d;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden; }
@@ -111,6 +137,6 @@ header {
     font-size: 24px;
     vertical-align: 16px; }
   header .name {
-    color: #3c3c3c; }
+    color: #3d3d3d; }
   header .about {
-    color: #cdc6b9; }
+    color: #ccc5b7; }
