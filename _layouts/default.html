@@ -8,8 +8,16 @@
   </head>
   <body>
     {% include header.html %}
+    <hr class="top">
+    <hr class="bottom">
+    {% include navigation.html %}
+    <hr class="top">
+    <hr class="bottom">
     <section class="fixed">
       {{ content }}
     </section>
+    <hr class="top">
+    <hr class="bottom">
+    {% include footer.html %}
   </body>
 </html>

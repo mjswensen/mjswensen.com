@@ -86,7 +86,9 @@ h1, h2, h3 {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #3d3d3d; }
+    font-size: 75%;
+    color: #ccc5b7;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
 
 p {
   margin: 0 0 22px;
@@ -105,7 +107,7 @@ hr {
     background-image: -webkit-linear-gradient(left, #ccc5b7, transparent); }
   hr.bottom {
     margin: 0 0 25px;
-    background-image: -webkit-linear-gradient(left, white, transparent); }
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9), transparent); }
 
 header {
   width: 100%;
@@ -124,6 +126,7 @@ header {
     header .gravatar img {
       width: 50px;
       height: 50px;
+      border-radius: 25px;
       opacity: 0.75;
       -webkit-transition: opacity 0.2s ease;
       transition: opacity 0.2s ease; }
@@ -139,4 +142,38 @@ header {
   header .name {
     color: #3d3d3d; }
   header .about {
-    color: #ccc5b7; }
+    color: #ccc5b7;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
+
+nav {
+  width: 100%;
+  max-width: 700px;
+  margin: 25px; }
+  nav a {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #553758;
+    text-decoration: none;
+    margin-right: 25px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc5b7;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.05s ease; }
+    nav a:last-child {
+      margin-right: 0; }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.5); }
+    nav a:active, nav a.current {
+      background-color: #ccc5b7;
+      box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
+
+footer div {
+  width: 100%;
+  max-width: 700px;
+  margin: 25px; }
+  footer div a img {
+    width: 50px;
+    height: 50px; }

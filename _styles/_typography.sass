@@ -64,12 +64,12 @@ h3
 
 h1, h2, h3
   margin: 0 0 ($base-line-height)
-  // margin: ($base-line-height / 2) 0
   color: $darker-gray
   small
     @include sans
-    // TODO
-    color: $dark-gray
+    font-size: ($proportion * 100%)
+    color: $light-gray
+    text-shadow: 0 1px 1px $opaque-white
 
 p
   margin: 0 0 ($base-line-height)
