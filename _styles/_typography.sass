@@ -36,19 +36,20 @@
   @else
     font-style: normal
 
-h1,
-h2,
-h3
-  @include sans(true)
-
-// Sizes
+// Base
 
 body
   @include serif
   font-size: $base-font-size
   line-height: $base-line-height
+  color: $darker-gray
 
 // Headings
+
+h1,
+h2,
+h3
+  @include sans(true)
 
 h1
   font-size: $large-heading-size
@@ -64,13 +65,24 @@ h3
 
 h1, h2, h3
   margin: 0 0 ($base-line-height)
-  color: $darker-gray
   small
     @include sans
     font-size: ($proportion * 100%)
     color: $light-gray
     text-shadow: 0 1px 1px $opaque-white
 
+// Body copy
+
 p
-  margin: 0 0 ($base-line-height)
-  color: $darker-gray
+  margin: 0 0 $base-line-height
+
+em
+  font-style: italic
+
+// Lists
+
+ul, ol
+  margin: 0 0 $base-line-height $base-line-height
+
+ol
+  list-style-type: decimal

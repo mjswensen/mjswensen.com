@@ -53,19 +53,20 @@ table {
   font-weight: normal;
   font-style: normal; }
 
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2e2e2e; }
+
 h1,
 h2,
 h3 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: normal; }
-
-body {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 22px; }
 
 h1 {
   font-size: 2em;
@@ -80,8 +81,7 @@ h3 {
   line-height: 44px; }
 
 h1, h2, h3 {
-  margin: 0 0 22px;
-  color: #2e2e2e; }
+  margin: 0 0 22px; }
   h1 small, h2 small, h3 small {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
@@ -91,8 +91,16 @@ h1, h2, h3 {
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
 
 p {
-  margin: 0 0 22px;
-  color: #2e2e2e; }
+  margin: 0 0 22px; }
+
+em {
+  font-style: italic; }
+
+ul, ol {
+  margin: 0 0 22px 22px; }
+
+ol {
+  list-style-type: decimal; }
 
 body, html {
   background-color: #e6e2db; }
@@ -145,35 +153,45 @@ header {
     color: #ccc5b7;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
 
-nav {
+a:link, a:visited {
+  color: #553758;
+  text-decoration: none;
+  border-bottom: 1px dotted #553758; }
+  a:link:hover, a:visited:hover {
+    color: #734b77;
+    border-bottom-color: #734b77; }
+  a:link:active, a:visited:active {
+    color: #925e97;
+    border-bottom-color: #925e97; }
+
+nav.nav {
   width: 100%;
   max-width: 700px;
   margin: 25px; }
-  nav a {
+  nav.nav a {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #553758;
     text-decoration: none;
-    margin-right: 25px;
     padding: 3px 6px;
     border-radius: 3px;
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.9);
     border: 1px solid #ccc5b7;
     -webkit-transition: background-color 0.2s ease;
     transition: background-color 0.05s ease; }
-    nav a:last-child {
-      margin-right: 0; }
-    nav a:hover {
+    nav.nav a:hover {
       background-color: rgba(255, 255, 255, 0.5); }
-    nav a:active, nav a.current {
+    nav.nav a:active, nav.nav a.current {
       background-color: #ccc5b7;
       box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
 
-footer div {
+footer.footer div {
   width: 100%;
   max-width: 700px;
   margin: 25px; }
-  footer div a img {
-    width: 50px;
-    height: 50px; }
+  footer.footer div a {
+    border-bottom: none; }
+    footer.footer div a img {
+      width: 50px;
+      height: 50px; }

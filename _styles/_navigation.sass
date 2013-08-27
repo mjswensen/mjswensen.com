@@ -1,18 +1,26 @@
-nav
+a:link, a:visited
+  color: $main
+  text-decoration: none
+  border-bottom: 1px dotted $main
+  &:hover
+    color: lighten($main, 10%)
+    border-bottom-color: lighten($main, 10%)
+  &:active
+    color: lighten($main, 20%)
+    border-bottom-color: lighten($main, 20%)
+
+nav.nav
   @include fixed
   a
     @include sans(true)
     color: $main
     text-decoration: none
-    margin-right: $space
     padding: 3px 6px
     border-radius: 3px
     box-shadow: 0 1px 1px $opaque-white, inset 0 1px 1px $opaque-white
     border: 1px solid $light-gray
     -webkit-transition: background-color 0.2s ease
     transition: background-color 0.05s ease
-    &:last-child
-      margin-right: 0
     &:hover
       background-color: $translucent-white
     &:active, &.current
