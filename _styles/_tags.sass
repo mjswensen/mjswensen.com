@@ -1,0 +1,15 @@
+.tags
+  @include sans
+  font-size: 12px
+  color: $medium-gray
+  a
+    color: $lighter-gray
+    background-color: $main
+    border-radius: $default-radius
+    padding: 3px 5px
+    &:hover
+      color: mix($lighter-gray, white)
+      background-color: lighten($main, 10%)
+    &:active
+      color: white
+      background-color: lighten($main, 20%)

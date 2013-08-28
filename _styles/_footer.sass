@@ -5,3 +5,7 @@ footer
       img
         width: $gravatar-dimension
         height: $gravatar-dimension
+        -webkit-filter: blur(1px) grayscale(75%)
+      &:hover
+        img
+          -webkit-filter: blur(0)

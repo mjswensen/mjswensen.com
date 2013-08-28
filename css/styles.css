@@ -88,7 +88,7 @@ h1, h2, h3 {
     font-weight: 400;
     font-style: normal;
     font-size: 75%;
-    color: #ccc5b7;
+    color: #b7ad9a;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
 
 p {
@@ -103,6 +103,13 @@ ul, ol {
 ol {
   list-style-type: decimal; }
 
+.end-sign {
+  width: 1ex;
+  height: 1ex;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #b31c14; }
+
 body, html {
   background-color: #e6e2db; }
 
@@ -112,7 +119,7 @@ hr {
   max-width: 750px; }
   hr.top {
     margin: 25px 0 0;
-    background-image: -webkit-linear-gradient(left, #ccc5b7, transparent); }
+    background-image: -webkit-linear-gradient(left, #b7ad9a, transparent); }
   hr.bottom {
     margin: 0 0 25px;
     background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9), transparent); }
@@ -122,7 +129,7 @@ header .gravatar {
   width: 58px;
   height: 58px;
   border-radius: 29px;
-  background-color: #553758;
+  background-color: #b31c14;
   border: 4px solid #3d3d3d;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -146,37 +153,65 @@ header .about {
 header .name {
   color: #3d3d3d; }
 header .about {
-  color: #ccc5b7;
+  color: #b7ad9a;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
 
 a:link, a:visited {
-  color: #553758;
+  color: #b31c14;
   text-decoration: none; }
   a:link:hover, a:visited:hover {
-    color: #734b77; }
+    color: #e12319; }
   a:link:active, a:visited:active {
-    color: #925e97; }
+    color: #ea4b43; }
 
 nav a {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #553758;
+  color: #b31c14;
   text-decoration: none;
   padding: 3px 6px;
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.9);
-  border: 1px solid #ccc5b7;
+  border: 1px solid #b7ad9a;
   -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.05s ease; }
   nav a:hover {
     background-color: rgba(255, 255, 255, 0.5); }
   nav a:active, nav a.current {
-    background-color: #ccc5b7;
+    background-color: #b7ad9a;
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(0, 0, 0, 0.1); }
 
 footer div a {
   border-bottom: none; }
   footer div a img {
     width: 50px;
-    height: 50px; }
+    height: 50px;
+    -webkit-filter: blur(1px) grayscale(75%); }
+  footer div a:hover img {
+    -webkit-filter: blur(0); }
+
+.showcase {
+  background-color: #2e2e2e;
+  color: #e6e2db;
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 1px 6px rgba(0, 0, 0, 0.5); }
+
+.tags {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  color: gray; }
+  .tags a {
+    color: #e6e2db;
+    background-color: #b31c14;
+    border-radius: 3px;
+    padding: 3px 5px; }
+    .tags a:hover {
+      color: #f2f0ed;
+      background-color: #e12319; }
+    .tags a:active {
+      color: white;
+      background-color: #ea4b43; }
