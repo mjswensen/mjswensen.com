@@ -41,10 +41,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.fixed {
+.main {
   width: 100%;
   max-width: 700px;
-  margin: 25px; }
+  padding: 25px;
+  box-sizing: border-box; }
 
 @font-face {
   font-family: "Bebas Neue Regular";
@@ -108,7 +109,6 @@ body, html {
 hr {
   border: 0;
   height: 1px;
-  width: 100%;
   max-width: 750px; }
   hr.top {
     margin: 25px 0 0;
@@ -117,81 +117,66 @@ hr {
     margin: 0 0 25px;
     background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9), transparent); }
 
-header {
-  width: 100%;
-  max-width: 700px;
-  margin: 25px; }
-  header .gravatar {
-    display: inline-block;
-    width: 58px;
-    height: 58px;
-    border-radius: 29px;
-    background-color: #553758;
-    border: 4px solid #3d3d3d;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: hidden; }
-    header .gravatar img {
-      width: 50px;
-      height: 50px;
-      border-radius: 25px;
-      opacity: 0.75;
-      -webkit-transition: opacity 0.2s ease;
-      transition: opacity 0.2s ease; }
-    header .gravatar:hover img {
-      opacity: 1; }
-  header .name,
-  header .about {
-    font-family: "Bebas Neue Regular", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    vertical-align: 16px; }
-  header .name {
-    color: #3d3d3d; }
-  header .about {
-    color: #ccc5b7;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
+header .gravatar {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  border-radius: 29px;
+  background-color: #553758;
+  border: 4px solid #3d3d3d;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden; }
+  header .gravatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease; }
+  header .gravatar:hover img {
+    opacity: 1; }
+header .name,
+header .about {
+  font-family: "Bebas Neue Regular", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  vertical-align: 16px; }
+header .name {
+  color: #3d3d3d; }
+header .about {
+  color: #ccc5b7;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
 
 a:link, a:visited {
   color: #553758;
-  text-decoration: none;
-  border-bottom: 1px dotted #553758; }
+  text-decoration: none; }
   a:link:hover, a:visited:hover {
-    color: #734b77;
-    border-bottom-color: #734b77; }
+    color: #734b77; }
   a:link:active, a:visited:active {
-    color: #925e97;
-    border-bottom-color: #925e97; }
+    color: #925e97; }
 
-nav.nav {
-  width: 100%;
-  max-width: 700px;
-  margin: 25px; }
-  nav.nav a {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #553758;
-    text-decoration: none;
-    padding: 3px 6px;
-    border-radius: 3px;
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.9);
-    border: 1px solid #ccc5b7;
-    -webkit-transition: background-color 0.2s ease;
-    transition: background-color 0.05s ease; }
-    nav.nav a:hover {
-      background-color: rgba(255, 255, 255, 0.5); }
-    nav.nav a:active, nav.nav a.current {
-      background-color: #ccc5b7;
-      box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
+nav a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #553758;
+  text-decoration: none;
+  padding: 3px 6px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc5b7;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.05s ease; }
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+  nav a:active, nav a.current {
+    background-color: #ccc5b7;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(0, 0, 0, 0.1); }
 
-footer.footer div {
-  width: 100%;
-  max-width: 700px;
-  margin: 25px; }
-  footer.footer div a {
-    border-bottom: none; }
-    footer.footer div a img {
-      width: 50px;
-      height: 50px; }
+footer div a {
+  border-bottom: none; }
+  footer div a img {
+    width: 50px;
+    height: 50px; }

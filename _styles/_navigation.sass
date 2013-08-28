@@ -1,16 +1,12 @@
 a:link, a:visited
   color: $main
   text-decoration: none
-  border-bottom: 1px dotted $main
   &:hover
     color: lighten($main, 10%)
-    border-bottom-color: lighten($main, 10%)
   &:active
     color: lighten($main, 20%)
-    border-bottom-color: lighten($main, 20%)
 
-nav.nav
-  @include fixed
+nav
   a
     @include sans(true)
     color: $main
@@ -25,4 +21,4 @@ nav.nav
       background-color: $translucent-white
     &:active, &.current
       background-color: $light-gray
-      box-shadow: 0 1px 1px $opaque-white
+      box-shadow: 0 1px 1px $opaque-white, inset 0 1px 1px $transparent-black
