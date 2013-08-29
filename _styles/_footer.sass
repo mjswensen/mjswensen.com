@@ -1,13 +1,26 @@
 footer
-  a
+  a:link, a:visited
+    @include social-icons
+    font-size: 3em
+    color: $light-gray
+    -webkit-transition: color 0.2s ease
+    transition: color 0.1s ease
+    &.twitter
+      &:hover
+        color: $twitter
+      &:active
+        color: lighten($twitter, 10%)
+    &.github
+      &:hover
+        color: $github
+      &:active
+        color: lighten($github, 10%)
+    &.linkedin
+      &:hover
+        color: $linkedin
+      &:active
+        color: lighten($linkedin, 7%)
     border-bottom: none
-    img
-      width: $gravatar-dimension
-      height: $gravatar-dimension
-      -webkit-filter: blur(1px) grayscale(75%)
-    &:hover
-      img
-        -webkit-filter: blur(0)
   .copyright
     @include sans
     color: $light-gray

@@ -21,5 +21,8 @@
       <hr class="bottom">
       {% include footer.html %}
     </section>
+    {% if site.safe %}
+    {% include analytics.html %}
+    {% endif %}
   </body>
 </html>
