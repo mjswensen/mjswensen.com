@@ -7,12 +7,15 @@ a:link, a:visited
     color: lighten($main, 20%)
 
 nav
+  @include clearfix
   a
     @include sans(true)
     color: $main
     text-decoration: none
     padding: 3px 6px
-    border-radius: $default-radius
+    float: left
+    margin-right: -1px
+    // border-radius: $default-radius
     box-shadow: 0 1px 1px $opaque-white, inset 0 1px 1px $opaque-white
     border: 1px solid $light-gray
     -webkit-transition: background-color 0.2s ease
@@ -21,4 +24,9 @@ nav
       background-color: $translucent-white
     &:active, &.current
       background-color: $light-gray
+      color: $subtly-darker-main
       box-shadow: 0 1px 1px $opaque-white, inset 0 1px 1px $transparent-black
+    &:first-child
+      border-radius: $default-radius 0 0 $default-radius
+    &:last-child
+      border-radius: 0 $default-radius $default-radius 0

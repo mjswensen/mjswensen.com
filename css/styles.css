@@ -45,7 +45,8 @@ table {
   width: 100%;
   max-width: 700px;
   padding: 25px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: rgba(230, 226, 219, 0.8); }
 
 @font-face {
   font-family: "Bebas Neue Regular";
@@ -110,8 +111,9 @@ ol {
   vertical-align: middle;
   background-color: #b31c14; }
 
-body, html {
-  background-color: #e6e2db; }
+body {
+  background-color: #e6e2db;
+  background-image: linear-gradient(135deg, #e6e2db 0%, #e6e2db 20%, rgba(179, 28, 20, 0.1) 20%, rgba(179, 28, 20, 0.1) 25%, rgba(87, 14, 10, 0.1) 25%, rgba(87, 14, 10, 0.1) 25.5%, #e6e2db 25.5%, #e6e2db 32%, rgba(128, 128, 128, 0.1) 32%, rgba(128, 128, 128, 0.1) 35%, rgba(46, 46, 46, 0.1) 35%, rgba(46, 46, 46, 0.1) 44%, rgba(183, 173, 154, 0.1) 44%, rgba(183, 173, 154, 0.1) 45%, #e6e2db 45%, #e6e2db 58%, rgba(61, 61, 61, 0.1) 58%, rgba(61, 61, 61, 0.1) 100%); }
 
 hr {
   border: 0;
@@ -164,6 +166,11 @@ a:link, a:visited {
   a:link:active, a:visited:active {
     color: #ea4b43; }
 
+nav::after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0; }
 nav a {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
@@ -171,7 +178,8 @@ nav a {
   color: #b31c14;
   text-decoration: none;
   padding: 3px 6px;
-  border-radius: 3px;
+  float: left;
+  margin-right: -1px;
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.9);
   border: 1px solid #b7ad9a;
   -webkit-transition: background-color 0.2s ease;
@@ -180,16 +188,27 @@ nav a {
     background-color: rgba(255, 255, 255, 0.5); }
   nav a:active, nav a.current {
     background-color: #b7ad9a;
+    color: #a11912;
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 1px rgba(0, 0, 0, 0.1); }
+  nav a:first-child {
+    border-radius: 3px 0 0 3px; }
+  nav a:last-child {
+    border-radius: 0 3px 3px 0; }
 
-footer div a {
+footer a {
   border-bottom: none; }
-  footer div a img {
+  footer a img {
     width: 50px;
     height: 50px;
     -webkit-filter: blur(1px) grayscale(75%); }
-  footer div a:hover img {
+  footer a:hover img {
     -webkit-filter: blur(0); }
+footer .copyright {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #b7ad9a;
+  font-size: 0.75em; }
 
 .showcase {
   background-color: #2e2e2e;

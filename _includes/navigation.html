@@ -1,4 +1,4 @@
 <nav>
-  <a href="#">Blog</a>
-  <a href="#">About</a>
+  <a href="#"{% if page.nav == 'blog' %} class="current"{% endif %}>Blog</a>
+  <a href="#"{% if page.nav == 'about' %} class="current"{% endif %}>About</a>
 </nav>

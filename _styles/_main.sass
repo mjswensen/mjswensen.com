@@ -1,5 +1,6 @@
-body, html
+body
   background-color: $lighter-gray
+  background-image: linear-gradient(135deg, $lighter-gray 0%, $lighter-gray 20%, transparentize($main, 0.9) 20%, transparentize($main, 0.9) 25%, transparentize(darken($main, 20%), 0.9) 25%, transparentize(darken($main, 20%), 0.9) 25.5%, $lighter-gray 25.5%, $lighter-gray 32%, transparentize($medium-gray, 0.9) 32%, transparentize($medium-gray, 0.9) 35%, transparentize($darker-gray, 0.9) 35%, transparentize($darker-gray, 0.9) 44%, transparentize($light-gray, 0.9) 44%, transparentize($light-gray, 0.9) 45%, $lighter-gray 45%, $lighter-gray 58%, transparentize($dark-gray, 0.9) 58%, transparentize($dark-gray, 0.9) 100%)
 
 hr
   border: 0
@@ -12,3 +13,10 @@ hr
   &.bottom
     margin: 0 0 $space
     background-image: -webkit-linear-gradient(left, $opaque-white, transparent)
+
+@mixin clearfix
+  &::after
+    content: ' '
+    display: block
+    clear: both
+    height: 0

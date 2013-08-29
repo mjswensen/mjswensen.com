@@ -1,11 +1,14 @@
 footer
-  div
-    a
-      border-bottom: none
+  a
+    border-bottom: none
+    img
+      width: $gravatar-dimension
+      height: $gravatar-dimension
+      -webkit-filter: blur(1px) grayscale(75%)
+    &:hover
       img
-        width: $gravatar-dimension
-        height: $gravatar-dimension
-        -webkit-filter: blur(1px) grayscale(75%)
-      &:hover
-        img
-          -webkit-filter: blur(0)
+        -webkit-filter: blur(0)
+  .copyright
+    @include sans
+    color: $light-gray
+    font-size: ($proportion * 1em)
