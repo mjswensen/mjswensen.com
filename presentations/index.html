@@ -1,0 +1,14 @@
+---
+title: mjswensen.com
+layout: default
+nav: presentations
+---
+
+<h1>Presentations</h1>
+<ul>
+	{% for page in site.pages %}
+		{% if page.type == 'presentation' %}
+		<li><a href="{{ page.url }}">{{page.title}}</a> {{ page.date | date_to_string }}</li>
+		{% endif %}
+	{% endfor %}
+</ul>

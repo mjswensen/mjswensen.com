@@ -1,0 +1,31 @@
+// Variables
+
+$impress-white: hsla(0, 0%, 100%, 0.75)
+$impress-black: hsla(0, 0%, 0%, 0.5)
+
+// Mixins
+
+@mixin impress($amt: 1px)
+  text-shadow: 0 $amt $amt $impress-white, 0 (-$amt) $amt $impress-black
+
+// Base styles
+
+body
+  background: radial-gradient(white, hsl(0, 0%, 90%))
+
+.step
+  width: 960px
+  height: 720px
+
+// Slide-specific styles
+
+#title
+  font-size: 2em
+  hgroup
+    position: relative
+    top: 33%
+    h1
+      margin-bottom: 0.5em
+    h2
+      @include impress
+
