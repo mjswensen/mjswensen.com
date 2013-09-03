@@ -11,6 +11,10 @@ body {
     position: relative;
     top: 33%; }
     #title hgroup h1 {
-      margin-bottom: 0.5em; }
+      margin-bottom: 0.55em; }
     #title hgroup h2 {
-      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75), 0 -1px 1px rgba(0, 0, 0, 0.5); }
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75), 0 -1px 1px rgba(0, 0, 0, 0.66);
+      font-weight: normal; }
+
+#agenda {
+  font-size: 1.2em; }
