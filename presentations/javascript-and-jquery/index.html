@@ -13,26 +13,31 @@ type: presentation
 <body>
 <!--
 javascript
-  overview
+  introduction
+    definition/contexts
     html, css, javascript - the ultimate trio
+    brief history of JS
+    JS statistics
   fundamentals
     syntax
+    scoping and the single var pattern
     functions are first-class
     prototypal inheritance
   the good parts
   additional resources
 jquery
-  overview
+  introduction
     how jquery is related to javascript (diagram?)
     the specific niche that jquery fills
       you don't always have to turn to jquery if plain old js will do the trick. That being said, there's a lot that jquery is the right tool for.
   fundamentals
   additional resources
 conclusion
+  Lucidchart demo
 -->
   <div id="impress">
     <!-- Title -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="3">
+    <div id="title" class="step no-bg" data-x="0" data-y="0" data-scale="3">
       <hgroup class="center">
         <h1>
           <span class="fg-green-dark">JavaScript</span>
@@ -43,7 +48,7 @@ conclusion
       </hgroup>
     </div>
     <!-- Agenda -->
-    <div id="agenda" class="step" data-x="3840" data-y="0" data-scale="1">
+    <div id="agenda" class="step no-bg" data-x="3840" data-y="0" data-scale="1">
       <div class="grid-container">
         <div class="col-6 col-offset-3">
           <h1 class="center row-push-1">Agenda</h1>
@@ -61,6 +66,110 @@ conclusion
             <li>Additional jQuery Resources</li>
           </ul>
           <h2 class="fg-gray">Conclusion <small>6 minutes</small></h2>
+        </div>
+      </div>
+    </div>
+    <!-- *********************** -->
+    <!-- JavaScript Introduction -->
+    <!-- *********************** -->
+    <!-- Definition/Contexts -->
+    <!--
+      * One way that JavaScript can be compiled: some frameworks for mobile development compile JS to Objective-C/Java, etc.
+      * The scope of this presentation is to discuss JavaScript in the context of modern Web browsers.
+    -->
+    <div id="definition" class="step" data-x="1440" data-y="2160">
+      <p class="center">JavaScript is an <strong>interpreted</strong> language. <span class="fg-gray-light">(usually)</span></p>
+      <p class="center">The most common use case for JavaScript code is within the Web browser.</p>
+    </div>
+    <!-- The Ultimate Trio -->
+    <!--
+      * HTML: the structure
+      * CSS: the style
+      * JS: the interactivity
+    -->
+    <div id="trio" class="step" data-x="2440" data-y="2160" data-z="100" data-rotate-y="10">
+      <p class="center">The Ultimate Trio</p>
+      <img src="images/web-trifecta_html5_css3_js-strict.png" alt="JavaScript, HTML, and CSS">
+    </div>
+    <!-- A Brief History of JavaScript -->
+    <!--
+      * TODO
+    -->
+    <div id="history" class="step" data-x="3440" data-y="2160" data-z="200" data-rotate-y="20">
+      <h1 class="center">A <span class="fg-gray-light">(Very)</span> Brief History of JavaScript</h1>
+      <p>TODO</p>
+    </div>
+    <!-- Some JavaScript Statistics -->
+    <!--
+      * TODO
+    -->
+    <div id="statistics" class="step" data-x="4440" data-y="2160" data-z="300" data-rotate-y="30">
+      <p class="center did-you-know">Did you know? Top 10 languages on GitHub in 2013:</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Rank</th>
+            <th>Language</th>
+            <th># Repositories Created</th>
+          </tr>
+          <tr class="center javascript-on-github"><td>1</td><td>JavaScript</td><td>264,131</td></tr>
+          <tr class="center"><td>2</td><td>Ruby</td><td>218,812</td></tr>
+          <tr class="center"><td>3</td><td>Java</td><td>157,618</td></tr>
+          <tr class="center"><td>4</td><td>PHP</td><td>114,384</td></tr>
+          <tr class="center"><td>5</td><td>Python</td><td>95,002</td></tr>
+          <tr class="center"><td>6</td><td>C++</td><td>78,327</td></tr>
+          <tr class="center"><td>7</td><td>C</td><td>67,706</td></tr>
+          <tr class="center"><td>8</td><td>Objective-C</td><td>36,344</td></tr>
+          <tr class="center"><td>9</td><td>C#</td><td>32,170</td></tr>
+          <tr class="center"><td>10</td><td>Shell</td><td>28,561</td></tr>
+        </tbody>
+      </table>
+      <footer class="right">
+        <small>Source: <a class="link-green" href="http://adambard.com/blog/top-github-languages-for-2013-so-far/">adambard.com/blog/top-github-languages-for-2013-so-far/</a></small>
+      </footer>
+    </div>
+    <!-- *********************** -->
+    <!-- JavaScript Fundamentals -->
+    <!-- *********************** -->
+    <!-- JavaScript Syntax -->
+    <!--
+      * TODO
+    -->
+    <div id="syntax" class="step" data-x="1440" data-y="3160">
+      <div class="grid-container">
+        <div class="col-12 last-col row-offset-2">
+          <p class="center">JavaScript's syntax is <strong>C</strong>-like.</p>
+        </div>
+        <div class="col-6 col-offset-3 row-offset-1">
+{% highlight js %}
+if(hungry) eat();
+foo.bar = 'baz';
+var time = new Date();
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
+    <!-- Scoping -->
+    <!--
+      * TODO
+    -->
+    <div id="scoping" class="step" data-x="2440" data-y="3160" data-z="100" data-rotate-y="10">
+      <div class="grid-container">
+        <div class="row-offset-1">
+          <p class="center">JavaScript employs <em>function scoping</em>, which is different than block scoping.</p>
+        </div>
+        <div class="row-offset-1">
+{% highlight js %}
+var myFunc = function() {// New scope here.
+
+  var myVar = 'Hello, world.';
+
+  if(true) {// NO new scope here!
+    var myVar = 'Goodbye.';// This would be a redeclaration of myVar and will produce unexpected results as well as errors/warnings for linters.
+  }
+
+};
+{% endhighlight %}
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 $impress-white: hsla(0, 0%, 100%, 0.75)
 $impress-black: hsla(0, 0%, 0%, 0.66)
+$code-background: hsla(0, 0%, 0%, 0.07)
 
 // Mixins
 
@@ -16,6 +17,18 @@ body
 .step
   width: 960px
   height: 720px
+  padding: 20px
+  box-sizing: border-box
+  border-radius: 20px
+  background-color: hsla(0, 0%, 100%, 0.35)
+  &.no-bg
+    background: none
+
+.highlight
+  pre
+    padding: 10px
+    border-radius: 2px
+    background-color: $code-background
 
 // Slide-specific styles
 
@@ -32,3 +45,24 @@ body
 
 #agenda
   font-size: 1.2em
+
+#definition
+  font-size: 2.8em
+  p
+    position: relative
+    top: 33%
+
+#trio
+  font-size: 3em
+  img
+    max-width: 920px
+
+#statistics
+  .did-you-know
+    font-size: 2em
+  .javascript-on-github
+    font-size: 2em
+    border-bottom-width: 0.0625rem
+
+#syntax, #scoping
+  font-size: 1.5em
