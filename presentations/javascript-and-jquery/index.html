@@ -21,10 +21,17 @@ javascript
   fundamentals
     syntax
     scoping and the single var pattern
-    functions are first-class
     prototypal inheritance
   the good parts
+    functions are first-class
+    object literals
+    array and regex literals
   additional resources
+    amazing things people are doing with javascript
+      d3.js
+      asm.js
+      three.js
+      PhoneGap
 jquery
   introduction
     how jquery is related to javascript (diagram?)
@@ -36,7 +43,12 @@ conclusion
   Lucidchart demo
 -->
   <div id="impress">
+    <!-- ***** -->
     <!-- Title -->
+    <!-- ***** -->
+    <!--
+      * TODO: Hook.
+    -->
     <div id="title" class="step no-bg" data-x="0" data-y="0" data-scale="3">
       <hgroup class="center">
         <h1>
@@ -47,7 +59,12 @@ conclusion
         <h2 class="fg-gray-light">AIS Value Added Forums</h2>
       </hgroup>
     </div>
+    <!-- ****** -->
     <!-- Agenda -->
+    <!-- ****** -->
+    <!--
+      * Assumption: you have programming experience, but not much experience with JavaScript.
+    -->
     <div id="agenda" class="step no-bg" data-x="3840" data-y="0" data-scale="1">
       <div class="grid-container">
         <div class="col-6 col-offset-3">
@@ -72,8 +89,12 @@ conclusion
     <!-- *********************** -->
     <!-- JavaScript Introduction -->
     <!-- *********************** -->
+    <div id="js-introduction" class="step section-header" data-x="900" data-y="2160" data-rotate="-90">
+      <h1 class="all-caps center fg-green-lighter">Introduction</h1>
+    </div>
     <!-- Definition/Contexts -->
     <!--
+      * Even though JS is interpreted, it is still pretty fast. More on that later.
       * One way that JavaScript can be compiled: some frameworks for mobile development compile JS to Objective-C/Java, etc.
       * The scope of this presentation is to discuss JavaScript in the context of modern Web browsers.
     -->
@@ -101,7 +122,7 @@ conclusion
     </div>
     <!-- Some JavaScript Statistics -->
     <!--
-      * TODO
+      * Because of JavaScript's association with the Web browser, it is one of the most popular languages in the world.
     -->
     <div id="statistics" class="step" data-x="4440" data-y="2160" data-z="300" data-rotate-y="30">
       <p class="center did-you-know">Did you know? Top 10 languages on GitHub in 2013:</p>
@@ -131,9 +152,12 @@ conclusion
     <!-- *********************** -->
     <!-- JavaScript Fundamentals -->
     <!-- *********************** -->
+    <div id="js-fundamentals" class="step section-header" data-x="900" data-y="3160" data-rotate="-90">
+      <h1 class="all-caps center fg-green-lighter">Fundamentals</h1>
+    </div>
     <!-- JavaScript Syntax -->
     <!--
-      * TODO
+      * If you are familiar with Java, you will be able to pick up JavaScript's syntax quickly.
     -->
     <div id="syntax" class="step" data-x="1440" data-y="3160">
       <div class="grid-container">
@@ -151,7 +175,8 @@ var time = new Date();
     </div>
     <!-- Scoping -->
     <!--
-      * TODO
+      * Unlike many other languages, new blocks in JavaScript do not create more specific scopes, only functions do that.
+      * Single var pattern.
     -->
     <div id="scoping" class="step" data-x="2440" data-y="3160" data-z="100" data-rotate-y="10">
       <div class="grid-container">
