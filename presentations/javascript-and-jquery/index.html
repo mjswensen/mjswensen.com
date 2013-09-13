@@ -72,10 +72,6 @@ conclusion
             <span class="fg-gray-dark">Matt Swensen</span>
           </div>
           <hr>
-          <div class="website">
-            <span><a href="/" class="link-orange">mjswensen.com</a></span>
-          </div>
-          <hr>
           <div class="experience">
             <ul class="unstyled">
               <li><em class="fg-gray-light">1<sup>st</sup> Year MISM, BYU</em></li>
@@ -83,11 +79,15 @@ conclusion
             </ul>
           </div>
           <hr>
+          <div class="website">
+            <span><a href="/" class="link-orange">mjswensen.com</a></span>
+          </div>
+          <hr>
           <div class="social">
             <ul class="unstyled">
               <li><a href="https://twitter.com/mjswensen" class="link-orange"><i>&#xe000;</i> @mjswensen</a></li>
               <li><a href="https://github.com/mjswensen" class="link-orange"><i>&#xe002;</i> /mjswensen</a></li>
-              <li><a href="http://www.linkedin.com/pub/matt-swensen/36/8b6/153/" class="link-orange"><i>&#xe001;</i> Linked in</a></li>
+              <li><a href="http://www.linkedin.com/pub/matt-swensen/36/8b6/153/" class="link-orange"><i>&#xe001;</i> Matt Swensen</a></li>
             </ul>
           </div>
         </div>
@@ -192,11 +192,12 @@ conclusion
     <!-- JavaScript Syntax -->
     <!--
       * If you are familiar with Java, you will be able to pick up JavaScript's syntax quickly.
+      * JavaScript basically lacks a typing system.
     -->
     <div id="syntax" class="step" data-x="1440" data-y="3160">
       <div class="grid-container">
         <div class="col-12 last-col row-offset-2">
-          <p class="center">JavaScript's syntax is <strong>C</strong>-like.</p>
+          <p class="center">JavaScript's syntax is <strong>C</strong>-like. It is also <strong>weakly</strong> typed.</p>
         </div>
         <div class="col-6 col-offset-3 row-offset-1">
 {% highlight js %}
@@ -224,7 +225,9 @@ var myFunc = function() {// New scope here.
   var myVar = 'Hello, world.';
 
   if(true) {// NO new scope here!
-    var myVar = 'Goodbye.';// This would be a redeclaration of myVar and will produce unexpected results as well as errors/warnings for linters.
+    // This would be a redeclaration of myVar and will produce
+    // unexpected results, as well as errors/warnings for linters.
+    var myVar = 'Goodbye.';
   }
 
 };
@@ -244,6 +247,9 @@ var myFunc = function() {// New scope here.
         </div>
         <div class="row-offset-1">
           <p class="center">There are therefore no classes in JavaScript, only objects.</p>
+        </div>
+        <div class="row-offset-1">
+          <p class="center">So objects "inherit" from other objects.</p>
         </div>
       </div>
     </div>
@@ -271,10 +277,89 @@ var myFunc = function() {// New scope here.
     </div>
     <!-- Object Literals -->
     <!--
-      * JavaScript has a rich literal syntax for objects.
+      * JavaScript has a rich literal syntax for objects. Very flexible.
     -->
     <div id="objects" class="step" data-x="2440" data-y="4160" data-z="100" data-rotate-y="10">
-      <p>Look how easy it is to create objects in JavaScript:</p>
+      <div class="grid-container">
+        <div class="row-offset-1">
+          <p class="center">Look how easy it is to create objects in JavaScript:</p>
+        </div>
+        <div class="col-6 col-offset-3 row-offset-1">
+{% highlight js %}
+var han = {
+  firstName: 'Han',
+  lastName: 'Solo',
+  fullName: function() {
+    return this.firstName + ' ' + this.lastName;
+  },
+  occupation: 'Smuggler',
+  jedi: false,
+  favoriteThings: [
+    'Chewy',
+    'Leia',
+    'Millenium Falcon'
+  ]
+};
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
+    <!-- Array Literals -->
+    <!-- \
+      * Arrays can hold data of any type and of various types.
+    -->
+    <div id="arrays-regexes" class="step" data-x="3440" data-y="4160" data-z="200" data-rotate-y="20">
+      <div class="grid-container">
+        <div class="row-offset-1">
+          <p class="center">Arrays have a nice literal syntax, too:</p>
+        </div>
+{% highlight js %}
+var stuff = ['apples', 'oranges', 5, true];
+{% endhighlight %}
+        <div class="row-offset-1">
+          <p class="center">As do regular expressions:</p>
+        </div>
+{% highlight js %}
+var matches = /\s*(\w+)\n/g.exec(myString);
+{% endhighlight %}
+      </div>
+    </div>
+    <!-- *********************************** -->
+    <!-- Additional Resources for JavaScript -->
+    <!-- *********************************** -->
+    <!--
+      * The pre-release version of JavaScript enlightenment is available online for free.
+      * Learning JavaScript Design Patterns has been open-sourced.
+    -->
+    <div id="js-additional-resources" class="step no-bg" data-x="8000" data-y="3160" data-scale="3">
+      <h1 class="center fg-green-dark">Additional JavaScript Resources</h1>
+      <div class="grid-container">
+        <!-- <div class="col-3 center books">
+          <span>Books:</span>
+        </div> -->
+        <div class="col-2 col-offset-3">
+          <a href="" target="_blank"><img src="images/javascript-the-good-parts.jpg" alt="JavaScript: the Good Parts"></a>
+        </div>
+        <div class="col-2 center">
+          <a href="" class="link-gray" target="_blank"><img src="images/javascript-enlightenment.jpg" alt="JavaScript Enlightenment">(Free!)</a>
+        </div>
+        <div class="col-2 center">
+          <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/" target="_blank" class="link-gray"><img src="images/learning-javascript-design-patterns.jpg" alt="Learning JavaScript Design Patterns">(Free!)</a>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="row-offset-1 row-push-1">
+          <p class="center">Check out these amazing things people are doing with JavaScript:</p>
+          <ul class="unstyled inline center">
+            <li><a href="" class="link-green" target="_blank">d3.js</a></li>
+            <li><a href="" class="link-green" target="_blank">asm.js</a></li>
+            <li><a href="" class="link-green" target="_blank">three.js</a></li>
+            <li><a href="" class="link-green" target="_blank">node.js</a></li>
+            <li><a href="" class="link-green" target="_blank">PhoneGap</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="right fg-blue-dark">And now, on to jQuery...</p>
     </div>
   </div>
   <script src="js/impress.js"></script>
