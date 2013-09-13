@@ -59,13 +59,47 @@ conclusion
         <h2 class="fg-gray-light">AIS Value Added Forums</h2>
       </hgroup>
     </div>
+    <!-- ***** -->
+    <!-- About -->
+    <!-- ***** -->
+    <div id="about" class="step no-bg" data-x="3840" data-y="0">
+      <div class="grid-container">
+        <div class="col-2 col-offset-2 right">
+          <img src="http://www.gravatar.com/avatar/70ec9ada3c51e6c0a83e19b3ba980ce4.png" alt="" class="gravatar">
+        </div>
+        <div class="col-5">
+          <div class="name">
+            <span class="fg-gray-dark">Matt Swensen</span>
+          </div>
+          <hr>
+          <div class="website">
+            <span><a href="/" class="link-orange">mjswensen.com</a></span>
+          </div>
+          <hr>
+          <div class="experience">
+            <ul class="unstyled">
+              <li><em class="fg-gray-light">1<sup>st</sup> Year MISM, BYU</em></li>
+              <li><em class="fg-gray-light">Software Engineer, <a href="https://www.lucidchart.com" class="link-orange">Lucidchart</a></em></li>
+            </ul>
+          </div>
+          <hr>
+          <div class="social">
+            <ul class="unstyled">
+              <li><a href="https://twitter.com/mjswensen" class="link-orange"><i>&#xe000;</i> @mjswensen</a></li>
+              <li><a href="https://github.com/mjswensen" class="link-orange"><i>&#xe002;</i> /mjswensen</a></li>
+              <li><a href="http://www.linkedin.com/pub/matt-swensen/36/8b6/153/" class="link-orange"><i>&#xe001;</i> Linked in</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- ****** -->
     <!-- Agenda -->
     <!-- ****** -->
     <!--
       * Assumption: you have programming experience, but not much experience with JavaScript.
     -->
-    <div id="agenda" class="step no-bg" data-x="3840" data-y="0" data-scale="1">
+    <div id="agenda" class="step no-bg" data-x="5340" data-y="0">
       <div class="grid-container">
         <div class="col-6 col-offset-3">
           <h1 class="center row-push-1">Agenda</h1>
@@ -90,7 +124,7 @@ conclusion
     <!-- JavaScript Introduction -->
     <!-- *********************** -->
     <div id="js-introduction" class="step section-header" data-x="900" data-y="2160" data-rotate="-90">
-      <h1 class="all-caps center fg-green-lighter">Introduction</h1>
+      <h1 class="all-caps center fg-green-dark">Introduction</h1>
     </div>
     <!-- Definition/Contexts -->
     <!--
@@ -153,7 +187,7 @@ conclusion
     <!-- JavaScript Fundamentals -->
     <!-- *********************** -->
     <div id="js-fundamentals" class="step section-header" data-x="900" data-y="3160" data-rotate="-90">
-      <h1 class="all-caps center fg-green-lighter">Fundamentals</h1>
+      <h1 class="all-caps center fg-green-dark">Fundamentals</h1>
     </div>
     <!-- JavaScript Syntax -->
     <!--
@@ -166,7 +200,7 @@ conclusion
         </div>
         <div class="col-6 col-offset-3 row-offset-1">
 {% highlight js %}
-if(hungry) eat();
+if(hungry) { eat(); }
 foo.bar = 'baz';
 var time = new Date();
 {% endhighlight %}
@@ -197,6 +231,50 @@ var myFunc = function() {// New scope here.
 {% endhighlight %}
         </div>
       </div>
+    </div>
+    <!-- Prototypal inheritance -->
+    <!--
+      * JavaScript does not have classes. Everything is an object. Therefore, objects "inherit" from other objects (called prototypes)
+      * Going into the specifics of how this works is beyond the scope of the presentation.
+    -->
+    <div id="prototype" class="step" data-x="3440" data-y="3160" data-z="200" data-rotate-y="20">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">JavaScript employs prototypal rather than classical inheritance.</p>
+        </div>
+        <div class="row-offset-1">
+          <p class="center">There are therefore no classes in JavaScript, only objects.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ************** -->
+    <!-- The Good Parts -->
+    <!-- ************** -->
+    <div id="good-parts" class="step section-header" data-x="900" data-y="4160" data-rotate="-90">
+      <h1 class="all-caps center fg-green-dark">The Good Parts</h1>
+    </div>
+    <!-- First-class Functions -->
+    <!--
+      * Functions in JavaScript can be assigned to variables, passed as arguments to other functions, can be the return value of a function, etc.
+      * "this" is not bound until the function is executed. This allows for very flexible, reusable code.
+    -->
+    <div id="functions" class="step" data-x="1440" data-y="4160">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">Functions are at the heart of what makes JavaScript great. The best way to get a feel for them is to jump in and try.</p>
+        </div>
+        <div class="row-offset-1">
+          <p class="center"><a href="#" class="btn btn-green">Interactive Sandbox</a></p>
+          <p class="center download"><em><a href="#" class="link-gray">Or download the exercise files</a></em></p>
+        </div>
+      </div>
+    </div>
+    <!-- Object Literals -->
+    <!--
+      * JavaScript has a rich literal syntax for objects.
+    -->
+    <div id="objects" class="step" data-x="2440" data-y="4160" data-z="100" data-rotate-y="10">
+      <p>Look how easy it is to create objects in JavaScript:</p>
     </div>
   </div>
   <script src="js/impress.js"></script>

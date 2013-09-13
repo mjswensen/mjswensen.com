@@ -1,3 +1,7 @@
+// Include social icons from main site
+
+@import "../../../_styles/_icons"
+
 // Variables
 
 $impress-white: hsla(0, 0%, 100%, 0.75)
@@ -28,6 +32,10 @@ body
     background: none
     width: 720px
     height: auto
+    transition: opacity 4s ease
+    -webkit-transition: opacity 4s ease
+    &.past
+      opacity: 0.2
 
 .highlight
   pre
@@ -47,6 +55,23 @@ body
     h2
       @include impress
       font-weight: normal
+
+#about
+  font-size: 2em
+  .gravatar
+    border-radius: 48px
+    border: 4px solid #555
+  .experience
+    font-size: 0.75em
+  hr
+    margin: 0.75em 0
+  .social
+    font-size: 0.75em
+    a
+      vertical-align: top
+    i
+      font-size: 1.2em
+      @include social-icons
 
 #agenda
   font-size: 1.2em
@@ -71,3 +96,11 @@ body
 
 #syntax, #scoping
   font-size: 1.5em
+
+#prototype
+  font-size: 2em
+
+#functions
+  font-size: 2em
+  .download
+    font-size: 0.5em
