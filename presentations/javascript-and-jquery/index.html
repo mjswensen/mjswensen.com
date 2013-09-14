@@ -358,6 +358,46 @@ var matches = /\s*(\w+)\n/g.exec(myString);
       </div>
       <p class="right fg-blue-dark">And now, on to jQuery...</p>
     </div>
+    <!-- ******************* -->
+    <!-- jQuery Introduction -->
+    <!-- ******************* -->
+    <div id="jquery-introduction" class="step section-header" data-x="900" data-y="5660" data-rotate="-90">
+      <h1 class="all-caps center fg-blue-dark">Introduction</h1>
+    </div>
+    <!-- Introduction -->
+    <!--
+      * jQuery mitigates many cross-browser issues (i.e., browsers having different APIs or different behavior for given JavaScript code).
+      * You don't always have to turn to jQuery if plain old JS will do the trick. That being said, there's a lot that jQuery IS the right tool for.
+    -->
+    <div id="jquery-definition" class="step" data-x="1440" data-y="5660">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">jQuery is a JavaScript library that makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler. It also takes care of making these functionalities cross-browser.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ******************* -->
+    <!-- jQuery Fundamentals -->
+    <!-- ******************* -->
+    <div id="jquery-fundamentals" class="step section-header" data-x="900" data-y="6660" data-rotate="-90">
+      <h1 class="all-caps center fg-blue-dark">Fundamentals</h1>
+    </div>
+    <!-- jQuery Function -->
+    <!-- 
+      * jQuery uses the facade pattern; what it does depends on what parameters you give it.
+    -->
+    <div id="jquery-function" class="step" data-x="1440" data-y="6660">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">jQuery uses the fa&ccedil;ade design pattern, meaning that access to the entire API is done through a single method:</p>
+        </div>
+        <div class="col-2 col-offset-5 row-offset-1">
+{% highlight js %}
+$();
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/impress.js"></script>
   <script>impress().init();</script>
