@@ -389,11 +389,35 @@ var matches = /\s*(\w+)\n/g.exec(myString);
     <div id="jquery-function" class="step" data-x="1440" data-y="6660">
       <div class="grid-container">
         <div class="row-offset-2">
-          <p class="center">jQuery uses the fa&ccedil;ade design pattern, meaning that access to the entire API is done through a single method:</p>
+          <p class="center">jQuery uses the fa&ccedil;ade design pattern, meaning that access to the entire API is done through a single function:</p>
         </div>
         <div class="col-2 col-offset-5 row-offset-1">
 {% highlight js %}
 $();
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
+    <!-- jQuery Basic Usage -->
+    <!--
+      * Typically CSS selectors are used to "get" elements from the document.
+      * jQuery methods always return "this" to allow for chaining.
+      * You can pass other things into $() as well.
+    -->
+    <div id="basic-usage" class="step" data-x="2440" data-y="6660" data-z="100" data-rotate-y="10">
+      <div class="grid-container">
+        <p class="center">Typically you pass jQuery a string CSS selector:</p>
+        <div class="row-offset-1">
+{% highlight js %}
+$('.accordian') ...
+{% endhighlight %}
+        </div>
+        <div class="row-offset-1">
+          <p class="center">And it returns the elements, wrapped in a jQuery object, that match the selector. Then you call methods on the jQuery object to manipulate the elements.</p>
+        </div>
+        <div class="row-offset-1">
+{% highlight js %}
+$('.accordian').slideDown(300);// Display all elements with "accordian" class (0.3-second sliding animation)
 {% endhighlight %}
         </div>
       </div>
