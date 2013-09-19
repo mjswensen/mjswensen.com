@@ -255,29 +255,11 @@ var myFunc = function() {// New scope here.
     <div id="good-parts" class="step section-header" data-x="900" data-y="4160" data-rotate="-90">
       <h1 class="all-caps center fg-green-dark">The Good Parts</h1>
     </div>
-    <!-- First-class Functions -->
-    <!--
-      * Functions in JavaScript can be assigned to variables, passed as arguments to other functions, can be the return value of a function, etc.
-      * "this" is not bound until the function is executed. This allows for very flexible, reusable code.
-    -->
-    <div id="functions" class="step" data-x="1440" data-y="4160">
-      <div class="grid-container">
-        <div class="row-offset-2">
-          <p class="center">Functions are at the heart of what makes JavaScript great. The best way to get a feel for them is to jump in and try.</p>
-        </div>
-        <div class="row-offset-1">
-          <p class="center"><a href="http://jsfiddle.net/mjswensen/KgkPG/" class="btn btn-green" target="_blank">Interactive Sandbox <small>(jsfiddle.net/mjswensen/KgkPG/)</small></a></p>
-        </div>
-        <div class="row-offset-1">
-          <p class="solution center"><a class="link-gray" href="http://jsfiddle.net/mjswensen/KgkPG/2/" target="_blank">View example solutions</a></p>
-        </div>
-      </div>
-    </div>
     <!-- Object Literals -->
     <!--
       * JavaScript has a rich literal syntax for objects. Very flexible.
     -->
-    <div id="objects" class="step" data-x="2440" data-y="4160" data-z="150" data-rotate-y="10">
+    <div id="objects" class="step" data-x="1440" data-y="4160">
       <div class="grid-container">
         <div class="row-offset-1">
           <p class="center">Look how easy it is to create objects in JavaScript:</p>
@@ -306,7 +288,7 @@ var han = {
     <!--
       * Arrays can hold data of any type and of various types.
     -->
-    <div id="arrays-regexes" class="step" data-x="3440" data-y="4160" data-z="300" data-rotate-y="20">
+    <div id="arrays-regexes" class="step" data-x="2440" data-y="4160" data-z="150" data-rotate-y="10">
       <div class="grid-container">
         <div class="row-offset-1">
           <p class="center">Arrays have a nice literal syntax, too:</p>
@@ -320,6 +302,24 @@ var stuff = ['apples', 'oranges', 5, true];
 {% highlight js %}
 var matches = /\s*(\w+)\n/g.exec(myString);
 {% endhighlight %}
+      </div>
+    </div>
+    <!-- First-class Functions -->
+    <!--
+      * Functions in JavaScript can be assigned to variables, passed as arguments to other functions, can be the return value of a function, etc.
+      * "this" is not bound until the function is executed. This allows for very flexible, reusable code.
+    -->
+    <div id="functions" class="step" data-x="3440" data-y="4160" data-z="300" data-rotate-y="20">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">Functions are at the heart of what makes JavaScript great. The best way to get a feel for them is to jump in and try.</p>
+        </div>
+        <div class="row-offset-1">
+          <p class="center"><a href="http://jsfiddle.net/mjswensen/KgkPG/" class="btn btn-green" target="_blank">Interactive Sandbox <small>(jsfiddle.net/mjswensen/KgkPG/)</small></a></p>
+        </div>
+        <div class="row-offset-1">
+          <p class="solution center"><a class="link-gray" href="http://jsfiddle.net/mjswensen/KgkPG/2/" target="_blank">View example solutions</a></p>
+        </div>
       </div>
     </div>
     <!-- *********************************** -->
