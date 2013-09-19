@@ -512,5 +512,8 @@ $.ajax({
   </div>
   <script src="js/impress.js"></script>
   <script>impress().init();</script>
+  {% if site.safe %}
+  {% include analytics.html %}
+  {% endif %}
 </body>
 </html>
