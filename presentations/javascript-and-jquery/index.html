@@ -407,7 +407,7 @@ $();
         <p class="center">Typically you pass jQuery a string CSS selector:</p>
         <div class="row-offset-1">
 {% highlight js %}
-$('.accordian') ...
+$('.accordion') ...
 {% endhighlight %}
         </div>
         <div class="row-offset-1">
@@ -415,7 +415,7 @@ $('.accordian') ...
         </div>
         <div class="row-offset-1">
 {% highlight js %}
-$('.accordian').slideDown(300);// Display all elements with "accordian" class (0.3-second sliding animation)
+$('.accordion').slideDown(300);// Display all elements with "accordion" class (0.3-second sliding animation)
 {% endhighlight %}
         </div>
       </div>
@@ -442,8 +442,8 @@ $.ajax({
     last_name: 'Ackbar',
     bio: 'It\'s a trap!'
   },
-  success: function(data) {
-    console.log('User created successfully.');
+  success: function(data, textStatus, jqXHR) {
+    console.log('User created successfully (' + jqXHR.status + ').');
   },
   error: function(jqXHR, textStatus, errorThrown) {
     console.log('There was a problem creating the user. The server responded: ' + jqXHR.status + ' ' + errorThrown);
