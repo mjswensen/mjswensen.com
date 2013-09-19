@@ -17,6 +17,11 @@ $code-background: hsla(0, 0%, 0%, 0.07)
 
 body
   background: radial-gradient(white, hsl(0, 0%, 90%))
+  .fallback-message
+    display: none
+  &.impress-not-supported
+    .fallback-message
+      display: block
 
 .step
   width: 960px
