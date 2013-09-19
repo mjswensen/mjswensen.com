@@ -108,20 +108,23 @@ conclusion
       <div class="grid-container">
         <div class="col-6 col-offset-3">
           <h1 class="center row-push-1">Agenda</h1>
-          <h2 class="fg-green-dark">JavaScript <small>24 minutes</small></h2>
+          <h2 class="fg-green-dark">JavaScript</h2>
           <ul>
             <li>Introduction to JavaScript</li>
             <li>Fundamentals</li>
             <li>The Good Parts</li>
             <li>Additional JavaScript Resources</li>
           </ul>
-          <h2 class="fg-blue-dark">jQuery <small>28 minutes</small></h2>
+          <h2 class="fg-blue-dark">jQuery</h2>
           <ul>
             <li>Overview of jQuery</li>
             <li>Fundamentals</li>
             <li>Additional jQuery Resources</li>
           </ul>
-          <h2 class="fg-gray">Conclusion <small>6 minutes</small></h2>
+          <h2 class="fg-gray">Conclusion</h2>
+          <ul>
+            <li>Demo</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -138,8 +141,12 @@ conclusion
       * The scope of this presentation is to discuss JavaScript in the context of modern Web browsers.
     -->
     <div id="definition" class="step" data-x="1440" data-y="2160">
-      <p class="center">JavaScript is an <strong>interpreted</strong> language. <span class="fg-gray-light">(usually)</span></p>
-      <p class="center">The most common use case for JavaScript code is within the Web browser.</p>
+      <div class="grid-container">
+        <div class="row-offset-3">
+          <p class="center">JavaScript is an <strong>interpreted</strong> language. <span class="fg-gray-light">(usually)</span></p>
+          <p class="center">The most common use case for JavaScript code is within the Web browser.</p>
+        </div>
+      </div>
     </div>
     <!-- The Ultimate Trio -->
     <!--
@@ -244,6 +251,8 @@ var myFunc = function() {// New scope here.
     var myVar = 'Goodbye.';
   }
 
+  console.log(myVar);// 'Goodbye.', not 'Hello, world.'
+
 };
 {% endhighlight %}
         </div>
@@ -284,8 +293,7 @@ var myFunc = function() {// New scope here.
           <p class="center">Functions are at the heart of what makes JavaScript great. The best way to get a feel for them is to jump in and try.</p>
         </div>
         <div class="row-offset-1">
-          <p class="center"><a href="#" class="btn btn-green">Interactive Sandbox</a></p>
-          <p class="center download"><em><a href="#" class="link-gray">Or download the exercise files</a></em></p>
+          <p class="center"><a href="#" class="btn btn-green">Interactive Sandbox <small>(bit.ly/todo)</small></a></p>
         </div>
       </div>
     </div>
@@ -319,7 +327,7 @@ var han = {
       </div>
     </div>
     <!-- Array Literals -->
-    <!-- \
+    <!--
       * Arrays can hold data of any type and of various types.
     -->
     <div id="arrays-regexes" class="step" data-x="3440" data-y="4160" data-z="300" data-rotate-y="20">
@@ -436,16 +444,59 @@ $('.accordian').slideDown(300);// Display all elements with "accordian" class (0
         </div>
       </div>
     </div>
-    <div id="jq-application" class="step" data-x="3440" data-y="6660" data-z="300" data-rotate-y="20">
+    <!-- JavaScript Application -->
+    <!--
+      * Let's take some time now to explore and solidify.
+    -->
+    <div id="application" class="step" data-x="3440" data-y="6660" data-z="300" data-rotate-y="20">
       <div class="grid-container">
         <div class="row-offset-2">
           <p class="center">Let's dive in and build our own JavaScript application with jQuery.</p>
         </div>
         <div class="row-offset-1">
-          <p class="center"><a href="#" class="btn btn-blue">Interactive Sandbox</a></p>
+          <p class="center"><a href="#" class="btn btn-blue">Interactive Sandbox <small>(bit.ly/todo)</small></a></p>
         </div>
       </div>
     </div>
+    <!-- *********************************** -->
+    <!-- Additional Resources for JavaScript -->
+    <!-- *********************************** -->
+    <div id="jq-additional-resources" class="step no-bg" data-x="8000" data-y="6160" data-scale="3">
+      <h1 class="center fg-blue-dark">Additional jQuery Resources</h1>
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">The best place to learn jQuery is its official documentation, <a href="http://api.jquery.com/" class="link-blue" target="_blank">api.jquery.com</a>.</p>
+        </div>
+        <div class="row-offset-3">
+          <p class="right fg-gray">One last note...</p>
+        </div>
+      </div>
+    </div>
+    <!-- ********** -->
+    <!-- Conclusion -->
+    <!-- ********** -->
+    <div id="conclusion" class="step section-header" data-x="900" data-y="8160" data-rotate="-90">
+      <h1 class="all-caps center fg-gray">Conclusion</h1>
+    </div>
+    <!-- Demo -->
+    <!--
+      * JavaScript is awesome.
+      * With its flexibility and rich literal syntax, and ability to embrace both functional and object-oriented paradigms, JavaScript is a great programming language for big projects - especially when coupled with a great framework and linter/compiler.
+    -->
+    <div id="demo" class="step" data-x="1440" data-y="8160">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">JavaScript is a great language to write big software in.</p>
+        </div>
+        <div class="row-offset-2">
+          <p class="center"><a href="https://www.lucidchart.com/demo" class="btn" target="_blank">Demo <small>(lucidchart.com/demo)</small></a></p>
+        </div>
+      </div>
+    </div>
+    <!-- *** -->
+    <!-- Fin -->
+    <!-- *** -->
+    <div id="fin" class="step no-bg" data-x="4000" data-y="4200" data-scale="13"></div>
   </div>
   <script src="js/impress.js"></script>
   <script>impress().init();</script>
