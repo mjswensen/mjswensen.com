@@ -1,0 +1,28 @@
+.presentation
+  @extend .showcase
+  hgroup
+    h2
+      margin-bottom: 0
+      small
+        color: $black
+        text-shadow: 0 1px 1px $transparent-white
+    h3
+      @include sans
+      text-transform: uppercase
+      color: $black
+      line-height: 1
+      text-shadow: 0 1px 1px $transparent-white
+  .screenshots
+    border-radius: 2px
+    overflow: hidden
+    display: block
+    position: relative// for positioning context
+    line-height: 0
+    img
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+      &:first-child
+        position: relative// to maintain height of parent
+        z-index: 1

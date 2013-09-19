@@ -5,10 +5,39 @@ nav: presentations
 ---
 
 <h1>Presentations</h1>
-<ul>
-	{% for page in site.pages %}
-		{% if page.type == 'presentation' %}
-		<li><a href="{{ page.url }}">{{page.title}}</a> {{ page.date | date_to_string }}</li>
-		{% endif %}
-	{% endfor %}
-</ul>
+{% for page in site.pages %}
+  {% if page.type == 'presentation' %}
+  <div class="presentation">
+    <hgroup>
+      <h2><a href="{{ page.url }}" class="link-light">{{ page.title }} <small>{{ page.date | date_to_string }}</small></a></h2>
+      <h3>{{ page.for }}, {{ page.at }}</h3>
+    </hgroup>
+    <hr class="top-dark">
+    <hr class="bottom-dark">
+    <p>{{ page.description }}</p>
+    <a href="{{ page.url }}" class="screenshots">
+      {% for i in (1..page.screenshotCount) %}
+      <img src="{{ page.screenshotDir }}{{ i }}.png" alt="{{ page.title }}">
+      {% endfor %}
+    </a>
+  </div>
+  {% endif %}
+{% endfor %}
+
+<script>
+  $(function() {
+    function showScreenshot(jq, idx) {
+      jq.find('img').eq(idx)
+        .css('z-index', '1')
+        .siblings().css('z-index', '0');
+    }
+    $('.screenshots').on('mousemove', function(e) {
+      var $this = $(this),
+        y = e.pageY - $this.offset().top,
+        idx = Math.floor(y / ($this.height() / $this.children().size()));
+      showScreenshot($this, idx);
+    }).on('mouseout', function() {
+      showScreenshot($(this), 0);
+    });
+  });
+</script>

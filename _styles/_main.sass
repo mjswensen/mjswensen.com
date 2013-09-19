@@ -18,6 +18,14 @@ hr
     margin: 0 0 $space
     background-image: -webkit-linear-gradient(90deg, $opaque-white 0%, transparentize($opaque-white, 1) 100%)
     background-image: linear-gradient(90deg, $opaque-white 0%, transparentize($opaque-white, 1) 100%)
+  &.top-dark
+    margin: $space 0 0
+    background-image: -webkit-linear-gradient(90deg, $black 0%, transparentize($black, 1) 100%)
+    background-image: linear-gradient(90deg, $black 0%, transparentize($black, 1) 100%)
+  &.bottom-dark
+    margin: 0 0 $space
+    background-image: -webkit-linear-gradient(90deg, $transparent-white 0%, transparentize($transparent-white, 1) 100%)
+    background-image: linear-gradient(90deg, $transparent-white 0%, transparentize($transparent-white, 1) 100%)
 
 @mixin clearfix
   &::after

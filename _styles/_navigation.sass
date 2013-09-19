@@ -1,10 +1,18 @@
-a:link, a:visited
+a
+  &:link, &:visited
   color: $main
   text-decoration: none
   &:hover
     color: lighten($main, 10%)
   &:active
     color: lighten($main, 20%)
+  &.link-light
+    &:link, &:visited
+      color: $lighter-gray
+    &:hover
+      color: lighten($lighter-gray, 10%)
+    &:active
+      color: lighten($lighter-gray, 20%)
 
 nav
   @include clearfix
