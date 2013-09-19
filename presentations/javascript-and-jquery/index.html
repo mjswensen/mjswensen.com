@@ -147,23 +147,32 @@ conclusion
       * CSS: the style
       * JS: the interactivity
     -->
-    <div id="trio" class="step" data-x="2440" data-y="2160" data-z="100" data-rotate-y="10">
+    <div id="trio" class="step" data-x="2440" data-y="2160" data-z="150" data-rotate-y="10">
       <p class="center">The Ultimate Trio</p>
       <img src="images/web-trifecta_html5_css3_js-strict.png" alt="JavaScript, HTML, and CSS">
     </div>
     <!-- A Brief History of JavaScript -->
     <!--
-      * TODO
+      * JavaScript and browsers have come a long way in 18 years.
     -->
-    <div id="history" class="step" data-x="3440" data-y="2160" data-z="200" data-rotate-y="20">
-      <h1 class="center">A <span class="fg-gray-light">(Very)</span> Brief History of JavaScript</h1>
-      <p>TODO</p>
+    <div id="history" class="step" data-x="3440" data-y="2160" data-z="300" data-rotate-y="20">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">JavaScript was originally developed by Brendan Eich and shipped with Netscape Navigator 2.0 in 1995.</p>
+        </div>
+        <div class="row-offset-1">
+          <p class="center">In 1996 it was submitted to ECMA International to become an industry standard. It has been evolving ever since.</p>
+        </div>
+        <div class="row-offset-1">
+          <p class="center"><a class="link-green" href="http://en.wikipedia.org/wiki/JavaScript#History" target="_blank">Wikipedia article</a></p>
+        </div>
+      </div>
     </div>
     <!-- Some JavaScript Statistics -->
     <!--
       * Because of JavaScript's association with the Web browser, it is one of the most popular languages in the world.
     -->
-    <div id="statistics" class="step" data-x="4440" data-y="2160" data-z="300" data-rotate-y="30">
+    <div id="statistics" class="step" data-x="4440" data-y="2160" data-z="450" data-rotate-y="30">
       <p class="center did-you-know">Did you know? Top 10 languages on GitHub in 2013:</p>
       <table>
         <tbody>
@@ -218,7 +227,7 @@ var time = new Date();
       * Unlike many other languages, new blocks in JavaScript do not create more specific scopes, only functions do that.
       * Single var pattern.
     -->
-    <div id="scoping" class="step" data-x="2440" data-y="3160" data-z="100" data-rotate-y="10">
+    <div id="scoping" class="step" data-x="2440" data-y="3160" data-z="150" data-rotate-y="10">
       <div class="grid-container">
         <div class="row-offset-1">
           <p class="center">JavaScript employs <em>function scoping</em>, which is different than block scoping.</p>
@@ -245,7 +254,7 @@ var myFunc = function() {// New scope here.
       * JavaScript does not have classes. Everything is an object. Therefore, objects "inherit" from other objects (called prototypes)
       * Going into the specifics of how this works is beyond the scope of the presentation.
     -->
-    <div id="prototype" class="step" data-x="3440" data-y="3160" data-z="200" data-rotate-y="20">
+    <div id="prototype" class="step" data-x="3440" data-y="3160" data-z="300" data-rotate-y="20">
       <div class="grid-container">
         <div class="row-offset-2">
           <p class="center">JavaScript employs prototypal rather than classical inheritance.</p>
@@ -284,7 +293,7 @@ var myFunc = function() {// New scope here.
     <!--
       * JavaScript has a rich literal syntax for objects. Very flexible.
     -->
-    <div id="objects" class="step" data-x="2440" data-y="4160" data-z="100" data-rotate-y="10">
+    <div id="objects" class="step" data-x="2440" data-y="4160" data-z="150" data-rotate-y="10">
       <div class="grid-container">
         <div class="row-offset-1">
           <p class="center">Look how easy it is to create objects in JavaScript:</p>
@@ -313,7 +322,7 @@ var han = {
     <!-- \
       * Arrays can hold data of any type and of various types.
     -->
-    <div id="arrays-regexes" class="step" data-x="3440" data-y="4160" data-z="200" data-rotate-y="20">
+    <div id="arrays-regexes" class="step" data-x="3440" data-y="4160" data-z="300" data-rotate-y="20">
       <div class="grid-container">
         <div class="row-offset-1">
           <p class="center">Arrays have a nice literal syntax, too:</p>
@@ -409,7 +418,7 @@ $();
       * jQuery methods always return "this" to allow for chaining.
       * You can pass other things into $() as well.
     -->
-    <div id="basic-usage" class="step" data-x="2440" data-y="6660" data-z="100" data-rotate-y="10">
+    <div id="basic-usage" class="step" data-x="2440" data-y="6660" data-z="150" data-rotate-y="10">
       <div class="grid-container">
         <p class="center">Typically you pass jQuery a string CSS selector:</p>
         <div class="row-offset-1">
@@ -424,6 +433,16 @@ $('.accordian') ...
 {% highlight js %}
 $('.accordian').slideDown(300);// Display all elements with "accordian" class (0.3-second sliding animation)
 {% endhighlight %}
+        </div>
+      </div>
+    </div>
+    <div id="jq-application" class="step" data-x="3440" data-y="6660" data-z="300" data-rotate-y="20">
+      <div class="grid-container">
+        <div class="row-offset-2">
+          <p class="center">Let's dive in and build our own JavaScript application with jQuery.</p>
+        </div>
+        <div class="row-offset-1">
+          <p class="center"><a href="#" class="btn btn-blue">Interactive Sandbox</a></p>
         </div>
       </div>
     </div>
