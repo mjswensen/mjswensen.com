@@ -417,11 +417,44 @@ $('.accordian').slideDown(300);// Display all elements with "accordian" class (0
         </div>
       </div>
     </div>
+    <!-- **** -->
+    <!-- AJAX -->
+    <!-- **** -->
+    <!--
+      * This is just one of the many ways to do an AJAX request.
+      * Point out that the parameter to the ajax() method is an object with options.
+    -->
+    <div id="ajax" class="step" data-x="3440" data-y="6660" data-z="300" data-rotate-y="20">
+      <div class="grid-container">
+        <div class="row-offset-1">
+          <p class="center">Another common use case for jQuery is to make asynchronous requests.</p>
+        </div>
+        <div class="col-8 col-offset-2 row-offset-1">
+{% highlight js %}
+$.ajax({
+  url: '/users/create',
+  type: 'POST',
+  data: {
+    first_name: 'Admiral',
+    last_name: 'Ackbar',
+    bio: 'It\'s a trap!'
+  },
+  success: function(data) {
+    console.log('User created successfully.');
+  },
+  error: function(jqXHR, textStatus, errorThrown) {
+    console.log('There was a problem creating the user. The server responded: ' + jqXHR.status + ' ' + errorThrown);
+  }
+});
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
     <!-- JavaScript Application -->
     <!--
       * Let's take some time now to explore and solidify.
     -->
-    <div id="application" class="step" data-x="3440" data-y="6660" data-z="300" data-rotate-y="20">
+    <div id="application" class="step" data-x="4440" data-y="6660" data-z="450" data-rotate-y="30">
       <div class="grid-container">
         <div class="row-offset-2">
           <p class="center">Let's dive in and build our own JavaScript application with jQuery.</p>
