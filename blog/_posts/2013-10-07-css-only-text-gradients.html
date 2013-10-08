@@ -1,0 +1,83 @@
+---
+title: CSS-only Text Gradients
+date: 2013-10-07 19:52:00
+tags: css "web design"
+layout: post
+nav: blog
+---
+
+<p>The things you can do with CSS these days are amazing. I was inspired by the beautiful <a href="http://jekyllrb.com/">Jekyll</a> logo and set out to see if I could do something similar using only CSS. This is the look I was going for:</p>
+
+<img src="/blog/images/jekyll-logo.png" alt="Jekyll Logo" class="screenshot">
+
+<p>I was excited to find on my first Google attempt <a href="http://css-tricks.com/snippets/css/gradient-text/">a succinct post</a> by the awesome <a href="http://chriscoyier.net/">Chris Coyier</a> and I had achieved the desired effect in minutes. I thought it would be nice for a new project I'm working on called <a href="http://scribb.li/">Scribbli</a>.</p>
+
+<p>Here is the complete Sass code:</p>
+
+{% highlight sass %}
+$yellow: hsl(52, 80%, 53%)
+h1
+  color: $yellow// Fallback
+  background: -webkit-linear-gradient(lighten($yellow, 20%), $yellow)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  text-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.15)
+{% endhighlight %}
+
+<p>And this is the end result for Webkit browsers (Chrome, Safari, Opera):</p>
+
+<img src="/blog/images/scribbli-logo-final.png" alt="End Result" class="screenshot">
+
+<h2>Breakdown</h2>
+
+<p>I thought we could take a closer look at what is going on here. First, let's take a look at the fallback for non-Webkit browsers:</p>
+
+{% highlight sass %}
+$yellow: hsl(52, 80%, 53%)
+h1
+  color: $yellow// Fallback
+{% endhighlight %}
+
+<p>This gives us a simple text color with no effect. Not as cool as the detail we get with the gradient and the shadow, but good enough for a fallback.</p>
+
+<img src="/blog/images/scribbli-logo-fallback.png" alt="Fallback" class="screenshot">
+
+<p>The trick is in this next part. We set a background gradient on the entire <code>h1</code> element, but we restrict the visibility of the gradient to the form of the text! We also need to make the text transparent so that the gradient isn't hidden by the flat yellow fallback we set earlier.</p>
+
+{% highlight sass %}
+$yellow: hsl(52, 80%, 53%)
+h1
+  color: $yellow// Fallback
+  background: -webkit-linear-gradient(lighten($yellow, 20%), $yellow)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+{% endhighlight %}
+
+<p>Note that we can use some nifty Sass functions to calculate the color stops for the gradient with minimal effort. Also note that for the background gradient, we are only using the <code>-webkit-</code> prefix and omitting the prefixes for the other browsers. This is because the <code>text-fill-color</code> is only currently supported in Webkit and we don't want the background gradient there if the rest of it doesn't work.</p>
+
+<img src="/blog/images/scribbli-logo-clipped-gradient.png" alt="Clipped Gradient Background" class="screenshot">
+
+<p>Cool. We're almost there. Last thing to do is to add a little shadow to give the text some depth. Adding a text shadow to transparent text is different than the usual text shadow effect, because you can see the entire shadow under the text. For example: this is what the shadow looks like if we remove the background clipping mask:</p>
+
+<img src="/blog/images/scribbli-logo-shadow.png" alt="Transparent Text Shadow" class="screenshot">
+
+<p>Anyway, putting it all together again:</p>
+
+{% highlight sass %}
+$yellow: hsl(52, 80%, 53%)
+h1
+  color: $yellow// Fallback
+  background: -webkit-linear-gradient(lighten($yellow, 20%), $yellow)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  text-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.15)
+{% endhighlight %}
+
+<p>Even though the shadow drastically affects the apparent colors of the text since it is fully visible, it actually gives a nice embossed effect with the slight vertical offset. Once again, here is a screenshot of the final result; fully selectable, SEO-friendly text!</p>
+
+<img src="/blog/images/scribbli-logo-final.png" alt="End Result" class="screenshot">
+
+<div class="showcase">
+  <h2>Additional Resources</h2>
+  <p><a href="http://css-tricks.com/image-under-text/">Here</a> is related and more in-depth article from Chris Coyier.</p>
+</div>

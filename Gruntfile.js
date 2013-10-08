@@ -32,12 +32,13 @@ module.exports = function(grunt) {
     watch: {
       site: {
         files: [
-          '_includes',
-          '_layouts',
-          'about',
-          'blog',
-          'css',
-          'presentations'
+          '_includes/**',
+          '_layouts/**',
+          '_styles/**',
+          'about/**',
+          'blog/**',
+          'css/**',
+          'presentations/**'
         ],
         tasks: 'jekyll:build'
       },
