@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   </head>
-  <body>
+  <body class="ff-serif">
     <section class="main">
       {% include header.html %}
-      <hr class="top">
-      <hr class="bottom">
       {% include navigation.html %}
-      <hr class="top">
-      <hr class="bottom">
-      <section class="fixed">
-        {{ content }}
-      </section>
-      <hr class="top">
-      <hr class="bottom">
+      {{ content }}
       {% include footer.html %}
     </section>
+    <script>
+    $(function() {
+      var doc = $(document),
+        scroller = $('#scroller');
+      $(window).on('scroll', function() {
+        var pos = doc.scrollTop() / -3;
+        scroller.css('background-position-y', pos + 'px');
+      });
+    });
+    </script>
     {% if site.safe %}
     {% include analytics.html %}
     {% endif %}

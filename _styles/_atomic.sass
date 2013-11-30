@@ -1,0 +1,401 @@
+////////////////
+// Typography //
+////////////////
+
+.fw, .fw-n
+  font-weight: normal
+.fw-b
+  font-weight: bold
+.fw-br
+  font-weight: bolder
+.fw-lr
+  font-weight: lighter
+
+.fs, .fs-n
+  font-style: normal
+.fs-i
+  font-style: italic
+
+@for $i from -2 through 8
+  $mult: 1
+  @if $i > 1
+    @for $j from 2 through $i
+      $mult: $mult / $base-proportion
+  @if $i < 1
+    @for $j from 0 through -$i
+      $mult: $mult * $base-proportion
+  .fz-#{$i}
+    font-size: $mult * 1em
+
+.td, .td-n
+  text-decoration: none
+.td-u
+  text-decoration: underline
+.td-l
+  text-decoration: line-through
+
+////////////
+// Layout //
+////////////
+
+.d, .d-b
+  display: block
+.d-n
+  display: none
+.d-i
+  display: inline
+.d-ib
+  display: inline-block
+
+@for $i from 1 through 10
+  .p-#{$i}
+    padding: ($i * 1rem)
+  .pt-#{$i}
+    padding-top: ($i * 1rem)
+  .pr-#{$i}
+    padding-right: ($i * 1rem)
+  .pb-#{$i}
+    padding-bottom: ($i * 1rem)
+  .pl-#{$i}
+    padding-left: ($i * 1rem)
+  .ptb-#{$i}
+    padding-top: ($i * 1rem)
+    padding-bottom: ($i * 1rem)
+  .plr-#{$i}
+    padding-left: ($i * 1rem)
+    padding-right: ($i * 1rem)
+  .m-#{$i}
+    margin: ($i * 1rem)
+  .mt-#{$i}
+    margin-top: ($i * 1rem)
+  .mr-#{$i}
+    margin-right: ($i * 1rem)
+  .mb-#{$i}
+    margin-bottom: ($i * 1rem)
+  .ml-#{$i}
+    margin-left: ($i * 1rem)
+  .mtb-#{$i}
+    margin-top: ($i * 1rem)
+    margin-bottom: ($i * 1rem)
+  .mlr-#{$i}
+    margin-left: ($i * 1rem)
+    margin-right: ($i * 1rem)
+
+.m-a
+  margin: auto
+.mt-a
+  margin-top: auto
+.mr-a
+  margin-right: auto
+.mb-a
+  margin-bottom: auto
+.ml-a
+  margin-left: auto
+.mtb-a
+  margin-top: auto
+  margin-bottom: auto
+.mlr-a
+  margin-left: auto
+  margin-right: auto
+
+// Grid
+
+@for $i from 1 through 60
+  .col-#{$i}
+    width: ($i / $column-count * 100%)
+  // .row-#{$i}
+  //   height: ($i * $base-unit)
+
+.ov, .ov-h
+  overflow: hidden
+.ov-v
+  overflow: visible
+.ov-s
+  overflow: scroll
+.ov-a
+  overflow: auto
+
+.ovx, .ovx-h
+  overflow-x: hidden
+.ovx-v
+  overflow-x: visible
+.ovx-s
+  overflow-x: scroll
+.ovx-a
+  overflow-x: auto
+
+.ovy, .ovy-h
+  overflow-y: hidden
+.ovy-v
+  overflow-y: visible
+.ovy-s
+  overflow-y: scroll
+.ovy-a
+  overflow-y: auto
+
+.fl, .fl-l
+  float: left
+.fl-r
+  float: right
+.fl-n
+  float: none
+
+.cl, .cl-b
+  clear: both
+.cl-l
+  clear: left
+.cl-r
+  clear: right
+
+.ta, .ta-l
+  text-align: left
+.ta-r
+  text-align: right
+.ta-c
+  text-align: center
+.ta-j
+  text-align: justify
+
+.w-100
+  width: 100%
+
+.pos, .pos-r
+  position: relative
+.pos-s
+  position: static
+.pos-a
+  position: absolute
+.pos-f
+  position: fixed
+
+.trbl
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.t
+  top: 0
+.r
+  right: 0
+.b
+  bottom: 0
+.l
+  left: 0
+.t-a
+  top: auto
+.r-a
+  right: auto
+.b-a
+  bottom: auto
+.l-a
+  left: auto
+
+@for $i from -5 through 5
+  .zi-#{$i}
+    z-index: $i
+
+//////////
+// Skin //
+//////////
+
+// Background (link and visited)
+
+.bg-gr-ltr, .bg-gr-ltr:link, .bg-gr-ltr:visited
+  background-color: $green-lighter
+.bg-gr-lt, .bg-gr-lt:link, .bg-gr-lt:visited
+  background-color: $green-light
+.bg-gr, .bg-gr:link, .bg-gr:visited
+  background-color: $green
+.bg-gr-dk, .bg-gr-dk:link, .bg-gr-dk:visited
+  background-color: $green-dark
+.bg-gr-dkr, .bg-gr-dkr:link, .bg-gr-dkr:visited
+  background-color: $green-darker
+
+.bg-go-ltr, .bg-go-ltr:link, .bg-go-ltr:visited
+  background-color: $gold-lighter
+.bg-go-lt, .bg-go-lt:link, .bg-go-lt:visited
+  background-color: $gold-light
+.bg-go, .bg-go:link, .bg-go:visited
+  background-color: $gold
+.bg-go-dk, .bg-go-dk:link, .bg-go-dk:visited
+  background-color: $gold-dark
+.bg-go-dkr, .bg-go-dkr:link, .bg-go-dkr:visited
+  background-color: $gold-darker
+
+.bg-p-ltr, .bg-p-ltr:link, .bg-p-ltr:visited
+  background-color: $purple-lighter
+.bg-p-lt, .bg-p-lt:link, .bg-p-lt:visited
+  background-color: $purple-light
+.bg-p, .bg-p:link, .bg-p:visited
+  background-color: $purple
+.bg-p-dk, .bg-p-dk:link, .bg-p-dk:visited
+  background-color: $purple-dark
+.bg-p-dkr, .bg-p-dkr:link, .bg-p-dkr:visited
+  background-color: $purple-darker
+
+.bg-wh, .bg-wh:link, .bg-wh:visited
+  background-color: $white
+.bg-bl, .bg-bl:link, .bg-bl:visited
+  background-color: $black
+
+.bg-twitter, .bg-twitter:link, .bg-twitter:visited
+  background-color: $twitter
+.bg-github, .bg-github:link, .bg-github:visited
+  background-color: $github
+.bg-linkedin, .bg-linkedin:link, .bg-linkedin:visited
+  background-color: $linkedin
+
+// Background (hover and active)
+
+.bg-gr-ltr-hov:hover, .bg-gr-ltr-hov:active
+  background-color: $green-lighter
+.bg-gr-lt-hov:hover, .bg-gr-lt-hov:active
+  background-color: $green-light
+.bg-gr-hov:hover, .bg-gr-hov:active
+  background-color: $green
+.bg-gr-dk-hov:hover, .bg-gr-dk-hov:active
+  background-color: $green-dark
+.bg-gr-dkr-hov:hover, .bg-gr-dkr-hov:active
+  background-color: $green-darker
+
+.bg-go-ltr-hov:hover, .bg-go-ltr-hov:active
+  background-color: $gold-lighter
+.bg-go-lt-hov:hover, .bg-go-lt-hov:active
+  background-color: $gold-light
+.bg-go-hov:hover, .bg-go-hov:active
+  background-color: $gold
+.bg-go-dk-hov:hover, .bg-go-dk-hov:active
+  background-color: $gold-dark
+.bg-go-dkr-hov:hover, .bg-go-dkr-hov:active
+  background-color: $gold-darker
+
+.bg-p-ltr-hov:hover, .bg-p-ltr-hov:active
+  background-color: $purple-lighter
+.bg-p-lt-hov:hover, .bg-p-lt-hov:active
+  background-color: $purple-light
+.bg-p-hov:hover, .bg-p-hov:active
+  background-color: $purple
+.bg-p-dk-hov:hover, .bg-p-dk-hov:active
+  background-color: $purple-dark
+.bg-p-dkr-hov:hover, .bg-p-dkr-hov:active
+  background-color: $purple-darker
+
+.bg-wh-hov:hover, .bg-wh-hov:active
+  background-color: $white
+.bg-bl-hov:hover, .bg-bl-hov:active
+  background-color: $black
+
+.bg-twitter-hov:hover, .bg-twitter-hov:active
+  background-color: $twitter
+.bg-github-hov:hover, .bg-github-hov:active
+  background-color: $github
+.bg-linkedin-hov:hover, .bg-linkedin-hov:active
+  background-color: $linkedin
+
+// Foreground (link and visited)
+
+.fg-gr-ltr, .fg-gr-ltr:link, .fg-gr-ltr:visited
+  color: $green-lighter
+.fg-gr-lt, .fg-gr-lt:link, .fg-gr-lt:visited
+  color: $green-light
+.fg-gr, .fg-gr:link, .fg-gr:visited
+  color: $green
+.fg-gr-dk, .fg-gr-dk:link, .fg-gr-dk:visited
+  color: $green-dark
+.fg-gr-dkr, .fg-gr-dkr:link, .fg-gr-dkr:visited
+  color: $green-darker
+
+.fg-go-ltr, .fg-go-ltr:link, .fg-go-ltr:visited
+  color: $gold-lighter
+.fg-go-lt, .fg-go-lt:link, .fg-go-lt:visited
+  color: $gold-light
+.fg-go, .fg-go:link, .fg-go:visited
+  color: $gold
+.fg-go-dk, .fg-go-dk:link, .fg-go-dk:visited
+  color: $gold-dark
+.fg-go-dkr, .fg-go-dkr:link, .fg-go-dkr:visited
+  color: $gold-darker
+
+.fg-p-ltr, .fg-p-ltr:link, .fg-p-ltr:visited
+  color: $purple-lighter
+.fg-p-lt, .fg-p-lt:link, .fg-p-lt:visited
+  color: $purple-light
+.fg-p, .fg-p:link, .fg-p:visited
+  color: $purple
+.fg-p-dk, .fg-p-dk:link, .fg-p-dk:visited
+  color: $purple-dark
+.fg-p-dkr, .fg-p-dkr:link, .fg-p-dkr:visited
+  color: $purple-darker
+
+.fg-wh, .fg-wh:link, .fg-wh:visited
+  color: $white
+.fg-bl, .fg-bl:link, .fg-bl:visited
+  color: $black
+
+.fg-twitter, .fg-twitter:link, .fg-twitter:visited
+  color: $twitter
+.fg-github, .fg-github:link, .fg-github:visited
+  color: $github
+.fg-linkedin, .fg-linkedin:link, .fg-linkedin:visited
+  color: $linkedin
+
+// Foreground (hover and active)
+
+.fg-gr-ltr-hov:hover, .fg-gr-ltr-hov:active
+  color: $green-lighter
+.fg-gr-lt-hov:hover, .fg-gr-lt-hov:active
+  color: $green-light
+.fg-gr-hov:hover, .fg-gr-hov:active
+  color: $green
+.fg-gr-dk-hov:hover, .fg-gr-dk-hov:active
+  color: $green-dark
+.fg-gr-dkr-hov:hover, .fg-gr-dkr-hov:active
+  color: $green-darker
+
+.fg-go-ltr-hov:hover, .fg-go-ltr-hov:active
+  color: $gold-lighter
+.fg-go-lt-hov:hover, .fg-go-lt-hov:active
+  color: $gold-light
+.fg-go-hov:hover, .fg-go-hov:active
+  color: $gold
+.fg-go-dk-hov:hover, .fg-go-dk-hov:active
+  color: $gold-dark
+.fg-go-dkr-hov:hover, .fg-go-dkr-hov:active
+  color: $gold-darker
+
+.fg-p-ltr-hov:hover, .fg-p-ltr-hov:active
+  color: $purple-lighter
+.fg-p-lt-hov:hover, .fg-p-lt-hov:active
+  color: $purple-light
+.fg-p-hov:hover, .fg-p-hov:active
+  color: $purple
+.fg-p-dk-hov:hover, .fg-p-dk-hov:active
+  color: $purple-dark
+.fg-p-dkr-hov:hover, .fg-p-dkr-hov:active
+  color: $purple-darker
+
+.fg-wh-hov:hover, .fg-wh-hov:active
+  color: $white
+.fg-bl-hov:hover, .fg-bl-hov:active
+  color: $black
+
+.fg-twitter-hov:hover, .fg-twitter-hov:active
+  color: $twitter
+.fg-github-hov:hover, .fg-github-hov:active
+  color: $github
+.fg-linkedin-hov:hover, .fg-linkedin-hov:active
+  color: $linkedin
+
+// Transition
+
+@for $i from 1 through 10
+  .tra-#{$i}
+    -webkit-transition: all #{$i / 10}s ease
+    transition: all #{$i / 10}s ease
+
+// TODO
+
+.br-2
+  border-radius: 2px

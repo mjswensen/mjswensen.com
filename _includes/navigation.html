@@ -1,5 +1,13 @@
-<nav>
+<!-- <nav>
   <a href="/blog/"{% if page.nav == 'blog' %} class="current"{% endif %}>Blog</a>
   <a href="/about/"{% if page.nav == 'about' %} class="current"{% endif %}>About</a>
   <a href="/presentations/"{% if page.nav == 'presentations' %} class="current"{% endif %}>Presentations</a>
+</nav> -->
+
+<nav class="bg-gr-dk ff-disp">
+  <div class="container">
+    <a href="/blog/" class="fg-wh td d-ib p-1 bg-gr-dkr-hov {% if page.nav == 'blog' %}bg-gr-dkr{% endif %}">Blog</a>
+    <a href="/presentations/" class="fg-wh td d-ib p-1 bg-gr-dkr-hov {% if page.nav == 'presentations' %}bg-gr-dkr{% endif %}">Presentations</a>
+    <a href="/projects/" class="fg-wh td d-ib p-1 bg-gr-dkr-hov {% if page.nav == 'projects' %}bg-gr-dkr{% endif %}">Projects</a>
+  </div>
 </nav>

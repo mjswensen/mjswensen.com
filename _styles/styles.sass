@@ -1,16 +1,15 @@
 @import "_reset"
 @import "_variables"
-@import "_layout"
 @import "_typography"
 @import "_icons"
 
-@import "_main"
-@import "_header"
-@import "_navigation"
-@import "_footer"
+@import "_patterns"
+@import "_atomic"
 
-@import "_showcase"
-@import "_tags"
-@import "_presentations"
-@import "_code"
-@import "_screenshots"
+body
+  font-size: $base-unit
+  line-height: (1 / $base-proportion)
+
+.container
+  max-width: $container-width
+  @extend .mlr-a

@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }} <small>{{ page.date | date_to_string }}</small></h1>
+
+<div id="scroller" class="p-10 ta-c ff-sans">
+  <h1 class="fz-5 fw-b">{{ page.title }}</h1>
+  <small class="fw fz-0">{{ page.date | date_to_string }}</small>
+</div>
+
 
 {{ content }}
 

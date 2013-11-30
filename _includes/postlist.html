@@ -1,0 +1,34 @@
+<ul>
+  {% for post in include.posts %}
+  <!-- <li class="ov mt-1">
+    <a href="{{ post.url }}" class="td fg-wh">
+      <div class="col-6 mr-1 ov fl ff-disp br-2">
+        <div class="bg-go fz-1 ta-c pt-1">{{ post.date | date: "%b" }}</div>
+        <div class="bg-go fz-3 ta-c">{{ post.date | date: "%d" }}</div>
+        <div class="bg-go fz-1 ta-c pb-1">{{ post.date | date: "%Y" }}</div>
+      </div>
+    </a>
+    <div class="ov">
+      <h3 class="fz-2 ff-sans fw-b"><a href="{{ post.url }}" class="td fg-bl">{{ post.title }}</a></h3>
+    </div>
+  </li> -->
+  <!-- <li class="mb-1 bg-go-ltr">
+    <a href="{{ post.url }}" class="bg-go br-2 fg-wh ff-sans fz-2 td p-1 d-ib">
+      <span class="fg-go-ltr fz-0">{{ post.date | date: "%a" }}</span>
+      <span>{{ post.date | date: "%d %b %Y" }}</span>
+      <span class="fg-go-ltr fz-0">{{ post.date | date: "%I:%M" }}<small class="fz-0">{{ post.date | date: "%p" }}</small></span>
+    </a>
+    <h3 class="d-ib fw-b">{{ post.title }}</h3>
+  </li> -->
+  <li class="mb-1 bg-go-ltr">
+    <a href="{{ post.url }}" class="ff-sans fz-2 fg-go-dkr td">
+      <div class="bg-go br-2 fg-wh p-1 d-ib">
+        <span class="fg-go-ltr fz-0">{{ post.date | date: "%a" }}</span>
+        <span>{{ post.date | date: "%d %b %Y" }}</span>
+        <span class="fg-go-ltr fz-0">{{ post.date | date: "%I:%M" }}<small class="fz-0">{{ post.date | date: "%p" }}</small></span>
+      </div>
+      <h3 class="d-ib pl-1 fw-b">{{ post.title }}</h3>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

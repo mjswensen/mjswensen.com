@@ -2,14 +2,12 @@
 layout: default
 title: mjswensen.com
 ---
-
-<h1>Recent Posts</h1>
-<ul>
-{% for post in site.posts %}
-  <li>
-    <span>{{ post.date | date_to_string }}</span>
-    &raquo;
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+<div id="scroller" class="diamond bg-p-ltr p-10 ta-c ff-sans fg-wh">
+  <div class="fz-5 fw-b">Hello.</div>
+  <p class="fz-3">I'm passionate about programming the Web.</p>
+  <p class="fz-3">I'm a husband, father, Mormon, and JavaScripter/CSSer for <a href="http://www.lucid.co" class="fg-p-ltr td">Lucid Software</a>.</p>
+</div>
+<section class="container ptb-3">
+  <h1 class="fz-3 ff-sans fw-b pb-3 fg-go-dkr">Recent Posts</h1>
+  {% include postlist.html posts=site.posts %}
+</section>
