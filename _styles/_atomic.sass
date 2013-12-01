@@ -147,6 +147,12 @@
 .cl-r
   clear: right
 
+.cf
+  &:after
+    content: ""
+    display: table
+    clear: both
+
 .ta, .ta-l
   text-align: left
 .ta-r
@@ -199,6 +205,8 @@
 //////////
 // Skin //
 //////////
+
+// TODO: convert all these to lists...
 
 // Background (link and visited)
 
@@ -390,12 +398,27 @@
 
 // Transition
 
-@for $i from 1 through 10
+$transition-duration-options: 2
+
+@each $i in $transition-duration-options
   .tra-#{$i}
     -webkit-transition: all #{$i / 10}s ease
     transition: all #{$i / 10}s ease
 
-// TODO
+// Border Radius
 
-.br-2
-  border-radius: 2px
+$border-radius-options: 2
+
+@each $i in $border-radius-options
+  .br-#{$i}
+    border-radius: ($i * 1px)
+
+// Opacity
+
+// $opacity-options: 20, 100
+
+// @each $i in $opacity-options
+//   .op-#{$i}
+//     opacity: ($i / 100)
+//   .op-#{$i}-hov:hover
+//     opacity: ($i / 100)
