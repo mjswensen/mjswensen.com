@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div id="scroller" class="p-10 ta-c ff-sans" style="background: url({{ page.background }}); background-size: cover;">
+<div id="scroller" class="ptb-10 plr-1 ta-c ff-sans" style="background: url({{ page.background }}); background-size: cover;">
   <h1 class="fz-5 fw-b"><span class="plr-1 br-2 {{ page.titleClass }}">{{ page.title }}</span></h1>
-  <small class="p-1 mt-1 d-ib fw fz-1 {{ page.titleClass }}">{{ page.date | date: "%-d %b %Y" }} &bull; Read time {{ page.content | size | divided_by: 900 | append: ' min' }}</small>
+  <small class="p-1 mt-1 d-ib fw fz-1 br-2 {{ page.titleClass }}">{{ page.date | date: "%-d %b %Y" }} &bull; Read time {{ page.content | size | divided_by: 900 | append: ' min' }}</small>
 </div>
 
 {{ content }}
