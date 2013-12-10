@@ -4,25 +4,29 @@ layout: default
 nav: presentations
 ---
 
-<h1>Presentations</h1>
-{% for page in site.pages %}
-  {% if page.type == 'presentation' %}
-  <div class="presentation">
-    <hgroup>
-      <h2><a href="{{ page.url }}" class="link-light">{{ page.title }} <small>{{ page.date | date_to_string }}</small></a></h2>
-      <h3>{{ page.for }}, {{ page.at }}</h3>
-    </hgroup>
-    <hr class="top-dark">
-    <hr class="bottom-dark">
-    <p>{{ page.description }}</p>
-    <a href="{{ page.url }}" class="screenshots">
-      {% for i in (1..page.screenshotCount) %}
-      <img src="{{ page.screenshotDir }}{{ i }}.png" alt="{{ page.title }}">
-      {% endfor %}
+<section class="col-px-45 mlr-a">
+  <h1 class="fz-3 ff-sans fw-b ptb-3 fg-go-dkr ta-c">Presentations</h1>
+  {% for page in site.pages %}
+    {% if page.type == 'presentation' %}
+    <a class="bg-p d-b td br-2 mb-1" href="{{ page.url }}">
+      <hgroup class="p-1 bg-go br-t-2">
+        <h2 class="fg-go-dkr fz-2 ff-sans fw-b">{{ page.title }} <small class="fg-go-dk fz-0">{{ page.date | date_to_string }}</small></h2>
+        <h3 class="fg-go-dk fz-1 ff-sans">{{ page.for }}, {{ page.at }}</h3>
+      </hgroup>
+      <div class="p-1">
+        {% if page.screenshotCount %}
+          <div class="screenshots pos-r mb-1">
+          {% for i in (1..page.screenshotCount) %}
+            <img src="{{ page.screenshotDir }}{{ i }}.png" alt="{{ page.title }}" class="mw-100 d-b br-2{% if i == 1 %} pos-r zi-1{% else %} pos-a t l zi-0{% endif %}">
+          {% endfor %}
+          </div>
+        {% endif %}
+        <p class="fs-i fg-p-ltr">{{ page.description }}</p>
+      </div>
     </a>
-  </div>
-  {% endif %}
-{% endfor %}
+    {% endif %}
+  {% endfor %}
+</section>
 
 <script>
   $(function() {
