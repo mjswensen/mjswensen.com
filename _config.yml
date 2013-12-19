@@ -2,4 +2,4 @@ name: mjswensen.com
 markdown: redcarpet
 pygments: true
 permalink: pretty
-exclude: [_styles]
+exclude: [_styles, node_modules, .git, .gitignore, package.json, README.md, .sass-cache, Gruntfile.js]
