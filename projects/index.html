@@ -9,7 +9,7 @@ nav: projects
   <div class="cf">
     {% for page in site.pages %}
       {% if page.type == 'project' %}
-      <div class="fl td m-1 col-28 bg-go br-2 mb-1 {% if page.openSource %}open-source-gold{% endif %}">
+      <div class="fl m-1 col-28 bg-go br-2 mb-1 {% if page.openSource %}open-source-gold{% endif %}">
         <a href="{{ page.externalUrl }}" class="td">
           <hgroup class="br-t-2 p-1 bg-gr {% if page.openSource %}open-source-green{% endif %}">
             <h2 class="fg-wh fz-2 ff-sans fw-b">{{ page.title }}</h2>

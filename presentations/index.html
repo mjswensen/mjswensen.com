@@ -8,22 +8,26 @@ nav: presentations
   <h1 class="fz-3 ff-sans fw-b ptb-3 fg-go-dkr ta-c">Presentations</h1>
   {% for page in site.pages %}
     {% if page.type == 'presentation' %}
-    <a class="bg-go d-b td br-2 mb-1" href="{{ page.url }}">
-      <hgroup class="p-1 bg-p br-t-2">
-        <h2 class="fg-p-ltr fz-2 ff-sans fw-b">{{ page.title }}</h2>
-        <h3 class="fg-p-lt fz-1 ff-sans">{{ page.date | date_to_string }}, {{ page.for }}, {{ page.at }}</h3>
-      </hgroup>
+    <div class="bg-go d-b td br-2 mlr-1 mb-1">
+      <a href="{{ page.url }}" class="td">
+        <hgroup class="p-1 bg-p br-t-2">
+          <h2 class="fg-p-ltr fz-2 ff-sans fw-b">{{ page.title }}</h2>
+          <h3 class="fg-p-lt fz-1 ff-sans">{{ page.date | date_to_string }}, {{ page.for }}, {{ page.at }}</h3>
+        </hgroup>
+      </a>
       <div class="p-1">
         {% if page.screenshotCount %}
-          <div class="screenshots pos-r mb-1">
-          {% for i in (1..page.screenshotCount) %}
-            <img src="{{ page.screenshotDir }}{{ i }}.png" alt="{{ page.title }}" class="mw-100 d-b br-2{% if i == 1 %} pos-r zi-1{% else %} pos-a t l zi-0{% endif %}">
-          {% endfor %}
-          </div>
+          <a href="{{ page.url }}" class="td">
+            <div class="screenshots pos-r mb-1">
+            {% for i in (1..page.screenshotCount) %}
+              <img src="{{ page.screenshotDir }}{{ i }}.png" alt="{{ page.title }}" class="mw-100 d-b br-2{% if i == 1 %} pos-r zi-1{% else %} pos-a t l zi-0{% endif %}">
+            {% endfor %}
+            </div>
+          </a>
         {% endif %}
         <p class="fs-i fg-go-dk">{{ page.description }}</p>
       </div>
-    </a>
+    </div>
     {% endif %}
   {% endfor %}
 </section>
