@@ -8,10 +8,10 @@ nav: presentations
   <h1 class="fz-3 ff-sans fw-b ptb-3 fg-go-dkr ta-c">Presentations</h1>
   {% for page in site.pages %}
     {% if page.type == 'presentation' %}
-    <a class="bg-p d-b td br-2 mb-1" href="{{ page.url }}">
-      <hgroup class="p-1 bg-go br-t-2">
-        <h2 class="fg-go-dkr fz-2 ff-sans fw-b">{{ page.title }}</h2>
-        <h3 class="fg-go-dk fz-1 ff-sans">{{ page.date | date_to_string }}, {{ page.for }}, {{ page.at }}</h3>
+    <a class="bg-go d-b td br-2 mb-1" href="{{ page.url }}">
+      <hgroup class="p-1 bg-p br-t-2">
+        <h2 class="fg-p-ltr fz-2 ff-sans fw-b">{{ page.title }}</h2>
+        <h3 class="fg-p-lt fz-1 ff-sans">{{ page.date | date_to_string }}, {{ page.for }}, {{ page.at }}</h3>
       </hgroup>
       <div class="p-1">
         {% if page.screenshotCount %}
@@ -21,7 +21,7 @@ nav: presentations
           {% endfor %}
           </div>
         {% endif %}
-        <p class="fs-i fg-p-ltr">{{ page.description }}</p>
+        <p class="fs-i fg-go-dk">{{ page.description }}</p>
       </div>
     </a>
     {% endif %}
