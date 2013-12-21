@@ -108,8 +108,17 @@
     width: ($i / $column-count * 100%)
   .col-px-#{$i}
     max-width: ($i / $column-count * $container-width)
-  // .row-#{$i}
-  //   height: ($i * $base-unit)
+  .rs
+    @media screen and (max-width: $breakpoint-one)
+      &.col-#{$i}_1
+        width: ($i / $column-count * 100%)
+      &.col-px-#{$i}_1
+        max-width: ($i / $column-count * $container-width)
+    @media screen and (max-width: $breakpoint-two)
+      &.col-#{$i}_2
+        width: ($i / $column-count * 100%)
+      &.col-px-#{$i}_2
+        max-width: ($i / $column-count * $container-width)
 
 .ov, .ov-h
   overflow: hidden
