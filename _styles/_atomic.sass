@@ -28,9 +28,19 @@
     font-size: $mult * 1em
 
 .td, .td-n
-  text-decoration: none
+  &, &:link, &:visited
+    text-decoration: none
+.td-hov, .td-n-hov
+  &:hover, &:active
+    text-decoration: none
+
 .td-u
-  text-decoration: underline
+  &, &:link, &:visited
+    text-decoration: underline
+.td-u-hov
+  &:hover, &:active
+    text-decoration: underline
+
 .td-l
   text-decoration: line-through
 
@@ -314,6 +324,21 @@
   .fg-#{nth($color, 1)}-hov:hover, .fg-#{nth($color, 1)}-hov:active
     color: nth($color, 2)
 
+// Border
+
+@each $color in $colors
+  .bdc-#{nth($color, 1)}
+    border-color: nth($color, 2)
+
+$border-width-options: 3
+
+@each $bdw in $border-width-options
+  .bdw-#{$bdw}
+    border-width: ($bdw * 1px)
+
+.bds, .bds-s
+  border-style: solid
+
 // Transition
 
 $transition-duration-options: 2
@@ -332,6 +357,9 @@ $border-radius-options: 2
     border-radius: ($i * 1px)
   .br-t-#{$i}
     border-radius: ($i * 1px) ($i * 1px) 0 0
+
+.br-round
+  border-radius: 100%
 
 // Opacity
 
