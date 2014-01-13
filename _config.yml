@@ -1,4 +1,5 @@
 name: mjswensen.com
+domain: http://mjswensen.com
 markdown: redcarpet
 pygments: true
 permalink: pretty
