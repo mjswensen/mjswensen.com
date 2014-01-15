@@ -60,7 +60,7 @@
 .d-ib
   display: inline-block
 
-@for $i from 1 through 10
+@for $i from 0 through 10
   .p-#{$i}
     padding: ($i * 1rem)
   .pt-#{$i}
@@ -161,6 +161,12 @@
         margin-left: ($i * 1rem)
         margin-right: ($i * 1rem)
 
+$fraction-options: (1 2, 1 4)
+
+@each $option in $fraction-options
+  .p-#{nth($option, 1)}-#{nth($option, 2)}
+    padding: (1rem * nth($option, 1) / nth($option, 2))
+
 .m-a
   margin: auto
 .mt-a
@@ -197,6 +203,20 @@
       &.col-px-#{$i}_2
         max-width: ($i / $column-count * $container-width)
 
+// Other sizing
+
+.w-100
+  width: 100%
+
+.mw-100
+  max-width: 100%
+
+.w-ex-1
+  width: 1ex
+
+.h-ex-1
+  height: 1ex
+
 .ov, .ov-h
   overflow: hidden
 .ov-v
@@ -230,6 +250,21 @@
   float: right
 .fl-n
   float: none
+.rs
+  @media screen and (max-width: $breakpoint-one)
+    &.fl_1, &.fl-l_1
+      float: left
+    &.fl-r_1
+      float: right
+    &.fl-n_1
+      float: none
+  @media screen and (max-width: $breakpoint-two)
+    &.fl_2, &.fl-l_2
+      float: left
+    &.fl-r_2
+      float: right
+    &.fl-n_2
+      float: none
 
 .cl, .cl-b
   clear: both
@@ -252,12 +287,6 @@
   text-align: center
 .ta-j
   text-align: justify
-
-.w-100
-  width: 100%
-
-.mw-100
-  max-width: 100%
 
 .pos, .pos-r
   position: relative
@@ -329,15 +358,39 @@
 @each $color in $colors
   .bdc-#{nth($color, 1)}
     border-color: nth($color, 2)
+  .bdtc-#{nth($color, 1)}
+    border-top-color: nth($color, 2)
+  .bdrc-#{nth($color, 1)}
+    border-right-color: nth($color, 2)
+  .bdbc-#{nth($color, 1)}
+    border-bottom-color: nth($color, 2)
+  .bdlc-#{nth($color, 1)}
+    border-left-color: nth($color, 2)
 
 $border-width-options: 3
 
 @each $bdw in $border-width-options
   .bdw-#{$bdw}
     border-width: ($bdw * 1px)
+  .bdtw-#{$bdw}
+    border-top-width: ($bdw * 1px)
+  .bdrw-#{$bdw}
+    border-right-width: ($bdw * 1px)
+  .bdbw-#{$bdw}
+    border-bottom-width: ($bdw * 1px)
+  .bdlw-#{$bdw}
+    border-left-width: ($bdw * 1px)
 
 .bds, .bds-s
   border-style: solid
+.bdts, .bdts-s
+  border-top-style: solid
+.bdrs, .bdrs-s
+  border-right-style: solid
+.bdbs, .bdbs-s
+  border-bottom-style: solid
+.bdls, .bdls-s
+  border-left-style: solid
 
 // Transition
 
@@ -353,12 +406,12 @@ $transition-duration-options: 2
 $border-radius-options: 2
 
 @each $i in $border-radius-options
-  .br-#{$i}
+  .br-#{$i}, .br-#{$i}-hov:hover
     border-radius: ($i * 1px)
-  .br-t-#{$i}
+  .br-t-#{$i}, .br-t-#{$i}-hov:hover
     border-radius: ($i * 1px) ($i * 1px) 0 0
 
-.br-round
+.br-round, .br-round-hov:hover
   border-radius: 100%
 
 // Opacity
