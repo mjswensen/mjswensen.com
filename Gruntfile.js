@@ -34,6 +34,7 @@ module.exports = function(grunt) {
         files: [
           'index.html',
           'sitemap.xml',
+          'rss.xml',
           '_includes/**',
           '_layouts/**',
           'about/**',
