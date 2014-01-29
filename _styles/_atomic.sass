@@ -166,6 +166,20 @@ $fraction-options: (1 2, 1 4)
 @each $option in $fraction-options
   .p-#{nth($option, 1)}-#{nth($option, 2)}
     padding: (1rem * nth($option, 1) / nth($option, 2))
+  .pt-#{nth($option, 1)}-#{nth($option, 2)}
+    padding-top: (1rem * nth($option, 1) / nth($option, 2))
+  .pr-#{nth($option, 1)}-#{nth($option, 2)}
+    padding-right: (1rem * nth($option, 1) / nth($option, 2))
+  .pb-#{nth($option, 1)}-#{nth($option, 2)}
+    padding-bottom: (1rem * nth($option, 1) / nth($option, 2))
+  .pl-#{nth($option, 1)}-#{nth($option, 2)}
+    padding-left: (1rem * nth($option, 1) / nth($option, 2))
+  .ptb-#{nth($option, 1)}-#{nth($option, 2)}
+    padding-top: (1rem * nth($option, 1) / nth($option, 2))
+    padding-bottom: (1rem * nth($option, 1) / nth($option, 2))
+  .plr-#{nth($option, 1)}-#{nth($option, 2)}
+    padding-left: (1rem * nth($option, 1) / nth($option, 2))
+    padding-right: (1rem * nth($option, 1) / nth($option, 2))
 
 .m-a
   margin: auto
@@ -320,6 +334,9 @@ $fraction-options: (1 2, 1 4)
   bottom: auto
 .l-a
   left: auto
+
+.va-t
+  vertical-align: top
 
 @for $i from -5 through 5
   .zi-#{$i}

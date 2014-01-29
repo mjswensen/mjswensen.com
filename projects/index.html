@@ -12,10 +12,15 @@ sitemap:
     {% for page in site.pages %}
       {% if page.type == 'project' %}
       <div class="fl plr-1 pb-2 col-30 rs col-60_1">
-        <div class="bg-go br-2 {% if page.openSource %}open-source-gold{% endif %}">
+        <div class="bg-go br-2">
           <a href="{{ page.externalUrl }}" class="td">
-            <div class="br-t-2 p-1 bg-gr {% if page.openSource %}open-source-green{% endif %}">
-              <h2 class="fg-wh fz-2 ff-sans fw-b">{{ page.title }}</h2>
+            <div class="br-t-2 p-1 bg-gr">
+              <h2 class="fg-wh fz-2 ff-sans fw-b">
+                {{ page.title }}
+                {% if page.openSource %}
+                <sup class="fz--1 plr-1-4 bg-gr-dkr br-2 fg-gr va-t">Open Source</sup>
+                {% endif %}
+              </h2>
               <span class="fg-gr-ltr fz-1 ff-sans d">{{ page.externalUrl }}</span>
             </div>
           </a>
