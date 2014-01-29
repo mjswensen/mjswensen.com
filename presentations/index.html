@@ -12,22 +12,27 @@ sitemap:
     {% if page.type == 'presentation' %}
     <div class="bg-go d-b td br-2 mlr-1 mb-1">
       <a href="{{ page.url }}" class="td">
-        <hgroup class="p-1 bg-p br-t-2">
-          <h2 class="fg-p-ltr fz-2 ff-sans fw-b">{{ page.title }}</h2>
-          <h3 class="fg-p-lt fz-1 ff-sans">{{ page.date | date_to_string }}, {{ page.for }}, {{ page.at }}</h3>
-        </hgroup>
+        <div class="p-1 bg-gr br-t-2">
+          <h2 class="fg-wh fz-2 ff-sans fw-b">{{ page.title }}</h2>
+          <span class="fg-gr-ltr fz-1 ff-sans d">{{ page.date | date_to_string }}, {{ page.for }}, {{ page.at }}</span>
+        </div>
       </a>
       <div class="p-1">
-        {% if page.screenshotCount %}
-          <a href="{{ page.url }}" class="td">
-            <div class="screenshots pos-r mb-1">
-            {% for i in (1..page.screenshotCount) %}
-              <img src="{{ page.screenshotDir }}{{ i }}.png" alt="{{ page.title }}" class="mw-100 d-b br-2{% if i == 1 %} pos-r zi-1{% else %} pos-a t l zi-0{% endif %}">
-            {% endfor %}
-            </div>
-          </a>
+        <p class="fs-i fg-go-dk mb-1">{{ page.description }}</p>
+        {% if page.videoUrl %}
+        <p class="ff-sans fz-0 fg-go-dk mb-1">Video:</p>
+        {% include video.html videoUrl=page.videoUrl %}
         {% endif %}
-        <p class="fs-i fg-go-dk">{{ page.description }}</p>
+        {% if page.screenshotCount %}
+        <p class="ff-sans fz-0 fg-go-dk mtb-1">Slides:</p>
+        <a href="{{ page.url }}" class="td">
+          <div class="screenshots pos-r">
+          {% for i in (1..page.screenshotCount) %}
+            <img src="{{ page.screenshotDir }}{{ i }}.png" alt="{{ page.title }}" class="mw-100 d-b br-2{% if i == 1 %} pos-r zi-1{% else %} pos-a t l zi-0{% endif %}">
+          {% endfor %}
+          </div>
+        </a>
+        {% endif %}
       </div>
     </div>
     {% endif %}
