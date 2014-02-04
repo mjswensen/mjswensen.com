@@ -410,8 +410,9 @@ $('.accordion') ...
         </div>
         <div class="row-offset-1">
           <p class="center">And it returns the elements, wrapped in a jQuery object, that match the selector. Then you call methods on the jQuery object to manipulate the elements.</p>
-        </div>
-        <div class="row-offset-1">
+		  <p class="center btn btn-blue try-it">Try it!</p>
+		</div>
+        <div class="row-offset-1 accordion" style="display: none;">
 {% highlight js %}
 $('.accordion').slideDown(300);// Display all elements with "accordion" class (0.3-second sliding animation)
 {% endhighlight %}
@@ -507,7 +508,11 @@ $.ajax({
     <div id="fin" class="step no-bg" data-x="4000" data-y="4200" data-scale="13"></div>
   </div>
   <script src="js/impress.js"></script>
-  <script>impress().init();</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    impress().init();
+    $('.try-it').on('click', function() {$('.accordion').slideToggle(300);});
+  </script>
   {% if site.safe %}
   {% include analytics.html %}
   {% endif %}
