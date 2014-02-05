@@ -11,9 +11,9 @@ layout: default
 
 <div class="ff-sans bg-gr-dk cf">
   {% if page.previous.url %}
-  <a href="{{ page.previous.url }}" class="fl d-ib p-1 td fg-wh bg-gr-dkr-hov"><span class="ff-icons">&#xe604;</span> {{ page.previous.title }}</a>
+  <a href="{{ page.previous.url }}" class="fl d-ib p-1 td fg-wh bg-gr-dkr-hov"><span class="ff-icons">previous</span> {{ page.previous.title }}</a>
   {% endif %}
   {% if page.next.url %}
-  <a href="{{ page.next.url }}" class="fl-r d-ib p-1 td fg-wh bg-gr-dkr-hov">{{ page.next.title }} <span class="ff-icons">&#xe603;</span></a>
+  <a href="{{ page.next.url }}" class="fl-r d-ib p-1 td fg-wh bg-gr-dkr-hov">{{ page.next.title }} <span class="ff-icons">next</span></a>
   {% endif %}
 </div>

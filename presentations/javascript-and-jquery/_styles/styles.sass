@@ -67,8 +67,9 @@ body
 #about
   font-size: 2em
   .gravatar
-    border-radius: 48px
+    border-radius: 100%
     border: 4px solid #555
+    max-width: 100%
   .experience
     font-size: 0.75em
   hr
@@ -78,8 +79,9 @@ body
     a
       vertical-align: top
     i
-      font-size: 1.2em
-      @include social-icons
+      font-size: 0.75em
+      @extend .ff-icons
+      padding-right: 0.25em
 
 #agenda
   font-size: 1.2em
