@@ -2,6 +2,7 @@
 @import "../../../_styles/_icons"
 @import "_variables"
 @import "_mixins"
+@import "_animations"
 
 // Global
 
@@ -65,32 +66,44 @@ i
   @extend .ff-icons
   opacity: 0.5
 
+h2
+  font-size: (1em / $proportion)
+  @include sans(true)
+  margin-bottom: 1em
+
 // Slide specific
 
 #title
-  @include sans
+  @include sans(true)
   text-align: center
   font-size: 2em
   .title
     color: $accent
+    -webkit-animation: wiggle 10s infinite
+    animation: wiggle 10s infinite
   .subtitle
     color: $gray
     font-size: ($proportion * 1em)
+    display: block
+    -webkit-animation: shake 10s infinite
+    animation: shake 10s infinite
 
 #usage-map
   width: 100vw
-  // height: 100vh
   img
     width: 100%
     display: block
 
 #agenda
-  ul
+  h2
     color: $accent
+
+#questions
+  font-size: 2em
 
 #careers-at-lucid-software
   background-color: $accent
-  padding: 5em
+  padding: 5em 5em 6em
   border-radius: 2px
   color: white
   a
@@ -100,9 +113,6 @@ i
       color: white
     &:active
       color: $accent-light
-
-#questions
-  font-size: 2em
 
 #fin
   display: none
