@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           'about/**',
           'blog/**',
           'css/**',
-          'presentations/**',
+          'presentations/**/css/**',
           'projects/**'
         ],
         tasks: 'jekyll:build'

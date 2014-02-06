@@ -34,6 +34,7 @@
 			'facebook': '&#xe607;',
 			'googleplus': '&#xe601;',
 			'popup': '&#xe608;',
+			'download': '&#xe609;',
 			'0': 0
 		};
 		delete icons['0'];
