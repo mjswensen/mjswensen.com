@@ -1,1 +1,108 @@
-// Start here.
+@import "../../../_styles/_reset"
+@import "../../../_styles/_icons"
+@import "_variables"
+@import "_mixins"
+
+// Global
+
+body
+  @include serif
+  font-size: $base-unit
+  line-height: (1 / $proportion)
+  color: $gray-darker
+
+.fallback-message
+  display: none
+
+.step
+  width: ($base-unit * 30)
+  text-align: center
+  &.with-background
+    background-color: $almost-opaque-white
+    padding: 5em
+  &.no-backface
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+p:not(:last-child)
+  margin-bottom: 1em
+img
+  max-width: 100%
+
+a
+  text-decoration: none
+  @include transition
+  font-weight: 400
+  &, &:link, &:visited
+    color: $accent
+  &:hover
+    color: $accent-light
+  &:active
+    color: $accent-dark
+
+.button
+  @include sans(true)
+  padding: 0.25em 0.5em
+  border-radius: 0.2em
+  position: relative
+  &, &:link, &:visited
+    color: white
+    background-color: $accent
+    box-shadow: 0 0.2em 0 $accent-dark
+  &:hover
+    background-color: $accent-light
+  &:active
+    background-color: $accent-dark
+    box-shadow: none
+    top: 0.2em
+
+.link-text
+  display: block
+  color: $gray
+  font-size: 0.5em
+
+i
+  @extend .ff-icons
+  opacity: 0.5
+
+// Slide specific
+
+#title
+  @include sans
+  text-align: center
+  font-size: 2em
+  .title
+    color: $accent
+  .subtitle
+    color: $gray
+    font-size: ($proportion * 1em)
+
+#usage-map
+  width: 100vw
+  // height: 100vh
+  img
+    width: 100%
+    display: block
+
+#agenda
+  ul
+    color: $accent
+
+#careers-at-lucid-software
+  background-color: $accent
+  padding: 5em
+  border-radius: 2px
+  color: white
+  a
+    &, &:link, &:visited
+      color: $accent-lighter
+    &:hover
+      color: white
+    &:active
+      color: $accent-light
+
+#questions
+  font-size: 2em
+
+#fin
+  display: none

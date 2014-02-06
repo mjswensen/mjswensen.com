@@ -10,9 +10,111 @@ at: BYU Campus
 <html>
 <head>
   <title>Diagramming with Lucidchart</title>
+  <link href="http://fonts.googleapis.com/css?family=Exo+2:100,400|Merriweather:400,700,400italic,700italic" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <p>Start here.</p>
+  <div class="fallback-message">
+    <p class="center">Your browser doesn't support the features required by this presentation, so you are presented with a simplified version.</p>
+    <p class="center">For the best experience please use the <a href="https://google.com/chrome">Google Chrome Web browser</a>.</p>
+  </div>
+  <div id="impress">
+    <!-- Title -->
+    <div id="title" class="step" data-x="0" data-y="0" data-z="1000" data-rotate-x="-80" data-scale="3">
+      <h1 class="title">Diagramming with Lucidchart</h1>
+      <span class="subtitle">BYU AIS Value Added Forums</span>
+      <!-- TODO: add social sharing -->
+    </div>
+    <!-- AWS Tech Talk Announcement -->
+    <div id="aws-tech-talk" class="step" data-x="-1440" data-y="1200">
+      <img src="images/aws-tech-talk.jpg" alt="AWS Tech Talk Event by Lucid Software">
+    </div>
+    <!-- Company Background -->
+    <div id="company-background" class="step" data-x="0" data-y="1200">
+      <p>Lucidchart began in 2008 when Ben Dilts, a BYU alumni, spent his nights and weekends developing a tool to make his team more efficient. <a href="https://www.golucid.co/company-history" target="_blank">Company history <i>popup</i></a></p>
+    </div>
+    <!-- Usage Map -->
+    <div id="usage-map" class="step" data-x="0" data-y="3900" data-z="-2500" data-rotate-x="80" data-scale="5">
+      <img src="images/usage-map.png" alt="Lucidchart usage map 9/2013">
+    </div>
+    <!-- Agenda -->
+    <div id="agenda" class="step" data-x="1440" data-y="1200">
+      <p>Here's our agenda for the evening:</p>
+      <ul>
+        <li>Introduction to Lucidchart</li>
+        <li>Conceptual Data Model</li>
+        <li>Sequence Diagram</li>
+        <li>Mobile App Wireframe</li>
+        <li>Q&amp;A</li>
+      </ul>
+    </div>
+    <!-- Demo -->
+    <div id="demo" class="step" data-x="0" data-y="6000">
+      <p>The best place to start:</p>
+      <p><a href="https://www.lucidchart.com/demo" class="button" target="_blank">Lucidchart Demo <i>popup</i></a></p>
+      <span class="link-text">https://www.lucidchart.com/demo</span>
+    </div>
+    <!-- Conceptual Data Model -->
+    <div id="conceptual-data-model" class="step" data-x="-960" data-y="6700">
+      <p>Let&rsquo;s create a conceptual data model together.</p>
+      <p><a href="https://www.lucidchart.com/users/login" class="button">Log in to Lucidchart <i>popup</i></a></p>
+      <span class="link-text">https://www.lucidchart.com/users/login</span>
+    </div>
+    <!-- Conceptual Data Model Advanced Features -->
+    <div id="conceptual-data-model-advanced-features" class="step with-background no-backface" data-x="-960" data-y="6700" data-z="-20" data-rotate-y="180">
+      <p>Here are some of the advanced features we just covered:</p>
+      <ul>
+        <li>TODO</li>
+        <li>TODO</li>
+        <li>TODO</li>
+      </ul>
+    </div>
+    <!-- Sequence Diagram -->
+    <div id="sequence-diagram" class="step" data-x="960" data-y="6700">
+      <p>Now let&rsquo;s collaborate on a sequence diagram.</p>
+      <p><a href="https://www.lucidchart.com/documents" class="button">Lucidchart Documents <i>popup</i></a></p>
+      <span class="link-text">https://www.lucidchart.com/documents</span>
+    </div>
+    <!-- Sequence Diagram Advanced Features -->
+    <div id="sequence-diagram-advanced-features" class="step with-background no-backface" data-x="960" data-y="6700" data-z="-20" data-rotate-y="180">
+      <p>Here are some of the advanced features we just covered:</p>
+      <ul>
+        <li>TODO</li>
+        <li>TODO</li>
+        <li>TODO</li>
+      </ul>
+    </div>
+    <!-- Wireframe -->
+    <div id="wireframe" class="step" data-x="0" data-y="7400">
+      <p>Lastly, let&rsquo;s create a mobile app wireframe.</p>
+      <p><a href="https://www.lucidchart.com/documents" class="button">Lucidchart Documents <i>popup</i></a></p>
+      <span class="link-text">https://www.lucidchart.com/documents</span>
+    </div>
+    <!-- Wireframe Advanced Features -->
+    <div id="wireframe-advanced-features" class="step with-background no-backface" data-x="0" data-y="7400" data-z="-20" data-rotate-y="180">
+      <p>Here are some of the advanced features we just covered:</p>
+      <ul>
+        <li>TODO</li>
+        <li>TODO</li>
+        <li>TODO</li>
+      </ul>
+    </div>
+    <!-- Q&A -->
+    <div id="questions" class="step" data-x="0" data-y="9000" data-z="-2000">
+      <p>Any questions?</p>
+    </div>
+    <!-- Careers at Lucid Software -->
+    <div id="careers-at-lucid-software" class="step" data-x="0" data-y="9000" data-z="1000" data-rotate-x="80" data-rotate-z="180" data-scale="1">
+      <p>One final plug...</p>
+      <p>If you are interested in working for a profitable, fun, and energetic startup, apply online at <a href="https://www.golucid.co/jobs">golucid.co/jobs <i>popup</i></a>.</p>
+    </div>
+    <!-- The End -->
+    <div id="fin" class="step" data-x="0" data-y="4500" data-scale="13"></div>
+  </div>
+  <script src="../js/impress-0.5.3.js"></script>
+  <script>impress().init();</script>
+  {% if site.safe %}
+  {% include analytics.html %}
+  {% endif %}
 </body>
 </html>
