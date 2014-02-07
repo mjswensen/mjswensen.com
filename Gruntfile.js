@@ -31,21 +31,6 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      site: {
-        files: [
-          'index.html',
-          'sitemap.xml',
-          'rss.xml',
-          '_includes/**',
-          '_layouts/**',
-          'about/**',
-          'blog/**',
-          'css/**',
-          'presentations/**/css/**',
-          'projects/**'
-        ],
-        tasks: 'jekyll:build'
-      },
       siteStyles: {
         files: '_styles/*.sass',
         tasks: 'sass:site'
@@ -56,6 +41,21 @@ module.exports = function(grunt) {
           'presentations/diagramming-with-lucidchart/_styles/*sass'
         ],
         tasks: 'sass:presentations'
+      },
+      site: {
+        files: [
+          'index.html',
+          'sitemap.xml',
+          'rss.xml',
+          '_includes/**',
+          '_layouts/**',
+          'about/**',
+          'blog/**',
+          'css/**',
+          'presentations/**',
+          'projects/**'
+        ],
+        tasks: 'jekyll:build'
       }
     },
 
