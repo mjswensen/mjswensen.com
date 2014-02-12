@@ -16,16 +16,6 @@
       {{ content }}
       {% include footer.html %}
     </section>
-    <script>
-    $(function() {
-      var doc = $(document),
-        scroller = $('#scroller');
-      $(window).on('scroll', function() {
-        var pos = doc.scrollTop() / -3;
-        scroller.css('background-position-y', pos + 'px');
-      });
-    });
-    </script>
     <script src="/css/fonts/icons/liga.js"></script>
     {% if site.safe %}
     {% include analytics.html %}
