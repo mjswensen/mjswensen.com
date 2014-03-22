@@ -7,15 +7,11 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="author" href="https://www.google.com/+MatthewSwensen">
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Ubuntu:400,700|Merriweather:300,300italic,900" rel="stylesheet" type="text/css">
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   </head>
-  <body class="ff-serif">
-    <section class="main">
-      {% include header.html %}
-      {% include navigation.html %}
-      {{ content }}
-      {% include footer.html %}
-    </section>
+  <body>
+    {{ content }}
     <script src="/css/fonts/icons/liga.js"></script>
     {% if site.safe %}
     {% include analytics.html %}

@@ -33,8 +33,11 @@
 			'github': '&#xe606;',
 			'facebook': '&#xe607;',
 			'googleplus': '&#xe601;',
-			'popup': '&#xe608;',
 			'download': '&#xe609;',
+			'projects': '&#xe60b;',
+			'blog': '&#xe608;',
+			'presentations': '&#xe60a;',
+			'down': '&#xe60c;',
 			'0': 0
 		};
 		delete icons['0'];

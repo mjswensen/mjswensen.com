@@ -1,0 +1,30 @@
+.home
+  text-align: center
+  background-color: $green
+  color: $white
+  .gravatar
+    width: 240px
+    margin-top: 10vh
+    border: 5px solid $white
+    border-radius: 100%
+    -webkit-animation: emanate 4s linear infinite
+    animation: emanate 4s linear infinite
+  .greeting
+    @include sans(true)
+    @include fz(5)
+  .bio
+    @include sans
+    @include fz(3)
+    a:link, a:visited
+      color: $purple-lighter
+  .down
+    @include icons
+    color: $green-light
+    font-size: 2em
+    margin-top: 1rem
+    width: 100%
+    position: absolute
+    bottom: 0
+    opacity: 0
+    -webkit-animation: reveal 1s ease 5s forwards, bounce 1s ease-in-out infinite alternate
+    animation: reveal 1s ease 5s forwards, bounce 1s ease-in-out infinite alternate

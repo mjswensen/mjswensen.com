@@ -1,0 +1,15 @@
+body
+  font-size: $base-unit
+  line-height: (1 / $base-proportion)
+  @include serif
+  -webkit-transition: background-color 0.2s ease
+  transition: background-color 0.2s ease
+
+section
+  height: 100vh
+
+h1, h2, h3
+  @include sans(true)
+
+a
+  text-decoration: none

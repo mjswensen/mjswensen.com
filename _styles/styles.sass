@@ -5,14 +5,14 @@
 
 @import "_patterns"
 @import "_code"
-@import "_atomic"
 
-body
-  font-size: $base-unit
-  line-height: (1 / $base-proportion)
+@import "_mixins"
+@import "_animations"
+@import "_base"
 
-.highlight
-  @extend .mb-1
-  @extend .p-1
-  @extend .br-2
-  @extend .ff-mono
+@import "_navigation"
+
+// Home page sections
+
+@import "_home"
+@import "_recent"
