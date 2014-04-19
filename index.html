@@ -1,28 +1,62 @@
 ---
-layout: default
+layout: thin
 title: mjswensen.com
 sitemap:
   priority: 1.0
   changefreq: monthly
 ---
 
-<nav class="main">
-  <a href="#">blog <span>Blog</span></a>
-  <a href="#">projects <span>Projects</span></a>
-  <a href="#">presentations <span>Presentations</span></a>
-  <a href="#">twitter</a>
-  <a href="#">github</a>
-  <a href="#">googleplus</a>
-</nav>
 <section class="home">
-  <img src="http://www.gravatar.com/avatar/70ec9ada3c51e6c0a83e19b3ba980ce4?s=480" alt="Matt Swensen Gravatar" class="gravatar">
-  <h1 class="greeting">Hello.</h1>
-  <p class="bio">I'm Matt. I'm passionate about programming the Web.</p>
-  <p class="bio">I'm a husband, father, <a href="http://mormon.org/me/3KNR" class="fg-p-ltr td">Mormon</a>, and JavaScripter/CSSer for <a href="http://www.golucid.co" class="fg-p-ltr td">Lucid Software</a>.</p>
-  <div class="down">down</div>
+  <!-- <img src="http://www.gravatar.com/avatar/70ec9ada3c51e6c0a83e19b3ba980ce4?s=480" alt="Matt Swensen Gravatar" class="gravatar"> -->
+  {% include logo.svg %}
+  <h1 class="name">Matt Swensen</h1>
+  <p>I'm passionate about programming the Web.</p>
+  <p>I'm a husband, father, <a href="http://mormon.org/me/3KNR">Mormon</a>, and front-end engineer for <a href="http://www.golucid.co">Lucid Software</a>.</p>
+  <nav class="social">
+    <a href="#TODO" class="twitter">twitter</a>
+    <a href="#TODO" class="github">github</a>
+    <a href="#TODO" class="linkedin">linkedin</a>
+  </nav>
 </section>
-<section class="recent">
-  <h2>Recent Posts</h2>
+<hr>
+<section class="recent-posts">
+  <h2><i>blog</i> Recent Posts</h2>
+  {% include postlist.html limit=3 %}
+  <a class="all-posts" href="/blog/">All posts <i>next</i></a>
+</section>
+<hr>
+<section class="projects">
+  <h2><i>projects</i> Projects</h2>
+  <ul>
+    {% for page in site.pages %}
+      {% if page.type == 'project' %}
+      <li>
+        <a href="{{ page.externalUrl }}">
+          {{ page.title }}
+          {% if page.openSource %}
+          <sup>Open Source</sup>
+          {% endif %}
+        </a>
+        <p>{{ page.description }}</p>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+<hr>
+<section class="presentations">
+  <h2><i>presentations</i> Presentations</h2>
+  <ul>
+    {% for page in site.pages %}
+      {% if page.type == 'presentation' %}
+      <li>
+        <a href="{{ page.url }}">"{{ page.title }}"</a>
+        <p>{{ page.description }}</p>
+        <div class="metadata"><time timestamp="{{ page.date }}">{{ page.date | date_to_string }}</time>, {{ page.for }}, {{ page.at }}</div>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
 </section>
 
 <!-- <div id="scroller" class="diamond bg-p pt-8 pb-10 plr-1 ta-c ff-sans fg-wh rs ptb-2_1">
@@ -38,6 +72,24 @@ sitemap:
   {% include postlist.html posts=site.posts %}
 </section> -->
 <script>
+// $(function() {
+//   var sections = $('section'),
+//     doc = $(document);
+//   sections.each(function() {
+//     var section = $(this);
+//     section.data('origY', section.offset().top);
+//   });
+//   $(window).on('scroll', function() {
+//     sections.each(function() {
+//       var section = $(this),
+//         ty = (section.data('origY') - doc.scrollTop()) * 2;
+//       $(this).css({
+//         '-webkit-transform': 'translate3d(0, ' + ty + 'px, 0)'
+//       });
+//     });
+//   });
+// });
+////////////////////////////////////////
 // $(function() {
 //   var sections = $('section'),
 //     doc = $(document),

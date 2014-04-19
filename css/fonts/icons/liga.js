@@ -25,19 +25,20 @@
 	var icons;
 	if (!supportsProperty('fontFeatureSettings')) {
 		icons = {
-			'next': '&#xe603;',
-			'previous': '&#xe604;',
-			'twitter': '&#xe600;',
-			'linkedin': '&#xe602;',
+			'blog': '&#xe609;',
+			'popup': '&#xe608;',
+			'projects': '&#xe60b;',
 			'rss': '&#xe605;',
+			'presentations': '&#xe60a;',
+			'download': '&#xe60c;',
+			'previous': '&#xe604;',
+			'down': '&#xe60d;',
+			'next': '&#xe603;',
 			'github': '&#xe606;',
+			'twitter': '&#xe600;',
 			'facebook': '&#xe607;',
 			'googleplus': '&#xe601;',
-			'download': '&#xe609;',
-			'projects': '&#xe60b;',
-			'blog': '&#xe608;',
-			'presentations': '&#xe60a;',
-			'down': '&#xe60c;',
+			'linkedin': '&#xe602;',
 			'0': 0
 		};
 		delete icons['0'];

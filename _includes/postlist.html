@@ -1,3 +1,4 @@
+{% comment %}
 <ul class="cf">
   {% for post in include.posts %}
   <li class="fl col-20 plr-1 pb-1 d-ib rs col-30_2 col-60_1">
@@ -15,6 +16,21 @@
           <div class="ff-serif fg-go-dk">Read Time <span class="fl-r">{{ post.content | size | divided_by: 900 | append: ' min' }}</span></div>
         </div>
       </a>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endcomment %}
+
+<ul class="postlist">
+  {% for post in site.posts limit:include.limit %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <p>{{ post.excerpt }}</p>
+    <div class="metadata">
+      <time datetime="{{ post.date }}">{{ post.date | date: "%-d %b %Y" }}</time>
+      &bull;
+      Read time: {{ post.content | size | divided_by: 900 | append: ' min' }}
     </div>
   </li>
   {% endfor %}

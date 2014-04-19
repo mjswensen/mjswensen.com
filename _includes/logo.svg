@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 16 14" class="logo">
+  <polygon points="0,1 6,4 6,7 2,5 2,10 0,9" class="left-face"></polygon>
+  <polygon points="2,5 4,6 4,9 2,10" class="left-under"></polygon>
+  <polygon points="2,0 6,2 10,0 12,1 6,4 0,1" class="top"></polygon>
+  <polygon points="10,5 10,10 8,9 8,6" class="right-under"></polygon>
+  <polygon points="12,1 12,9 10,10 10,5 6,7 6,4" class="right-face"></polygon>
+</svg>

@@ -1,6 +1,6 @@
-// Font size
+// Proportion
 
-@mixin fz($n)
+@function proportion($n)
   $mult: 1
   @if $n > 1
     @for $j from 2 through $n
@@ -8,7 +8,12 @@
   @if $n < 1
     @for $j from 0 through -$n
       $mult: $mult * $base-proportion
-  font-size: $mult * 1em
+  @return $mult
+
+// Font size
+
+@mixin fz($n)
+  font-size: (proportion($n) * 1em)
 
 // Grid
 
@@ -31,8 +36,21 @@
 
 // Long shadows
 
-@function shadow($bg, $fg, $size)
+@function shadow($fg, $bg, $size)
   $value: 0 0 $fg
   @for $i from 1 through $size
     $value: #{$value}, #{$i}px #{$i}px mix($bg, $fg, percentage($i / $size))
   @return $value
+
+// Commonly used sets of styles
+
+@mixin metadata
+  @include fz(-1)
+  text-transform: uppercase
+  color: $medium
+
+@mixin entityList
+  li
+    margin: (proportion(3) * 1rem) 0
+    p
+      margin-bottom: (proportion(-2) * 1rem)

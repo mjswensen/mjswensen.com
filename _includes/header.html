@@ -1,7 +1,20 @@
+{% comment %}
 <header class="bg-gr ff-disp fz-3">
   <div class="col-px-60 mlr-a p-1">
     <a href="/" class="td">
       <h1 class="fg-wh">Matt Swensen <small class="fg-gr-lt">// Front-end Software Engineer</small></h1>
     </a>
   </div>
+</header>
+{% endcomment %}
+
+<header class="main">
+  <a href="{{ include.url }}">
+    <span class="previous">previous</span>
+    {% if include.text %}
+      <span>{{ include.text }}</span>
+    {% else %}
+      {% include logo.svg %}
+    {% endif %}
+  </a>
 </header>

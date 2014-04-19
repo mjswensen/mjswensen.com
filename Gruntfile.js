@@ -3,7 +3,8 @@ module.exports = function(grunt) {
 
     jekyll: {
       options: {
-        config: '_config.yml'
+        config: '_config.yml',
+        drafts: true
       },
       serve: {
         options: {

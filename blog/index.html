@@ -1,10 +1,11 @@
 ---
 title: Blog &bull; mjswensen.com
-layout: default
-nav: blog
+layout: thin
 ---
 
-<section class="col-px-60 mlr-a">
-  <h1 class="fz-3 ff-sans fw-b ptb-3 fg-go-dkr ta-c">All Posts</h1>
+{% include header.html url="/" %}
+
+<section>
+  <h1>All Posts</h1>
   {% include postlist.html posts=site.posts %}
 </section>

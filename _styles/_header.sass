@@ -1,0 +1,19 @@
+header.main
+  background-color: $accent
+  padding: 1rem
+  @include sans
+  a
+    &:link, &:visited
+      color: $white
+    &:hover
+      color: $light
+    &:active
+      color: $medium
+    span
+      vertical-align: middle
+      &.previous
+        @include icons
+    .logo
+      height: 2em
+      width: 2em
+      vertical-align: middle
