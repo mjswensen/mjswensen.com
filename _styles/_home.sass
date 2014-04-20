@@ -18,6 +18,8 @@
     padding: 1rem
     @include fz(4)
     @include icons
+    @media screen and (max-width: $content-width-thin)
+      @include fz(3)
     a
       position: relative
       border-radius: $corner-radius

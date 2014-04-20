@@ -8,6 +8,8 @@ section
   position: relative
   margin: 2rem 0 7rem
   padding: 1rem
+  @media screen and (max-width: $content-width-thin)
+    margin: 1rem 0
 
 h1, h2, h3
   @include sans(true)
@@ -16,17 +18,23 @@ h1, h2, h3
 h1
   @include fz(5)
   margin-bottom: (proportion(2) * 1rem)
+  @media screen and (max-width: $content-width-thin)
+    @include fz(3)
 
 h2
   @include fz(3)
   text-transform: uppercase
   margin-bottom: (proportion(2) * 1rem)
+  @media screen and (max-width: $content-width-thin)
+    @include fz(2)
   i
     color: $light
 
 h3
   @include fz(2)
   margin-bottom: 1rem
+  @media screen and (max-width: $content-width-thin)
+    @include fz(1)
 
 p
   margin-bottom: 1rem
@@ -67,6 +75,8 @@ hr
   margin: 5rem 1rem
   border: none
   border-bottom: 1px dashed $light
+  @media screen and (max-width: $content-width-thin)
+    margin: 2rem 1rem
 
 iframe
   width: 100%

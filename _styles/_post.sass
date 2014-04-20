@@ -1,33 +1,27 @@
 article
+  @media screen and (max-width: $content-width-medium)
+    padding: 1rem
   header
     margin-top: 5rem
+    @media screen and (max-width: $content-width-thin)
+      margin-top: 0
   .metadata
     text-transform: uppercase
     color: $medium
-
-// .share-on-twitter
-//   a
-//     span
-//       @include icons
-//   .tweet-text
-//     color: $light
-
-// .social
-//   text-align: center
-//   margin-bottom: 1rem
-//   a
-//     @include icons
-//     background-color: $accent
-//     color: $white
-//     border-radius: $corner-radius
-//     padding: (proportion(0) * 1em)
+    @media screen and (max-width: $content-width-thin)
+      @include fz(0)
 
 .prev-next-posts
   @include cf
   margin-bottom: 5rem
+  @media screen and (max-width: $content-width-medium)
+    padding: 1rem
+    margin-bottom: 3rem
   a
     &.previous
       float: left
+      @media screen and (max-width: $content-width-medium)
+        margin-bottom: 1rem
     &.next
       float: right
     span
