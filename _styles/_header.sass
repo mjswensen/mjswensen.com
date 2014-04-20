@@ -1,19 +1,14 @@
 header.main
   background-color: $accent
-  padding: 1rem
-  @include sans
   a
+    padding: 0.5rem 1rem
+    display: inline-block
     &:link, &:visited
-      color: $white
+      background-color: $accent
     &:hover
-      color: $light
+      background-color: mix($white, $accent, 20%)
     &:active
-      color: $medium
-    span
-      vertical-align: middle
-      &.previous
-        @include icons
+      background-color: $white
     .logo
-      height: 2em
       width: 2em
-      vertical-align: middle
+      height: 2em

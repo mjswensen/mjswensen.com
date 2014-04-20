@@ -3,10 +3,6 @@ title: "Lucidpress: Publishing for Web and Print"
 date: 2013-12-30 14:21:00
 tags: software design
 layout: post
-nav: blog
-thumbnail: /img/thumbnails/lucidpress.jpg
-background: /img/backgrounds/lucidpress.jpg
-titleClass: "fg-p-dkr bg-owh"
 excerpt: Lucidpress is a new cloud-based-yet-desktop-caliber publishing application.
 sitemap:
   lastmod: 2014-01-15 15:31:00

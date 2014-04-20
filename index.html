@@ -7,7 +7,6 @@ sitemap:
 ---
 
 <section class="home">
-  <!-- <img src="http://www.gravatar.com/avatar/70ec9ada3c51e6c0a83e19b3ba980ce4?s=480" alt="Matt Swensen Gravatar" class="gravatar"> -->
   {% include logo.svg %}
   <h1 class="name">Matt Swensen</h1>
   <p>I'm passionate about programming the Web.</p>
@@ -58,71 +57,3 @@ sitemap:
     {% endfor %}
   </ul>
 </section>
-
-<!-- <div id="scroller" class="diamond bg-p pt-8 pb-10 plr-1 ta-c ff-sans fg-wh rs ptb-2_1">
-  <div>
-    <img src="http://www.gravatar.com/avatar/70ec9ada3c51e6c0a83e19b3ba980ce4?s=480" alt="Matt Swensen Avatar" class="br-round bdc-wh bdw-3 bds col-60 col-px-15">
-  </div>
-  <div class="fz-5 fw-b">Hello.</div>
-  <p class="fz-3">I'm passionate about programming the Web.</p>
-  <p class="fz-3 mb-2">I'm a husband, father, <a href="http://mormon.org/me/3KNR" class="fg-p-ltr td">Mormon</a>, and JavaScripter/CSSer for <a href="http://www.golucid.co" class="fg-p-ltr td">Lucid Software</a>.</p>
-</div>
-<section class="col-px-60 mlr-a ptb-3">
-  <h1 class="fz-3 ff-sans fw-b pb-3 fg-go-dkr ta-c">Recent Posts</h1>
-  {% include postlist.html posts=site.posts %}
-</section> -->
-<script>
-// $(function() {
-//   var sections = $('section'),
-//     doc = $(document);
-//   sections.each(function() {
-//     var section = $(this);
-//     section.data('origY', section.offset().top);
-//   });
-//   $(window).on('scroll', function() {
-//     sections.each(function() {
-//       var section = $(this),
-//         ty = (section.data('origY') - doc.scrollTop()) * 2;
-//       $(this).css({
-//         '-webkit-transform': 'translate3d(0, ' + ty + 'px, 0)'
-//       });
-//     });
-//   });
-// });
-////////////////////////////////////////
-// $(function() {
-//   var sections = $('section'),
-//     doc = $(document),
-//     body = $('body');
-//   sections.map(function(idx, el) {
-//     $(window).on('scroll', function(e) {
-//       if (doc.scrollTop() > $(el).offset().top - 200) {
-//         body.removeClass().addClass($(el).attr('class'));
-//       }
-//     });
-//   });
-// });
-////////////////////////////////////////
-// $(function() {
-//   var threshold = $('.threshold'),
-//     imgs = threshold.find('img'),
-//     len = imgs.size(),
-//     height = threshold.height();
-//   console.debug(len);
-//   $(window).on('scroll', function() {
-//     var idx = Math.max(Math.min(Math.round((window.scrollY / height) * len-1), len-1), 0);
-//     console.debug(idx);
-//     imgs.slice(-idx).addClass('transparent');
-//     imgs.slice(0, len-idx).removeClass('transparent');
-//   });
-// });
-////////////////////////////////////////
-// $(function() {
-//   var doc = $(document),
-//     scroller = $('#scroller');
-//   $(window).on('scroll', function() {
-//     var pos = doc.scrollTop() / -3;
-//     scroller.css('background-position-y', pos + 'px');
-//   });
-// });
-</script>

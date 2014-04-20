@@ -1,22 +1,22 @@
+// General logo styles
+
 svg.logo
   polygon
-    @include transit(0.4s)
     &.left-face, &.right-under
       fill: lighten($accent, 20%)
     &.top
       fill: lighten($accent, 28%)
     &.right-face, &.left-under
       fill: $accent
-  &:active
-    polygon
-      fill: $accent
-      &.top
-        -webkit-transform: translate3d(0, -10%, 0)
-      &.left-face
-        -webkit-transform: translate3d(-5%, 0, 0)
-      &.right-face
-        -webkit-transform: translate3d(5%, 0, 0)
-      &.left-under
-        -webkit-transform: translate3d(10%, 15%, 0)
-      &.right-under
-        -webkit-transform: translate3d(-10%, 15%, 0)
+
+@mixin logoExplode
+  &.top
+    -webkit-transform: translate3d(0, -10%, 0)
+  &.left-face
+    -webkit-transform: translate3d(-5%, 0, 0)
+  &.right-face
+    -webkit-transform: translate3d(5%, 0, 0)
+  &.left-under
+    -webkit-transform: translate3d(10%, 15%, 0)
+  &.right-under
+    -webkit-transform: translate3d(-10%, 15%, 0)

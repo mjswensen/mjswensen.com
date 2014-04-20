@@ -3,9 +3,6 @@ title: CSS-only Text Gradients
 date: 2013-10-07 19:52:00
 tags: css "web design"
 layout: post
-nav: blog
-thumbnail: /img/thumbnails/css-text-gradient.jpg
-background: /img/backgrounds/css3-logo.jpg
 excerpt: The things you can do with CSS these days are amazing. I was inspired by the beautiful Jekyll logo and set out to see if I could do something similar using only CSS.
 ---
 

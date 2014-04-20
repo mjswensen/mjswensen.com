@@ -1,38 +1,7 @@
 ---
-title: Projects &bull; mjswensen.com
-layout: default
-nav: projects
+title: Projects
+layout: redirect
+externalUrl: /
 sitemap:
-  priority: 0.7
+  priority: 0
 ---
-
-<section class="col-px-60 mlr-a">
-  <h1 class="fz-3 ff-sans fw-b ptb-3 fg-go-dkr ta-c">Projects</h1>
-  <div class="cf">
-    {% for page in site.pages %}
-      {% if page.type == 'project' %}
-      <div class="fl plr-1 pb-2 col-30 rs col-60_1">
-        <div class="bg-go br-2">
-          <a href="{{ page.externalUrl }}" class="td">
-            <div class="br-t-2 p-1 bg-gr">
-              <h2 class="fg-wh fz-2 ff-sans fw-b">
-                {{ page.title }}
-                {% if page.openSource %}
-                <sup class="fz--1 plr-1-4 bg-gr-dkr br-2 fg-gr va-t">Open Source</sup>
-                {% endif %}
-              </h2>
-              <span class="fg-gr-ltr fz-1 ff-sans d">{{ page.externalUrl }}</span>
-            </div>
-          </a>
-          <div class="p-1">
-            <a href="{{ page.externalUrl }}" class="td">
-              <img src="{{ page.screenshot }}" alt="{{ page.title }}" class="d-b mw-100 br-2 mb-1">
-            </a>
-            <p class="fs-i fg-go-dk">{{ page.description }}</p>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
