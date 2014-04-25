@@ -11,6 +11,30 @@ article
     @media screen and (max-width: $content-width-thin)
       @include fz(0)
 
+.share-on-twitter
+  @include sans
+  .tweet-link
+    a
+      padding: 0.5em
+      border-radius: $corner-radius
+      &:link, &:visited
+        color: $accent
+      &:hover
+        background-color: $twitter
+        color: $white
+      span
+        @include icons
+    .tweet-link-help
+      @include fz(0)
+      color: $light
+  .tweet-preview
+    padding: 1rem
+    font-style: italic
+    @include fz(0)
+    background-color: $medium
+    color: $white
+    border-radius: $corner-radius
+
 .prev-next-posts
   @include cf
   margin-bottom: 5rem

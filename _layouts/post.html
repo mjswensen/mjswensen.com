@@ -17,6 +17,14 @@ layout: medium
   {{ content }}
 </article>
 <hr>
+<div class="share-on-twitter">
+  <p class="tweet-link">
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }}&amp;url={{ site.domain | append: page.url | cgi_escape }}&amp;via=mjswensen&amp;hashtags={{ page.tags | join: ',' }}" target="_blank"><span>twitter</span> Tweet this</a>
+    <span class="tweet-link-help">(you will be able to change it first)</span>
+  </p>
+  <p class="tweet-preview">{{ page.title }} {{ site.domain | append: page.url }} {% for tag in page.tags %}#{{ tag }} {% endfor %}via @mjswensen</p>
+</div>
+<hr>
 <nav class="prev-next-posts">
   {% if page.previous.url %}
   <a class="previous" href="{{ page.previous.url }}"><span>previous</span> {{ page.previous.title }}</a>
