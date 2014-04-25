@@ -12,7 +12,7 @@ This is the look I was going for:
 
 ![Jekyll Logo](/blog/images/jekyll-logo.png)
 
-I was excited to find on my first Google attempt [a succinct post](http://css-tricks.com/snippets/css/gradient-text/) by the awesome [Chris Coyier](http://chriscoyier.net/) and I had achieved the desired effect in minutes. I thought it would be nice for a new project I'm working on called [Scribbli](http://scribb.li/).</p>
+I was excited to find on my first Google attempt [a succinct post](http://css-tricks.com/snippets/css/gradient-text/) by the awesome [Chris Coyier](http://chriscoyier.net/) and I had achieved the desired effect in minutes. I thought it would be nice for a new project I'm working on called [Scribbli](http://scribb.li/).
 
 Here is the complete Sass code:
 
