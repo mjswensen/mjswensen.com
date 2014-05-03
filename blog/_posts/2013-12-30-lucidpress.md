@@ -5,7 +5,7 @@ tags: software design
 layout: post
 excerpt: Lucidpress is a new cloud-based-yet-desktop-caliber publishing application.
 sitemap:
-  lastmod: 2014-01-15 15:31:00
+  lastmod: 2014-05-02 21:39:00
 ---
 
 [Lucidpress](http://www.lucidpress.com) is a new cloud-based-yet-desktop-caliber publishing application. If you're a designer or involved with a small- or medium-sized business, you should probably check it out&mdash;it's free during beta. There's also an interactive [demo](http://www.lucidpress.com/demo).
@@ -30,5 +30,6 @@ Check out what others are saying about Lucidpress:
 * EducatorsTechnology.com &mdash; [Lucidpress: A Good Real-time Collaborative Tool for Teachers and Students](http://www.educatorstechnology.com/2013/10/lucidpress-good-real-time-collaborative.html)
 * CreativePro.com &mdash; [Design for Print and Digital Publishing With Lucidpress](http://www.creativepro.com/article/design-for-print-and-digital-publishing-with-lucidpress)
 * PubExec.com &mdash; [Drag-and-Drop Software Makes Publishing Accessible](http://www.pubexec.com/article/drag-and-drop-software-makes-publishing-accessible/1)
+* MakeUseOf.com &mdash; [Lucidpress: The Free Online InDesign Alternative For Your Creative Needs](http://www.makeuseof.com/tag/lucidpress-free-online-indesign-alternative-creative-needs/)
 
 Well, what are you waiting for? Go [check it out!](http://www.lucidpress.com/demo)
