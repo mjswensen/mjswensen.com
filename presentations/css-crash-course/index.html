@@ -1,0 +1,86 @@
+---
+title: CSS Crash Course
+type: presentation
+description: TODO
+date: 2014-05-08 06:32:00
+for: Lucid Software Development Teams
+at: Lucid Software
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Crash Course</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="impress">
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="3">
+      <h1>CSS Crash Course</h1>
+      <span class="subtitle">Lucid Software Development Teams, May 2014</span>
+    </div>
+    <div id="basic" class="step" data-x="1000" data-y="-750" data-z="-50" data-rotate-y="180">
+      <h2>Basic CSS</h2>
+      <p data-height="318" data-theme-id="0" data-slug-hash="nEaFi" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mjswensen/pen/nEaFi/'>Basic Selectors</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    </div>
+    <div id="advanced" class="step" data-x="0" data-y="-750" data-z="-50" data-rotate-y="180">
+      <h2>Advanced Selectors</h2>
+      <p data-height="318" data-theme-id="0" data-slug-hash="LwBlv" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mjswensen/pen/LwBlv/'>Advanced Selectors</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    </div>
+    <div id="pseudo-elements" class="step" data-x="-1000" data-y="-750" data-z="-50" data-rotate-y="180">
+      <h2>Pseudo-elements</h2>
+      <p data-height="318" data-theme-id="0" data-slug-hash="FdwsH" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mjswensen/pen/FdwsH/'>Pseudo-elements</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
+    </div>
+    <div id="media-queries" class="step" data-x="1000" data-y="0" data-z="-50" data-rotate-y="180">
+      <h2>Media Queries and Responsive Web Design</h2>
+{% highlight css %}
+@media screen and (max-width: 1024px) {
+  .my-class {
+    ...
+  }
+}
+{% endhighlight %}
+    </div>
+    <div id="transitions-and-transforms" class="step" data-x="0" data-y="0" data-z="-50" data-rotate-y="180">
+      <h2>Transitions and Transforms</h2>
+      <p data-height="318" data-theme-id="0" data-slug-hash="mahkL" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mjswensen/pen/mahkL/'>Transitions and Transforms</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    </div>
+    <div id="animations" class="step" data-x="-1000" data-y="0" data-z="-50" data-rotate-y="180">
+      <h2>Animations</h2>
+      <p data-height="318" data-theme-id="0" data-slug-hash="AkohD" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mjswensen/pen/AkohD/'>Animations</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    </div>
+    <div id="preprocessors" class="step" data-x="1000" data-y="750" data-z="-50" data-rotate-y="180">
+      <h2>Preprocessors</h2>
+      <p>Preprocessors make writing CSS even more fun than it already is. The three main ones right now are SASS, Less, and Stylus. Some of the main advantages of a CSS preprocessor are nesting, variables, and mixins/functions.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>SASS</th>
+            <th>Less</th>
+            <th>Stylus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>More robust and has features familiar to developers like <code>if</code> statements and lists</td>
+            <td>More designer-oriented; has color blending functions like <code>multiply</code></td>
+            <td>Transparent mixins for seamless CSS3 prefixing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="resources" class="step" data-x="0" data-y="750" data-z="-50" data-rotate-y="180">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="http://codepen.io" target="_blank">CodePen</a></li>
+        <li><a href="http://css-tricks.com" target="_blank">CSS Tricks</a></li>
+        <li><a href="http://caniuse.com" target="_blank">CanIUse</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">Mozilla Developer Network</a></li>
+      </ul>
+    </div>
+  </div>
+  <script async src="//codepen.io/assets/embed/ei.js"></script>
+  <script src="../js/impress-0.5.3.js"></script>
+  <script>impress().init();</script>
+</body>
+</html>

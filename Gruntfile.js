@@ -26,7 +26,8 @@ module.exports = function(grunt) {
       presentations: {
         files: {
           'presentations/javascript-and-jquery/css/styles.css': 'presentations/javascript-and-jquery/_styles/styles.sass',
-          'presentations/diagramming-with-lucidchart/css/styles.css': 'presentations/diagramming-with-lucidchart/_styles/styles.sass'
+          'presentations/diagramming-with-lucidchart/css/styles.css': 'presentations/diagramming-with-lucidchart/_styles/styles.sass',
+          'presentations/css-crash-course/css/styles.css': 'presentations/css-crash-course/_styles/styles.sass'
         }
       }
     },
@@ -39,7 +40,8 @@ module.exports = function(grunt) {
       presentationStyles: {
         files: [
           'presentations/javascript-and-jquery/_styles/*sass',
-          'presentations/diagramming-with-lucidchart/_styles/*sass'
+          'presentations/diagramming-with-lucidchart/_styles/*sass',
+          'presentations/css-crash-course/_styles/*sass'
         ],
         tasks: 'sass:presentations'
       },
