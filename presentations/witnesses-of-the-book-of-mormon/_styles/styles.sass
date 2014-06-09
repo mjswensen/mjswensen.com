@@ -1,0 +1,80 @@
+@import "../../../_styles/_reset"
+@import "../../../_styles/_icons"
+@import "_animations"
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600")
+
+// Variables
+
+$accent: hsl(204, 48%, 56%)
+$main: hsl(0, 0%, 27%)
+$medium: hsl(0, 0%, 67%)
+$light: hsl(0, 0%, 80%)
+
+$background-center: hsl(0, 0%, 100%)
+$background-outer: hsl(0, 0%, 87%)
+
+$base-unit: 30px
+
+// Base styles
+
+html, body
+  font-size: $base-unit
+  line-height: 1.33
+  font-family: "Open Sans", sans-serif
+  color: $main
+  font-weight: 300
+  background: -webkit-radial-gradient($background-center, $background-outer)
+  background: radial-gradient($background-center, $background-outer)
+
+h1
+  color: $accent
+  font-size: 2em
+  font-weight: 600
+
+h1, p, blockquote
+  margin-bottom: 1em
+
+a
+  text-decoration: none
+  -webkit-transition: all 200ms ease
+  transition: all 200ms ease
+  &:link, &:visited
+    color: $accent
+  &:hover
+    color: lighten($accent, 10%)
+  &:active
+    color: darken($accent, 10%)
+
+blockquote
+  font-style: italic
+
+video
+  max-width: 100%
+
+// General styles
+
+.step
+  width: ($base-unit * 32)
+  text-align: center
+  padding: 3rem
+
+.arrow-down
+  @include icons
+  color: $light
+  display: inline-block
+  -webkit-animation: bounce 1s infinite alternate
+  animation: bounce 1s infinite alternate
+
+.quote
+  text-align: left
+  color: $medium
+
+.attribution
+  color: $medium
+  text-align: right
+
+// Slide-specific styles
+
+#fin
+  display: none
