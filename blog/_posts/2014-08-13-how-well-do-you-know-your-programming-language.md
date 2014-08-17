@@ -3,6 +3,7 @@ title: How Well Do You Know Your Programming Language?
 date: 2014-08-15 23:48:17
 tags: software
 layout: post
+excerpt: I was listening to a podcast about Scala by Scott Hanselman and Dianne Marsh where programming languages were briefly compared to foreign languages. The idea stuck in my mind for the rest of the drive to work.
 ---
 
 I was listening to [a podcast about Scala](http://hanselminutes.com/394/demystifying-scala-with-netflixs-dianne-marsh) by [Scott Hanselman](http://www.hanselman.com/) and [Dianne Marsh](http://diannemarsh.com/) where programming languages were briefly compared to foreign languages. The idea stuck in my mind for the rest of the drive to work. I came up with the following scale that can be used to help self-assess one's proficiency with a programming language.
@@ -13,7 +14,6 @@ I was listening to [a podcast about Scala](http://hanselminutes.com/394/demystif
       <th>Level</th>
       <th>Programming Language</th>
       <th>Foreign Language</th>
-      <!-- TODO: idea: add a "next steps" or "advice" column. Or maybe just a paragraph about it. -->
     </tr>
   </thead>
   <tbody>
