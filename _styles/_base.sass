@@ -90,3 +90,20 @@ blockquote
   padding-left: 1rem
   @include sans
   font-style: italic
+
+table
+  $table-border-style-heading: 5px solid $light
+  $table-border-style-main: 1px solid $light
+  width: 100%
+  margin-bottom: 1rem
+  th
+    @include sans
+    text-align: left
+    font-size: (1em * proportion(2))
+    border-top: $table-border-style-heading
+    border-bottom: $table-border-style-heading
+  td
+    border-bottom: $table-border-style-main
+    font-size: (1em * proportion(0))
+  th, td
+    padding: (1rem * proportion(-2))
