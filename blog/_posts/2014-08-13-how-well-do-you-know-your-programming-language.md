@@ -4,6 +4,8 @@ date: 2014-08-15 23:48:17
 tags: software
 layout: post
 excerpt: I was listening to a podcast about Scala by Scott Hanselman and Dianne Marsh where programming languages were briefly compared to foreign languages. The idea stuck in my mind for the rest of the drive to work.
+sitemap:
+  lastmod: 2014-08-18 08:11:26
 ---
 
 I was listening to [a podcast about Scala](http://hanselminutes.com/394/demystifying-scala-with-netflixs-dianne-marsh) by [Scott Hanselman](http://www.hanselman.com/) and [Dianne Marsh](http://diannemarsh.com/) where programming languages were briefly compared to foreign languages. The idea stuck in my mind for the rest of the drive to work. I came up with the following scale that can be used to help self-assess one's proficiency with a programming language.
@@ -19,12 +21,12 @@ I was listening to [a podcast about Scala](http://hanselminutes.com/394/demystif
   <tbody>
     <tr>
       <td>1 (inexperienced)</td>
-      <td>You don't recognize the syntax either because the language utilizes an unfamiliar paradigm or is from a different family of languages than what you are used to. The file extension might provide a hint—depending on how good your memory is.</td>
+      <td>You don't recognize the syntax, either because the language utilizes an unfamiliar paradigm or is from a different family of languages than what you are used to. The file extension might provide a hint—depending on how good your memory is.</td>
       <td>You might be able to guess which continent this language is used in, but you wouldn't feel comfortable taking a stab at identifying the language with anyone listening.</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>You know what language it is, but the syntax feels quite uncomfortable (if not unintelligible at all).</td>
+      <td>You know what language it is, but the syntax feels quite uncomfortable (or even unintelligible).</td>
       <td>You are able to identify the language based on the look of the alphabet, but phonetics, grammar, and general structure are still very foreign.</td>
     </tr>
     <tr>
@@ -34,17 +36,17 @@ I was listening to [a podcast about Scala](http://hanselminutes.com/394/demystif
     </tr>
     <tr>
       <td>4</td>
-      <td>You can make things work, but it's the quality of code that pains others (and future you) to read. You don't yet love to write code in the new language.</td>
+      <td>You can make things work, but the level of code quality is such that it pains others (and future you) to read. You don't yet enjoy writing code in the new language.</td>
       <td>Though still fragmented, you have a basic knowledge of the structure of the language and can form a basic sentence on the fly, albeit grammatically unsound.</td>
     </tr>
     <tr>
       <td>5</td>
-      <td>You write code at an acceptable level. It's no longer completely written in the paradigms of languages you are more comfortable with, but mostly so.</td>
-      <td>Though you are still mostly speaking your native language using the foreign words, you are able to carry on basic conversation.</td>
+      <td>You write code at an acceptable level. It's no longer completely written in the paradigms of languages you are more comfortable with. You are starting to feel comfortable in the new language.</td>
+      <td>Though you are still simply speaking your native language using foreign words some of the time, you are able to carry on a conversation.</td>
     </tr>
     <tr>
       <td>6</td>
-      <td>You are adopting more and more of the idioms of the new language. You are adopting the best practices and avoiding the pitfalls and code smells of the new ecosystem that is becoming more familiar to you by the day. You creatively solve problems in the way that only the new language would.</td>
+      <td>You are adopting more and more of the idioms of the new language. You are embracing the best practices and avoiding the pitfalls and code smells of the new ecosystem that is becoming more familiar to you by the day. You creatively solve problems in the way that only the new language would.</td>
       <td>You are starting to think and dream in your new language. You wish there were ways to express certain ideas in your native language that are only achievable in the foreign language.</td>
     </tr>
     <tr>
