@@ -1,9 +1,13 @@
+// base16 Tomorrow (Light) for pygments
+
 code
   @include mono
+  background-color: $code-background
+  border-radius: $corner-radius
 
 div.highlight
   background-color: $code-background
-  color: #E6E1DC
+  color: hsl(210, 6%, 12%)
   margin-bottom: 1rem
   padding: 1rem
   border-radius: $corner-radius
@@ -11,147 +15,133 @@ div.highlight
   pre
     overflow-x: scroll
     .hll
-      background-color: #ffffcc
+      background-color: hsl(0, 0%, 88%)
     .c
-      color: #BC9458
-      font-style: italic
+      color: hsl(120, 2%, 71%)
     .err
-      color: #E6E1DC
-    .g
-      color: #E6E1DC
+      color: hsl(0, 50%, 60%)
     .k
-      color: #CC7833
+      color: hsl(286, 22%, 66%)
     .l
-      color: #E6E1DC
+      color: hsl(25, 66%, 62%)
     .n
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .o
-      color: #E6E1DC
-    .x
-      color: #E6E1DC
+      color: hsl(172, 29%, 64%)
     .p
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .cm
-      color: #BC9458
-      font-style: italic
+      color: hsl(120, 2%, 71%)
     .cp
-      color: #CC7833
+      color: hsl(120, 2%, 71%)
     .c1
-      color: #BC9458
-      font-style: italic
+      color: hsl(120, 2%, 71%)
     .cs
-      color: #BC9458
-      font-style: italic
+      color: hsl(120, 2%, 71%)
     .gd
-      color: #E6E1DC
-      background-color: #660000
+      color: hsl(0, 50%, 60%)
     .ge
-      color: #E6E1DC
-    .gr
-      color: #FFFFFF
-      background-color: #990000
+      font-style: italic
     .gh
-      color: #FFFFFF
+      color: hsl(210, 6%, 12%)
+      font-weight: bold
     .gi
-      color: #E6E1DC
-      background-color: #144212
-    .go
-      color: #E6E1DC
+      color: hsl(66, 39%, 57%)
     .gp
-      color: #E6E1DC
+      color: hsl(120, 2%, 71%)
+      font-weight: bold
     .gs
-      color: #E6E1DC
+      font-weight: bold
     .gu
-      color: #FFFFFF
-    .gt
-      color: #E6E1DC
+      color: hsl(172, 29%, 64%)
+      font-weight: bold
     .kc
-      color: #CC7833
+      color: hsl(286, 22%, 66%)
     .kd
-      color: #CC7833
+      color: hsl(286, 22%, 66%)
     .kn
-      color: #CC7833
+      color: hsl(172, 29%, 64%)
     .kp
-      color: #CC7833
+      color: hsl(286, 22%, 66%)
     .kr
-      color: #CC7833
+      color: hsl(286, 22%, 66%)
     .kt
-      color: #DA4939
+      color: hsl(40, 81%, 70%)
     .ld
-      color: #E6E1DC
+      color: hsl(66, 39%, 57%)
     .m
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
     .s
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .na
-      color: #FFC66D
+      color: hsl(208, 32%, 63%)
     .nb
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .nc
-      color: #E6E1DC
+      color: hsl(40, 81%, 70%)
     .no
-      color: #6D9CBE
+      color: hsl(0, 50%, 60%)
     .nd
-      color: #E6E1DC
+      color: hsl(172, 29%, 64%)
     .ni
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .ne
-      color: #E6E1DC
+      color: hsl(0, 50%, 60%)
     .nf
-      color: #FFC66D
+      color: hsl(208, 32%, 63%)
     .nl
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .nn
-      color: #E6E1DC
+      color: hsl(40, 81%, 70%)
     .nx
-      color: #E6E1DC
+      color: hsl(208, 32%, 63%)
     .py
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .nt
-      color: #CC7833
+      color: hsl(172, 29%, 64%)
     .nv
-      color: #D0D0FF
+      color: hsl(0, 50%, 60%)
     .ow
-      color: #E6E1DC
+      color: hsl(172, 29%, 64%)
     .w
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .mf
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
     .mh
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
     .mi
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
     .mo
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
     .sb
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .sc
-      color: #A5C261
+      color: hsl(210, 6%, 12%)
     .sd
-      color: #A5C261
+      color: hsl(120, 2%, 71%)
     .s2
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .se
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
     .sh
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .si
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
     .sx
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .sr
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .s1
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .ss
-      color: #A5C261
+      color: hsl(66, 39%, 57%)
     .bp
-      color: #E6E1DC
+      color: hsl(210, 6%, 12%)
     .vc
-      color: #D0D0FF
+      color: hsl(0, 50%, 60%)
     .vg
-      color: #D0D0FF
+      color: hsl(0, 50%, 60%)
     .vi
-      color: #D0D0FF
+      color: hsl(0, 50%, 60%)
     .il
-      color: #A5C261
+      color: hsl(25, 66%, 62%)
