@@ -11,12 +11,17 @@ svg.logo
 
 @mixin logoExplode
   &.top
-    -webkit-transform: translate3d(0, -10%, 0) // TODO: standardize
+    -webkit-transform: translate3d(0, -10%, 0)
+    transform: translate3d(0, -10%, 0)
   &.left-face
     -webkit-transform: translate3d(-5%, 0, 0)
+    transform: translate3d(-5%, 0, 0)
   &.right-face
     -webkit-transform: translate3d(5%, 0, 0)
+    transform: translate3d(5%, 0, 0)
   &.left-under
     -webkit-transform: translate3d(10%, 15%, 0)
+    transform: translate3d(10%, 15%, 0)
   &.right-under
     -webkit-transform: translate3d(-10%, 15%, 0)
+    transform: translate3d(-10%, 15%, 0)

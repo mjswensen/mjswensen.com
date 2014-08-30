@@ -50,7 +50,13 @@ sitemap:
       {% if page.type == 'presentation' %}
       <li>
         <a href="{{ page.url }}">"{{ page.title }}"</a>
-        <p>{{ page.description }}</p>
+        <p>
+          {{ page.description }}
+          {% if page.videoUrl %}
+          &bull;
+          <a href="{{ page.videoUrl }}">Video</a>
+          {% endif %}
+        </p>
         <div class="metadata"><time timestamp="{{ page.date }}">{{ page.date | date_to_string }}</time>, {{ page.for }}, {{ page.at }}</div>
       </li>
       {% endif %}

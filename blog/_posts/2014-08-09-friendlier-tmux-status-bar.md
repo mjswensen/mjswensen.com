@@ -18,6 +18,4 @@ I added a few config options to my `~/.tmux.conf` file to make the status bar ea
 
 This is what the status bar looks like now:
 
-![tmux status bar after configurations](/blog/images/tmux-status-bar-after.png)
-
-(Terminal theme is the beautiful [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) by [Chris Kempson](http://chriskempson.com).)
+![tmux status bar after configurations](/blog/images/tmux-status-bar-after.png) (Terminal theme is the beautiful [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) by [Chris Kempson](http://chriskempson.com).)

@@ -10,6 +10,16 @@
       $mult: $mult * $base-proportion
   @return $mult
 
+// Vertical rhythm
+
+@function rhythm($inRems: true)
+  $rhythm: proportion(3)
+  @if $inRems
+    @return (1rem * $rhythm)
+  @else
+    @return $rhythm
+
+
 // Font size
 
 @mixin fz($n)
