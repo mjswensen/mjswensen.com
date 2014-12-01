@@ -1,0 +1,243 @@
+---
+---
+
+@import "_reset"
+@import "_icons"
+
+///////////////
+// Variables //
+///////////////
+
+// Colors
+
+$accent: hsl(5, 52%, 56%)
+$accent-lighter: lighten($accent, 25%)
+$accent-light: lighten($accent, 5%)
+$accent-dark: darken($accent, 15%)
+$accent-darker: darken($accent, 25%)
+
+$almost-opaque-accent: transparentize($accent, 0.1)
+
+$gray: hsl(205, 2%, 50%)
+$gray-lighter: lighten($gray, 40%)
+$gray-light: lighten($gray, 20%)
+$gray-dark: darken($gray, 20%)
+$gray-darker: darken($gray, 40%)
+
+$almost-opaque-white: hsla(0, 100%, 100%, 0.95)
+
+// Sizes
+
+$base-unit: 32px
+$proportion: 0.75
+
+// Other
+
+$transition-duration: 0.15s
+
+////////////
+// Mixins //
+////////////
+
+@mixin sans($bold: false)
+  font-family: "Exo 2", sans-serif
+  @if $bold
+    font-weight: 400
+  @else
+    font-weight: 100
+
+@mixin serif($bold: false, $italic: false)
+  font-family: "Merriweather", serif
+  @if $bold
+    font-weight: 700
+  @else
+    font-weight: 400
+  @endif
+  @if $italic
+    font-style: italic
+  @else
+    font-style: normal
+
+@mixin transition
+  -webkit-transition: all $transition-duration ease
+  transition: all $transition-duration ease
+
+////////////////
+// Animations //
+////////////////
+
+@-webkit-keyframes wiggle
+  0%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+  40%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+  45%
+    -webkit-transform: rotateY(5deg) translateZ(1em)
+  50%
+    -webkit-transform: rotateY(-5deg) translateZ(1em)
+  55%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+  100%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+
+@keyframes wiggle
+  0%
+    transform: rotateY(0deg) translateZ(0em)
+  40%
+    transform: rotateY(0deg) translateZ(0em)
+  45%
+    transform: rotateY(5deg) translateZ(1em)
+  50%
+    transform: rotateY(-5deg) translateZ(1em)
+  55%
+    transform: rotateY(0deg) translateZ(0em)
+  100%
+    transform: rotateY(0deg) translateZ(0em)
+
+@-webkit-keyframes shake
+  0%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+  60%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+  62%
+    -webkit-transform: rotateY(-5deg) translateZ(1em)
+  64%
+    -webkit-transform: rotateY(5deg) translateZ(1em)
+  66%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+  100%
+    -webkit-transform: rotateY(0deg) translateZ(0em)
+
+@keyframes shake
+  0%
+    transform: rotateY(0deg) translateZ(0em)
+  60%
+    transform: rotateY(0deg) translateZ(0em)
+  62%
+    transform: rotateY(-5deg) translateZ(1em)
+  64%
+    transform: rotateY(5deg) translateZ(1em)
+  66%
+    transform: rotateY(0deg) translateZ(0em)
+  100%
+    transform: rotateY(0deg) translateZ(0em)
+
+////////////
+// Global //
+////////////
+
+body
+  @include serif
+  font-size: $base-unit
+  line-height: (1 / $proportion)
+  color: $gray-darker
+
+.fallback-message
+  display: none
+
+.step
+  width: ($base-unit * 30)
+  text-align: center
+  &.with-background
+    background-color: $almost-opaque-white
+    padding: 5em
+  &.no-backface
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+p:not(:last-child)
+  margin-bottom: 1em
+img
+  max-width: 100%
+
+a
+  text-decoration: none
+  @include transition
+  font-weight: 400
+  &, &:link, &:visited
+    color: $accent
+  &:hover
+    color: $accent-light
+  &:active
+    color: $accent-dark
+
+.button
+  @include sans(true)
+  padding: 0.25em 0.5em
+  border-radius: 0.2em
+  position: relative
+  &, &:link, &:visited
+    color: white
+    background-color: $accent
+    box-shadow: 0 0.2em 0 $accent-dark
+  &:hover
+    background-color: $accent-light
+  &:active
+    background-color: $accent-dark
+    box-shadow: none
+    top: 0.2em
+
+.link-text
+  display: block
+  color: $gray
+  font-size: 0.5em
+
+i
+  @include icons
+  opacity: 0.5
+
+h2
+  font-size: (1em / $proportion)
+  @include sans(true)
+  margin-bottom: 1em
+
+// Slide specific
+
+#title
+  @include sans(true)
+  text-align: center
+  font-size: 2em
+  .title
+    color: $accent
+    -webkit-animation: wiggle 10s infinite
+    animation: wiggle 10s infinite
+  .subtitle
+    color: $gray
+    font-size: ($proportion * 1em)
+    display: block
+    -webkit-animation: shake 10s infinite
+    animation: shake 10s infinite
+
+#usage-map
+  width: 100vw
+  img
+    width: 100%
+    display: block
+
+#agenda
+  h2
+    color: $accent
+
+#conceptual-data-model
+  .download
+    font-size: ($proportion * $proportion * 1em)
+    margin-top: (1em / $proportion / $proportion)
+
+#questions
+  font-size: 2em
+
+#careers-at-lucid-software
+  background-color: $accent
+  padding: 5em 5em 6em
+  border-radius: 2px
+  color: white
+  a
+    &, &:link, &:visited
+      color: $accent-lighter
+    &:hover
+      color: white
+    &:active
+      color: $accent-light
+
+#fin
+  display: none
