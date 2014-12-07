@@ -4,6 +4,8 @@ date: 2013-10-07 19:52:00
 tags: css web-design
 layout: post
 excerpt: The things you can do with CSS these days are amazing. I was inspired by the beautiful Jekyll logo and set out to see if I could do something similar using only CSS.
+sitemap:
+  lastmod: 2014-12-06 21:51:30
 ---
 
 The things you can do with CSS these days are amazing. I was inspired by the beautiful [Jekyll](http://jekyllrb.com/) logo and set out to see if I could do something similar using only CSS.
@@ -12,7 +14,7 @@ This is the look I was going for:
 
 ![Jekyll Logo](/blog/images/jekyll-logo.png)
 
-I was excited to find on my first Google attempt [a succinct post](http://css-tricks.com/snippets/css/gradient-text/) by the awesome [Chris Coyier](http://chriscoyier.net/) and I had achieved the desired effect in minutes. I thought it would be nice for a new project I'm working on called [Scribbli](http://scribb.li/).
+I was excited to find on my first Google attempt [a succinct post](http://css-tricks.com/snippets/css/gradient-text/) by the awesome [Chris Coyier](http://chriscoyier.net/) and I had achieved the desired effect in minutes. I thought it would be nice for a new project I'm working on called [Scribbli](https://github.com/mjswensen/scribbli).
 
 Here is the complete Sass code:
 
