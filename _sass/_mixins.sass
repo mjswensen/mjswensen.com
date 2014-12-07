@@ -13,7 +13,7 @@
 // Vertical rhythm
 
 @function rhythm($inRems: true)
-  $rhythm: proportion(3)
+  $rhythm: proportion(2)
   @if $inRems
     @return (1rem * $rhythm)
   @else
@@ -55,9 +55,10 @@
 // Commonly used sets of styles
 
 @mixin metadata
-  @include fz(-1)
+  @include fz(0)
   text-transform: uppercase
   color: $medium
+  @include sans
 
 @mixin entityList
   li
