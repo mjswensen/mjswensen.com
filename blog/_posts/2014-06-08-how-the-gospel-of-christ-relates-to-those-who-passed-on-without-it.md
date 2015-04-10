@@ -2,9 +2,11 @@
 title: How the Gospel of Christ Relates to Those Who Passed On Without It
 date: 2014-06-08 11:50:00
 layout: post
+sitemap:
+  lastmod: 2015-04-10 07:28:13
 ---
 
-I had the opportunity to give a talk on this topic to an LDS congregation in Orem, UT. The following is the transcript.
+I had the opportunity to give a talk on this topic to an [LDS](https://www.lds.org/?lang=eng) congregation in Orem, UT. The following is the transcript.
 
 ---
 
