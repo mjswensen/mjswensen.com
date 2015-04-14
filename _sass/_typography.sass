@@ -1,20 +1,20 @@
 // Fonts
 
-@import url("http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Ubuntu:300,700|Merriweather:300,300italic,900")
+@import url("http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Lato:300,700|Gentium+Book+Basic:400,400italic,700")
 
 @mixin sans($bold: false)
-  font-family: "Ubuntu", sans-serif
+  font-family: "Lato", sans-serif
   @if $bold
     font-weight: 700
   @else
     font-weight: 300
 
 @mixin serif($bold: false, $italic: false)
-  font-family: "Merriweather", serif
+  font-family: "Gentium Book Basic", serif
   @if $bold
-    font-weight: 900
+    font-weight: 700
   @else
-    font-weight: 300
+    font-weight: 400
   @if $italic
     font-style: italic
   @else
