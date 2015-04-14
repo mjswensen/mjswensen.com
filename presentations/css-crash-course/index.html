@@ -12,6 +12,9 @@ at: Lucid Software
   <title>CSS Crash Course</title>
   <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width">
+  {% if site.safe %}
+  {% include analytics.html %}
+  {% endif %}
 </head>
 <body>
   <div id="impress">

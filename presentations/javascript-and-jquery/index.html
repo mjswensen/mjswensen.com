@@ -13,6 +13,9 @@ videoUrl: //www.youtube.com/embed/ejEcNiit-4A
   <title>JavaScript &amp; jQuery</title>
   <link rel="stylesheet" href="css/startup.css">
   <link rel="stylesheet" href="css/styles.css">
+  {% if site.safe %}
+  {% include analytics.html %}
+  {% endif %}
 </head>
 <body>
   <div class="fallback-message">
@@ -507,8 +510,5 @@ $.ajax({
   <script src="../impress-0.5.3.js"></script>
   <script>impress().init();</script>
   <script src="/css/fonts/icons/liga.js"></script>
-  {% if site.safe %}
-  {% include analytics.html %}
-  {% endif %}
 </body>
 </html>
