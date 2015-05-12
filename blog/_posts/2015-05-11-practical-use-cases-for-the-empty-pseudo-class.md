@@ -21,11 +21,9 @@ You'll notice that the tags without text are wider than they would be if they we
 }
 {% endhighlight %}
 
-I made the labels `contenteditable` and [put it up on CodePen](http://codepen.io/mjswensen/pen/jPWrNe) so that it can be played with.
+Simple, yet adds a bit of robustness to the design. I made the labels `contenteditable` and [put it up on CodePen](http://codepen.io/mjswensen/pen/jPWrNe) so that it can be played with:
 
-![Editable tags example](/blog/images/css-empty-contenteditable.gif)
-
-Simple, yet adds a bit of robustness to the design.
+[![Editable tags example](/blog/images/css-empty-contenteditable.gif)](http://codepen.io/mjswensen/pen/jPWrNe)
 
 ## Analytics dashboard UI
 
