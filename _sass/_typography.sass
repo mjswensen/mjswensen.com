@@ -1,32 +1,11 @@
 // Fonts
 
-@import url("http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Lato:300,700|Gentium+Book+Basic:400,400italic,700")
+@import url("http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Lato:300,700,300italic,700italic")
 
-@mixin sans($bold: false)
-  font-family: "Lato", sans-serif
-  @if $bold
-    font-weight: 700
-  @else
-    font-weight: 300
+$sans-font-family: "Lato", sans-serif
+$sans-font-weight-normal: 300
+$sans-font-weight-bold: 700
 
-@mixin serif($bold: false, $italic: false)
-  font-family: "Gentium Book Basic", serif
-  @if $bold
-    font-weight: 700
-  @else
-    font-weight: 400
-  @if $italic
-    font-style: italic
-  @else
-    font-style: normal
-
-@mixin mono($bold: false, $italic: false)
-  font-family: "Ubuntu Mono", monospace
-  @if $bold
-    font-weight: 700
-  @else
-    font-weight: 400
-  @if $italic
-    font-style: italic
-  @else
-    font-style: normal
+$mono-font-family: "Ubuntu Mono", monospace
+$mono-font-weight-normal: 400
+$mono-font-weight-bold: 700

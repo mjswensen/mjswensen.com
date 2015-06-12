@@ -1,7 +1,8 @@
 // base16 Tomorrow (Light) for pygments
 
 code
-  @include mono
+  font-family: $mono-font-family
+  font-weight: $mono-font-weight-normal
   background-color: $code-background
   border-radius: $corner-radius
 
@@ -11,7 +12,7 @@ div.highlight
   margin-bottom: rhythm()
   padding: 1rem
   border-radius: $corner-radius
-  @include mono
+  font-family: $mono-font-family
   pre
     overflow-x: scroll
     .hll

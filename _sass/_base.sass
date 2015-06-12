@@ -1,7 +1,8 @@
 html, body
   font-size: $base-unit
   line-height: rhythm(false)
-  @include serif
+  font-family: $sans-font-family
+  font-weight: $sans-font-weight-normal
   color: $dark
 
 section
@@ -11,8 +12,7 @@ section
     margin: 1rem 0
 
 h1, h2, h3
-  @include sans(true)
-  color: $accent
+  font-weight: $sans-font-weight-bold
 
 h1
   @include fz(5)
@@ -29,6 +29,8 @@ h2
     @include fz(2)
   i
     color: $light
+  code
+    text-transform: none
 
 h3
   @include fz(2)
@@ -52,7 +54,7 @@ a
     color: lighten($accent, 15%)
 
 strong
-  @include serif(true)
+  font-weight: $sans-font-weight-bold
 
 em
   font-style: italic
@@ -96,7 +98,7 @@ iframe
 
 blockquote
   padding-left: 1rem
-  @include serif(false, true)
+  font-style: italic
   border-left: 3px solid $lighter
   position: relative
   overflow: hidden
@@ -107,10 +109,11 @@ blockquote
     color: $lighter
     content: "“"
     position: absolute
+    top: -2rem
+    left: -1.75rem
     font-size: 14em
     z-index: -1
     line-height: 1
-    left: -2rem
 
 table
   $table-border-style-heading: 5px solid $light
@@ -120,7 +123,6 @@ table
   &:last-child
     margin-bottom: 0
   th
-    @include sans
     text-align: left
     font-size: (1em * proportion(2))
     border-top: $table-border-style-heading
