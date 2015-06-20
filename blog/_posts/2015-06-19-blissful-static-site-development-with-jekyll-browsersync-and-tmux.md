@@ -1,5 +1,6 @@
 ---
 title: Blissful Static Site Development with Jekyll, BrowserSync, and tmux
+date: 2015-06-19 23:44:34
 tags: software productivity
 layout: post
 excerpt: I was recently listening to the Shop Talk Show podcast where Chris Coyier shared a submission from a listener that outlined the development and deployment setup for her personal website. I thought I would add to the conversation by sharing my setup for developing mjswensen.com.
