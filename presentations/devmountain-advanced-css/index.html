@@ -1,0 +1,347 @@
+---
+title: Advanced CSS
+type: presentation
+description: Advanced CSS class session for DevMountain code school.
+date: 2015-07-09 09:30:00
+for: DevMountain
+at: DevMountain Campus (Provo, UT)
+---
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Advanced CSS • DevMountain</title>
+
+    <meta name="description" content="CSS topics for the DevMountain code school.">
+    <meta name="author" content="Matt Swensen">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/theme/custom.css" id="theme">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/lib/css/zenburn.css">
+
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/print/pdf.css' : '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Presentation-specific styles -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/css/box-model.css">
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Advanced CSS</h1>
+          <p>DevMountain • 9 July 2015</p>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li>HTML5 elements</li>
+            <li>The box model</li>
+            <li>Pseudo-classes</li>
+            <li>Pseudo-elements</li>
+            <li>Media queries</li>
+            <li>Intro to layout (floats)</li>
+          </ul>
+          <p class="fragment">We'll also talk about some tools available to us for developing and debugging CSS.</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>HTML5 Elements</h2>
+          </section>
+          <section>
+            <p>With HTML5, we have a lot of new elements to choose from.</p>
+            <p class="fragment">Our goal is to mark up our content <em>semantically</em>.</p>
+          </section>
+          <section>
+            <p>Not semantic:</p>
+            <pre><code class="html" data-trim>
+              &lt;div&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div&gt;&NewLine;  &lt;div&gt;&NewLine;    &lt;div&gt;Some heading&lt;/div&gt;&NewLine;  &lt;/div&gt;&NewLine;  &lt;div&gt;&NewLine;    &lt;div&gt;Some content&lt;/div&gt;&NewLine;  &lt;/div&gt;&NewLine;  &lt;div&gt;Some more content&lt;/div&gt;&NewLine;  &lt;div&gt;Some tangential content&lt;/div&gt;&NewLine;&lt;/div&gt;
+            </code></pre>
+          </section>
+          <section>
+            <p>Semantic:</p>
+            <pre><code class="html" data-trim>
+              &lt;nav&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;&lt;/nav&gt;&NewLine;&lt;article&gt;&NewLine;  &lt;header&gt;&NewLine;    &lt;h1&gt;Some heading&lt;/h1&gt;&NewLine;  &lt;/header&gt;&NewLine;  &lt;section&gt;&NewLine;    &lt;p&gt;Some content&lt;/p&gt;&NewLine;  &lt;/section&gt;&NewLine;  &lt;footer&gt;Some more content&lt;/footer&gt;&NewLine;  &lt;aside&gt;Some tangential content&lt;/aside&gt;&NewLine;&lt;/article&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Make a general, semantic HTML structure for <a href="http://daringfireball.net/">daringfireball.net</a>.</p>
+            <p><a href="http://html5doctor.com/element-index/">html5doctor.com/element-index/</a> has a nice reference of available tags.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>The Box Model</h2>
+          </section>
+          <section>
+            <p>The responsibility of a web browser's rendering engine is to determine the size, properties, and position of rectangular boxes (elements). [<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model">MDN article on the box model.</a>]</p>
+          </section>
+          <section>
+            <p>The box model outlines how these rectangles are sized and positioned.</p>
+          </section>
+          <section>
+            <p>For a given element, like <code>&lt;p&gt;My paragraph&lt;/p&gt;</code>:</p>
+            <div class="box-model">
+              <div class="margin">
+                <div class="border">
+                  <div class="padding">
+                    <div class="content">My paragraph</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <aside class="notes">
+              All of these things contribute to the size and positioning of an element.
+            </aside>
+          </section>
+          <section>
+            <p>Ocassionaly the box model can be tricky when you are trying to give a value to the <code>width</code> property.</p>
+          </section>
+          <section>
+            <p>Use the <code>box-sizing</code> property to get around that.</p>
+            <div data-height="257" data-theme-id="12278" data-slug-hash="MYVwzR" data-default-tab="html" data-user="mjswensen" class="codepen">
+              <p>See the Pen <a href='http://codepen.io/mjswensen/pen/MYVwzR/'>CSS Power-ups - Examples - box-sizing</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <ol>
+              <li>Create a parent element with a width of 200 pixels.</li>
+              <li>Give it some padding and a border.</li>
+              <li>Create a child element, also with some padding and a border.</li>
+              <li>Set the width of the child to 100% (if it isn't already), and use <code>box-sizing: border-box;</code> to make sure it fits right.</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Pseudo-classes</h2>
+          </section>
+          <section>
+            <p>Pseudo-classes give you more control over which elements your CSS selectors are targeting.</p>
+            <p class="fragment">Use them in tandem with type and class selectors.</p>
+          </section>
+          <section>
+            <p>For example, to emphasize the first item in a list:</p>
+            <pre><code class="html" data-trim>
+              &lt;ol&gt;&NewLine;  &lt;li&gt;Trucks&lt;/li&gt;&NewLine;  &lt;li&gt;Cars&lt;/li&gt;&NewLine;  &lt;li&gt;Motorcycles&lt;/li&gt;&NewLine;&lt;/ol&gt;
+            </code></pre>
+            <pre><code class="css" data-trim>
+              li:first-child {&NewLine;  font-weight: bold;&NewLine;}
+            </code></pre>
+            <aside class="notes">
+              The nice thing about this approach (as opposed to adding a class to the first list item) is that we can re-order the elements in the list (in the HTML) and the first one will always be the one that is bolded.
+            </aside>
+          </section>
+          <section>
+            <table class="small">
+              <thead>
+                <tr>
+                  <th>CSS</th>
+                  <th>English</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>:first-child</code></td>
+                  <td>Elements that are the first child of their parent</td>
+                </tr>
+                <tr>
+                  <td><code>:last-child</code></td>
+                  <td>Elements that are the last child of their parent</td>
+                </tr>
+                <tr>
+                  <td><code>:nth-child(3)</code></td>
+                  <td>Elements that are the third child of their parent</td>
+                </tr>
+                <tr>
+                  <td><code>:hover</code></td>
+                  <td>Elements that are currently under the mouse cursor</td>
+                </tr>
+                <tr>
+                  <td><code>:active</code></td>
+                  <td>Elements that are currently being clicked</td>
+                </tr>
+                <tr>
+                  <td><code>:empty</code></td>
+                  <td>Elements that have no children or text</td>
+                </tr>
+                <tr>
+                  <td><code>:not(.summary)</code></td>
+                  <td>Elements that do not have the <code>summary</code> class</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Fun selector game at <a href="http://flukeout.github.io/">flukeout.github.io</a>!</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Pseudo-elements</h2>
+          </section>
+          <section>
+            <p>Pseudo-elements allow you to adjust your markup from your stylesheet.</p>
+          </section>
+          <section>
+            <p>For example, you can insert extra elements into the document:</p>
+            <div data-height="257" data-theme-id="12278" data-slug-hash="BNxNPM" data-default-tab="html" data-user="mjswensen" class="codepen">
+              <p>See the Pen <a href='http://codepen.io/mjswensen/pen/BNxNPM/'>Pseudo-elements example</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+          </section>
+          <section>
+            <p>These are the types of pseudo-elements:</p>
+            <ul class="plain">
+              <li><code>::before</code></li>
+              <li><code>::after</code></li>
+              <li><code>::first-letter</code></li>
+              <li><code>::first-line</code></li>
+              <li><code>::selection</code></li>
+              <li><code>::backdrop</code></li>
+            </ul>
+            <aside class="notes">
+              ::before and ::after are somewhat misleading. The CSS Power-ups homepage has an example of ::selection. ::backdrop might be used for modal overlays in the future.
+            </aside>
+          </section>
+          <section>
+            <p>Pseudo-elements should only be used for style/design, not for adding important content.</p>
+            <img src="{{ site.baseurl }}/presentations/devmountain-advanced-css/img/uncle-ben.gif" alt="With great power comes great responsibility.">
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Given this HTML:</p>
+            <pre><code class="html" data-trim>
+              &lt;h3&gt;Table of Contents&lt;/h3&gt;
+            </code></pre>
+            <p>Reproduce this screenshot:</p>
+            <img src="{{ site.baseurl }}/presentations/devmountain-advanced-css/img/pseudo-elements.png" alt="Website title with styled pseudo-elements.">
+          </section>
+          <section>
+            <p>Here's one way to do it:</p>
+            <pre><code class="css" data-trim>
+              h3::before, h3::after {&NewLine;  content: &quot;//&quot;;&NewLine;  padding: 0 1ex;&NewLine;  color: hsla(0, 0%, 0%, 0.5);&NewLine;}
+            </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Media Queries</h2>
+          </section>
+          <section>
+            <p>Media queries let us define CSS rules that will only apply when certain conditions are met.</p>
+            <p class="fragment">A common use case is detecting screen width, changing layout as appropriate.</p>
+            <aside class="notes">
+              Recall the definition a CSS rule: a selector accompanied by a set of properties and values.
+            </aside>
+          </section>
+          <section>
+            <p>See <a href="http://codepen.io/mjswensen/pen/OPEwZQ">this simple media query example.</a></p>
+          </section>
+          <section>
+            <p>There are other useful media queries:</p>
+            <pre class="fragment"><code class="css" data-trim>
+              @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {&NewLine;  /* Detecting screen resolution to provide high-DPI&NewLine;   * images for retina screens or high-quality prints.&NewLine;   */&NewLine;}
+            </code></pre>
+            <pre class="fragment"><code class="css" data-trim>
+              @media print {&NewLine;  /* Print-specific CSS for doing things like removing&NewLine;   * background colors, making content full-width, etc.&NewLine;   */&NewLine;}&NewLine;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Create an element that has a blue background color when the window is larger than 500 pixels wide, and a red background color otherwise.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Intro to Layout (Floats)</h2>
+          </section>
+          <section>
+            <p>There are lots of options for creating layouts in CSS.</p>
+            <p class="fragment">Today we'll go over a specific approach to creating simple website layouts: arranging columns with the <code>float</code> property.</p>
+          </section>
+          <section>
+            <p>In a nutshell, <code>float</code> removes an element from the normal flow and "floats" it to the side.</p>
+          </section>
+          <section>
+            <p>Let's try a live demo.</p>
+            <p>(<a href="http://codepen.io/mjswensen/pen/yNjYyJ">Finished example.</a>)</p>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Practice creating a simple two-column layout (like the one we just built together) using <code>float</code>.</p>
+          </section>
+          <section>
+            <h3>In the future...</h3>
+            <p>If you're needing more complex layouts, consider looking into <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</a> or <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid</a>. These new CSS modules are extremely flexible and powerful, but don't yet enjoy the same browser support as legacy techniques.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Thank you!</h2>
+            <p>I'd love to connect with you:</p>
+            <ul>
+              <li>Twitter: <a href="https://twitter.com/mjswensen">@mjswensen</a></li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/mjswensen">/in/mjswensen</a></li>
+              <li>Online: <a href="http://mjswensen.com">mjswensen.com</a></li>
+            </ul>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/js/reveal.js"></script>
+
+    <script>
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide',
+
+        dependencies: [
+          { src: '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+  </body>
+</html>
