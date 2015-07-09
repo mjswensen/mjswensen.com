@@ -45,6 +45,10 @@ at: DevMountain Campus (Provo, UT)
     <!-- Presentation-specific styles -->
     <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/css/box-model.css">
 
+    {% if site.safe %}
+    {% include analytics.html %}
+    {% endif %}
+
   </head>
   <body>
     <div class="reveal">
