@@ -19,13 +19,13 @@ sitemap:
 </section>
 <hr>
 <section class="recent-posts">
-  <h2><i>blog</i> Recent Posts</h2>
+  <h2>Posts</h2>
   {% include postlist.html limit=3 %}
   <a class="all-posts" href="/blog/">All posts <i>next</i></a>
 </section>
 <hr>
 <section class="projects">
-  <h2><i>projects</i> Projects</h2>
+  <h2>Projects</h2>
   <ul>
     {% for page in site.pages %}
       {% if page.type == 'project' %}
@@ -44,7 +44,7 @@ sitemap:
 </section>
 <hr>
 <section class="presentations">
-  <h2><i>presentations</i> Presentations</h2>
+  <h2>Presentations</h2>
   <ul>
     {% for page in site.pages %}
       {% if page.type == 'presentation' %}
