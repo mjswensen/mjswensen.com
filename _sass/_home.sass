@@ -48,24 +48,10 @@
           box-shadow: shadow(mix($linkedin, $white, 20%), $white, 75)
           text-shadow: shadow(mix($linkedin, $black, 80%), $linkedin, 75)
 
-.recent-posts
-  @include entityList
-  .all-posts
-    float: right
-
-.projects
-  @include entityList
-  sup
-    @include fz(-1)
-    text-transform: uppercase
-    padding: 0.25em 0.35em
-    background-color: $light
-    color: $white
-    border-radius: $corner-radius
-    vertical-align: top
+.all-posts,
+.all-projects,
+.all-presentations
+  float: right
 
 .presentations
-  @include entityList
   margin-bottom: (rhythm() * 3)
-  .metadata
-    @include metadata

@@ -18,7 +18,7 @@ sitemap:
   </nav>
 </section>
 <hr>
-<section class="recent-posts">
+<section class="posts">
   <h2>Posts</h2>
   {% include postlist.html limit=3 %}
   <a class="all-posts" href="/blog/">All posts <i>next</i></a>
@@ -26,38 +26,12 @@ sitemap:
 <hr>
 <section class="projects">
   <h2>Projects</h2>
-  <ul>
-    {% assign projects = site.pages | where: 'type', 'project' | sort: 'priority' | reverse %}
-    {% for project in projects %}
-      <li>
-        <a href="{{ project.externalUrl }}">
-          {{ project.title }}
-          {% if project.openSource %}
-          <sup>Open Source</sup>
-          {% endif %}
-        </a>
-        <p>{{ project.description }}</p>
-      </li>
-    {% endfor %}
-  </ul>
+  {% include projectlist.html limit=3 %}
+  <a class="all-projects" href="/projects/">All projects <i>next</i></a>
 </section>
 <hr>
 <section class="presentations">
   <h2>Presentations</h2>
-  <ul>
-    {% assign presentations = site.pages | where: 'type', 'presentation' | sort: 'date' | reverse %}
-    {% for presentation in presentations %}
-      <li>
-        <a href="{{ presentation.url }}">"{{ presentation.title }}"</a>
-        <p>
-          {{ presentation.description }}
-          {% if presentation.videoUrl %}
-          &bull;
-          <a href="{{ presentation.videoUrl }}">Video</a>
-          {% endif %}
-        </p>
-        <div class="metadata"><time timestamp="{{ presentation.date }}">{{ presentation.date | date_to_string }}</time>, {{ presentation.for }}, {{ presentation.at }} ({{ presentation.location }})</div>
-      </li>
-    {% endfor %}
-  </ul>
+  {% include presentationlist.html limit=3 %}
+  <a class="all-presentations" href="/presentations/">All presentations <i>next</i></a>
 </section>

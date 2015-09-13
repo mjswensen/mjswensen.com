@@ -1,0 +1,14 @@
+<ul class="project-list">
+  {% assign projects = site.pages | where: 'type', 'project' | sort: 'priority' | reverse %}
+  {% for project in projects limit: include.limit %}
+    <li>
+      <a href="{{ project.externalUrl }}">
+        {{ project.title }}
+        {% if project.openSource %}
+        <sup>Open Source</sup>
+        {% endif %}
+      </a>
+      <p>{{ project.description }}</p>
+    </li>
+  {% endfor %}
+</ul>
