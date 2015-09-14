@@ -25,11 +25,15 @@ In [this question](http://stackoverflow.com/questions/29753912/figcaption-not-al
 
 **Key takeaway:** A lack of understanding for [the CSS box model](http://mjswensen.com/css-power-ups/the-box-model-and-positioning/#/) is a common source of error for layout and alignment concerns. Also, the use of the `box-sizing` property can greatly simplify the reasoning behind an element's computed size.
 
+![The CSS box model]({{ site.baseurl }}/blog/images/key-takeaways-box-model.jpg)
+
 ## The `display` And `visibility` Properties
 
 In [this question](http://stackoverflow.com/questions/30766049/css3-animations-being-triggered-on-display-change/30766624), the original poster discovered that changing an element's `display` property from `none` to `block` re-triggered any animations for that element. The solution was to toggle between the `hidden` and `visible` values of the `visibility` property instead.
 
 **Key takeaway:** Animations do not play nicely with `display: none;` in general. The use of `visibility: hidden;` can sometimes help with this, but special care must be taken as there are differences in behavior and styling between these two property-value pairs. (e.g., `visibility: hidden;` maintains an element's space in the flow of the web page while `display: none;` removes it from the flow. For this reason, in certain circumstances there will be [performance gains from favoring `visibility`](http://csstriggers.com/#display).)
+
+![visibility: hidden vs. display: none]({{ site.baseurl }}/blog/images/key-takeaways-visibility-display.jpg)
 
 ## SVG
 
