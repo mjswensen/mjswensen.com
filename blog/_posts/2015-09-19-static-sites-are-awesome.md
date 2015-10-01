@@ -15,7 +15,7 @@ For certain types of content, static websites excel over content management syst
 
 In today's world where site performance is of utmost importance, the most compelling reason to move toward static websites is the performance benefit. Content management systems make use of a database, and reading from the database to serve page content incurs a performance cost. Static sites make no use of a database—all the content is baked right into the final HTML code. The performance win comes from the fact that modern webservers (like Apache or nginx) are heavily optimized to serve such static files extremely quickly.
 
-In a nutshell, with a CMS, the burden of constructing a web page is place on the server, at the time the page is requested. With a static site, that burden is moved to when the site is assembled before it is deployed. Many programmers will agree that, from a user experience perspective, it is better to have as much processing occur as possible at compile time rather than at run time. This is the approach that static site generators take.
+In a nutshell, with a CMS, the burden of constructing a web page is placed on the server, at the time the page is requested. With a static site, that burden is moved to when the site is assembled before it is deployed. Many programmers will agree that, from a user experience perspective, it is better to have as much processing occur as possible at compile time rather than at run time. This is the approach that static site generators take.
 
 ![Content management systems performance vs. static site generators performance]({{ site.baseurl }}/blog/images/cms-vs-static-website-generator.png)
 
