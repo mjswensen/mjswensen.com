@@ -42,6 +42,9 @@ location: Provo, UT
     <!--[if lt IE 9]>
     <script src="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <!-- Presentation-specific styles -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/css/box-model.css">
   </head>
 
   <body>
@@ -140,6 +143,170 @@ location: Provo, UT
               Note: Any questions about HTML at this point before we move on to CSS?
             </script>
           </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            <script type="text/template">
+              ## CSS
+
+              CSS stands for **Cascading Style Sheets.**
+
+              Note: We won't go too into the "cascading" part today—that's for the advanced session later.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              CSS is what gives a webpage its "look and feel."
+
+              Note: Have the students open up their solutions to the last try it to see that it's unstyled.
+            </script>
+          </section>
+          <section>
+            <p>Anatomy of CSS code:</p>
+            <pre><code data-trim>
+p {
+  color: red;
+}
+            </code></pre>
+            <aside class="notes">Point out the selector, the declaration block made up of property-value pairs, and the rule.</aside>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              Let's first talk about CSS properties. There are hundreds of them!
+
+              * `width`
+              * `height`
+              * `background-color`
+              * `background-image`
+              * `color`
+              * `font-size`
+              * `text-align`
+              * `line-height`
+
+              Note: These are some of the common ones, but if you can dream it, you can do it with CSS (almost).
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              Now let's look at how we apply CSS properties to specific HTML elements. This is achieved through *selectors*.
+            </script>
+          </section>
+          <section>
+            <p>Given the following HTML:</p>
+            <pre><code class="html" data-trim>
+              &lt;p&gt;Introductory paragraph.&lt;/p&gt;&NewLine;&lt;p&gt;Main content.&lt;/p&gt;&NewLine;&lt;p&gt;Concluding paragraph.&lt;/p&gt;
+            </code></pre>
+            <p>And the following CSS:</p>
+            <pre><code class="css" data-trim>
+p {
+  font-size: 16px;
+}
+            </code></pre>
+            <p>All three paragraphs will have a font size of 16 pixels.</p>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              But what if we wanted to make our first paragraph have larger text?
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              The selector we just saw was a simple *type selector*.
+
+              * `p` will select all paragraphs (`<p>`)
+              * `a` will select all links (`<a>`)
+              * `li` will select all list items (`<li>`)
+              * etc.
+
+              Note: the CSS type selector and corresponds directly to the tag.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              There are other types of selectors that are more specific and more powerful.
+
+              Today we'll talk about **class** selectors and **ID** selectors.
+            </script>
+          </section>
+          <section>
+            <p>HTML:</p>
+            <pre><code class="html" data-trim>
+              &lt;p class=&quot;intro&quot;&gt;Introductory paragraph.&lt;/p&gt;&NewLine;&lt;p&gt;Main content.&lt;/p&gt;&NewLine;&lt;p&gt;Concluding paragraph.&lt;/p&gt;
+            </code></pre>
+            <p>CSS:</p>
+            <pre><code class="css" data-trim>
+p {
+  font-size: 16px;
+}
+
+.intro {
+  font-size: 20px;
+}
+            </code></pre>
+            <aside class="notes">Point out the syntax.</aside>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              Selector conflicts are resolved via *specificity.*
+
+              Note: Specificity will be covered in greater detail another day, but for now: IDs are most specific, then classes, then types of the selector types we looked at today. Only *conflicting* properties of given rules are resolved this way. Any CSS questions at this point?
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ### Try it!
+
+              1. Create a file called `style.css` in the same place as your `news.html` file.
+              2. Add the following to the `<head>` element: `<link rel="stylesheet" href="styles.css">`
+              3. Start adding some style to your news page by adding CSS rules to `style.css`
+
+              [(CSS reference)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+              Note: Instruct them to refresh the page in the browser when they make changes to their source files.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              Just one last note...
+            </script>
+          </section>
+          <section>
+            <p>An element's size is calculated by using the *box model*.</p>
+            <p>For a given element, like <code>&lt;p&gt;My paragraph&lt;/p&gt;</code>:</p>
+            <div class="box-model">
+              <div class="margin">
+                <div class="border">
+                  <div class="padding">
+                    <div class="content">My paragraph</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>Try messing around with the <code>width</code>, <code>padding</code>, <code>border</code>, and <code>margin</code> properties for elements in your news articles.</p>
+            <aside class="notes">
+              All of these things contribute to the size and positioning of an element.
+            </aside>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              Also, try out the `float` property to push elements around.
+
+              Note: There are lots of approaches to creating layouts with CSS, which will be covered later. One approach uses `float: left` (or `right`) and `clear` to move elements around.
+            </script>
+          </section>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Thank you!
+
+            I'd love to connect with you:
+
+            * Twitter: [@mjswensen](https://twitter.com/mjswensen)
+            * LinkedIn: [/in/mjswensen](https://www.linkedin.com/in/mjswensen)
+            * Online: [mjswensen.com](http://mjswensen.com)
+          </script>
         </section>
 
       </div>
