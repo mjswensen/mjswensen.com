@@ -1,0 +1,173 @@
+---
+title: HTML/CSS Fundamentals
+type: presentation
+description: Introductory class for DevMountain code school.
+date: 2015-10-13 09:30:00
+for: DevMountain
+at: DevMountain Campus
+location: Provo, UT
+---
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>HTML/CSS Fundamentals • DevMountain</title>
+
+    <meta name="description" content="Introductory class for DevMountain code school.">
+    <meta name="author" content="Matt Swensen">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/css/reveal.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/css/theme/custom.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/css/print/pdf.css' : '{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section data-markdown>
+          <script type="text/template">
+            # HTML/CSS Fundamentals
+
+            DevMountain • 13 October 2015
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Agenda
+
+            1. What is HTML?
+            2. Intro to HTML elements
+            3. What is CSS?
+            4. CSS basics
+          </script>
+        </section>
+
+        <section>
+          <section data-markdown>
+            <script type="text/template">
+              ## HTML
+
+              HTML stands for **Hypertext Markup Language.**
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ...what?
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ![Sample resume for visual parsing]({{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/img/resume.png)
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              HTML allows web browsers and search engines to understand the structure of a document.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              HTML, therefore, provides the basic structure of the *content* of our web page.
+            </script>
+          </section>
+          <section>
+            <p>Here's some example HTML:</p>
+            <pre><code class="html" data-trim>
+              &lt;article&gt;&NewLine;  &lt;header&gt;&NewLine;    &lt;h1&gt;Are Fats Unhealthy? The Battle Over Dietary Guidelines&lt;/h1&gt;&NewLine;  &lt;/header&gt;&NewLine;  &lt;p&gt;People are passionate about food.&lt;/p&gt;&NewLine;&lt;/article&gt;
+            </code></pre>
+            <aside class="notes">Point out the structure and syntax of HTML here. Just a few more points to make before we try it out ourselves.</aside>
+          </section>
+          <section>
+            <p>With HTML5, we have a lot of elements to choose from.</p>
+            <p class="fragment">Our goal is to mark up our content <em>semantically</em>.</p>
+          </section>
+          <section>
+            <p>Not semantic:</p>
+            <pre><code class="html" data-trim>
+              &lt;div&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div&gt;&NewLine;  &lt;div&gt;&NewLine;    &lt;div&gt;Some heading&lt;/div&gt;&NewLine;  &lt;/div&gt;&NewLine;  &lt;div&gt;&NewLine;    &lt;div&gt;Some content&lt;/div&gt;&NewLine;  &lt;/div&gt;&NewLine;  &lt;div&gt;Some more content&lt;/div&gt;&NewLine;  &lt;div&gt;Some tangential content&lt;/div&gt;&NewLine;&lt;/div&gt;
+            </code></pre>
+          </section>
+          <section>
+            <p>Semantic:</p>
+            <pre><code class="html" data-trim>
+              &lt;nav&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;&lt;/nav&gt;&NewLine;&lt;article&gt;&NewLine;  &lt;header&gt;&NewLine;    &lt;h1&gt;Some heading&lt;/h1&gt;&NewLine;  &lt;/header&gt;&NewLine;  &lt;section&gt;&NewLine;    &lt;p&gt;Some content&lt;/p&gt;&NewLine;  &lt;/section&gt;&NewLine;  &lt;footer&gt;Some more content&lt;/footer&gt;&NewLine;  &lt;aside&gt;Some tangential content&lt;/aside&gt;&NewLine;&lt;/article&gt;
+            </code></pre>
+          </section>
+          <section>
+            <p>Finally, here is an example basic structure of a complete HTML document:</p>
+            <pre><code class="html" data-trim>
+              &lt;!DOCTYPE html&gt;&NewLine;&lt;html&gt;&NewLine;  &lt;head&gt;&NewLine;    &lt;title&gt;Page title...&lt;/title&gt;&NewLine;    &lt;!-- The head is for document metadata. --&gt;&NewLine;  &lt;/head&gt;&NewLine;  &lt;body&gt;&NewLine;    &lt;!-- The body is where you put your HTML. --&gt;&NewLine;  &lt;/body&gt;&NewLine;&lt;/html&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Try it!</h3>
+            <p>Using the following structure as a template:</p>
+            <pre><code class="html" data-trim>
+              &lt;!DOCTYPE html&gt;&NewLine;&lt;html&gt;&NewLine;  &lt;head&gt;&NewLine;    &lt;title&gt;Page title...&lt;/title&gt;&NewLine;    &lt;!-- The head is for document metadata. --&gt;&NewLine;  &lt;/head&gt;&NewLine;  &lt;body&gt;&NewLine;    &lt;!-- The body is where you put your HTML. --&gt;&NewLine;  &lt;/body&gt;&NewLine;&lt;/html&gt;
+            </code></pre>
+            <p>Create a news article document called <code>news.html</code> using at least the following elements:</p>
+            <p><code>&lt;p&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code></p>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              There are [tons of HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+
+              Note: Any questions about HTML at this point before we move on to CSS?
+            </script>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/lib/js/head.min.js"></script>
+    <script src="{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/js/reveal.js"></script>
+
+    <script>
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide',
+
+        dependencies: [
+          { src: '{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '{{ site.baseurl }}/presentations/devmountain-html-css-fundamentals/lib/reveal.js-3.1.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
