@@ -1,0 +1,143 @@
+---
+title: "Armchair Visual Design for Engineers: A Picture is Worth a Thousand Lines of Code"
+type: presentation
+description: Introduction to the basics of visual design, from a software engineer's perspective.
+date: 2015-10-22 11:00:00
+for: Lucid Software Recruiting
+at: BYU Campus
+location: Provo, UT
+
+colors:
+  orange: "#f78d1e"
+  blueSteel: "#212c35"
+  berry: "#c87aa6"
+---
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Armchair Visual Design for Engineering • BYU Recruiting</title>
+
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Matt Swensen">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/css/reveal.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/css/theme/armchair-visual-design.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/css/print/pdf.css' : '{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Presentation-specific styles -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/armchair-visual-design/css/armchair-visual-design.css">
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section data-markdown data-background="{{ page.colors.orange }}" class="inverse">
+          <script type="text/template">
+            # Armchair Visual Design for Engineers
+
+            A Picture is Worth a Thousand Lines of Code
+          </script>
+        </section>
+
+        <section data-background="{{ page.colors.blueSteel }}">
+          <section data-markdown>
+            <script type="text/template">
+              > We are in this era of design now, where design is not only celebrated and seen as a competitive advantage...
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              > ...but is also an era in which designers are increasingly getting more responsibility, authority, and power inside of organizations.
+
+              —Jeffrey Veen
+
+              Note: Share brief background with Lucid and tell about unique opportunities I've had due to being design-minded.
+            </script>
+          </section>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Agenda
+
+            * TODO...
+
+            Note: We are going to power through tons of practical, actionable techniques for being design-minded in your approach. They will be ideas to think about, or questions to ask yourself when it seems like something just isn’t quite right in your design.
+          </script>
+        </section>
+
+        <section>
+          <section data-markdown data-background="{{ page.colors.berry }}">
+            <script type="text/template">
+              ## Composition / Layout
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ### Balance
+
+              Achieving balance is important for a design to feel natural.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ![Balance]({{ site.baseurl }}/presentations/armchair-visual-design/img/balance.jpg)
+            </script>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/lib/js/head.min.js"></script>
+    <script src="{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/js/reveal.js"></script>
+
+    <script>
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide',
+
+        dependencies: [
+          { src: '{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '{{ site.baseurl }}/presentations/armchair-visual-design/lib/reveal.js-3.1.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

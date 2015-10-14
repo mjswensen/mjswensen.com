@@ -1,0 +1,46 @@
+/**
+ * Custom theme for BYU recruiting presentation, "Armchair Visual Design for Engineers"
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url("http://fonts.googleapis.com/css?family=Lato:300,900,300italic,900italic");
+// TODO: change up the fonts.
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #212c35;
+$headingColor: #212c35;
+
+$mainFontSize: 38px;
+$mainFont: "Lato", sans-serif;
+$headingFont: "Lato", sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #f78d1e;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.37em;
+$heading2Size: 1.777em;
+$heading3Size: 1.333em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
