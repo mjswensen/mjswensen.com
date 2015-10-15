@@ -11,6 +11,7 @@ colors:
   orange: "#f78d1e"
   blueSteel: "#212c35"
   berry: "#c87aa6"
+  watermelon: "#ff6c6c"
 ---
 
 <!doctype html>
@@ -56,7 +57,7 @@ colors:
     <div class="reveal">
       <div class="slides">
 
-        <section data-markdown data-background="{{ page.colors.orange }}" class="inverse">
+        <section data-markdown data-background="{{ page.colors.orange }}" data-state="no-controls" class="inverse">
           <script type="text/template">
             # Armchair Visual Design for Engineers
 
@@ -93,7 +94,7 @@ colors:
         </section>
 
         <section>
-          <section data-markdown data-background="{{ page.colors.berry }}">
+          <section data-markdown data-background="{{ page.colors.berry }}" data-state="no-controls">
             <script type="text/template">
               ## Composition / Layout
             </script>
@@ -108,6 +109,60 @@ colors:
           <section data-markdown>
             <script type="text/template">
               ![Balance]({{ site.baseurl }}/presentations/armchair-visual-design/img/balance.jpg)
+            </script>
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown data-background="{{ page.colors.watermelon }}" data-state="no-controls">
+            <script type="text/template">
+              ## Typography
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ### Pairing fonts
+
+              If you need more than one font for your design, choose fonts that are dissimilar.
+
+              ![Font pairing]({{ site.baseurl }}/presentations/armchair-visual-design/img/font-pairing.jpg)
+
+              Note: See how the example on the right is stronger. The fonts are different but have a similar tone and fall in similar places along the spectrum of playful vs. serious.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              There are online resources that can help you choose fonts that go well together, like [fontpair.co](http://fontpair.co/).
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ### Establishing hierarchy
+
+              Use typography to help establish order and hierarchy to the content of your design.
+
+              ![Type hierarchy]({{ site.baseurl }}/presentations/armchair-visual-design/img/type-hierarchy.jpg)
+
+              Note: See how the example on the right more clearly communicates order using size, weight, and color.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ### Serif vs. sans-serif typefaces
+
+              Serifs can help guide the eye.
+
+              ![Serifs]({{ site.baseurl }}/presentations/armchair-visual-design/img/serifs.jpg)
+
+              Note: The serifs along the basline of the text can help reduce eye fatigue when reading long passages of text. Consider using a serif font for your body copy.
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ### Font resources online
+
+              * [google.com/fonts](https://www.google.com/fonts)
+              * [fontsquirrel.com](http://www.fontsquirrel.com/)
             </script>
           </section>
         </section>
