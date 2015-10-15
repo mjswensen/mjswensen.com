@@ -9,7 +9,7 @@
 
 
 // Include theme-specific fonts
-@import url("http://fonts.googleapis.com/css?family=Lato:300,900,300italic,900italic");
+@import url("http://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic");
 // TODO: change up the fonts.
 
 // Override theme settings (see ../template/settings.scss)
@@ -23,11 +23,11 @@ $mainFont: "Lato", sans-serif;
 $headingFont: "Lato", sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: none;
-$headingFontWeight: 600;
+$headingTextTransform: uppercase;
+$headingFontWeight: 700;
 $linkColor: #f78d1e;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.37em;
 $heading2Size: 1.777em;

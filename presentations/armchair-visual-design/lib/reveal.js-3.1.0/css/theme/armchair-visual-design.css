@@ -1,7 +1,7 @@
 /**
  * Custom theme for BYU recruiting presentation, "Armchair Visual Design for Engineers"
  */
-@import url("http://fonts.googleapis.com/css?family=Lato:300,900,300italic,900italic");
+@import url("http://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic");
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
@@ -40,10 +40,10 @@ body {
   margin: 0 0 20px 0;
   color: #212c35;
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: none;
+  text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
 

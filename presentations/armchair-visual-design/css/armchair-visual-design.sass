@@ -1,12 +1,35 @@
 ---
 ---
 
-.inverse
-  &, h1, h2, h3, p
-    color: white
+// Title slide
+
+.title
+  .title-container
+    position: relative
+    top: 40px
+    span
+      color: white
+      display: block
+      text-transform: uppercase
+      font-weight: 700
+      &.subtitle
+        opacity: 0.9
+        font-size: 0.75em
+        margin-bottom: 1em
+    .logo
+      opacity: 0.2
+      // reveal.js resets
+      max-width: 80px
+      background: none
+      box-shadow: none
+      margin: 0
+
+// Overriding reveal.js
 
 .reveal .controls
   transition: opacity 500ms ease
+
+// Slide states
 
 .no-controls
   .reveal
