@@ -265,6 +265,7 @@ body {
 	margin: 15px 0px;
 	background: rgba(255,255,255,0.12);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	&.no-shadow { box-shadow: none; }
 }
 
 	.reveal a img {
@@ -276,8 +277,8 @@ body {
 	.reveal a:hover img {
 		background: rgba(255,255,255,0.2);
 		border-color: $linkColor;
-
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+		&.no-shadow { box-shadow: none; }
 	}
 
 
