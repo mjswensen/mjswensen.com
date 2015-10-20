@@ -24,10 +24,14 @@
       box-shadow: none
       margin: 0
 
-// Overriding reveal.js
+// Overriding/augmenting reveal.js
 
-.reveal .controls
-  transition: opacity 500ms ease
+.reveal
+  .controls
+    transition: opacity 500ms ease
+  .color-wheel-small
+    max-width: 200px
+    margin-top: -100px
 
 // Slide states
 

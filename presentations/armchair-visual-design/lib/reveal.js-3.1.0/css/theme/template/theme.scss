@@ -266,7 +266,10 @@ body {
 	margin: 15px 0px;
 	background: rgba(255,255,255,0.12);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	&.no-shadow { box-shadow: none; }
+	&.no-shadow {
+		background: none;
+		box-shadow: none;
+	}
 }
 
 	.reveal a img {
