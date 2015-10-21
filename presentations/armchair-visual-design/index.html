@@ -52,6 +52,11 @@ colors:
 
     <!-- Presentation-specific styles -->
     <link rel="stylesheet" href="{{ site.baseurl }}/presentations/armchair-visual-design/css/armchair-visual-design.css">
+
+    {% if site.safe %}
+    {% include analytics.html %}
+    {% endif %}
+
   </head>
 
   <body>
