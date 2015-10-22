@@ -44,14 +44,6 @@
   -webkit-transition: all $duration
   transition: all $duration
 
-// Long shadows
-
-@function shadow($fg, $bg, $size)
-  $value: 0 0 $fg
-  @for $i from 1 through $size
-    $value: #{$value}, #{$i}px #{$i}px mix($bg, $fg, percentage($i / $size))
-  @return $value
-
 // Commonly used sets of styles
 
 @mixin metadata

@@ -2,9 +2,9 @@
   text-align: center
   @include entityList
   .logo
-    max-width: (proportion(0) * 100%)
+    max-width: (proportion(-2) * 100%)
     max-height: 100% // https://bugs.webkit.org/show_bug.cgi?id=82489
-    margin: 1rem 0 2rem
+    margin: 1rem 0
     polygon
       @include transit(0.4s)
     &:active
@@ -13,41 +13,6 @@
         @include logoExplode
   .name
     @include fz(4)
-  .social
-    padding: 1rem
-    @include fz(4)
-    @include icons
-    @media screen and (max-width: $content-width-thin)
-      @include fz(3)
-    a
-      position: relative
-      border-radius: $corner-radius
-      padding: 0.25em 0.5em
-      overflow: hidden
-      display: inline-block
-      &:hover
-        top: ($active-top * -1)
-        color: $white
-      &:active
-        top: $active-top
-        text-shadow: none !important
-        box-shadow: none !important
-      &.twitter
-        &:hover
-          background-color: $twitter
-          box-shadow: shadow(mix($twitter, $white, 20%), $white, 75)
-          text-shadow: shadow(mix($twitter, $black, 80%), $twitter, 75)
-      &.github
-        &:hover
-          background-color: $github
-          box-shadow: shadow(mix($github, $white, 20%), $white, 75)
-          text-shadow: shadow(mix($github, $black, 80%), $github, 75)
-      &.linkedin
-        &:hover
-          background-color: $linkedin
-          box-shadow: shadow(mix($linkedin, $white, 20%), $white, 75)
-          text-shadow: shadow(mix($linkedin, $black, 80%), $linkedin, 75)
-
 .all-posts,
 .all-projects,
 .all-presentations
