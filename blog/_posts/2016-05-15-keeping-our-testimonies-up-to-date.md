@@ -3,6 +3,12 @@ title: Keeping Our Testimonies Up-to-date
 date: 2016-05-15 09:25
 layout: post
 excerpt: We are constantly changing, growing, and learning as we progress through life. Because of this, our testimonies need to be growing at a proportional pace.
+sitemap:
+  lastmod: 2016-05-16 07:36:59
+---
+
+I had the opportunity to give a talk on this topic to an [LDS](https://www.lds.org/) congregation in South Jordan, UT. The following is the transcript. The original topic title was "Finding Peace Through Jesus Christ by Strengthening Your Testimony Throughout Your Entire Life".
+
 ---
 
 Good morning brothers and sisters, I’m Brother Swensen. Today I will be talking about testimony. But I won’t be talking about it in the way we normally do. Often we think of a testimony as a belief or assurance of a particular point of doctrine or principle. And usually we think of these testimonies as knowledge gained by some specific experience in our lives, that can then be added to our collection of experience to be recalled later when we need it. Today, however, I am trying to shift my own thinking of what a testimony is—and I invite you to do the same—by thinking about testimony in the context of the passage of time; so rather than thinking of our testimonies as pieces of knowledge gained at a particular point in time, instead thinking of them as a living foundation that changes and adapts over time.
