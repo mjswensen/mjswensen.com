@@ -8,7 +8,7 @@ sitemap:
   lastmod: 2015-05-16 20:51:28
 ---
 
-At work, the engineering team uses [tmux](http://tmux.sourceforge.net) to manage the several instances of the services we run to develop the Lucid suite locally. It is a phenomenal terminal management system and the best part is that it is highly configurable. If you enjoy working in the command-line and haven't checked it out yet, you need to!
+At work, the engineering team uses [tmux](https://tmux.github.io/) to manage the several instances of the services we run to develop the Lucid suite locally. It is a phenomenal terminal management system and the best part is that it is highly configurable. If you enjoy working in the command-line and haven't checked it out yet, you need to!
 
 This is what the default status bar looks like with a few windows open:
 

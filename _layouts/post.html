@@ -19,7 +19,7 @@ layout: medium
 <hr>
 <div class="share-on-twitter">
   <p class="tweet-link">
-    <a href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }}&amp;url={{ site.domain | append: page.url | cgi_escape }}&amp;via=mjswensen&amp;hashtags={{ page.tags | join: ',' }}" target="_blank"><span>twitter</span> Tweet this</a>
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }}&amp;url={{ site.domain | append: page.url | cgi_escape }}&amp;via=mjswensen&amp;hashtags={{ page.tags | join: ',' }}" target="_blank">Tweet this</a>
     <span class="tweet-link-help">(you will be able to change it first)</span>
   </p>
   <p class="tweet-preview">{{ page.title }} {{ site.domain | append: page.url }} {% for tag in page.tags %}#{{ tag }} {% endfor %}via @mjswensen</p>
@@ -31,9 +31,9 @@ layout: medium
 {% endif %}
 <nav class="prev-next-posts">
   {% if page.previous.url %}
-  <a class="previous" href="{{ page.previous.url }}"><span>previous</span> {{ page.previous.title }}</a>
+  <a class="previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title }}</a>
   {% endif %}
   {% if page.next.url %}
-  <a class="next" href="{{ page.next.url }}">{{ page.next.title }} <span>next</span></a>
+  <a class="next" href="{{ page.next.url }}">Next: {{ page.next.title }}</a>
   {% endif %}
 </nav>

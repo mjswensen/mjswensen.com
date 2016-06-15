@@ -24,10 +24,10 @@ location: Provo, UT
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/theme/custom.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/reveal.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/css/devmountain-advanced-css-theme.css" id="theme">
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/lib/css/zenburn.min.css">
 
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
 
@@ -35,16 +35,16 @@ location: Provo, UT
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/print/pdf.css' : '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/print/pdf.min.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/print/paper.min.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
     <!--[if lt IE 9]>
-    <script src="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/js/html5shiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/lib/js/html5shiv.min.js"></script>
     <![endif]-->
 
     <!-- Presentation-specific styles -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/css/box-model.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/css/devmountain-advanced-css.css">
 
     {% if site.safe %}
     {% include analytics.html %}
@@ -326,8 +326,8 @@ location: Provo, UT
       </div>
     </div>
 
-    <script src="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/lib/js/head.min.js"></script>
-    <script src="{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/js/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/js/reveal.min.js"></script>
 
     <script>
 
@@ -340,15 +340,15 @@ location: Provo, UT
         transition: 'slide',
 
         dependencies: [
-          { src: '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: '{{ site.baseurl }}/presentations/devmountain-advanced-css/lib/reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/plugin/highlight/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/plugin/notes/notes.min.js', async: true }
         ]
       });
 
     </script>
 
-    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
 
   </body>
 </html>

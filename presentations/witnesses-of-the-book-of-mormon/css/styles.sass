@@ -4,23 +4,8 @@ sitemap:
 ---
 
 @import "_reset"
-@import "_icons"
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600")
-
-// Animations
-
-@-webkit-keyframes bounce
-  0%
-    -webkit-transform: translateY(0)
-  100%
-    -webkit-transform: translateY(10px)
-
-@keyframes bounce
-  0%
-    transform: translateY(0)
-  100%
-    transform: translateY(10px)
 
 // Variables
 
@@ -76,13 +61,6 @@ video
   width: ($base-unit * 32)
   text-align: center
   padding: 3rem
-
-.arrow-down
-  @include icons
-  color: $light
-  display: inline-block
-  -webkit-animation: bounce 1s infinite alternate
-  animation: bounce 1s infinite alternate
 
 .quote
   text-align: left

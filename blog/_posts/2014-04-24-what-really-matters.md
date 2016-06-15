@@ -20,11 +20,11 @@ We were overwhelmed by the amount of love and support we felt when our family an
 
 ## A Close-knit Community
 
-The [Mormon church](http://lds.org) serves my family well in this regard. Leaders of our local congregation organized volunteers to bring us dinner for three nights following our return home from the hospital. When we attended our church meetings that Sunday, our friends at church showed genuine concern for our well-being and were relieved to hear that everything was OK. Since it is a global church, we know that no matter where we may relocate to in the future there will be a warm community there to welcome us.
+The [Mormon church](https://lds.org) serves my family well in this regard. Leaders of our local congregation organized volunteers to bring us dinner for three nights following our return home from the hospital. When we attended our church meetings that Sunday, our friends at church showed genuine concern for our well-being and were relieved to hear that everything was OK. Since it is a global church, we know that no matter where we may relocate to in the future there will be a warm community there to welcome us.
 
 ## Hope
 
-This is perhaps the most important factor to our ability to handle life's curve balls. For me, hope comes from [my belief that I will be able to be with my family in the afterlife](http://www.mormon.org/faq/topic/family/question/mormon-families). I knew that no matter what happened to my precious baby son, he is my son both in life and after death. This is possible through Jesus Christ, and brings me great peace each day. The following Easter-themed video shows why we can have hope in Jesus Christ:
+This is perhaps the most important factor to our ability to handle life's curve balls. For me, hope comes from [my belief that I will be able to be with my family in the afterlife](https://www.mormon.org/faq/topic/family/question/mormon-families). I knew that no matter what happened to my precious baby son, he is my son both in life and after death. This is possible through Jesus Christ, and brings me great peace each day. The following Easter-themed video shows why we can have hope in Jesus Christ:
 
 {% include video.html videoUrl="//www.youtube.com/embed/_S3TI4bYerU" %}
 

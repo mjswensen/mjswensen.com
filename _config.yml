@@ -1,6 +1,4 @@
 name: mjswensen.com
 domain: http://mjswensen.com
-markdown: redcarpet
-highlighter: pygments
 permalink: pretty
-exclude: [_styles, node_modules, .git, .gitignore, package.json, README.md, .sass-cache, Gruntfile.js]
+exclude: [ _styles, node_modules, .git, .gitignore, package.json, README.md, .sass-cache ]

@@ -1,3 +1,120 @@
+---
+---
+
+/**
+ * Custom theme for DevMountain class, "Advanced CSS"
+ *
+ * This code is taken directly from the process of building custom themes for
+ * reveal.js 3.1.0.
+ */
+
+// Default mixins and settings -----------------
+
+@mixin vertical-gradient( $top, $bottom ) {
+	background: $top;
+	background: -moz-linear-gradient( top, $top 0%, $bottom 100% );
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom) );
+	background: -webkit-linear-gradient( top, $top 0%, $bottom 100% );
+	background: -o-linear-gradient( top, $top 0%, $bottom 100% );
+	background: -ms-linear-gradient( top, $top 0%, $bottom 100% );
+	background: linear-gradient( top, $top 0%, $bottom 100% );
+}
+
+@mixin horizontal-gradient( $top, $bottom ) {
+	background: $top;
+	background: -moz-linear-gradient( left, $top 0%, $bottom 100% );
+	background: -webkit-gradient( linear, left top, right top, color-stop(0%,$top), color-stop(100%,$bottom) );
+	background: -webkit-linear-gradient( left, $top 0%, $bottom 100% );
+	background: -o-linear-gradient( left, $top 0%, $bottom 100% );
+	background: -ms-linear-gradient( left, $top 0%, $bottom 100% );
+	background: linear-gradient( left, $top 0%, $bottom 100% );
+}
+
+@mixin radial-gradient( $outer, $inner, $type: circle ) {
+	background: $outer;
+	background: -moz-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: -webkit-gradient( radial, center center, 0px, center center, 100%, color-stop(0%,$inner), color-stop(100%,$outer) );
+	background: -webkit-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: -o-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: -ms-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+	background: radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+}
+
+// Background of the presentation
+$backgroundColor: #2b2b2b;
+
+// Primary/body text
+$mainFont: 'Lato', sans-serif;
+$mainFontSize: 36px;
+$mainColor: #eee;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'League Gothic', Impact, sans-serif;
+$headingColor: #eee;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+$headingFontWeight: normal;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
+
+// Links and actions
+$linkColor: #13DAEC;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+}
+
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url("http://fonts.googleapis.com/css?family=Lato:300,900,300italic,900italic");
+
+// Override theme settings (see ./theme/_settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #333333;
+$headingColor: #333333;
+
+$mainFontSize: 38px;
+$mainFont: "Lato", sans-serif;
+$headingFont: "Lato", sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 900;
+$linkColor: #d724a7;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+// Theme template ------------------------------
 // Base theme template for reveal.js
 
 /*********************************************
@@ -138,11 +255,12 @@ body {
 	position: relative;
 	width: 70%;
 	margin: $blockMargin auto;
-	padding: 5px;
-
+	padding: 5px 20px;
+	border-radius: 20px;
 	font-style: italic;
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+	$border: 5px solid rgba(255, 255, 255, 0.25);
+	border-left: $border;
+	border-right: $border;
 }
 	.reveal blockquote p:first-child,
 	.reveal blockquote p:last-child {
@@ -231,6 +349,15 @@ body {
 	vertical-align: top;
 }
 
+// Additional small classes
+
+.reveal table.small {
+  font-size: 0.75em;
+}
+
+.reveal table.smaller {
+  font-size: 0.66em;
+}
 
 /*********************************************
  * LINKS
@@ -264,9 +391,11 @@ body {
 .reveal section img {
 	margin: 15px 0px;
 	background: rgba(255,255,255,0.12);
-	border: 4px solid $mainColor;
-
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	&.no-shadow {
+		background: none;
+		box-shadow: none;
+	}
 }
 
 	.reveal a img {
@@ -278,8 +407,8 @@ body {
 	.reveal a:hover img {
 		background: rgba(255,255,255,0.2);
 		border-color: $linkColor;
-
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+		&.no-shadow { box-shadow: none; }
 	}
 
 
@@ -347,3 +476,4 @@ body {
 }
 
 
+// ---------------------------------------------
