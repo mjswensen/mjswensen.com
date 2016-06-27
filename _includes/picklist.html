@@ -2,8 +2,8 @@
   {% assign picks = site.pages | where: 'type', 'pick' | sort: 'date' | reverse %}
   {% for pick in picks limit: include.limit %}
     <li>
-      <a href="{{ pick.url }}">[{{ pick.pick.type | capitalize }}] {{ pick.title }}</a>
-      <p>{{ pick.description }}</p>
+      <a class="title" href="{{ pick.url }}">[{{ pick.pick.type | capitalize }}] {{ pick.title }}</a>
+      <p class="description">{{ pick.description }}</p>
       <div class="metadata">
         <time datetime="{{ pick.date }}">{{ pick.date | date: "%-d %b %Y" }}</time>
       </div>

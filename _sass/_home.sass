@@ -2,7 +2,7 @@
   text-align: center
   @include entityList
   .logo
-    max-width: (proportion(-2) * 100%)
+    max-width: proportion(100%, 3)
     max-height: 100% // https://bugs.webkit.org/show_bug.cgi?id=82489
     margin: 1rem 0
     polygon
@@ -12,11 +12,13 @@
         fill: $accent
         @include logoExplode
   .name
-    @include fz(4)
-.all-posts,
-.all-projects,
-.all-presentations
-  float: right
+    @include fz(-3)
+
+.posts,
+.projects,
+.presentations,
+.picks
+  border-left: 2px solid $medium
 
 section:last-child
   margin-bottom: (rhythm() * 3)

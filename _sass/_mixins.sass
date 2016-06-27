@@ -1,29 +1,41 @@
 // Proportion
+//
+// Example outputs with standard base proportion:
+//   $pow => return
+//    -4  =>  3.16
+//    -3  =>  2.37
+//    -2  =>  1.78
+//    -1  =>  1.33
+//     0  =>  1
+//     1  =>  0.75
+//     2  =>  0.56
+//     3  =>  0.42
+//     4  =>  0.32
 
-@function proportion($n)
+@function proportion($base, $pow, $prop: $base-proportion)
   $mult: 1
-  @if $n > 1
-    @for $j from 2 through $n
-      $mult: $mult / $base-proportion
-  @if $n < 1
-    @for $j from 0 through -$n
-      $mult: $mult * $base-proportion
-  @return $mult
+  @if $pow > 0
+    @for $j from 1 through $pow
+      $mult: $mult * $prop
+  @if $pow < 0
+    @for $j from $pow through -1
+      $mult: $mult / $prop
+  @return ($mult * $base)
 
 // Vertical rhythm
 
 @function rhythm($inRems: true)
-  $rhythm: proportion(2)
+  $rhythmPow: -1
   @if $inRems
-    @return (1rem * $rhythm)
+    @return proportion(1rem, $rhythmPow)
   @else
-    @return $rhythm
+    @return proportion(1, $rhythmPow)
 
 
 // Font size
 
 @mixin fz($n)
-  font-size: (proportion($n) * 1em)
+  font-size: proportion(1em, $n)
 
 // Grid
 
@@ -46,13 +58,18 @@
 
 // Commonly used sets of styles
 
-@mixin metadata
-  @include fz(0)
-  text-transform: uppercase
-  color: $medium
-
 @mixin entityList
+  list-style-type: none
+  padding-left: 0
   li
-    margin: (proportion(3) * 1rem) 0
-    p
-      margin-bottom: (proportion(-2) * 1rem)
+    margin: proportion(1rem, -4) 0
+    .title
+      @include fz(-1)
+      display: block
+      margin-bottom: proportion(1rem, 5)
+    .description
+      margin-bottom: proportion(1rem, 2)
+    .metadata
+      @include fz(1)
+      text-transform: uppercase
+      color: $medium

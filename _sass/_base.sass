@@ -15,28 +15,28 @@ h1, h2, h3
   font-weight: $sans-font-weight-bold
 
 h1
-  @include fz(5)
-  line-height: proportion(2)
-  margin-bottom: (proportion(2) * 1rem)
+  @include fz(-4)
+  line-height: proportion(1, -1)
+  margin-bottom: proportion(1rem, -1)
   @media screen and (max-width: $content-width-thin)
-    @include fz(3)
+    @include fz(-2)
 
 h2
-  @include fz(3)
+  @include fz(-2)
   text-transform: uppercase
-  margin-bottom: (proportion(2) * 1rem)
+  margin-bottom: proportion(1rem, -1)
   @media screen and (max-width: $content-width-thin)
-    @include fz(2)
+    @include fz(-1)
   i
     color: $light
   code
     text-transform: none
 
 h3
-  @include fz(2)
+  @include fz(-1)
   margin-bottom: rhythm()
   @media screen and (max-width: $content-width-thin)
-    @include fz(1)
+    @include fz(0)
 
 p
   margin-bottom: rhythm()
@@ -122,14 +122,14 @@ table
     margin-bottom: 0
   th
     text-align: left
-    font-size: (1em * proportion(2))
+    font-size: proportion(1em, -1)
     border-top: $table-border-style-heading
     border-bottom: $table-border-style-heading
   td
     border-bottom: $table-border-style-main
-    font-size: (1em * proportion(0))
+    font-size: proportion(1em, 1)
   th, td
-    padding: (1rem * proportion(-2))
+    padding: proportion(1rem, 3)
     @media screen and (max-width: $breakpoint-thin)
       display: block
     &.meta

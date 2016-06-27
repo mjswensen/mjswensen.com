@@ -2,8 +2,8 @@
   {% assign presentations = site.pages | where: 'type', 'presentation' | sort: 'date' | reverse %}
   {% for presentation in presentations limit: include.limit %}
     <li>
-      <a href="{{ presentation.url }}">"{{ presentation.title }}"</a>
-      <p>
+      <a class="title" href="{{ presentation.url }}">"{{ presentation.title }}"</a>
+      <p class="description">
         {{ presentation.description }}
         {% if presentation.videoUrl %}
         &bull;

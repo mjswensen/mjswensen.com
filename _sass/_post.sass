@@ -9,10 +9,10 @@ article
     text-transform: uppercase
     color: $medium
     @media screen and (max-width: $content-width-thin)
-      @include fz(0)
+      @include fz(1)
   .update
     background-color: $lighter
-    padding: (1em * proportion(-6)) (1em * proportion(-4))
+    padding: proportion(1em, 7) proportion(1em, 5)
     border-radius: $corner-radius
     .update-date
       color: $medium
@@ -30,12 +30,12 @@ article
         background-color: $twitter
         color: $white
     .tweet-link-help
-      @include fz(0)
+      @include fz(1)
       color: $light
   .tweet-preview
     padding: 1rem
     font-style: italic
-    @include fz(0)
+    @include fz(1)
     background-color: $medium
     color: $white
     border-radius: $corner-radius
