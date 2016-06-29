@@ -1,6 +1,5 @@
 .home
   text-align: center
-  @include entityList
   .logo
     max-width: proportion(100%, 3)
     max-height: 100% // https://bugs.webkit.org/show_bug.cgi?id=82489
@@ -18,7 +17,8 @@
 .projects,
 .presentations,
 .picks
-  border-left: 2px solid $medium
+  border-left: 2px solid $light
+  margin: (rhythm() * 3) 0
 
 section:last-child
   margin-bottom: (rhythm() * 3)
