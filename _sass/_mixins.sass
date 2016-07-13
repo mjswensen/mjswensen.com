@@ -67,6 +67,16 @@
       @include fz(-1)
       display: block
       margin-bottom: proportion(1rem, 5)
+      .title-detail
+        @include fz(2)
+        text-transform: uppercase
+        padding: proportion(1em, 9) proportion(1em, 4)
+        font-weight: $sans-font-weight-bold
+        background-color: $light
+        color: $white
+        border-radius: $corner-radius
+        position: relative
+        top: proportion(-1em, 4)
     .description
       margin-bottom: proportion(1rem, 2)
     .metadata
