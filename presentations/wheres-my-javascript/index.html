@@ -1,0 +1,161 @@
+---
+title: Where's My JavaScript? A Closer Look at Loading Up Your Application
+type: presentation
+description: Managing JavaScript dependencies and loading modularized applications has always been a pain for JavaScript developers. This presentation combs through the different solutions to this problem, with emphasis on the new standard, ES6 Import/Export.
+date: 2016-09-16 16:40:00
+for: UtahJS 2016
+at: O.C. Tanner Events Center
+location: Sandy, UT
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Where's My JavaScript?</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+  <link rel="stylesheet" href="css/github.css">
+  <link rel="stylesheet" href="css/styles.css">
+  {% if site.safe %}
+  {% include analytics.html %}
+  {% endif %}
+</head>
+<body>
+  <div id="impress">
+    <div id="title" class="step" data-x="-900" data-y="100" data-z="-300" data-scale="0.5">
+      <h1>Where's My JavaScript?</h1>
+      <span class="subtitle">A Closer Look at Loading Up Your Application</span>
+    </div>
+    <div id="script-tags" class="script-tags primary step" data-x="-900" data-y="800" data-z="-40" data-scale="1.2">
+      <h2>Managed <code>&lt;script&gt;</code> Tags</h2>
+      <ul>
+        <li>global namespace</li>
+        <li>managing dependencies manually</li>
+        <li><strong>advantages:</strong> minimal dev tooling setup</li>
+        <li><strong>disadvantages:</strong> not scalable at all</li>
+      </ul>
+    </div>
+    <div id="calcdeps" class="script-tags implementation step" data-x="-559.2" data-y="991.7" data-z="100" data-rotate-x="-60" data-scale="0.4">
+      <h2>Google Closure's calcdeps.py</h2>
+      <p>Calculates dependencies and can create an ordered list of <code>script</code> tags.</p>
+      <div class="snippet">
+      	<span class="title">person.js</span>
+{% highlight javascript %}
+goog.provide('example.model.Person');
+example.model.Person = function() { ... };
+{% endhighlight %}
+      </div>
+      <div class="snippet">
+        <span class="title">people.js</span>
+{% highlight javascript %}
+goog.provide('example.model.People');
+goog.require('example.model.Person');
+example.model.People = function() {
+  this.mainPerson = new example.model.Person();
+}
+{% endhighlight %}
+      </div>
+    </div>
+    <div id="commonjs" class="commonjs primary step" data-x="500" data-y="600" data-scale="0.8">
+      <h2>CommonJS</h2>
+      <ul>
+        <li>developed primarily for the server</li>
+        <li><strong>advantages:</strong> integrates well with npm</li>
+        <li><strong>disadvantages:</strong> it's a global API, not a language construct, and therefore doesn't scale to other platforms</li>
+      </ul>
+      <div class="snippet">
+        <span class="title">helper.js</span>
+{% highlight js %}
+module.exports = function() { ... };
+{% endhighlight %}
+      </div>
+      <div class="snippet">
+        <span class="title">server.js</span>
+{% highlight js %}
+var helper = require('path/to/helper');
+{% endhighlight %}
+      </div>
+      <ul>
+        <!-- TODO: move this into an implementation card -->
+        <li>Doesn't work in the browser unless you use something like <a href="http://browserify.org/">Browserify</a></li>
+      </ul>
+    </div>
+    <div id="nodejs" class="commonjs implementation step" data-x="727.2" data-y="727.8" data-z="80" data-rotate-x="-60" data-scale="0.2">
+      <h2>Node.js</h2>
+      <p>See <a href="https://nodejs.org/dist/latest-v6.x/docs/api/modules.html">Node docs: "Modules"</a></p>
+      <div class="snippet">
+        <span class="title">webserver.js</span>
+{% highlight js %}
+const fs = require('fs');
+{% endhighlight %}
+      </div>
+    </div>
+    <div id="amd" class="amd primary step" data-x="500" data-y="1200" data-scale="0.8">
+      <h2>AMD (Asynchronous Module Definition)</h2>
+      <ul>
+        <li>Developed primarily for the browser</li>
+        <li>Uses JS to load JS (rather than at the engine level)</li>
+      </ul>
+      <div class="snippet">
+        <span class="title">amd.js</span>
+{% highlight js %}
+require(['dep1', 'dep2'], function(dep1, dep2) { ... });
+{% endhighlight %}
+      </div>
+    </div>
+    <div id="requirejs" class="amd implementation step" data-x="727.2" data-y="1327.8" data-z="80" data-rotate-x="-60" data-scale="0.2">
+      <h2>RequireJS</h2>
+      <ul>
+        <li>Asynchronously requests files from the server based on paths you define in dependency list (or in config)</li>
+      </ul>
+    </div>
+    <div id="umd" class="umd primary step" data-x="1400" data-y="800" data-z="-20" data-scale="2.5">
+      <h2>UMD (Universal Module Definition)</h2>
+      <div class="content">
+        <ul>
+          <li>Developed to unify the browser and the server</li><!-- TODO: give these analogous statements some sort of unifying style. -->
+        </ul>
+      </div>
+    </div>
+    <div id="systemjs" class="umd implementation step" data-x="2110" data-y="1199.375" data-z="250" data-rotate-x="-60" data-scale="0.625">
+      <h2>SystemJS</h2>
+      <ul>
+        <li>Supports ES6 modules, AMD modules, CommonJS modules, and even global scripts</li>
+        <li>Supports the browser and Node</li>
+      </ul>
+    </div>
+    <div id="es6" class="es6 primary step" data-y="2800" data-z="40" data-scale="3">
+      <h2>ES6 Modules</h2>
+      <ul>
+        <li>The standard (ES 2015)</li>
+        <li>To be implemented by JS engines</li>
+        <li>No browser support yet</li>
+      </ul>
+    </div>
+    <div id="moving-forward" class="step" data-x="2600" data-y="2600" data-z="60" data-scale="1.2">
+      <h2>Moving forward</h2>
+      <h3>...in the browser</h3>
+      <ul>
+        <li>transpilers: <a href="https://babeljs.io/">Babel</a> and <a href="https://www.typescriptlang.org/">TypeScript</a></li>
+        <li>module bundlers: <a href="http://webpack.github.io/">webpack</a> and <a href="http://rollupjs.org/">rollup.js</a></li>
+        <li>module loaders: <a href="https://github.com/ModuleLoader/es-module-loader">ES6 module loader polyfill</a> and <a href="http://jspm.io/">jspm</a></li>
+      </ul>
+      <h3>...on the server</h3>
+      <ul>
+        <li>ES6 syntax with <span class="strike">.mjs</span>.js extension + package.json</li>
+      </ul>
+    </div>
+    <div id="http2" class="step" data-x="2100" data-y="3300" data-z="80" data-rotate-z="-90" data-scale="0.5">
+      <h2>HTTP/2</h2>
+      <ul>
+        <li>Requests will be relatively cheaper, as servers can push multiple resources upon initial request</li>
+        <li>Bundling JS into a large blob, therefore, might be suboptimal</li>
+      </ul>
+    </div>
+    <div id="overview" class="step" data-x="600" data-y="1900" data-z="-80" data-scale="6.25"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
+  <script>impress().init();</script>
+</body>
+</html>
+

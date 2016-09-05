@@ -1,0 +1,174 @@
+---
+sitemap:
+  exclude: true
+---
+
+@import "_reset";
+
+@import "https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:400,700";
+
+// Variables
+
+$main-color: hsl(0, 0%, 21%);
+$base-unit: 36px;
+$base-proportion: 0.75;
+
+$red: hsl(1, 87%, 65%);
+$yellow: hsl(49, 100%, 47%);
+$green: hsl(127, 45%, 51%);
+$blue: hsl(197, 68%, 45%);
+$purple: hsl(287, 31%, 50%);
+
+// Functions
+
+@function proportion($base, $n, $prop: $base-proportion) {
+  $mult: 1;
+  @if $n > 0 {
+    @for $j from 1 through $n {
+      $mult: $mult * $prop;
+    }
+  }
+  @if $n < 0 {
+    @for $j from $n through -1 {
+      $mult: $mult / $prop;
+    }
+  }
+  @return ($mult * $base);
+}
+
+// Base styles
+
+html, body {
+  font-size: $base-unit;
+  font-family: "Fira Sans", sans-serif;
+  line-height: proportion(1, -1);
+  background-image: radial-gradient(#fff, #ddd); // TODO: browser compat?
+  width: 100%;
+  height: 100%;
+  color: $main-color;
+}
+
+h2 {
+  font-size: proportion(1rem, -1);
+  font-weight: bold;
+  margin-bottom: proportion(1em, 0);
+  padding: 0 proportion(1em, 10) proportion(1em, 4);
+  border-bottom: 1px solid gray;
+}
+
+h3 {
+  margin: proportion(1em, -1) 0 proportion(1em, 0) 0;
+  font-weight: bold;
+}
+
+a {
+  &:link, &:visited { color: $main-color; }
+  &:hover { color: lighten($main-color, 10%); }
+  &:active { color: lighten($main-color, 20%); }
+}
+
+ul {
+  padding-left: proportion(1em, -2);
+  list-style-type: circle;
+}
+
+strong {
+  font-weight: bold;
+}
+
+code {
+  font-family: "Fira Mono", monospace;
+  background-color: hsla(0, 0%, 100%, 0.75);
+  border-radius: proportion(1em, 10);
+  padding: 0 proportion(1em, 6);
+}
+
+pre code {
+  background-color: transparent;
+}
+
+// Main styles
+
+.step {
+  // 16:9 ratio
+  width: proportion(1rem, -12); // 1136px
+  height: proportion(1rem, -10); // 639px
+  padding: proportion(1rem, 0);
+  box-sizing: border-box;
+  // background-color: hsla(123, 53%, 60%, 0.1); // Debug TODO remove
+  transition: 200ms opacity ease;
+  &.future {
+    opacity: 0.1;
+    &.umd, &.implementation { opacity: 0; }
+  }
+  &.primary {
+    border: proportion(1rem, 5) dashed;
+    &.script-tags { border-color: $red; }
+    &.commonjs { border-color: $yellow; }
+    &.amd { border-color: $blue; }
+    &.umd { border-color: $green; }
+    &.es6 { border-color: $purple; }
+  }
+  &.implementation {
+    background-color: hsla(0, 0%, 100%, 0.95);
+    border-left: 1em solid;
+    &.script-tags { border-left-color: $red; }
+    &.commonjs { border-left-color: $yellow; }
+    &.amd { border-left-color: $blue; }
+    &.umd { border-left-color: $green; }
+    &.es6 { border-left-color: $purple; }
+  }
+  .snippet {
+    margin: proportion(1rem, 2) 0;
+    padding: proportion(1em, 4);
+	  font-size: proportion(1em, 1);
+    border: 1px solid $main-color;
+    position: relative;
+    .title {
+      $size: proportion(1em, -2);
+      font-size: proportion(1em, 1);
+      height: $size;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: proportion(1em, 4);
+      background-color: $main-color;
+      color: white;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: ($size * -1);
+        height: 0;
+        width: 0;
+        border-top: 0 solid transparent;
+        border-right: $size solid $main-color;
+        border-bottom: $size solid transparent;
+      }
+    }
+  }
+}
+
+
+#title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: proportion(1rem, -2);
+  }
+}
+
+#script-tags {
+  border-color: $red;
+}
+
+#umd {
+  .content {
+    width: 66%;
+    margin-left: 33%;
+  }
+}
