@@ -42,7 +42,7 @@ html, body {
   font-size: $base-unit;
   font-family: "Fira Sans", sans-serif;
   line-height: proportion(1, -1);
-  background-image: radial-gradient(#fff, #ddd); // TODO: browser compat?
+  background-image: radial-gradient(#fff, #ddd);
   width: 100%;
   height: 100%;
   color: $main-color;
@@ -67,9 +67,15 @@ a {
   &:active { color: lighten($main-color, 20%); }
 }
 
+.strike {
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
 ul {
   padding-left: proportion(1em, -2);
   list-style-type: circle;
+  margin-bottom: proportion(1rem, 1);
 }
 
 strong {
@@ -78,7 +84,7 @@ strong {
 
 code {
   font-family: "Fira Mono", monospace;
-  background-color: hsla(0, 0%, 100%, 0.75);
+  background-color: hsla(0, 0%, 90%, 0.75);
   border-radius: proportion(1em, 10);
   padding: 0 proportion(1em, 6);
 }
@@ -95,7 +101,6 @@ pre code {
   height: proportion(1rem, -10); // 639px
   padding: proportion(1rem, 0);
   box-sizing: border-box;
-  // background-color: hsla(123, 53%, 60%, 0.1); // Debug TODO remove
   transition: 200ms opacity ease;
   &.future {
     opacity: 0.1;
@@ -119,7 +124,7 @@ pre code {
     &.es6 { border-left-color: $purple; }
   }
   .snippet {
-    margin: proportion(1rem, 2) 0;
+    margin-bottom: proportion(1rem, 1);
     padding: proportion(1em, 4);
 	  font-size: proportion(1em, 1);
     border: 1px solid $main-color;
