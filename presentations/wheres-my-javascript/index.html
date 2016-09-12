@@ -22,10 +22,15 @@ location: Sandy, UT
 </head>
 <body>
   <div id="impress">
+
     <div id="title" class="step" data-x="-900" data-y="100" data-z="-60" data-scale="0.33">
       <h1>Where's My JavaScript?</h1>
       <span class="subtitle">A Closer Look at Loading Up Your Application</span>
     </div>
+    <!--
+    * As the web has grown over the last 20 years, so have JavaScript applications. It's no surprise that source code needs to be modularized; unfortunately, the JavaScript language and web platform initially didn't design a mechanism for managing and loading dependencies. Over the years, we've come up with a number of solutions to that problem. Let's take a look at the main ones.
+    -->
+
     <div id="script-tags" class="script-tags primary step" data-x="-900" data-y="800" data-z="-40" data-scale="1.2">
       <h2>Managed <code>&lt;script&gt;</code> Tags</h2>
       <div class="snippet">
@@ -37,12 +42,20 @@ location: Sandy, UT
 {% endhighlight %}
       </div>
       <ul>
-        <li>global namespace</li>
-        <li>managing dependencies manually</li>
         <li><strong>advantages:</strong> minimal dev tooling setup</li>
-        <li><strong>disadvantages:</strong> not scalable at all</li>
+        <li><strong>disadvantages:</strong> not scalable (global namespace, managing dependencies manually)</li>
       </ul>
     </div>
+    <!--
+    * The scripts execute in the order that they are declared in the HTML, but they can be downloaded in parallel.
+    * What are the advantages to manually-managed script tags?
+      * Simplicity for small projects (tooling, learning curve, etc.)
+    * What are the disadvantages?
+      * Maintaining a long list of modules gets unwieldy.
+      * Making the user download hundreds of small files is currently an anti-pattern.
+      * All your code lives in the global namespace.
+    -->
+
     <div id="calcdeps" class="script-tags implementation step" data-x="-559.2" data-y="991.7" data-z="100" data-rotate-x="-60" data-scale="0.4">
       <h2>Google Closure's calcdeps.py</h2>
       <ul>
@@ -66,6 +79,12 @@ example.model.People = function() {
 {% endhighlight %}
       </div>
     </div>
+    <!--
+    * The nice thing about the calcdeps script is that it can manage the order of your scripts for you.
+    * Notice that the code still lives in the global namespace.
+    * At this point you are introducing a build step, and there are plenty of other options.
+    -->
+
     <div id="commonjs" class="commonjs primary step" data-x="500" data-y="640" data-scale="0.8">
       <h2>CommonJS</h2>
       <div class="snippet">
@@ -81,11 +100,20 @@ var helper = require('path/to/helper');
 {% endhighlight %}
       </div>
       <ul>
-        <li>developed primarily for the server</li>
+        <li>developed primarily for execution on the server</li>
         <li><strong>advantages:</strong> Node implementation integrates well with npm</li>
-        <li><strong>disadvantages:</strong> it's a global API, not a language construct, and therefore doesn't automatically scale to other platforms</li>
+        <li><strong>disadvantages:</strong> it's a global API rather than a standardized language construct, and therefore doesn't automatically scale to other platforms</li>
       </ul>
     </div>
+    <!--
+    * What are the advantages of CommonJS?
+      * The code isn't in the global namespace anymore, but this is more of a feature of the runtime than a specification of the language at this point.
+      * On the Node.js platform, `require` knows to check your node_modules folder, which is where npm puts your dependencies.
+    * What are the disadvantages?
+      * It doesn't play nicely with the browser; `require` needs to be synchronous, which means that code needs to be already loaded somewhere.
+      * Modules need to be wrapped in the browser to emulate local scope.
+    -->
+
     <div id="nodejs" class="commonjs implementation step" data-x="727.2" data-y="767.8" data-z="80" data-rotate-x="-60" data-scale="0.2">
       <h2>Node.js</h2>
       <ul>
@@ -98,12 +126,14 @@ const fs = require('fs');
 {% endhighlight %}
       </div>
     </div>
+
     <div id="browserify" class="commonjs implementation step" data-x="727.2" data-y="787.8" data-z="80" data-rotate-x="-60" data-scale="0.2">
       <h2>Browserify</h2>
       <ul>
         <li>"<a href="http://browserify.org/">Browserify</a> lets you require('modules') in the browser by bundling up all of your dependencies."</li>
       </ul>
     </div>
+
     <div id="amd" class="amd primary step" data-x="500" data-y="1220" data-scale="0.8">
       <h2>AMD (Asynchronous Module Definition)</h2>
       <div class="snippet">
@@ -123,35 +153,52 @@ require(['dep1', 'dep2'], function(dep1, dep2) { ... });
         <li><strong>advantage/disadvantage:</strong> uses JS to load JS (rather than at the engine level)</li>
       </ul>
     </div>
+    <!--
+    * Module IDs are paths to files.
+    * AMD solves the global scope problem by wrapping everything in functions. Unfortunately this means wonky syntax, strange for beginners especially.
+    * Rather than relying on the engine to load things, it uses vanilla JS to load JS.
+      * This is nice because it's automatically portable to other systems, so long as there are implementations available for `define` and `require` in the global namespace.
+      * It's also a little strange... it dynamically creates HTML `<script>` tags (this functionality is called a "script loader") to load things on demand. This behavior really does belong at the engine level.
+    * Another advantage is that it can load up your application small bits at a time, in reverse order than the managed script tags approach. If a module is never required, it never gets loaded.
+    -->
+
     <div id="requirejs" class="amd implementation step" data-x="727.2" data-y="1347.8" data-z="80" data-rotate-x="-60" data-scale="0.2">
       <h2>RequireJS</h2>
       <ul>
-        <li>asynchronously requests files from the server based on paths you define in dependency list (or in config)</li>
+        <li>implements <code>define</code> and <code>require</code> to asynchronously request files from the server (based on paths you define in dependency list, or in config)</li>
       </ul>
     </div>
+
     <div id="umd" class="umd primary step" data-x="1400" data-y="800" data-z="-20" data-scale="2.5">
       <h2>UMD (Universal Module Definition)</h2>
       <div class="content">
         <ul>
           <li>developed to unify the browser and the server</li>
-          <li>supports both AMD and CommonJS modules, preferring the AMD syntax</li>
+          <li>supports both AMD and CommonJS modules, preferring the AMD syntax and polyfilling for CommonJS modules</li>
+          <li>the syntax is essentially passing your module to an IIFE that determines the environment to produce the appropriate type of module</li>
         </ul>
       </div>
     </div>
-    <div id="systemjs" class="umd implementation step" data-x="2110" data-y="1199.375" data-z="250" data-rotate-x="-60" data-scale="0.625">
-      <h2>SystemJS</h2>
-      <ul>
-        <li>supports ES6 modules, AMD modules, CommonJS modules, and even global scripts</li>
-        <li>supports the browser and Node</li>
-      </ul>
-    </div>
-    <div id="webpack" class="umd implementation step" data-x="2110" data-y="1261.875" data-z="250" data-rotate-x="-60" data-scale="0.625">
+    <!--
+    * UMD is not really anything new syntax-wise; its implementations just provide a way to use AMD and CommonJS together (and therefore on any platform).
+    -->
+
+    <div id="webpack" class="umd implementation step" data-x="2110" data-y="1199.375" data-z="250" data-rotate-x="-60" data-scale="0.625">
       <h2>webpack</h2>
       <ul>
         <li>supports both AMD modules and CommonJS modules</li>
         <li>can be customized via plugin ecosystem</li>
       </ul>
     </div>
+
+    <div id="systemjs" class="umd implementation step" data-x="2110" data-y="1261.875" data-z="250" data-rotate-x="-60" data-scale="0.625">
+      <h2>SystemJS</h2>
+      <ul>
+        <li>supports ES6 modules, AMD modules, CommonJS modules, and even global scripts</li>
+        <li>supports the browser and Node</li>
+      </ul>
+    </div>
+
     <div id="es6" class="es6 primary step" data-y="2800" data-z="40" data-scale="3">
       <h2>ES6 Modules</h2>
       <div class="snippet">
@@ -171,7 +218,7 @@ export default class Baz { ... }
         <span class="title">app.js</span>
 {% highlight js %}
 import { foo, bar } from 'named';
-import Baz from 'default';
+import Baz from 'default'; // name doesn't have to match
 {% endhighlight %}
       </div>
       <ul>
@@ -179,6 +226,12 @@ import Baz from 'default';
         <li>to be implemented by all JS engines</li>
       </ul>
     </div>
+    <!--
+    * The default export simply allows for a more compact syntax (don't need to explictly bind to a different name).
+    * One disadvantage is that you have to specifiy the entire filepath. goog.require(), on the other hand, works more like Java packages (where namespace is a separate concept from filepath).
+    * There are other convenience syntaxes as well, but these are the main ones.
+    -->
+
     <div id="babel" class="es6 implementation step" data-x="852" data-y="3279.25" data-z="300" data-scale="0.75" data-rotate-x="-60">
       <h2>Babel</h2>
       <ul>
@@ -202,6 +255,11 @@ var foo = exports.foo = 100;
 {% endhighlight %}
       </div>
     </div>
+    <!--
+    * By default, compiles to CommonJS (Node.js; SystemJS/webpack).
+    * It can also compile to AMD via plugin, if desired.
+    -->
+
     <div id="typescript" class="es6 implementation step" data-x="852" data-y="3354.25" data-z="300" data-scale="0.75" data-rotate-x="-60">
       <h2>TypeScript</h2>
       <ul>
@@ -220,12 +278,15 @@ export const foo = 100;
 define(["require", "exports"], function (require, exports) {
     "use strict";
     exports.foo = 100;
-    function bar(a, b) { return a + b; }
-    exports.bar = bar;
 });
 {% endhighlight %}
       </div>
     </div>
+    <!--
+    * Compiles to AMD by default, or it can be configured to compile to CommonJS, UMD, or ES6.
+    * You can also use tsickle to compile it to Closure-compilable JS!
+    -->
+
     <div id="moving-forward" class="step" data-x="2600" data-y="2600" data-z="60" data-scale="1.2">
       <h2>Moving forward</h2>
       <h3>...in the browser</h3>
@@ -236,8 +297,10 @@ define(["require", "exports"], function (require, exports) {
       <h3>...on the server</h3>
       <ul>
         <li>ES6 syntax with <span class="strike">.mjs</span> .js extension + package.json</li>
+        <li>(use Babel/TS if you need more ES6 than Node.js already supports)</li>
       </ul>
     </div>
+
     <div id="http2" class="step" data-x="2100" data-y="3300" data-z="80" data-rotate-z="-90" data-scale="0.5">
       <h2>HTTP/2</h2>
       <ul>
@@ -245,7 +308,15 @@ define(["require", "exports"], function (require, exports) {
         <li>bundling JS into a large blob, therefore, might be suboptimal</li>
       </ul>
     </div>
+    <!--
+    * Since data transfer can more easily be parallelized, it may be faster to send down many small modules rather than one large one.
+    -->
+
     <div id="overview" class="step" data-x="600" data-y="1900" data-z="-80" data-scale="6.25"></div>
+    <!--
+    * Thanks! Slides are available online if desired.
+    -->
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
   <script>impress().init();</script>

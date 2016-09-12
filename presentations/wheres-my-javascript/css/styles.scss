@@ -91,6 +91,7 @@ code {
 
 pre code {
   background-color: transparent;
+  padding: 0;
 }
 
 // Main styles
@@ -106,6 +107,7 @@ pre code {
     opacity: 0.1;
     &.umd, &.implementation { opacity: 0; }
   }
+  &.present ~ &.past { opacity: 0; }
   &.primary {
     border: proportion(1rem, 5) dashed;
     &.script-tags { border-color: $red; }
