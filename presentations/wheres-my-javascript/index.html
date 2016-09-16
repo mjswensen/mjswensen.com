@@ -75,7 +75,7 @@ goog.provide('example.model.People');
 goog.require('example.model.Person');
 example.model.People = function() {
   this.mainPerson = new example.model.Person();
-}
+};
 {% endhighlight %}
       </div>
     </div>
@@ -96,7 +96,7 @@ module.exports = function() { ... };
       <div class="snippet">
         <span class="title">server.js</span>
 {% highlight js %}
-var helper = require('path/to/helper');
+const helper = require('path/to/helper');
 {% endhighlight %}
       </div>
       <ul>
@@ -174,8 +174,8 @@ require(['dep1', 'dep2'], function(dep1, dep2) { ... });
       <div class="content">
         <ul>
           <li>developed to unify the browser and the server</li>
-          <li>supports both AMD and CommonJS modules, preferring the AMD syntax and polyfilling for CommonJS modules</li>
-          <li>the syntax is essentially passing your module to an IIFE that determines the environment to produce the appropriate type of module</li>
+          <li>supports both AMD and CommonJS modules</li>
+          <li>the way it works is essentially passing your module to an IIFE that determines the environment to produce the appropriate type of module</li>
         </ul>
       </div>
     </div>
@@ -186,6 +186,7 @@ require(['dep1', 'dep2'], function(dep1, dep2) { ... });
     <div id="webpack" class="umd implementation step" data-x="2110" data-y="1199.375" data-z="250" data-rotate-x="-60" data-scale="0.625">
       <h2>webpack</h2>
       <ul>
+        <li>module bundler</li>
         <li>supports both AMD modules and CommonJS modules</li>
         <li>can be customized via plugin ecosystem</li>
       </ul>
@@ -194,8 +195,10 @@ require(['dep1', 'dep2'], function(dep1, dep2) { ... });
     <div id="systemjs" class="umd implementation step" data-x="2110" data-y="1261.875" data-z="250" data-rotate-x="-60" data-scale="0.625">
       <h2>SystemJS</h2>
       <ul>
+        <li>module loader</li>
         <li>supports ES6 modules, AMD modules, CommonJS modules, and even global scripts</li>
         <li>supports the browser and Node</li>
+        <li>potential implementation for the internals of the ES6 module standard</li>
       </ul>
     </div>
 
@@ -292,7 +295,7 @@ define(["require", "exports"], function (require, exports) {
       <h3>...in the browser</h3>
       <ul>
         <li>transpile ES6 modules with <a href="https://babeljs.io/">Babel</a> or <a href="https://www.typescriptlang.org/">TypeScript</a></li>
-        <li>load and bundle them with <a href="http://webpack.github.io/">webpack</a>, <a href="https://github.com/systemjs/systemjs">SystemJS</a>, or <a href="http://rollupjs.org/">rollup.js</a></li>
+        <li>load and bundle them with <a href="https://github.com/systemjs/systemjs">SystemJS</a> or <a href="http://rollupjs.org/">rollup.js</a></li>
       </ul>
       <h3>...on the server</h3>
       <ul>
