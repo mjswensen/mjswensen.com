@@ -28,7 +28,7 @@ location: Sandy, UT
       <span class="subtitle">A Closer Look at Loading Up Your Application</span>
     </div>
     <!--
-    * As the web has grown over the last 20 years, so have JavaScript applications. It's no surprise that source code needs to be modularized; unfortunately, the JavaScript language and web platform initially didn't design a mechanism for managing and loading dependencies. Over the years, we've come up with a number of solutions to that problem. Let's take a look at the main ones.
+    * As the web has grown over the last 20 years, so have JavaScript applications. It's no surprise that source code needs to be modularized; unfortunately, the JavaScript language and web platform initially didn't design a mechanism for managing and loading modules. Over the years, we've come up with a number of solutions to that problem. Let's take a look at the main ones.
     -->
 
     <div id="script-tags" class="script-tags primary step" data-x="-900" data-y="800" data-z="-40" data-scale="1.2">
@@ -303,6 +303,9 @@ define(["require", "exports"], function (require, exports) {
         <li>(use Babel/TS if you need more ES6 than Node.js already supports)</li>
       </ul>
     </div>
+    <!--
+    * Dave Herman, Yehuda Katz, Caridy Patiño wrote "In defense of dot JS"
+    -->
 
     <div id="http2" class="step" data-x="2100" data-y="3300" data-z="80" data-rotate-z="-90" data-scale="0.5">
       <h2>HTTP/2</h2>
@@ -312,12 +315,14 @@ define(["require", "exports"], function (require, exports) {
       </ul>
     </div>
     <!--
+    * Currently we use webpack/CC to bundle into one huge blob.
     * Since data transfer can more easily be parallelized, it may be faster to send down many small modules rather than one large one.
     -->
 
     <div id="overview" class="step" data-x="600" data-y="1900" data-z="-80" data-scale="6.25"></div>
     <!--
     * Thanks! Slides are available online if desired.
+    * Twitter handle is same as domain name.
     -->
 
   </div>
