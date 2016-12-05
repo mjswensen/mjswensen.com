@@ -79,6 +79,17 @@
         top: proportion(-1em, 4)
     .description
       margin-bottom: proportion(1rem, 2)
+      .special-link
+        padding: 0 proportion(1em, 4)
+        border-radius: $corner-radius
+        background-color: $accent
+        color: $white
+        &:hover
+          background-color: $accent-light
+          color: $white
+        &:active
+          background-color: $accent-lighter
+          color: $white
     .metadata
       @include fz(1)
       text-transform: uppercase
