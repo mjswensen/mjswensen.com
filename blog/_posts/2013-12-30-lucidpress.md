@@ -26,7 +26,7 @@ Check out what others are saying about Lucidpress:
 * The Red Ferret &mdash; [Lucidpress – superb new free collaborative web based layout and design application does it all](http://www.redferret.net/?p=39919)
 * AddictiveTips &mdash; [Lucidpress Is A Collaborative Web-Based Alternative To Adobe InDesign](http://www.addictivetips.com/web/lucidpress-free-collaborative-web-based-adobe-indesign-alternative/)
 * FreeTech4Teachers.com &mdash; [Collaboratively Create Multimedia Documents With Lucidpress](http://www.freetech4teachers.com/2013/10/collaboratively-create-multimedia.html)
-* MarketingTechBlog.com &mdash; [Lucidpress: Collaborative Online Print &amp; Digital Publishing](https://martech.zone/lucidpress/)
+* MarketingTechBlog.com &mdash; [Lucidpress: Collaborative Online Print &amp; Digital Publishing](http://www.marketingtechblog.com/lucidpress/)
 * EducatorsTechnology.com &mdash; [Lucidpress: A Good Real-time Collaborative Tool for Teachers and Students](http://www.educatorstechnology.com/2013/10/lucidpress-good-real-time-collaborative.html)
 * CreativePro.com &mdash; [Design for Print and Digital Publishing With Lucidpress](http://www.creativepro.com/article/design-for-print-and-digital-publishing-with-lucidpress)
 * PubExec.com &mdash; [Drag-and-Drop Software Makes Publishing Accessible](http://www.pubexec.com/article/drag-and-drop-software-makes-publishing-accessible/1)
