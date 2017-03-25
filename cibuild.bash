@@ -5,7 +5,7 @@ echo "Building site..."
 bundle exec jekyll build
 
 echo "Checking link and image URLs..."
-bundle exec htmlproofer ./_site --url-ignore "/linkedin.com/,/gravatar.com/"
+bundle exec htmlproofer ./_site --url-ignore "/linkedin.com/,/gravatar.com/,/marketingtechblog.com/"
 
 echo "Making sure CSS files didn't make it into the sitemap..."
 [ $(grep \\.css _site/sitemap.xml -c) -eq 0 ]
