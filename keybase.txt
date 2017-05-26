@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/mjswensen
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://mjswensen.com
+  * I am mjswensen (https://keybase.io/mjswensen) on keybase.
+  * I have a public key with fingerprint 39E5 6D6F 3960 DE37 2910  D34C 3F9E 482B FC52 6F35
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101314a95fff9c367f874259d94822b2da40d44a733a871c82647f846afb614ce080a",
+            "fingerprint": "39e56d6f3960de372910d34c3f9e482bfc526f35",
+            "host": "keybase.io",
+            "key_id": "3f9e482bfc526f35",
+            "kid": "0101314a95fff9c367f874259d94822b2da40d44a733a871c82647f846afb614ce080a",
+            "uid": "168e6be47706e14f7e148d7e0a8dc119",
+            "username": "mjswensen"
+        },
+        "service": {
+            "hostname": "mjswensen.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1495827719,
+    "expire_in": 157680000,
+    "prev": "f2a55d5e27130d8f384c5526cf3d8ec3e29452a9fa21ad85fb4ac195d0693ea9",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkntQVFUcx3dhISAyLFEzZOX6iFfrfT/WKdSgSWqc5DGClst9nLtcYe9ddxeI
+ZGsI0YpeDKOWiaKUDj4gCoTCB7HsWDIGGDmFMxpkAWqAryzanM5l8p+mPzt/nDPn
+9/t8v+d3fvN774FgQ5gxZc8zSYEMjTL2jAmG3PjKyM2IoEmliHUzUgCmD1AoAbfH
+VqBIiBVBMRQjMJLnKFmWOZGgGZllSJziJI5kcVzAJZ5EJZLkGYLgWQYTWZwmIUPS
+vCzQGCkClEV5JBmRFdUOXE6XonqgLcEBipZomeBoVAIEg3MYKhGkSMgcgL6CLFI4
+zFJQmK+5dQUsTuDdwKJoMAYvtuny/oP/n+sumrbDaBbQAiAZBqUBRsoM3FiJASjP
+SiKGcTroBi6VdwBIOza6S4DqBiriTUZguFgRgd5Z/Sv/Riyi5oBqp0vzaKJWCFP5
+Ho/Tqis9pU4dLQGC7R8Tm6CoEmwkFBQDl1vRVMSKQVL0KLorRnIUizMMxiUj4CWn
+4gI2RScohmZRuPRnQDG0lHGeoqRcCuAMRqASKxMsKVKwhaJMSCwQCYBzJIXznMzj
+GC+xlCyQvIhxlITSHAF4/b9usEnVECsF6+Tt0NOt2FXeU+QCiDfijSDCZDCGGebP
+jjNxPzs0Lu8ikxD17XP3hi8kSJ88Q0R41L3IV/4ow5k5iRsBtXcHvrUz+8O55UO9
+Xke1Y6Bn190Xs7Liq+4/9I5yrr+6KCnfuzv9au3Iw7El0rbR62dDDf3YvnYkoa7B
+8XF5cNw8Z+Pw/scPHnBXbDgap3xW3Z+dwDdO/XYtIrF11DwxPz0paxX1QvbbO4mf
+tvfcrMu98+7Mx451xLfKj1SYLTeCj5dd6viufksik5n0aee5j4JO9124PN7y/Ohg
+W8J4cHRK8yUSVb+OfDZuqj5SrLciRYOTOVOdLZa3fCvVVuWDI+3d+HJfmv9OZurt
+sdiOwZoHm6+MxMQsWXy+6mho043WsxVNKwKFv/q7X8NMDekzJrHYpRkv4yZ0Tcgs
+Xtt76/W1jy5Y+GPoVEjquj8jCkfkI1W9rxYaA5/7FrwZsvtCQ8qKusN+Pw5yn8Id
+n+z45XR/wrVNphRlfx44s3CXHzu4LCew77h1+PeOE0Pr2tZ6MwNVHSd8S76p7V06
+eLuvKzB7UaNt3sWak+h9MbeWRXs6C9KMO/8iSpP7ypA/mgxz5YykWeGI17F66Fjv
+uCVc6Mof6h0Iq4z2SYfJU3OGs5RDpi9cPd3fT+Qt3tq++uTElw+l5ttTlLQrOZef
+NtlnWp4ofQUMv6/Zzc2nnuxfeXdRaxNVNuk3M93lV+NXbRhHt49FmVqi1xSns5U1
+9OSW8wfWd5XW3CyIrVu+54cZ19fXmtsG/gY=
+=9cwt
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mjswensen
+
+==================================================================
