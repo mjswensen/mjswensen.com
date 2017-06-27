@@ -15,3 +15,9 @@ Make sure Ruby, Bundler, and Yarn are installed.
 
     bundle exec jekyll build --watch
     browser-sync start --server --files "*.css, *.html" # from within _mjswensen-site/
+
+## Deploying
+
+    JEKYLL_ENV=production bundle exec jekyll build --destination _mjswensen-site
+    cd _mjswensen-site
+    now
