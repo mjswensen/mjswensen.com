@@ -17,7 +17,7 @@ One of my goals for Q2 2015 was to answer ten CSS-related questions on Stack Ove
 
 In [this question](http://stackoverflow.com/questions/29528157/nested-div-css-selector/29528204), the original poster was on a wild goose chase that most CSS developers have found themselves on at one point or another: trying to select a parent element based on whether or not it contains a given descendant. For example, all `section`s that contain an element with the `metadata` class, but not those that do not (proposed syntax: `section < .metadata`).
 
-**Key takeaway:** Unfortunately, the parent selector does not yet exist, but may someday in [a future CSS specification](http://www.w3.org/TR/selectors4/). There may be, however, alternate solutions to solving that problem, such as the [use of psuedo-classes like `:empty`](https://mjswensen.github.io/blog/2015/05/11/practical-use-cases-for-the-empty-pseudo-class/) or `:not()`.
+**Key takeaway:** Unfortunately, the parent selector does not yet exist, but may someday in [a future CSS specification](http://www.w3.org/TR/selectors4/). There may be, however, alternate solutions to solving that problem, such as the [use of psuedo-classes like `:empty`](https://mjswensen.com/blog/2015/05/11/practical-use-cases-for-the-empty-pseudo-class/) or `:not()`.
 
 ## The Box Model
 
