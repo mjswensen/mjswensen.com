@@ -1,4 +1,4 @@
-# mjswensen.github.io [![Travis](https://img.shields.io/travis/mjswensen/mjswensen.github.io.svg)](https://travis-ci.org/mjswensen/mjswensen.github.io)
+# mjswensen.com
 
 Source code for [mjswensen.com](https://mjswensen.com/).
 
@@ -14,4 +14,4 @@ Make sure Ruby, Bundler, and Yarn are installed.
 ### Local server
 
     bundle exec jekyll build --watch
-    browser-sync start --server --files "*.css, *.html" # from within _site/
+    browser-sync start --server --files "*.css, *.html" # from within _mjswensen-site/
