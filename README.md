@@ -1,6 +1,6 @@
 # mjswensen.github.io [![Travis](https://img.shields.io/travis/mjswensen/mjswensen.github.io.svg)](https://travis-ci.org/mjswensen/mjswensen.github.io)
 
-Source code for [mjswensen.com](http://mjswensen.com/).
+Source code for [mjswensen.com](https://mjswensen.com/).
 
 ## Developing locally
 

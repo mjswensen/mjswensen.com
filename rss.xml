@@ -13,7 +13,7 @@ sitemap:
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <generator>Jekyll</generator>
-    <webMaster>webmaster@mjswensen.com</webMaster>
+    <webMaster>swensen.matthew@gmail.com</webMaster>
     {% for post in site.posts %}
     <item>
       <title>{{ post.title }}</title>
