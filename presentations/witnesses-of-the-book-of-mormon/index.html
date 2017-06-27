@@ -30,7 +30,7 @@ Subtopics and Ideas:
   <title>Witnesses of the Book of Mormon</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
-  {% if site.safe %}
+  {% if jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
 </head>

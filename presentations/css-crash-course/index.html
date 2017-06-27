@@ -14,7 +14,7 @@ location: Draper, UT
   <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
-  {% if site.safe %}
+  {% if jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
 </head>

@@ -46,7 +46,7 @@ location: Provo, UT
     <!-- Presentation-specific styles -->
     <link rel="stylesheet" href="{{ site.baseurl }}/presentations/devmountain-advanced-css/css/devmountain-advanced-css.css">
 
-    {% if site.safe %}
+    {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
     {% endif %}
 

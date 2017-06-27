@@ -25,7 +25,7 @@ layout: medium
   <p class="tweet-preview">{{ page.title }} {{ site.domain | append: page.url }} {% for tag in page.tags %}#{{ tag }} {% endfor %}via @mjswensen</p>
 </div>
 <hr>
-{% if site.safe %}
+{% if jekyll.environment == 'production' %}
 {% include comments.html %}
 <hr>
 {% endif %}
