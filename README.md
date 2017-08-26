@@ -9,11 +9,11 @@ Source code for [mjswensen.com](https://mjswensen.com/).
 Make sure Ruby, Bundler, and Yarn are installed.
 
     bundle install
-    yarn global add browser-sync
+    npm -g i browser-sync
 
 ### Local server
 
-    bundle exec jekyll build --watch
+    bundle exec jekyll build --watch --destination _mjswensen-site
     browser-sync start --server --files "*.css, *.html" # from within _mjswensen-site/
 
 ## Deploying
