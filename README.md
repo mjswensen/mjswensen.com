@@ -4,20 +4,12 @@ Source code for [mjswensen.com](https://mjswensen.com/).
 
 ## Developing locally
 
-### Install dependencies
+    docker-compose up dev
 
-Make sure Ruby, Bundler, and Yarn are installed.
-
-    bundle install
-    npm -g i browser-sync
-
-### Local server
-
-    bundle exec jekyll build --watch --destination _mjswensen-site
-    browser-sync start --server --files "*.css, *.html" # from within _mjswensen-site/
+Then serve the contents of `_mjswensen-site` (e.g., `cd _mjswensen-site && npx http-server`).
 
 ## Deploying
 
-    JEKYLL_ENV=production bundle exec jekyll build --destination _mjswensen-site
+    docker-compose run -e JEKYLL_ENV=production dev bundle exec jekyll build --destination _mjswensen-site
     cd _mjswensen-site
     now

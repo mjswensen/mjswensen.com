@@ -1,0 +1,7 @@
+version: '3'
+services:
+  dev:
+    build: .
+    volumes:
+      - .:/mjswensen
+    command: bundle exec jekyll build --watch --destination _mjswensen-site
