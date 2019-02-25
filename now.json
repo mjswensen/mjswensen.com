@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "alias": "mjswensen.com"
+  "alias": "mjswensen.com",
+  "routes": [
+    { "src": "/.well-known/brave-rewards-verification.txt", "dest": "brave-rewards-verification.txt" }
+  ]
 }
