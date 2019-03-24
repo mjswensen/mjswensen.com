@@ -1,4 +1,21 @@
 name: mjswensen.com
 domain: https://mjswensen.com
 permalink: pretty
-exclude: [ _styles, node_modules, .git, .gitignore, package.json, README.md, .sass-cache, cibuild.bash, vendor, build.bash, Dockerfile, docker-compose.yml, Gemfile, Gemfile.lock ]
+exclude: 
+  - _styles
+  - node_modules
+  - .git
+  - .gitignore
+  - package.json
+  - README.md
+  - .sass-cache
+  - cibuild.bash
+  - vendor
+  - build.bash
+  - Dockerfile
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - now.json
+include:
+  - .well-known

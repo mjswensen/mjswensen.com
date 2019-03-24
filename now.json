@@ -1,7 +1,14 @@
 {
   "version": 2,
   "alias": "mjswensen.com",
+  "builds": [
+    { "src": "_mjswensen-site/**", "use": "@now/static" },
+    { "src": "_mjswensen-site/.well-known/**", "use": "@now/static" }
+  ],
   "routes": [
-    { "src": "/.well-known/brave-rewards-verification.txt", "dest": "brave-rewards-verification.txt" }
+    {
+      "src": "/(.*)",
+      "dest": "_mjswensen-site/$1"
+    }
   ]
 }

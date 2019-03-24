@@ -11,5 +11,4 @@ Then serve the contents of `_mjswensen-site` (e.g., `cd _mjswensen-site && npx h
 ## Deploying
 
     docker-compose run -e JEKYLL_ENV=production dev bundle exec jekyll build --destination _mjswensen-site
-    cd _mjswensen-site
     now
