@@ -43,7 +43,7 @@ One requirement for themer's GUI was that users should be able to save (and idea
 
 I went the whole nine yards and implemented `Open`, `Save`, `Save As...`, friendly prompts to prevent accidental discarding of unsaved changes, etc.... basically everything you'd expect from a traditional desktop program. This worked well enough for persisting theme data, but didn't allow for easily sharing themes with others.
 
-On the Web, there's a better way to share application state: the URL. themer's new PWA stores all of the theme-relevant state in the URL's query string, so sharing your theme is as easy as sending a link (like [this one](https://themer.mjswensen.com/?colors.dark.accent0=%23CA3E5A&colors.dark.accent1=%23D8843E&colors.dark.accent2=%23EBB062&colors.dark.accent3=%2381A559&colors.dark.accent4=%2342ABAB&colors.dark.accent5=%234496CD&colors.dark.accent6=%239770B2&colors.dark.accent7=%23B35D8D&colors.dark.shade0=%2313222E&colors.dark.shade7=%23ACBECC&activeColorSet=dark&calculateIntermediaryShades.dark=true&calculateIntermediaryShades.light=true)), and saving is as easy as bookmarking (or just using your browser's history).
+On the Web, there's a better way to share application state: the URL. themer's new PWA stores all of the theme-relevant state in the URL's query string, so sharing your theme is as easy as sending a link (like [this one](https://themer.dev/?colors.dark.accent0=%23CA3E5A&colors.dark.accent1=%23D8843E&colors.dark.accent2=%23EBB062&colors.dark.accent3=%2381A559&colors.dark.accent4=%2342ABAB&colors.dark.accent5=%234496CD&colors.dark.accent6=%239770B2&colors.dark.accent7=%23B35D8D&colors.dark.shade0=%2313222E&colors.dark.shade7=%23ACBECC&activeColorSet=dark&calculateIntermediaryShades.dark=true&calculateIntermediaryShades.light=true)), and saving is as easy as bookmarking (or just using your browser's history).
 
 ## The takeaway
 
@@ -65,4 +65,4 @@ There are, of course, applications that require the use of Electron (like VS Cod
 
 Electron is a wonderful piece of software, and building an Electron app was an enjoyable experience filled with learning. After having spent some time with it, though, I am more committed than ever to building for my platform of choice: the Web. I can't wait to see what the future holds for PWAs and Web technologies in general.
 
-Check out [themer's new PWA](https://themer.mjswensen.com) and let me know what you think.
+Check out [themer's new PWA](https://themer.dev) and let me know what you think.
