@@ -4,11 +4,11 @@ Source code for [mjswensen.com](https://mjswensen.com/).
 
 ## Developing locally
 
-    docker-compose up dev
+    docker-compose up
 
-Then serve the contents of `_mjswensen-site` (e.g., `cd _mjswensen-site && npx http-server`).
+The site will be available on http://localhost:5000.
 
 ## Deploying
 
-    docker-compose run -e JEKYLL_ENV=production dev bundle exec jekyll build --destination _mjswensen-site
+    docker-compose run -e JEKYLL_ENV=production builder bundle exec jekyll build --destination _mjswensen-site
     now

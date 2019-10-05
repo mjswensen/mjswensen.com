@@ -1,7 +1,15 @@
 version: '3'
 services:
-  dev:
+  builder:
     build: .
     volumes:
       - .:/mjswensen
     command: bundle exec jekyll build --watch --destination _mjswensen-site
+  server:
+    image: node
+    volumes:
+      - .:/mjswensen
+    ports:
+      - 5000:5000
+    working_dir: /mjswensen/_mjswensen-site
+    command: npx serve
