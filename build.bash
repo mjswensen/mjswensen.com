@@ -6,9 +6,6 @@ OUT_DIR="_mjswensen-site"
 echo "Building site..."
 bundle exec jekyll build --destination $OUT_DIR
 
-echo "Checking link and image URLs..."
-bundle exec htmlproofer ./_mjswensen-site --url-ignore "/linkedin.com/,/gravatar.com/,/marketingtechblog.com/"
-
 echo "Making sure CSS files didn't make it into the sitemap..."
 [ $(grep \\.css $OUT_DIR/sitemap.xml -c) -eq 0 ]
 
