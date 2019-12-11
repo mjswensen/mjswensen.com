@@ -25,10 +25,6 @@ layout: medium
   <p class="tweet-preview">{{ page.title }} {{ site.domain | append: page.url }} {% for tag in page.tags %}#{{ tag }} {% endfor %}via @mjswensen</p>
 </div>
 <hr>
-{% if jekyll.environment == 'production' %}
-{% include comments.html %}
-<hr>
-{% endif %}
 <nav class="prev-next-posts">
   {% if page.previous.url %}
   <a class="previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title }}</a>
