@@ -4,6 +4,10 @@ date: 2019-12-18 05:48
 layout: post
 ---
 
+<p><span class="update">Update <span class="update-date">12/18/2019</span></span> Thanks to an astute Reddit commenter, today I learned about Pascal's Wager, which is strikingly similar to the idea I tried to synthesize below. For a more in-depth read on this topic, check out <a href="https://en.wikipedia.org/wiki/Pascal's_wager">the Wikipedia article on Pascal's Wager</a>.</p>
+
+---
+
 A core premise (perhaps _the_ core premise) of religiosity is faith, which I define as "believing in things one cannot see or otherwise definitively prove." Though faith is an essential component to any religious conversation, I'd like to set it aside for just a moment and focus instead on a pragmatic and logical way of thinking about religion.
 
 The topic in question: "Does God exist?"—a question that has sparked divisive debate for millennia. Believers will present mountains of "evidence" while non-believers will correctly point out that such "evidence" cannot amount to "proof."
