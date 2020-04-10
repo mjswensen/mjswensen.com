@@ -2,6 +2,7 @@
 title: "Building Stripe.com's Tabbed Preview Widget From Scratch in 30 Minutes"
 date: 2020-04-09 06:39
 layout: post
+excerpt: In this video I try to build a fully functional tabbed preview widget in HTML and CSS from scratch in 30 minutes—without looking at the original code. After the time's up, I peek under the hood to see the approach of the original author and compare and contrast it to my approach.
 ---
 
 {% include video.html videoUrl="//www.youtube.com/embed/NFOidUvke0k" %}
@@ -241,3 +242,13 @@ Stripe is known for adding a level of polish and detail that most engineering te
 # Conclusion
 
 Any questions or suggestions about my tooling, approach, development style? What would you have done differently? I'd love to hear from you. [Find me on Twitter](https://twitter.com/mjswensen) or [leave a comment on the video](https://youtu.be/NFOidUvke0k).
+
+# Tools
+
+Here are the tools I used in this video:
+
+* Text editor: [Visual Studio Code](https://code.visualstudio.com/) with theme [_Right in the Teals_](https://themer.dev/?colors.dark.shade0=%23171D1D&colors.dark.shade7=%23CDDEDE&colors.dark.accent0=%23F18CB1&colors.dark.accent1=%23B86675&colors.dark.accent2=%23C57B67&colors.dark.accent3=%2300ACBD&colors.dark.accent4=%23208490&colors.dark.accent5=%231A9BA6&colors.dark.accent6=%2332A0AC&colors.dark.accent7=%23FCA188&colors.light.shade0=%23F8FDFE&colors.light.shade7=%2305262D&colors.light.accent0=%23D75971&colors.light.accent1=%23CD2455&colors.light.accent2=%23AA582D&colors.light.accent3=%231D7E66&colors.light.accent4=%2314808C&colors.light.accent5=%230E7481&colors.light.accent6=%234797A7&colors.light.accent7=%23C87D4F&activeColorSet=light&calculateIntermediaryShades.dark=true&calculateIntermediaryShades.light=true) by [themer](https://github.com/mjswensen/themer), and [Fira Code](https://github.com/tonsky/FiraCode) font
+* Browser: [Brave](https://brave.com/mjs324)
+* Development server: [Browsersync](https://browsersync.io/) launched under [npx](https://www.npmjs.com/package/npx)
+* Application launcher: [Alfred](https://www.alfredapp.com/)
+* Color picker: [Sip](https://sipapp.io/)
