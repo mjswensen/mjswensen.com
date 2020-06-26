@@ -3,6 +3,7 @@ title: How to Learn From Mistakes
 date: 2015-12-26 16:29
 tags: business life
 layout: post
+excerpt: Mistakes are an inevitable and essential part of the human experience. Though everybody makes mistakes of some form or another, not everyone leverages the great potential for learning and growth that mistakes offer. Here are some ideas for taking advantage of our mistakes rather than simply letting them weigh us down.
 ---
 
 Mistakes are an inevitable and essential part of the human experience. Though everybody makes mistakes of some form or another, not everyone leverages the great potential for learning and growth that mistakes offer. Here are some ideas for taking advantage of our mistakes rather than simply letting them weigh us down.
