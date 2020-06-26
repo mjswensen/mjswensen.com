@@ -19,6 +19,7 @@ sitemap:
       <title>{{ post.title }}</title>
       <link>{{ site.domain }}{{ post.url }}</link>
       <description>{{ post.excerpt }}</description>
+      <content>{{ post.content }}</content>
       {% if post.sitemap.lastmod %}
       <pubDate>{{ post.sitemap.lastmod | date_to_rfc822 }}</pubDate>
       {% else %}
