@@ -2,8 +2,8 @@
 sitemap:
   changefreq: weekly
 ---
-<?xml version="1.0"?>
-<rss version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>{{ site.name }}</title>
     <link>{{ site.domain }}</link>
@@ -19,7 +19,7 @@ sitemap:
       <title>{{ post.title }}</title>
       <link>{{ site.domain }}{{ post.url }}</link>
       <description>{{ post.excerpt }}</description>
-      <content>{{ post.content }}</content>
+      <content:encoded>{{ post.content | escape }}</content:encoded>
       {% if post.sitemap.lastmod %}
       <pubDate>{{ post.sitemap.lastmod | date_to_rfc822 }}</pubDate>
       {% else %}
