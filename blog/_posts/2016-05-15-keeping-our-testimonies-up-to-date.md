@@ -1,10 +1,10 @@
 ---
 title: Keeping Our Testimonies Up-to-date
-date: 2016-05-15 09:25
+date: 2016-05-15 09:25 MDT
 layout: post
 excerpt: We are constantly changing, growing, and learning as we progress through life. Because of this, our testimonies need to be growing at a proportional pace.
 sitemap:
-  lastmod: 2016-05-16 07:36:59
+  lastmod: 2016-05-16 07:36:59 MDT
 ---
 
 I had the opportunity to give a talk on this topic to an [LDS](https://www.lds.org/) congregation in South Jordan, UT. The following is the transcript. The original topic title was "Finding Peace Through Jesus Christ by Strengthening Your Testimony Throughout Your Entire Life".

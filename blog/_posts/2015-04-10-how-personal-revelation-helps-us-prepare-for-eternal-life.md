@@ -1,10 +1,10 @@
 ---
 title: How Personal Revelation Helps Us Prepare For Eternal Life
-date: 2015-04-10 7:30:19
+date: 2015-04-10 7:30:19 MDT
 layout: post
 excerpt: Heavenly Father is closer to us than we realize. He wants to communicate with us and has given us the pattern by which we can ask Him for help.
 sitemap:
-  lastmod: 2015-04-10 07:28:13
+  lastmod: 2015-04-10 07:28:13 MDT
 ---
 
 I had the opportunity to give a talk on this topic to an [LDS](https://www.lds.org/?lang=eng) congregation in Provo, UT. The following is the transcript.

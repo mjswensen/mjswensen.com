@@ -11,7 +11,7 @@ pick:
     image:
       url: /picks/images/procreate-pocket-icon.png
       alt: Procreate Pocket app icon
-date: 2016-07-19 20:52
+date: 2016-07-19 20:52 MDT
 layout: pick
 ---
 

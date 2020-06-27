@@ -1,11 +1,11 @@
 ---
 title: "Lucidpress: Publishing for Web and Print"
-date: 2013-12-30 14:21:00
+date: 2013-12-30 14:21:00 MST
 tags: software design
 layout: post
 excerpt: Lucidpress is a new cloud-based-yet-desktop-caliber publishing application.
 sitemap:
-  lastmod: 2014-05-02 21:39:00
+  lastmod: 2014-05-02 21:39:00 MDT
 ---
 
 [Lucidpress](http://www.lucidpress.com) is a new cloud-based-yet-desktop-caliber publishing application. If you're a designer or involved with a small- or medium-sized business, you should probably check it out&mdash;it's free during beta. There's also an interactive [demo](http://www.lucidpress.com/demo).

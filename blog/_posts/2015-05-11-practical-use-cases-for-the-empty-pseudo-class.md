@@ -1,6 +1,6 @@
 ---
 title: Practical Use Cases For The :empty Pseudo-class
-date: 2015-05-11 22:17:54
+date: 2015-05-11 22:17:54 MDT
 tags: css
 layout: post
 excerpt: At first, the :empty pseudo-class may not seem to be the most useful of the advanced selectors. However, there are situations in which :empty is the perfect tool for the job.

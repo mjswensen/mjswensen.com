@@ -1,6 +1,6 @@
 ---
 title: "Building Stripe.com's Tabbed Preview Widget From Scratch in 30 Minutes"
-date: 2020-04-09 06:39
+date: 2020-04-09 06:39 MDT
 layout: post
 excerpt: In this video I try to build a fully functional tabbed preview widget in HTML and CSS from scratch in 30 minutes—without looking at the original code. After the time's up, I peek under the hood to see the approach of the original author and compare and contrast it to my approach.
 ---

@@ -11,7 +11,7 @@ pick:
     image:
       url: /picks/images/alfred-logo.png
       alt: Alfred logo
-date: 2016-07-04 15:02
+date: 2016-07-04 15:02 MDT
 layout: pick
 ---
 

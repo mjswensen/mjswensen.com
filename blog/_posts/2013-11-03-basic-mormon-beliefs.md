@@ -1,6 +1,6 @@
 ---
 title: Basic Mormon Beliefs
-date: 2013-11-03 08:13:00
+date: 2013-11-03 08:13:00 MST
 tags: religion
 layout: post
 excerpt: The story behind the Mormon Church is remarkably simple and powerful.

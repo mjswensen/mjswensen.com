@@ -1,10 +1,10 @@
 ---
 title: How the Gospel of Christ Relates to Those Who Passed On Without It
-date: 2014-06-08 11:50:00
+date: 2014-06-08 11:50:00 MDT
 layout: post
 excerpt: The Plan of Salvation is a selfless plan of love.
 sitemap:
-  lastmod: 2015-04-10 07:28:13
+  lastmod: 2015-04-10 07:28:13 MDT
 ---
 
 I had the opportunity to give a talk on this topic to an [LDS](https://www.lds.org/?lang=eng) congregation in Orem, UT. The following is the transcript.

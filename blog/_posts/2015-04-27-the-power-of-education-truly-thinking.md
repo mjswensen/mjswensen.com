@@ -1,6 +1,6 @@
 ---
 title: "The Power of Education: Truly Thinking"
-date: 2015-04-27 14:42:18
+date: 2015-04-27 14:42:18 MDT
 layout: post
 excerpt: We have the power to truly think, to choose what has meaning and what doesn't in the mundane moments of everyday life.
 ---

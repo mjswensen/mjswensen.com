@@ -1,6 +1,6 @@
 ---
 title: Static Sites Are Awesome
-date: 2015-09-19 15:41
+date: 2015-09-19 15:41 MDT
 tags: web publishing
 layout: post
 excerpt: When creating landing pages, content sites, or blogs, content management systems shouldn't be the first tool web developers reach for. Because of the many benefits that come with the simplicity of static sites, they are not only a viable alternative, they are a more practical alternative. And with the popularity of static site generators rapidly on the rise, creating and maintaining static websites is easier than ever.

@@ -1,6 +1,6 @@
 ---
 title: What Really Matters
-date: 2014-04-24 08:29:00
+date: 2014-04-24 08:29:00 MDT
 layout: post
 excerpt: When life's challenges affront us, the superfluity of daily life suddenly loses its meaning.
 ---

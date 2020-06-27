@@ -1,6 +1,6 @@
 ---
 title: "Playing the Numbers: A Millennial Engineer's Probabilistic Approach to Believing in God"
-date: 2019-12-18 05:48
+date: 2019-12-18 05:48 MST
 layout: post
 excerpt: Though faith is an essential component to any religious conversation, I'd like to set it aside for just a moment and focus instead on a pragmatic and logical way of thinking about religion.
 ---
