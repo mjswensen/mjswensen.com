@@ -1,6 +1,6 @@
 name: mjswensen.com
 domain: https://mjswensen.com
-permalink: pretty
+permalink: /:categories/:title/
 exclude: 
   - _styles
   - node_modules
@@ -19,3 +19,4 @@ exclude:
   - now.json
 include:
   - .well-known
+  - _redirects

@@ -1,6 +1,6 @@
 ---
 title: From Electron to Progressive Web App
-date: 2019-03-23 20:29
+date: 2019-03-23 20:29 MDT
 layout: post
 excerpt: In this post I'd like to review my reasoning behind sunsetting an Electron-based application in favor of a Progressive Web App (PWA).
 ---

@@ -1,6 +1,6 @@
 ---
 title: Why Code Snobs Are Invaluable
-date: 2015-01-30 13:50:44
+date: 2015-01-30 13:50:44 MST
 tags: software
 layout: post
 excerpt: Some argue that "code snobs" waste time on trivia. While I am sure this can be the case, I submit that their ideas and comments offer more benefit than cost in the long run.

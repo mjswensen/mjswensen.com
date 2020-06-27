@@ -1,11 +1,11 @@
 ---
 title: Configurations for a Friendlier tmux Status Bar
-date: 2014-08-09 17:22:00
+date: 2014-08-09 17:22:00 MDT
 tags: productivity
 layout: post
 excerpt: I recently added a few configuration options to my local tmux configuration file to make the status bar easier to read.
 sitemap:
-  lastmod: 2017-08-26 13:31:43
+  lastmod: 2017-08-26 13:31:43 MDT
 ---
 
 At work, the engineering team uses [tmux](https://tmux.github.io/) to manage the several instances of the services we run to develop the Lucid suite locally. It is a phenomenal terminal management system and the best part is that it is highly configurable. If you enjoy working in the command-line and haven't checked it out yet, you need to!

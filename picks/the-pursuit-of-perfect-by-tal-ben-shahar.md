@@ -11,7 +11,7 @@ pick:
     image:
       url: /picks/images/the-pursuit-of-perfect-by-tal-ben-shahar.jpg
       alt: "Book cover for The Pursuit of Perfect: How to Stop Chasing Perfection and Start Living a Richer, Happier Life"
-date: 2015-12-29 20:11
+date: 2015-12-29 20:11 MST
 layout: pick
 ---
 

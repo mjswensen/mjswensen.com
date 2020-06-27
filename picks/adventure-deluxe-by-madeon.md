@@ -11,7 +11,7 @@ pick:
     image:
       url: /picks/images/adventure-deluxe-by-madeon.jpeg
       alt: Album art for Adventure (Deluxe) by Madeon
-date: 2015-09-14 17:43
+date: 2015-09-14 17:43 MDT
 layout: pick
 ---
 
