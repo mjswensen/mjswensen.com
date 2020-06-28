@@ -1,1 +1,2 @@
 /blog/:year/:month/:date/* /blog/:splat 301
+/blog/basic-mormon-beliefs/ /blog/basic-beliefs-of-the-church-of-jesus-christ/ 301

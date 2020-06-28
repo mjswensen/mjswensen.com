@@ -3,6 +3,8 @@ title: What Really Matters
 date: 2014-04-24 08:29:00 MDT
 layout: post
 excerpt: When life's challenges affront us, the superfluity of daily life suddenly loses its meaning.
+sitemap:
+  lastmod: 2020-06-27 19:04:24 MDT
 ---
 
 When life's challenges affront us, the superfluity of daily life suddenly loses its meaning.
@@ -21,11 +23,11 @@ We were overwhelmed by the amount of love and support we felt when our family an
 
 ## A Close-knit Community
 
-The [Mormon church](https://lds.org) serves my family well in this regard. Leaders of our local congregation organized volunteers to bring us dinner for three nights following our return home from the hospital. When we attended our church meetings that Sunday, our friends at church showed genuine concern for our well-being and were relieved to hear that everything was OK. Since it is a global church, we know that no matter where we may relocate to in the future there will be a warm community there to welcome us.
+The [Church of Jesus Christ](https://churchofjesuschrist.org) serves my family well in this regard. Leaders of our local congregation organized volunteers to bring us dinner for three nights following our return home from the hospital. When we attended our church meetings that Sunday, our friends at church showed genuine concern for our well-being and were relieved to hear that everything was OK. Since it is a global church, we know that no matter where we may relocate to in the future there will be a warm community there to welcome us.
 
 ## Hope
 
-This is perhaps the most important factor to our ability to handle life's curve balls. For me, hope comes from [my belief that I will be able to be with my family in the afterlife](https://www.mormon.org/faq/topic/family/question/mormon-families). I knew that no matter what happened to my precious baby son, he is my son both in life and after death. This is possible through Jesus Christ, and brings me great peace each day. The following Easter-themed video shows why we can have hope in Jesus Christ:
+This is perhaps the most important factor to our ability to handle life's curve balls. For me, hope comes from [my belief that I will be able to be with my family in the afterlife](https://www.comeuntochrist.org/faq/topic/family/question/mormon-families). I knew that no matter what happened to my precious baby son, he is my son both in life and after death. This is possible through Jesus Christ, and brings me great peace each day. The following Easter-themed video shows why we can have hope in Jesus Christ:
 
 {% include video.html videoUrl="//www.youtube.com/embed/_S3TI4bYerU" %}
 

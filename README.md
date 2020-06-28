@@ -15,3 +15,9 @@ The site will be available on http://localhost:5000.
 ```sh
 git push # master branch
 ```
+
+## Get the date/time for front matter
+
+```sh
+date "+%Y-%m-%d %H:%M:%S %Z" | pbcopy
+```
