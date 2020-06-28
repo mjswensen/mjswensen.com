@@ -4,6 +4,8 @@ date: 2015-12-26 16:29 MST
 tags: business life
 layout: post
 excerpt: Mistakes are an inevitable and essential part of the human experience. Though everybody makes mistakes of some form or another, not everyone leverages the great potential for learning and growth that mistakes offer. Here are some ideas for taking advantage of our mistakes rather than simply letting them weigh us down.
+sitemap:
+  lastmod: 2020-06-27 19:06:54 MDT
 ---
 
 Mistakes are an inevitable and essential part of the human experience. Though everybody makes mistakes of some form or another, not everyone leverages the great potential for learning and growth that mistakes offer. Here are some ideas for taking advantage of our mistakes rather than simply letting them weigh us down.
@@ -55,7 +57,7 @@ Very few mistakes are completely unrecoverable. Use your creativity to come up w
 
 We are children of a loving Heavenly Father who weeps when we are in pain and who rejoices when we learn from our mistakes. We can turn to Him with our concerns, and He can help us with strength to undertake any of the processes outlined in this article. If your mistake was moral in nature, ask Him for forgiveness and tell Him of your resolve to improve; He will answer that prayer and help you feel of His unconditional love for you.
 
-To learn more about forgiveness through Jesus Christ, visit [mormon.org](https://www.mormon.org/beliefs/jesus-christ#repentance).
+To learn more about forgiveness through Jesus Christ, visit [comeuntochrist.org](https://www.comeuntochrist.org/beliefs/jesus-christ).
 
 ## Forgive yourself
 

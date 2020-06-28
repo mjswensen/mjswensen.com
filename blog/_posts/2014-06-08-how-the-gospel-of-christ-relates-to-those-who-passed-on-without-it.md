@@ -4,10 +4,10 @@ date: 2014-06-08 11:50:00 MDT
 layout: post
 excerpt: The Plan of Salvation is a selfless plan of love.
 sitemap:
-  lastmod: 2015-04-10 07:28:13 MDT
+  lastmod: 2020-06-27 19:01:13 MDT
 ---
 
-I had the opportunity to give a talk on this topic to an [LDS](https://www.lds.org/?lang=eng) congregation in Orem, UT. The following is the transcript.
+I had the opportunity to give a talk on this topic to a congregation of [the Church of Jesus Christ](https://www.churchofjesuschrist.org/?lang=eng) in Orem, UT. The following is the transcript.
 
 ---
 
@@ -17,7 +17,7 @@ I have the opportunity to speak today about one of the great messages of hope an
 
 For those of you who are visiting with us today or who are unfamiliar with family history, it is the process of gathering information about our ancestors and finding out who they are so that we can vicariously perform sacred ordinances in temples as proxies for them. These ordinances allow them to enjoy the blessings of the gospel in the afterlife even though they didn't have an opportunity to receive them when they were alive.
 
-[The Prophet Joseph Smith said](https://www.lds.org/manual/teachings-joseph-smith/chapter-41):
+[The Prophet Joseph Smith said](https://www.churchofjesuschrist.org/manual/teachings-joseph-smith/chapter-41):
 
 > ...suppose the case of two men, brothers, equally intelligent, learned, virtuous and lovely, walking in uprightness and in all good conscience, so far as they have been able to discern duty from the muddy stream of tradition, or from the blotted page of the book of nature.
 >
@@ -25,7 +25,7 @@ For those of you who are visiting with us today or who are unfamiliar with famil
 
 Outlined here is one of the great questions of life: is there no hope for those who pass away without having had a chance to embrace the gospel of Jesus Christ? Joseph explains that there *is* a way for this first brother, and that it is through the ordinances performed by proxy in the temple. Though God is a just God in that each and every person must adhere to His commandments to receive the saving ordinances, He is also merciful, loving, and kind, not condemning those who never had an opportunity to do so before their sojourn on earth was through.
 
-Of this, [Joseph aptly said](https://www.lds.org/manual/teachings-joseph-smith/chapter-41), "This doctrine appears glorious, inasmuch as it exhibits the greatness of divine compassion and benevolence in the extent of the plan of human salvation...This glorious truth is well calculated to enlarge the understanding, and to sustain the soul under troubles, difficulties and distresses."
+Of this, [Joseph aptly said](https://www.churchofjesuschrist.org/manual/teachings-joseph-smith/chapter-41), "This doctrine appears glorious, inasmuch as it exhibits the greatness of divine compassion and benevolence in the extent of the plan of human salvation...This glorious truth is well calculated to enlarge the understanding, and to sustain the soul under troubles, difficulties and distresses."
 
 Brothers and sisters, I know that Heavenly Father loves us. Not only because of this beautiful doctrine, but because He has revealed it to us so that we may have peace and hope concerning our brothers and sisters who leave this life without a knowledge of Him.
 
@@ -33,7 +33,7 @@ One of the most amazing parts of this doctrine is that we have the power to help
 
 As Voltaire (and later [a wise comic book character](http://en.wikipedia.org/wiki/Uncle_Ben#.22With_great_power_comes_great_responsibility.22)) once said, "With great power comes great responsibility." It is up to us to perform this ever-important work. Joseph warned: "Those Saints who neglect it in behalf of their deceased relatives, do it at the peril of their own salvation." This helps us realize that performing vicariously these saving ordinances is not just for our ancestors' benefit, but also for our own.
 
-Elder David A. Bednar, in an [October 2011 General Conference address](https://www.lds.org/general-conference/2011/10/the-hearts-of-the-children-shall-turn), promised the following:
+Elder David A. Bednar, in an [October 2011 General Conference address](https://www.churchofjesuschrist.org/general-conference/2011/10/the-hearts-of-the-children-shall-turn), promised the following:
 
 > As you respond in faith to this invitation, your hearts shall turn to the fathers. The promises made to Abraham, Isaac, and Jacob will be implanted in your hearts. Your patriarchal blessing, with its declaration of lineage, will link you to these fathers and be more meaningful to you. Your love and gratitude for your ancestors will increase. Your testimony of and conversion to the Savior will become deep and abiding. And I promise you will be protected against the intensifying influence of the adversary. As you participate in and love this holy work, you will be safeguarded...throughout your lives.
 
@@ -67,15 +67,15 @@ The benefits of family history work are not only spiritual. The following is an 
 >
 > ...The bottom line: if you want a happier family, create, refine and retell the story of your family's positive moments and your ability to bounce back from the difficult ones. That act alone may increase the odds that your family will thrive for many generations to come.
 
-I believe that there is eternal truth at the heart of these doctors' research that can be summarized by [Malachi chapter four, verse six](https://www.lds.org/scriptures/ot/mal/4), which says: "And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse."
+I believe that there is eternal truth at the heart of these doctors' research that can be summarized by [Malachi chapter four, verse six](https://www.churchofjesuschrist.org/scriptures/ot/mal/4), which says: "And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse."
 
-Perhaps the greatest blessing, though, is the joy we feel when we participate in the Lord's work. [President Joseph F. Smith once said](https://www.lds.org/liahona/2014/06/hastening-the-work), "Through our efforts in their behalf their chains of bondage will fall from them, and the darkness surrounding them will clear away, that light may shine upon them and they shall hear in the spirit world of the work that has been done for them by their children here, and will rejoice with you in their performance of these duties."
+Perhaps the greatest blessing, though, is the joy we feel when we participate in the Lord's work. [President Joseph F. Smith once said](https://www.churchofjesuschrist.org/liahona/2014/06/hastening-the-work), "Through our efforts in their behalf their chains of bondage will fall from them, and the darkness surrounding them will clear away, that light may shine upon them and they shall hear in the spirit world of the work that has been done for them by their children here, and will rejoice with you in their performance of these duties."
 
 We taste of the joy that President Joseph F. Smith is talking about when we do missionary work. In fact, family history work can be considered missionary work for the dead. Both involve bringing the gospel to those who did not have it before. Both involve some sort of sacrifice on our part. Both involve faith.
 
-This month's special message from President Monson (the current prophet and president of the Church) is entitled ["Hastening the Work."](https://www.lds.org/liahona/2014/06/hastening-the-work) When I think of hastening work, I think about working extra hard at the end of the day to make sure that everything is done; I think about expending extra effort in the ninth inning of a close baseball game between rival teams; I think about scrambling to finish an exam before the exam center closes. The Lord has said through His prophets that He is hastening His work in *these times*. This is not limited to full-time missionary service. President Monson reminds us that "The Lord has never...indicated that His work is confined to mortality. Rather, His work embraces eternity." Temple ordinances for the dead, therefore, are a vital part of this work.
+This month's special message from President Monson (the current prophet and president of the Church) is entitled ["Hastening the Work."](https://www.churchofjesuschrist.org/liahona/2014/06/hastening-the-work) When I think of hastening work, I think about working extra hard at the end of the day to make sure that everything is done; I think about expending extra effort in the ninth inning of a close baseball game between rival teams; I think about scrambling to finish an exam before the exam center closes. The Lord has said through His prophets that He is hastening His work in *these times*. This is not limited to full-time missionary service. President Monson reminds us that "The Lord has never...indicated that His work is confined to mortality. Rather, His work embraces eternity." Temple ordinances for the dead, therefore, are a vital part of this work.
 
-If you've never done family history work before, that's OK. Neither have I. Now is a great time to start. [President Monson said](https://www.lds.org/liahona/2014/06/hastening-the-work):
+If you've never done family history work before, that's OK. Neither have I. Now is a great time to start. [President Monson said](https://www.churchofjesuschrist.org/liahona/2014/06/hastening-the-work):
 
 > We are going to make mistakes, but none of us can become an expert in family history work without first being a novice. Therefore, we must plunge into this work, and we must prepare for some uphill climbing. This is not an easy task, but the Lord has placed it upon you, and He has placed it upon me.
 >
@@ -87,7 +87,7 @@ The Lord has already provided us with many valuable resources to aid in His work
 
 My faith was strengthened by reading this story. And thanks to modern technology, with a few clicks of the mouse I was able to see that all the temple work for Miles had been completed a few years ago.
 
-Our ancestors need our help. [President Monson said](https://www.lds.org/liahona/2014/06/hastening-the-work), "We, as spirit children of our Heavenly Father, were sent to earth at this time that we might participate in hastening this great work... Our job is to search out our dead and then go to the temple and perform the sacred ordinances that will bring those beyond the veil the same opportunities we have."
+Our ancestors need our help. [President Monson said](https://www.churchofjesuschrist.org/liahona/2014/06/hastening-the-work), "We, as spirit children of our Heavenly Father, were sent to earth at this time that we might participate in hastening this great work... Our job is to search out our dead and then go to the temple and perform the sacred ordinances that will bring those beyond the veil the same opportunities we have."
 
 If you'd like to learn more about family history, I encourage you to attend the Family History Sunday School class that starts next week.
 
