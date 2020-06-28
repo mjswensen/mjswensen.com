@@ -11,6 +11,7 @@ sitemap:
     <language>en-us</language>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <ttl>60</ttl>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <generator>Jekyll</generator>
     <webMaster>swensen.matthew@gmail.com</webMaster>
@@ -20,11 +21,7 @@ sitemap:
       <link>{{ site.domain }}{{ post.url }}</link>
       <description>{{ post.excerpt }}</description>
       <content:encoded>{{ post.content | escape }}</content:encoded>
-      {% if post.sitemap.lastmod %}
-      <pubDate>{{ post.sitemap.lastmod | date_to_rfc822 }}</pubDate>
-      {% else %}
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      {% endif %}
       <guid>{{ site.domain }}{{ post.url }}</guid>
     </item>
     {% endfor %}
