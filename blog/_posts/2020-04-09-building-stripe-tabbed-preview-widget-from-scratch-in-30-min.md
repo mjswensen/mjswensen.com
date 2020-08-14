@@ -3,6 +3,8 @@ title: "Building Stripe.com's Tabbed Preview Widget From Scratch in 30 Minutes"
 date: 2020-04-09 06:39 MDT
 layout: post
 excerpt: In this video I try to build a fully functional tabbed preview widget in HTML and CSS from scratch in 30 minutes—without looking at the original code. After the time's up, I peek under the hood to see the approach of the original author and compare and contrast it to my approach.
+links:
+  dev.to: https://dev.to/mjswensen/building-stripe-com-s-tabbed-preview-widget-from-scratch-in-30-minutes-53fi
 ---
 
 {% include video.html videoUrl="//www.youtube.com/embed/NFOidUvke0k" %}
@@ -15,7 +17,9 @@ In this video I try to build a fully functional tabbed preview widget in HTML an
 
 For this short project I used a very simple setup: an `index.html` file served by [`browser-sync`](https://npmjs.com/package/browser-sync) for automatic reloads on save. It can be run without previous download or install via [`npx`](https://www.npmjs.com/package/npx), which is included by default in node/npm installations.
 
-    npx browser-sync --server --files index.html
+{% highlight shell %}
+npx browser-sync --server --files index.html
+{% endhighlight %}
 
 ## Configuring the widget's container
 
@@ -43,185 +47,187 @@ For the shine effect, I added an `::after` pseudo-element, positioned absolutely
 
 Here is what I ended up with at the end of the session.
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Code Preview Widget</title>
-      <style>
-        .container {
-          --width: 490px;
-          --bg: #31335B;
-          --radius: 8px;
-          --border-active: #596481;
-          width: var(--width);
-          height: 380px;
-          background-color: var(--bg);
-          border-radius: var(--radius);
-          color: white;
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: auto 1fr;
-          transform: rotateX(-10deg) rotateY(10deg);
-          position: relative;
-        }
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Preview Widget</title>
+  <style>
+    .container {
+      --width: 490px;
+      --bg: #31335B;
+      --radius: 8px;
+      --border-active: #596481;
+      width: var(--width);
+      height: 380px;
+      background-color: var(--bg);
+      border-radius: var(--radius);
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: auto 1fr;
+      transform: rotateX(-10deg) rotateY(10deg);
+      position: relative;
+    }
 
-        .container::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background-image: linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.15), transparent);
-          pointer-events: none;
-        }
+    .container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.15), transparent);
+      pointer-events: none;
+    }
 
-        .content {
-          grid-column-start: 1;
-          grid-column-end: 6;
-          position: relative;
-        }
+    .content {
+      grid-column-start: 1;
+      grid-column-end: 6;
+      position: relative;
+    }
 
-        .slide-wrapper {
-          display: flex;
-          overflow-x: hidden;
-          position: absolute;
-          transition: left 400ms ease-in-out;
-        }
+    .slide-wrapper {
+      display: flex;
+      overflow-x: hidden;
+      position: absolute;
+      transition: left 400ms ease-in-out;
+    }
 
-        #js:checked ~ .content .slide-wrapper {
-          left: 0;
-        }
+    #js:checked ~ .content .slide-wrapper {
+      left: 0;
+    }
 
-        #rb:checked ~ .content .slide-wrapper {
-          left: calc(var(--width) * -1);
-        }
+    #rb:checked ~ .content .slide-wrapper {
+      left: calc(var(--width) * -1);
+    }
 
-        #py:checked ~ .content .slide-wrapper {
-          left: calc(var(--width) * -2);
-        }
+    #py:checked ~ .content .slide-wrapper {
+      left: calc(var(--width) * -2);
+    }
 
-        #go:checked ~ .content .slide-wrapper {
-          left: calc(var(--width) * -3);
-        }
+    #go:checked ~ .content .slide-wrapper {
+      left: calc(var(--width) * -3);
+    }
 
-        #other:checked ~ .content .slide-wrapper {
-          left: calc(var(--width) * -4);
-        }
+    #other:checked ~ .content .slide-wrapper {
+      left: calc(var(--width) * -4);
+    }
 
-        .content pre {
-          width: var(--width);
-          overflow: hidden;
-        }
+    .content pre {
+      width: var(--width);
+      overflow: hidden;
+    }
 
-        input[type="radio"] {
-          display: none;
-        }
+    input[type="radio"] {
+      display: none;
+    }
 
-        #js:checked ~ label[for="js"],
-        #rb:checked ~ label[for="rb"],
-        #py:checked ~ label[for="py"],
-        #go:checked ~ label[for="go"],
-        #other:checked ~ label[for="other"] {
-          background-color: var(--bg);
-          border-left: 1px solid var(--border-active);
-          border-right: 1px solid var(--border-active);
-          border-bottom: 1px solid var(--bg);
-        }
+    #js:checked ~ label[for="js"],
+    #rb:checked ~ label[for="rb"],
+    #py:checked ~ label[for="py"],
+    #go:checked ~ label[for="go"],
+    #other:checked ~ label[for="other"] {
+      background-color: var(--bg);
+      border-left: 1px solid var(--border-active);
+      border-right: 1px solid var(--border-active);
+      border-bottom: 1px solid var(--bg);
+    }
 
-        label {
-          background-color: #2D2F4A;
-          border-top-left-radius: var(--radius);
-          border-top-right-radius: var(--radius);
-          text-align: center;
-          padding: 0.25em;
-          border-bottom: 1px solid var(--border-active);
-        }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <input type="radio" name="tab" id="js" checked>
-        <input type="radio" name="tab" id="rb">
-        <input type="radio" name="tab" id="py">
-        <input type="radio" name="tab" id="go">
-        <input type="radio" name="tab" id="other">
-        <label for="js">
-          Node.js
-        </label>
-        <label for="rb">
-          Ruby
-        </label>
-        <label for="py">
-          Python
-        </label>
-        <label for="go">
-          Go
-        </label>
-        <label for="other">
-          ...
-        </label>
-        <section class="content">
-          <div class="slide-wrapper">
-            <pre><code>// Set your secret key
-      const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
-      
-      // Get the payment token ID submitted by the form:
-      const token = request.body.stripeToken;
-      
-      (async () => {
-        const charge = await stripe.charges.create({
-          amount: 999,
-          currency: 'usd',
-          description: 'Example charge',
-          source: token,
-        });
-      })();</code></pre>
-            <pre><code># Set your secret key
-      Stripe.api_key = 'sk_test_BQokikJOvBiI2HlWgH4olfQ2'
-      
-      # Get the payment token ID submitted by the form:
-      token = params[:stripeToken]
-      
-      charge = Stripe::Charge.create({
-        amount: 999,
-        currency: 'usd',
-        description: 'Example charge',
-        source: token,
-      })</code></pre>
-            <pre><code> Set your secret key
-      stripe.api_key = 'sk_test_BQokikJOvBiI2HlWgH4olfQ2'
-      
-      # Get the payment token ID submitted by the form:
-      token = request.form['stripeToken']
-      
-      charge = stripe.Charge.create(
-        amount=999,
-        currency='usd',
-        description='Example charge',
-        source=token,
-      )</code></pre>
-            <pre><code>// Set your secret key
-      stripe.Key = 'sk_test_BQokikJOvBiI2HlWgH4olfQ2'
-      
-      // Get the payment token ID submitted by the form:
-      token := r.FormValue('stripeToken')
-      
-      params := &stripe.ChargeParams{
-        Amount: 999,
-        Currency: 'usd',
-        Description: 'Example charge',
-      }
-      params.SetSource(token)
-      ch, _ := charge.New(params)</code></pre>
-            <pre><code>TODO</code></pre>
-          </div>
-        </section>
+    label {
+      background-color: #2D2F4A;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      text-align: center;
+      padding: 0.25em;
+      border-bottom: 1px solid var(--border-active);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="radio" name="tab" id="js" checked>
+    <input type="radio" name="tab" id="rb">
+    <input type="radio" name="tab" id="py">
+    <input type="radio" name="tab" id="go">
+    <input type="radio" name="tab" id="other">
+    <label for="js">
+      Node.js
+    </label>
+    <label for="rb">
+      Ruby
+    </label>
+    <label for="py">
+      Python
+    </label>
+    <label for="go">
+      Go
+    </label>
+    <label for="other">
+      ...
+    </label>
+    <section class="content">
+      <div class="slide-wrapper">
+        <pre><code>// Set your secret key
+  const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
+  
+  // Get the payment token ID submitted by the form:
+  const token = request.body.stripeToken;
+  
+  (async () => {
+    const charge = await stripe.charges.create({
+      amount: 999,
+      currency: 'usd',
+      description: 'Example charge',
+      source: token,
+    });
+  })();</code></pre>
+        <pre><code># Set your secret key
+  Stripe.api_key = 'sk_test_BQokikJOvBiI2HlWgH4olfQ2'
+  
+  # Get the payment token ID submitted by the form:
+  token = params[:stripeToken]
+  
+  charge = Stripe::Charge.create({
+    amount: 999,
+    currency: 'usd',
+    description: 'Example charge',
+    source: token,
+  })</code></pre>
+        <pre><code> Set your secret key
+  stripe.api_key = 'sk_test_BQokikJOvBiI2HlWgH4olfQ2'
+  
+  # Get the payment token ID submitted by the form:
+  token = request.form['stripeToken']
+  
+  charge = stripe.Charge.create(
+    amount=999,
+    currency='usd',
+    description='Example charge',
+    source=token,
+  )</code></pre>
+        <pre><code>// Set your secret key
+  stripe.Key = 'sk_test_BQokikJOvBiI2HlWgH4olfQ2'
+  
+  // Get the payment token ID submitted by the form:
+  token := r.FormValue('stripeToken')
+  
+  params := &stripe.ChargeParams{
+    Amount: 999,
+    Currency: 'usd',
+    Description: 'Example charge',
+  }
+  params.SetSource(token)
+  ch, _ := charge.New(params)</code></pre>
+        <pre><code>TODO</code></pre>
       </div>
-    </body>
-    </html>
+    </section>
+  </div>
+</body>
+</html>
+{% endhighlight %}
 
 # Inspecting the original Stripe code
 

@@ -4,6 +4,9 @@ date: 2015-01-30 13:50:44 MST
 tags: software
 layout: post
 excerpt: Some argue that "code snobs" waste time on trivia. While I am sure this can be the case, I submit that their ideas and comments offer more benefit than cost in the long run.
+links:
+  Hacker News: https://news.ycombinator.com/item?id=9113474
+  dev.to: https://dev.to/mjswensen/why-code-snobs-are-invaluable-2pee
 ---
 
 Some argue that "code snobs" waste time on trivia. While I am sure this can be the case, I submit that their ideas and comments offer more benefit than cost in the long run.

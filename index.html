@@ -6,29 +6,47 @@ sitemap:
   changefreq: weekly
 ---
 
-<section class="home">
-  {% include logo.svg %}
-  <h1 class="name">Matt Swensen</h1>
-  <p>I'm passionate about programming the Web.</p>
-  <p>I'm a husband, father, member of the <a href="https://churchofjesuschrist.org">Church of Jesus Christ of Latter-day Saints</a>, and software engineer for <a href="https://rivethealth.com">Rivet</a>.</p>
+<section class="jumbotron">
+  {% include memoji.html name="smiling" %}
+  <h1 class="name">Hi, I'm Matt!</h1>
+  <p>I'm a family man, member of the <a href="https://churchofjesuschrist.org">Church of Jesus Christ of Latter-day Saints</a>, and principal software engineer at <a href="https://rivethealth.com">Rivet</a>.</p>
+  <svg
+    class="scroll-hint"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 12"
+  >
+    <path
+      d="M2,2 l8,8 l8,-8"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+  </svg>
 </section>
 <section class="posts">
-  <h2>Posts</h2>
+  {% include memoji.html name="thinking" small=true %}
+  <h2 class="list-title">Posts</h2>
+  <p>I write about technology and faith.</p>
   {% include postlist.html limit=3 %}
   <a class="all-posts" href="/blog/">All posts</a>
 </section>
 <section class="projects">
-  <h2>Projects</h2>
+  {% include memoji.html name="coding" small=true %}
+  <h2 class="list-title">Projects</h2>
+  <p>I love making things, especially open-source software.</p>
   {% include projectlist.html limit=3 %}
   <a class="all-projects" href="/projects/">All projects</a>
 </section>
 <section class="presentations">
-  <h2>Presentations</h2>
+  {% include memoji.html name="presenting" small=true %}
+  <h2 class="list-title">Presentations</h2>
+  <p>I occasionally give talks about building the Web.</p>
   {% include presentationlist.html limit=3 %}
   <a class="all-presentations" href="/presentations/">All presentations</a>
 </section>
 <section class="picks">
-  <h2>Picks</h2>
-  {% include picklist.html limit=3 %}
-  <a class="all-picks" href="/picks/">All picks</a>
+  {% include memoji.html name="thumbsup" small=true %}
+  <h2 class="list-title">Picks</h2>
+  <p>Check out my <a href="/uses">/uses</a> page for my favorite tools and hacks.</p>
 </section>

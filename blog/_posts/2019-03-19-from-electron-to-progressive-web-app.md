@@ -3,16 +3,23 @@ title: From Electron to Progressive Web App
 date: 2019-03-23 20:29 MDT
 layout: post
 excerpt: In this post I'd like to review my reasoning behind sunsetting an Electron-based application in favor of a Progressive Web App (PWA).
+links:
+  dev.to: https://dev.to/mjswensen/from-electron-to-progressive-web-app-lhd
 ---
 
 In this post I'd like to review my reasoning behind sunsetting an [Electron](https://electronjs.org)-based application in favor of a [Progressive Web App (PWA)](https://developers.google.com/web/progressive-web-apps/).
 
-<div class="tldr">
-  <ul>
-    <li>Choose your platform wisely—you are at the mercy of its maintainers</li>
-    <li>URLs are amazing</li>
-    <li>You really can't beat the distribution model of the Web</li>
-  </ul>
+<div class="cards tldr">
+  <div class="card">
+    <span class="card-title">tl;dr</span>
+    <div class="card-body">
+      <ul>
+        <li>Choose your platform wisely—you are at the mercy of its maintainers</li>
+        <li>URLs are amazing</li>
+        <li>You really can't beat the distribution model of the Web</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 # themer

@@ -13,23 +13,37 @@ layout: medium
       Read time: {{ page.content | size | divided_by: 900 | append: ' min' }}
     </div>
   </header>
-  <hr>
   {{ content }}
+  {% if page.links %}
+    <footer>
+      {% include memoji.html name="smiling" small=true %}
+      <div class="cta">
+        <h2>What do you think?</h2>
+        <p class="links">
+          Discuss this article on
+          {% if page.links.size > 2 %}
+            {% for link in page.links %}
+              {% if forloop.last %}
+                or <a href="{{ link[1] }}">{{ link[0] }}</a>.
+              {% else %}
+                <a href="{{ link[1] }}">{{ link[0] }}</a>,
+              {% endif %}
+            {% endfor %}
+          {% elsif page.links.size == 2 %}
+            {% for link in page.links %}
+              {% if forloop.last %}
+                or <a href="{{ link[1] }}">{{ link[0] }}</a>.
+              {% else %}
+                <a href="{{ link[1] }}">{{ link[0] }}</a>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% for link in page.links %}
+              <a href="{{ link[1] }}">{{ link[0] }}</a>.
+            {% endfor %}
+          {% endif %}
+        </p>
+      </div>
+    </footer>
+  {% endif %}
 </article>
-<hr>
-<div class="share-on-twitter">
-  <p class="tweet-link">
-    <a href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }}&amp;url={{ site.domain | append: page.url | cgi_escape }}&amp;via=mjswensen&amp;hashtags={{ page.tags | join: ',' }}" target="_blank">Tweet this</a>
-    <span class="tweet-link-help">(you will be able to change it first)</span>
-  </p>
-  <p class="tweet-preview">{{ page.title }} {{ site.domain | append: page.url }} {% for tag in page.tags %}#{{ tag }} {% endfor %}via @mjswensen</p>
-</div>
-<hr>
-<nav class="prev-next-posts">
-  {% if page.previous.url %}
-  <a class="previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title }}</a>
-  {% endif %}
-  {% if page.next.url %}
-  <a class="next" href="{{ page.next.url }}">Next: {{ page.next.title }}</a>
-  {% endif %}
-</nav>

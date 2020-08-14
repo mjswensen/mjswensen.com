@@ -4,6 +4,8 @@ date: 2015-06-12 08:42:13 MDT
 tags: css
 layout: post
 excerpt: One of my goals for Q2 2015 was to answer ten CSS-related questions on Stack Overflow. These are some of the key concepts I came across while doing so.
+links:
+  dev.to: https://dev.to/mjswensen/key-takeaways-to-common-css-questions-4206
 ---
 
 One of my goals for Q2 2015 was to answer ten CSS-related questions on Stack Overflow. Below is an outline of some of the key concepts I came across while doing so.

@@ -3,6 +3,8 @@ title: Zen and the Art of Software Engineering
 date: 2017-03-24 18:58 MDT
 layout: post
 excerpt: As part of my on-boarding as software engineer at Nuvi, I had the opportunity to read the classic book "Zen and the Art of Motorcycle Maintenance" by Robert M. Pirsig. While the book delves deeply into abstract philosophical concepts, there were a number of concrete principles that I felt had direct application to writing high-quality software.
+links:
+  dev.to: https://dev.to/mjswensen/zen-and-the-art-of-software-engineering-h7p
 ---
 
 As part of my on-boarding as software engineer at [Nuvi](https://www.nuvi.com/), I had the opportunity to read the classic book _Zen and the Art of Motorcycle Maintenance: An Inquiry into Values_ by Robert M. Pirsig. While the book delves deeply into abstract philosophical concepts, there were a number of concrete principles that I felt had direct application to writing high-quality software.

@@ -4,6 +4,8 @@ date: 2015-05-11 22:17:54 MDT
 tags: css
 layout: post
 excerpt: At first, the :empty pseudo-class may not seem to be the most useful of the advanced selectors. However, there are situations in which :empty is the perfect tool for the job.
+links:
+  dev.to: https://dev.to/mjswensen/practical-use-cases-for-the-empty-pseudo-class-3g1f
 ---
 
 At first, the `:empty` pseudo-class may not seem to be the most useful of the advanced selectors. However, there are situations in which `:empty` is the perfect tool for the job. Here are a couple of examples:
@@ -32,7 +34,7 @@ Another example use case would be a data collection user interface that hasn't r
 
 ![Data collection UI example](/blog/images/css-empty-conversions.png)
 
-In the previous example, the elements for the USA and Canada metrics have text ("1.64%" and "0.53%", respectively), while that of Mexico is empty. This is relevant code:
+In the previous example, the elements for the USA and Canada metrics have text ("1.64%" and "0.53%", respectively), while that of Mexico is empty. This is the relevant code:
 
 {% highlight css %}
 .conversion-rate:empty::before {
