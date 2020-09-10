@@ -5,6 +5,12 @@
 
 :root {
   --background-color: var(--light-shade0-rgb);
+  --background-mask-color: rgba(
+    var(--light-shade0-rgb-r),
+    var(--light-shade0-rgb-g),
+    var(--light-shade0-rgb-b),
+    0.5
+  );
   --foreground-high-contrast-color: var(--light-shade7-rgb);
   --foreground-low-contrast-color: var(--light-shade5-rgb);
   --link-color: var(--light-accent4-rgb);
@@ -37,6 +43,15 @@
   --footer-logo-top-color: var(--light-shade2-rgb);
   --footer-logo-left-color: var(--light-shade3-rgb);
   --footer-logo-right-color: var(--light-shade4-rgb);
+  --jumbotron-glow-color-1: var(--light-accent2-rgb);
+  --jumbotron-glow-color-2: var(--light-accent7-rgb);
+  --jumbotron-glow-color-3: var(--light-accent4-rgb);
+  --jumbotron-glow-color-3-transparent: rgba(
+    var(--light-accent4-rgb-r),
+    var(--light-accent4-rgb-g),
+    var(--light-accent4-rgb-b),
+    0
+  );
   --jumbotron-scroll-hint-color: var(--light-shade2-rgb);
   --rule-color-1: var(--light-accent2-rgb);
   --rule-color-2: var(--light-accent0-rgb);
@@ -94,6 +109,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: var(--dark-shade0-rgb);
+    --background-mask-color: rgba(
+      var(--dark-shade0-rgb-r),
+      var(--dark-shade0-rgb-g),
+      var(--dark-shade0-rgb-b),
+      0.5
+    );
     --foreground-high-contrast-color: var(--dark-shade7-rgb);
     --foreground-low-contrast-color: var(--dark-shade5-rgb);
     --link-color: var(--dark-accent4-rgb);
@@ -127,6 +148,15 @@
     --footer-logo-left-color: var(--dark-shade3-rgb);
     --footer-logo-right-color: var(--dark-shade2-rgb);
     --jumbotron-scroll-hint-color: var(--dark-shade2-rgb);
+    --jumbotron-glow-color-1: var(--dark-accent2-rgb);
+    --jumbotron-glow-color-2: var(--dark-accent7-rgb);
+    --jumbotron-glow-color-3: var(--dark-accent4-rgb);
+    --jumbotron-glow-color-3-transparent: rgba(
+      var(--dark-accent4-rgb-r),
+      var(--dark-accent4-rgb-g),
+      var(--dark-accent4-rgb-b),
+      0
+    );
     --rule-color-1: var(--dark-accent2-rgb);
     --rule-color-2: var(--dark-accent0-rgb);
     --blockquote-decoration-color: var(--dark-shade1-rgb);
@@ -223,6 +253,7 @@
   --border-width-large: calc(var(--size-px) * 2);
 
   --border-radius: var(--size-small-5);
+  --border-radius-small: var(--size-small-9);
 }
 
 /* Typography */
@@ -407,7 +438,7 @@ a:active {
   position: relative;
   display: inline-flex;
   border-radius: 100%;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-small);
   overflow: hidden;
 }
 
@@ -794,12 +825,44 @@ code {
 /* Jumbotron */
 
 .jumbotron {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.jumbotron::before {
+  --size: var(--size-large-13);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image:
+    radial-gradient(circle closest-side, var(--background-mask-color), var(--background-color)),
+    linear-gradient(to bottom right, var(--jumbotron-glow-color-3) 35%, var(--jumbotron-glow-color-3-transparent) 45%),
+    linear-gradient(to top right, var(--jumbotron-glow-color-1) 42%, var(--jumbotron-glow-color-2) 58%);
+  background-size:
+    var(--size) var(--size),
+    var(--size) var(--size),
+    var(--size) var(--size);
+  background-position:
+    center,
+    center,
+    center;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+  filter: blur(var(--size-large-2));
+}
+
+.jumbotron > * {
+  position: relative;
 }
 
 .jumbotron .name {
@@ -813,6 +876,8 @@ code {
   margin-top: var(--size-large-4);
   stroke: var(--jumbotron-scroll-hint-color);
 }
+
+/* Lists */
 
 .projects,
 .presentations,
