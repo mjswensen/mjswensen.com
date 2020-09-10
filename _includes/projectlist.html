@@ -1,5 +1,5 @@
 <ul class="entity-list">
-  {% assign projects = site.pages | where: 'type', 'project' | where: 'current', true | sort: 'priority' | reverse %}
+  {% assign projects = site.data.projects | where: 'current', true %}
   {% for project in projects limit: include.limit %}
     <li>
       <a class="title" href="{{ project.externalUrl }}">{{ project.title }}</a>

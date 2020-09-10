@@ -1,0 +1,45 @@
+- title: themer
+  current: true
+  description: A theme generator for editors, terminals, and desktop wallpaper.
+  openSource: true
+  openSourceUrl: https://github.com/mjswensen/themer
+  externalUrl: https://themer.dev
+- title: shoulders
+  current: true
+  description: View a list of your dependencies' open issues.
+  openSource: true
+  openSourceUrl: https://github.com/mjswensen/shoulders
+  externalUrl: https://github.com/mjswensen/shoulders
+- title: "Pedigreeable: Beautiful Family Trees"
+  current: true
+  description: Easily create beautiful, high-quality, home-decor-ready family trees.
+  openSource: false
+  externalUrl: https://pedigreeable.com
+- title: CSS Power-ups
+  current: true
+  description: An eight-week course on everything CSS.
+  openSource: true
+  openSourceUrl: https://github.com/mjswensen/css-power-ups
+  externalUrl: https://mjswensen.github.io/css-power-ups/
+- title: CodePen Portfolio
+  current: true
+  description: A showcase of front-end experiments and designs.
+  openSource: true
+  openSourceUrl: http://codepen.io/mjswensen/
+  externalUrl: http://codepen.io/mjswensen/
+- title: Scribbli
+  current: false
+  description: Digital scratch paper for developers.
+  openSource: true
+  openSourceUrl: https://github.com/mjswensen/scribbli
+  externalUrl: https://mjswensen.github.io/scribbli/
+- title: Lucidchart Homepage Redesign
+  current: false
+  description: Research-driven and modernized.
+  openSource: false
+  externalUrl: https://www.lucidchart.com
+- title: Lucid Software Site
+  current: false
+  description: 'Designed by the talented <a href="http://robmwitt.com">Rob Witt</a>.'
+  openSource: false
+  externalUrl: http://www.golucid.co

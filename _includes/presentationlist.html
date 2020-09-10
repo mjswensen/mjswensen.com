@@ -1,5 +1,5 @@
 <ul class="entity-list">
-  {% assign presentations = site.pages | where: 'type', 'presentation' | sort: 'date' | reverse %}
+  {% assign presentations = site.pages | where: 'type', 'presentation' | concat: site.data.presentations | sort: 'date' | reverse %}
   {% for presentation in presentations limit: include.limit %}
     <li>
       <a class="title" href="{{ presentation.url }}">"{{ presentation.title }}"</a>
