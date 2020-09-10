@@ -1,12 +1,12 @@
-<ul class="presentation-list">
-  {% assign presentations = site.pages | where: 'type', 'presentation' | sort: 'date' | reverse %}
+<ul class="entity-list">
+  {% assign presentations = site.pages | where: 'type', 'presentation' | concat: site.data.presentations | sort: 'date' | reverse %}
   {% for presentation in presentations limit: include.limit %}
     <li>
       <a class="title" href="{{ presentation.url }}">"{{ presentation.title }}"</a>
       <p class="description">
         {{ presentation.description }}
         {% if presentation.videoUrl %}
-        <a class="special-link" href="{{ presentation.videoUrl }}">Video</a>
+          <a href="{{ presentation.videoUrl }}">Video</a>
         {% endif %}
       </p>
       <div class="metadata"><time timestamp="{{ presentation.date }}">{{ presentation.date | date_to_string }}</time>, {{ presentation.for }}, {{ presentation.at }} ({{ presentation.location }})</div>

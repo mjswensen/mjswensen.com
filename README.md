@@ -13,7 +13,7 @@ The site will be available on http://localhost:5000.
 ## Deploying
 
 ```sh
-git push # master branch
+git push
 ```
 
 ## Get the date/time for front matter

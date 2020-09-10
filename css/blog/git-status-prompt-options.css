@@ -1,0 +1,15 @@
+:root {
+  --meta-color: var(--light-shade5-rgb);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --meta-color: var(--dark-shade5-rgb);
+  }
+}
+
+.meta {
+  color: var(--meta-color);
+  text-align: center;
+  font-style: italic;
+}

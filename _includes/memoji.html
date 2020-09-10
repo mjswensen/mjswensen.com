@@ -1,0 +1,13 @@
+<span
+  {% if include.small %}
+  class="memoji-wrapper small"
+  {% else %}
+  class="memoji-wrapper"
+  {% endif %}
+>
+  <img
+    src="/images/{{ include.name }}.png"
+    alt="{{ include.name }} memoji"
+    class="memoji"
+  />
+</span>

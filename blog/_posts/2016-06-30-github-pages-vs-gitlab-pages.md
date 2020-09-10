@@ -3,6 +3,8 @@ title: GitHub Pages vs. GitLab Pages
 date: 2016-06-30 21:59 MDT
 layout: post
 excerpt: I've been a longtime fan of GitHub Pages. It is a wonderful option for hosting many types of sites. However, recent movements toward a more secure web and GitHub's lack of support for HTTPS on GitHub Pages with a custom domain prompted me to start looking at other options, including GitLab Pages.
+links:
+  dev.to: https://dev.to/mjswensen/github-pages-vs-gitlab-pages-jjn
 ---
 
 I've been a longtime fan of [GitHub Pages](https://pages.github.com/). It is a wonderful option for hosting many types of sites. However, recent movements toward a more secure web and [GitHub's lack of support for HTTPS on GitHub Pages with a custom domain](https://github.com/isaacs/github/issues/156) prompted me to start looking at other options, including [GitLab Pages](https://pages.gitlab.io/).

@@ -6,6 +6,8 @@ layout: post
 excerpt: The things you can do with CSS these days are amazing. I was inspired by the beautiful Jekyll logo and set out to see if I could do something similar using only CSS.
 sitemap:
   lastmod: 2014-12-06 21:51:30 MST
+links:
+  dev.to: https://dev.to/mjswensen/css-only-text-gradients-1l0o
 ---
 
 The things you can do with CSS these days are amazing. I was inspired by the beautiful [Jekyll](http://jekyllrb.com/) logo and set out to see if I could do something similar using only CSS.

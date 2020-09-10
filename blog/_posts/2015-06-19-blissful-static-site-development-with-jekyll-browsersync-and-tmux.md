@@ -4,6 +4,8 @@ date: 2015-06-19 23:44:34 MDT
 tags: software productivity
 layout: post
 excerpt: I was recently listening to the Shop Talk Show podcast where Chris Coyier shared a submission from a listener that outlined the development and deployment setup for her personal website. I thought I would add to the conversation by sharing my setup for developing mjswensen.com.
+links:
+  dev.to: https://dev.to/mjswensen/blissful-static-site-development-with-jekyll-browsersync-and-tmux-4ei3
 ---
 
 I was recently listening to the [Shop Talk Show podcast](http://shoptalkshow.com/) where [Chris Coyier](https://css-tricks.com/) shared a submission from a listener that outlined the development and deployment setup for her personal website. It involved using Dropbox to sync blog posts to a static site generator on her server and sounded pretty slick. I thought I would add to the conversation by sharing my setup for developing this site. These are the technologies that are used in concert:

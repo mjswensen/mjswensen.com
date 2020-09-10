@@ -5,9 +5,14 @@ layout: post
 excerpt: Though faith is an essential component to any religious conversation, I'd like to set it aside for just a moment and focus instead on a pragmatic and logical way of thinking about religion.
 ---
 
-<p><span class="update">Update <span class="update-date">12/18/2019</span></span> Thanks to an astute Reddit commenter, today I learned about Pascal's Wager, which is strikingly similar to the idea I tried to synthesize below. For a more in-depth read on this topic, check out <a href="https://en.wikipedia.org/wiki/Pascal's_wager">the Wikipedia article on Pascal's Wager</a>.</p>
-
----
+<div class="cards updates">
+  <div class="card">
+    <span class="card-title">Update 12/18/2019</span>
+    <div class="card-body">
+      <p>Thanks to an astute Reddit commenter, today I learned about Pascal's Wager, which is strikingly similar to the idea I tried to synthesize below. For a more in-depth read on this topic, check out <a href="https://en.wikipedia.org/wiki/Pascal's_wager">the Wikipedia article on Pascal's Wager</a>.</p>
+    </div>
+  </div>
+</div>
 
 A core premise (perhaps _the_ core premise) of religiosity is faith, which I define as "believing in things one cannot see or otherwise definitively prove." Though faith is an essential component to any religious conversation, I'd like to set it aside for just a moment and focus instead on a pragmatic and logical way of thinking about religion.
 
@@ -19,49 +24,163 @@ For the purposes of illustration, let's simplify the spectrum of possibilities d
 
 For a visual aid, we plot our two dimensions onto an empty probability square.
 
-|          | God | No God |
-|----------|-----|--------|
-| Obey     |     |        |
-| Not Obey |     |        |
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>God</th>
+        <th>No God</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Obey</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Not Obey</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Since the goal of most rational people is to maximize one's own happiness, we'll use a rough relative measure of happiness level for the values in our square.
 
 The doctrines of most religions include some flavor of an afterlife, so we'll also add a third dimension to our square: this life vs. the afterlife.
 
-|          | God                                       | No God                                    |
-|----------|-------------------------------------------|-------------------------------------------|
-| Obey     | this life happiness / afterlife happiness | this life happiness / afterlife happiness |
-| Not Obey | this life happiness / afterlife happiness | this life happiness / afterlife happiness |
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>God</th>
+        <th>No God</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Obey</td>
+        <td>this life happiness / afterlife happiness</td>
+        <td>this life happiness / afterlife happiness</td>
+      </tr>
+      <tr>
+        <td>Not Obey</td>
+        <td>this life happiness / afterlife happiness</td>
+        <td>this life happiness / afterlife happiness</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 We're ready to start filling out our diagram, starting with the left column. We might describe these cells as "the happiness level in both this life and the afterlife of people who obey God and who do not obey God, given God exists."
 
 "Happiness in this life" is difficult to measure. Though [some research suggests that religiosity is directly correlated with increased happiness, health, and wealth,](https://www.nber.org/papers/w11377) in my observation faithful people do not have a corner market on happiness or prosperity, and they certainly aren't immune to the challenges of being human. Conversely, despite what many non-religious people believe, living free from the rigors of a religious lifestyle isn't necessarily a path to greater happiness in the long run. To keep our estimates conservative, we'll assume that the happiness level of both religious and non-religious people is approximately the same. We'll mark this level as "average."
 
-|          | God         | No God |
-|----------|-------------|--------|
-| Obey     | Average / ? | ? / ?  |
-| Not Obey | Average / ? | ? / ?  |
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>God</th>
+        <th>No God</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Obey</td>
+        <td>Average / ?</td>
+        <td>? / ?</td>
+      </tr>
+      <tr>
+        <td>Not Obey</td>
+        <td>Average / ?</td>
+        <td>? / ?</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 The afterlife dimension of these cells is more straightforward. Most religions concur that obedience to God in this life warrants some sort of reward in the afterlife; and disobedience results in some form of diminished happiness, at least temporarily.
 
-|          | God            | No God |
-|----------|----------------|--------|
-| Obey     | Average / High | ? / ?  |
-| Not Obey | Average / Low  | ? / ?  |
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>God</th>
+        <th>No God</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Obey</td>
+        <td>Average / High</td>
+        <td>? / ?</td>
+      </tr>
+      <tr>
+        <td>Not Obey</td>
+        <td>Average / Low</td>
+        <td>? / ?</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 On to the right column. We will reuse our previously calculated "Average" happiness level for both obedient and non-obedient people for this life into this column. Since there is no God and presumably therefore no afterlife in these scenarios, we'll put "N/A" for the afterlife values.
 
-|          | God            | No God         |
-|----------|----------------|----------------|
-| Obey     | Average / High | Average / N/A  |
-| Not Obey | Average / Low  | Average / N/A  |
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>God</th>
+        <th>No God</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Obey</td>
+        <td>Average / High</td>
+        <td>Average / N/A</td>
+      </tr>
+      <tr>
+        <td>Not Obey</td>
+        <td>Average / Low</td>
+        <td>Average / N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 With our square filled in, we can now finish our analysis. Since the existence of God can neither be proven nor disproven (much to the chagrin of both believers and non-believers), we'll naively assign an equal probability of 50% to both options. And in lieu of a more precise measure for happiness, we'll make a simple assignment of 1, 2, and 3 to our rough levels.
 
-|          | God (0.5)              | No God (0.5)       |
-|----------|------------------------|--------------------|
-| Obey     | Average (2) / High (3) | Average (2) / N/A  |
-| Not Obey | Average (2) / Low (1)  | Average (2) / N/A  |
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>God (0.5)</th>
+        <th>No God (0.5)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Obey</td>
+        <td>Average (2) / High (3)</td>
+        <td>Average (2) / N/A</td>
+      </tr>
+      <tr>
+        <td>Not Obey</td>
+        <td>Average (2) / Low (1)</td>
+        <td>Average (2) / N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Now we can calculate the expected value for happiness for the two lifestyle choices:
 

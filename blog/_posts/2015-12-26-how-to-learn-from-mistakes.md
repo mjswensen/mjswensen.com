@@ -16,24 +16,26 @@ Mistakes hurt. There's no sugar-coating it: when we screw up, we cause pain for 
 
 We are pre-programmed with a natural aversion to pain, which helps us survive and avoid dangerous situations. We can use this aversion to our advantage when we make mistakes. Rather than avoid the pain we are experiencing after making a mistake—as many often do—we should instead embrace the pain and let it run its full course to help us fully learn our lesson.
 
-<table>
-  <thead>
-    <tr>
-      <th>Pain avoidance</th>
-      <th>Pain acceptance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>"Medicating" with alcohol or addictive substance/behavior</td>
-      <td>Meditating on the events leading up to the mistake</td>
-    </tr>
-    <tr>
-      <td>Mentally denying that a mistake was made</td>
-      <td>Pondering the implications and consequences of the mistake</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Pain avoidance</th>
+        <th>Pain acceptance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>"Medicating" with alcohol or addictive substance/behavior</td>
+        <td>Meditating on the events leading up to the mistake</td>
+      </tr>
+      <tr>
+        <td>Mentally denying that a mistake was made</td>
+        <td>Pondering the implications and consequences of the mistake</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 It may seem counterintuitive at first, but actively accepting the pain allows us to feel the depth of it and let our natural aversion to pain do its job when we later remember what we've experienced. If we avoid it altogether, we don't allow ourselves that learning opportunity.
 
