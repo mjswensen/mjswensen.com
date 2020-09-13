@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    {% if page.excerpt %}
+      <meta name="description" content="{{ page.excerpt }}">
+    {% endif %}
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="icon" type="image/png" href="/favicon.png">
