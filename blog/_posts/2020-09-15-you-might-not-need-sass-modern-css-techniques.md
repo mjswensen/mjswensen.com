@@ -3,6 +3,8 @@ title: "You Might Not Need Sass: Modern CSS Techniques"
 date: 2020-09-15 06:46:12 MDT
 layout: post
 excerpt: Sass and other CSS preprocessors have some great features and have been widely used for years. CSS is rapidly evolving, though, and some of the features that were previously only possible through preprocessors are now achievable in plain CSS.
+links:
+  dev.to: https://dev.to/mjswensen/you-might-not-need-sass-modern-css-techniques-15g
 ---
 
 [Sass](https://sass-lang.com/) and other CSS preprocessors have some great features and have been widely used for years. CSS is rapidly evolving, though, and some of the features that were previously only possible through preprocessors are now achievable in plain CSS. While updating the styles for [mjswensen.com](https://mjswensen.com), I found plain CSS to be powerful enough on its own and completely migrated away from Sass. Depending on the size and needs of your project (and target browser support), you may be able to simplify your CSS tool chain as well by using these techniques.
