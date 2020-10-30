@@ -4,12 +4,28 @@ date: 2014-08-07 22:01:00 MDT
 tags: software productivity
 layout: post
 excerpt: When it comes to customizing your Bash prompt to give you more information about the status of a Git repository, there are a lot of options out there. This post covers using the built-in options that ship with Git.
-stylesheet: /css/blog/git-status-prompt-options.css
 sitemap:
   lastmod: 2014-08-23 13:39:33 MDT
 links:
   dev.to: https://dev.to/mjswensen/options-for-git-status-in-shell-prompt-12a0
 ---
+
+<style>
+:root {
+  --meta-color: var(--light-shade5-rgb);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --meta-color: var(--dark-shade5-rgb);
+  }
+}
+
+.meta {
+  color: var(--meta-color);
+  text-align: center;
+  font-style: italic;
+}
+</style>
 
 When it comes to customizing your Bash prompt to give you more information about the status of a Git repository, there are a lot of options out there. This post covers using the built-in options that ship with Git, as opposed to a third-party alternatives like [this](https://github.com/magicmonty/bash-git-prompt) or [this](https://github.com/lvv/git-prompt).
 
