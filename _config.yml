@@ -19,3 +19,4 @@ exclude:
   - now.json
 include:
   - .well-known
+  - _redirects
