@@ -103,6 +103,13 @@
     var(--light-accent3-rgb-b),
     0.1
   );
+  --tip-accent-color: var(--light-accent5-rgb);
+  --tip-accent-background-color: rgba(
+    var(--light-accent5-rgb-r),
+    var(--light-accent5-rgb-g),
+    var(--light-accent5-rgb-b),
+    0.1
+  );
   --article-footer-border-color-1: var(--light-accent1-rgb);
   --article-footer-border-color-2: var(--light-accent6-rgb);
 }
@@ -206,6 +213,13 @@
       var(--dark-accent3-rgb-r),
       var(--dark-accent3-rgb-g),
       var(--dark-accent3-rgb-b),
+      0.1
+    );
+    --tip-accent-color: var(--dark-accent5-rgb);
+    --tip-accent-background-color: rgba(
+      var(--dark-accent5-rgb-r),
+      var(--dark-accent5-rgb-g),
+      var(--dark-accent5-rgb-b),
       0.1
     );
     --article-footer-border-color-1: var(--dark-accent1-rgb);
@@ -379,7 +393,8 @@ iframe:not(:last-child),
 .table-wrapper:not(:last-child),
 .highlight:not(:last-child),
 .updates:not(:last-child),
-.tldr:not(:last-child) {
+.tldr:not(:last-child),
+.tip:not(:last-child) {
   margin-bottom: var(--size-regular);
 }
 
@@ -1037,6 +1052,13 @@ article .updates {
 article .tldr {
   --card-accent-color: var(--tldr-accent-color);
   --card-accent-background-color: var(--tldr-accent-background-color);
+}
+
+/* Tip cards */
+
+article .tip {
+  --card-accent-color: var(--tip-accent-color);
+  --card-accent-background-color: var(--tip-accent-background-color);
 }
 
 /* Article footer */
