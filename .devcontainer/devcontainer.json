@@ -1,0 +1,5 @@
+{
+  "name": "ruby:2.4",
+  "image": "ruby:2.4",
+  "postCreateCommand": "bundle install"
+}

@@ -4,11 +4,13 @@ Source code for [mjswensen.com](https://mjswensen.com/).
 
 ## Developing locally
 
+From within the development container:
+
 ```sh
-docker-compose up
+bundle exec jekyll serve --watch
 ```
 
-The site will be available on http://localhost:5000.
+The site will be available on http://localhost:4000.
 
 ## Deploying
 
