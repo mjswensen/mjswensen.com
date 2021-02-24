@@ -3,6 +3,8 @@ title: "How to Make an .ico File Using the macOS Terminal"
 date: 2021-02-11 07:03:36 MDT
 layout: post
 excerpt: Suppose you have an icon or logo at multiple resolutions and would like to combine them into a single `favicon.ico` file for your website. These are the commands you need to get up and running from the comfort of your own terminal.
+links:
+  dev.to: https://dev.to/mjswensen/how-to-make-an-ico-file-using-the-macos-terminal-5aan
 ---
 
 Suppose you have an icon or logo at multiple resolutions and would like to combine them into a single `favicon.ico` file for your website. These are the commands you need to get up and running from the comfort of your own terminal.
