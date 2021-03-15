@@ -1012,9 +1012,12 @@ footer.main .body .theme-link.dark {
 /* Posts */
 
 article .metadata {
-  text-transform: uppercase;
   color: var(--foreground-low-contrast-color);
   margin-bottom: var(--size-large-2);
+}
+
+article .metadata .canonical {
+  font-style: italic;
 }
 
 /* Cards */

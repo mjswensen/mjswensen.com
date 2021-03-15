@@ -1,0 +1,44 @@
+{
+	"Post frontmatter": {
+		"prefix": "frontmatter",
+		"body": [
+			"---",
+			"title: $1",
+			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND ${2|MST,MDT|}",
+			"tags: ${3|software,productivity,faith|}",
+			"layout: post",
+			"excerpt: ${4:TODO}",
+			"---",
+			"",
+			"$0",
+			""
+		],
+		"description": "Add frontmatter for a new blog post"
+	},
+	"Sitemap lastmod frontmatter": {
+		"prefix": "lastmod",
+		"body": [
+			"sitemap:",
+			"  lastmod: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND ${1|MST,MDT|}",
+		],
+		"description": "Adds last modified date to the post frontmatter"
+	},
+	"Links frontmatter": {
+		"prefix": "links",
+		"body": [
+			"links:",
+			"  ${1:|dev.to,Hacker News,Other|}: ${2:url}"
+		],
+		"description": "Adds links section to the post frontmatter"
+	},
+	"Canonical frontmatter": {
+		"prefix": "canonical",
+		"body": [
+			"canonical:",
+			"  name: ${1:name}",
+			"  url: ${2:url}",
+			"  date: ${3:YYYY-MM-DD}"
+		],
+		"description": "Adds canonical URL to the post frontmatter"
+	}
+}

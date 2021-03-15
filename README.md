@@ -18,8 +18,6 @@ The site will be available on http://localhost:4000.
 git push
 ```
 
-## Get the date/time for front matter
+## Writing
 
-```sh
-date "+%Y-%m-%d %H:%M:%S %Z" | pbcopy
-```
+See [.vscode/post.code-snippets](.vscode/post.code-snippets) for helpful snippets in creating or editing posts.
