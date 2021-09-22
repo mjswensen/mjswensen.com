@@ -12,7 +12,7 @@ canonical:
 
 # Creating compound components in React and Angular
 
-There's no question that components are a powerful abstraction for authoring frontend user interfaces (and, it turns out, [text-based UIs](https://github.com/vadimdemedes/ink), [application routers](https://github.com/ReactTraining/react-router), and many other types of interfaces). 
+There's no question that components are a powerful abstraction for authoring frontend user interfaces (and, it turns out, [text-based UIs](https://github.com/vadimdemedes/ink), [application routers](https://github.com/ReactTraining/react-router), and many other types of interfaces).
 
 But there are many different approaches to authoring components. In this post, we'll talk about the compound component pattern and when it may be an appropriate choice for component authors.
 
@@ -32,7 +32,7 @@ In this example, the `<select>` and `<option>` elements come together to form a 
 
 # How to implement compound components
 
-First, make sure a compound component is the appropriate API design. Like any programming paradigm, compound components come with their fair share of tradeoffs. Generally, any pattern where there is implicit shared state — or behavior that is “magical” or not easily discoverable — can cause headaches down the road if not designed with utmost care.
+First, make sure a compound component is the appropriate API design. Like any programming paradigm, compound components come with their fair share of tradeoffs. Generally, any pattern where there is implicit shared state — or behavior that is "magical" or not easily discoverable — can cause headaches down the road if not designed with utmost care.
 
 Some questions to ask yourself before designing a compound component are:
 
@@ -163,7 +163,7 @@ if (!value.includes(filter)) {
 {% endhighlight %}
 
 Finally, we'll render the checkbox and plug its `checked` state into our compound component's selection state, as well as any children the consumer of our component would like to render. Here is the full source code for `EnhancedMultiSelectOption`:
- 
+
 {% highlight jsx %}
 import { useContext } from 'react';
 import { EnhancedMultiSelectContext } from './EnhancedMultiSelect';
@@ -257,7 +257,7 @@ export class EnhancedMultiSelectComponent {
 
 #### `enhanced-multi-select-option.component.ts`
 
-For the option items, we'll render a label that wraps the checkbox and the content of the component, just like in the React example. We'll utilize Angular's [dependency injection](https://angular.io/guide/dependency-injection) system to get a reference to the parent `EnhancedMultiSelectComponent` instance passed via the `constructor`. 
+For the option items, we'll render a label that wraps the checkbox and the content of the component, just like in the React example. We'll utilize Angular's [dependency injection](https://angular.io/guide/dependency-injection) system to get a reference to the parent `EnhancedMultiSelectComponent` instance passed via the `constructor`.
 
 With that reference, we can evaluate and manipulate the state directly and check to see if the option should be visible according to the value of the user-provided filter string. Here is the source code:
 
@@ -345,6 +345,6 @@ export class AppComponent {
 
 In this post we've implemented a filterable multi-select compound component in React, using the [Context API](https://reactjs.org/docs/context.html), and in Angular, using [dependency injection](https://angular.io/guide/dependency-injection).
 
-Compound components are one option for creating a simple API to compose behavior that is too complex for a single component. There are plenty of alternative patterns, such as [“render props”](https://reactjs.org/docs/render-props.html) in React, and each pattern's trade-offs should be carefully considered for a particular use case.
+Compound components are one option for creating a simple API to compose behavior that is too complex for a single component. There are plenty of alternative patterns, such as ["render props"](https://reactjs.org/docs/render-props.html) in React, and each pattern's trade-offs should be carefully considered for a particular use case.
 
 The full source code for running the above examples in a development environment can be found on [GitHub](https://github.com/mjswensen/compound-components).

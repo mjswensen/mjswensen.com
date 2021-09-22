@@ -28,13 +28,13 @@ Frameworks are built to overcome the deficiencies of the standard features until
 
 # Stackless has too many limitations
 
-To Keyhoe’s credit, the limitations of the stackless approach are clearly acknowledged in [the introductory tutorials](https://tutorials.yax.com/articles/the-yax-way/index.html). Unfortunately, they are prohibitively severe for many types of modern web development projects.
+To Keyhoe's credit, the limitations of the stackless approach are clearly acknowledged in [the introductory tutorials](https://tutorials.yax.com/articles/the-yax-way/index.html). Unfortunately, they are prohibitively severe for many types of modern web development projects.
 
 ## Data persistence is ignored
 
-Perhaps the largest omission in the stackless approach is that it doesn’t account for data persistence. The approach talks about abandoning Rails for standards-based JavaScript, HTML, and CSS, but Rails solves a different problem than the frontend browser technologies.
+Perhaps the largest omission in the stackless approach is that it doesn't account for data persistence. The approach talks about abandoning Rails for standards-based JavaScript, HTML, and CSS, but Rails solves a different problem than the frontend browser technologies.
 
-What about an API to hide sensitive or proprietary business logic from the frontend? What about centralized state persistence? What about user authentication? There are so many common problems and paradigms that the stackless approach simply doesn’t account for.
+What about an API to hide sensitive or proprietary business logic from the frontend? What about centralized state persistence? What about user authentication? There are so many common problems and paradigms that the stackless approach simply doesn't account for.
 
 Using "functions" (meaning serverless or Lambda functions) is mentioned in passing, but if you are using serverless functions backed by a database or other storage, all of a sudden you have a "stack" again.
 
@@ -48,7 +48,7 @@ Even with powerful tools like CSS preprocessors, the topic of keeping CSS under 
 
 Web components are ill-equipped to manage the complex state required to build an advanced frontend application. The stackless approach can work for simple informational sites, but for applications with complex user interfaces, the state management becomes unwieldy without the help of a framework or state management library.
 
-This is the second time the answer to "how to build an app without a framework" is "actually, just use a framework." There are very few classes of applications that are both useful and don’t require the management of complex state.
+This is the second time the answer to "how to build an app without a framework" is "actually, just use a framework." There are very few classes of applications that are both useful and don't require the management of complex state.
 
 ## Complexity is not addressed
 
@@ -64,17 +64,15 @@ A bespoke API, on the other hand, may handle the complexity of gathering all of 
 
 The Facebook team behind [React](https://reactjs.org/) has tried to abstract away the complexity of maintaining [webpack](https://webpack.js.org/) and other configuration to bootstrap a React application as quickly as possible. This allows engineers to create fully functional React application without having to worry about installing and configuring all the tooling; they only have to install the `react-scripts`  package.
 
-The build tool complexity didn’t go away, its burden just moved into the application’s dependencies rather than on the shoulders of the engineer building the application.
+The build tool complexity didn't go away, its burden just moved into the application's dependencies rather than on the shoulders of the engineer building the application.
 
 # Redeeming qualities of the stackless way
 
 Though using the stackless approach may not be feasible for projects larger than hobbies or prototypes, there are some excellent points in its philosophy that can benefit software projects regardless of which approach they use.
 
-1. "Users are the users." The focus on users’ needs, where the definition of users is literally the end users of the software, is a critical point that developers should stay as close to as possible. It is only by keeping the users in mind that applications can be designed empathetically and with critical attributes such as performance and progressive enhancement at the forefront.
-
+1. "Users are the users." The focus on users' needs, where the definition of users is literally the end users of the software, is a critical point that developers should stay as close to as possible. It is only by keeping the users in mind that applications can be designed empathetically and with critical attributes such as performance and progressive enhancement at the forefront.
 2. "Stick to standards." One of the best features of the web is that it moves forward on open standards and an unfailing spirit of backward compatibility. Framework authors and framework users alike should embrace and utilize standard features as much as possible (without being afraid to use non-standard technology such as frameworks when it enables them to build better software more quickly).
-
-3. "Embrace simplicity where possible." The idea of using the best and simplest tool for the job is pervasive in the stackless approach, and indeed, is part of the core DNA of the web. It’s easy for engineers to fall into the trap of "over-engineering" solutions to problems that end up just creating more problems themselves; it takes discipline and the wisdom of experience to avoid this trap.
+3. "Embrace simplicity where possible." The idea of using the best and simplest tool for the job is pervasive in the stackless approach, and indeed, is part of the core DNA of the web. It's easy for engineers to fall into the trap of "over-engineering" solutions to problems that end up just creating more problems themselves; it takes discipline and the wisdom of experience to avoid this trap.
 
 # Use stackless where it makes sense
 

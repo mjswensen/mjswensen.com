@@ -10,15 +10,15 @@ canonical:
   date: 2021-02-17
 ---
 
-As with any conversation about performance, we need to gain some shared context around the type of JavaScript code we want to optimize and the context in which it will run. So, let’s start with some definitions:
+As with any conversation about performance, we need to gain some shared context around the type of JavaScript code we want to optimize and the context in which it will run. So, let's start with some definitions:
 
 **Performance.** First of all, when we use the word performance in the context of a computer program, we are referring to how quickly or efficiently that program can execute.
 
-**Polymorphic functions.** A polymorphic function is a function that changes its behavior based on the types of arguments that are passed to it. 
+**Polymorphic functions.** A polymorphic function is a function that changes its behavior based on the types of arguments that are passed to it.
 
-The key word here is types*,* as opposed to values*.* (A function that didn’t change its output based on different values for arguments would not be a very useful function at all.)
+The key word here is *types,* as opposed to *values.* (A function that didn't change its output based on different values for arguments would not be a very useful function at all.)
 
-**JavaScript engine.** In order to think about performance productively, we also need to know where our JavaScript is going to be executed. For our example code, we’ll use the [V8 engine](https://v8.dev/) given its popularity. 
+**JavaScript engine.** In order to think about performance productively, we also need to know where our JavaScript is going to be executed. For our example code, we'll use the [V8 engine](https://v8.dev/) given its popularity.
 
 V8 is the engine that powers the Chrome browser, Node.js, the Edge browser, and more. Note that there are also other JavaScript engines with their own performance characteristics, such as [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey) (used by Firefox), [JavaScriptCore](https://developer.apple.com/documentation/javascriptcore) (used by Safari), and others.
 
@@ -36,7 +36,7 @@ saveMessage(author, contents, timestamp);
 
 ## Option 2: Use message contents with `options` object
 
-This signature will allow consumers to separate the required data (message contents) from the optional data (the author and the timestamp) into two separate arguments. We’ll accept the arguments in any order, for convenience.
+This signature will allow consumers to separate the required data (message contents) from the optional data (the author and the timestamp) into two separate arguments. We'll accept the arguments in any order, for convenience.
 
 {% highlight js %}
 saveMessage(contents, options);
@@ -45,7 +45,7 @@ saveMessage(options, contents);
 
 ## Option 3: Use an `options` object
 
-We’ll also allow users of our API to call the function passing in a single argument of an object containing all of the data we need:
+We'll also allow users of our API to call the function passing in a single argument of an object containing all of the data we need:
 
 {% highlight js %}
 saveMessage(options);
@@ -53,7 +53,7 @@ saveMessage(options);
 
 ## Option 4: Use only the message contents
 
-Finally, we’ll allow users of our API to provide only the message contents, and we’ll provide default values for the rest of the data:
+Finally, we'll allow users of our API to provide only the message contents, and we'll provide default values for the rest of the data:
 
 {% highlight js %}
 saveMessage(contents);
@@ -119,7 +119,7 @@ function saveMessage(...args) {
 }
 {% endhighlight %}
 
-OK, now we’ll write some code that stores a lot of messages using our function — taking advantage of its polymorphic API — and measure its performance.
+OK, now we'll write some code that stores a lot of messages using our function — taking advantage of its polymorphic API — and measure its performance.
 
 {% highlight js %}
 const { performance } = require('perf_hooks');
@@ -162,14 +162,13 @@ console.log(`Inserted ${database.length} records into the database.`);
 console.log(`Duration: ${(performance.now() - start).toFixed(2)} milliseconds`);
 {% endhighlight %}
 
-Now let’s implement our function again but with a simpler, monomorphic API.
+Now let's implement our function again but with a simpler, monomorphic API.
 
 # Creating a monomorphic function in JavaScript
 
-In exchange for a more restrictive API, we can trim down the complexity of our function and make it monomorphic, meaning that the arguments of the function are always of the same type and in the same order. 
+In exchange for a more restrictive API, we can trim down the complexity of our function and make it monomorphic, meaning that the arguments of the function are always of the same type and in the same order.
 
-Although it won’t be as flexible, we can keep some of the ergonomics of the previous implementation by utilizing [default arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters). Our new function will look like this:
-
+Although it won't be as flexible, we can keep some of the ergonomics of the previous implementation by utilizing [default arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters). Our new function will look like this:
 
 {% highlight js %}
 // We'll again utilize an array for a simple in-memory database.
@@ -191,7 +190,7 @@ function saveMessage(contents, author = 'Anonymous', timestamp = new Date()) {
 }
 {% endhighlight %}
 
-We’ll update the performance measuring code from our previous example to use our new unified API.
+We'll update the performance measuring code from our previous example to use our new unified API.
 
 {% highlight js %}
 const { performance } = require('perf_hooks');
@@ -231,23 +230,23 @@ console.log(`Duration: ${(performance.now() - start).toFixed(2)} milliseconds`);
 
 # Results
 
-OK, now let’s run our programs and compare the results.
+OK, now let's run our programs and compare the results.
 
 {% highlight shell %}
-$ node polymorphic.js 
+$ node polymorphic.js
 Inserted 30000 records into the database.
 Duration: 6565.41 milliseconds
 
-$ node monomorphic.js 
+$ node monomorphic.js
 Inserted 30000 records into the database.
 Duration: 2955.01 milliseconds
 {% endhighlight %}
 
 The monomorphic version of our function is about twice as fast as the polymorphic version, as there is less code to execute in the monomorphic version. But because the types and shapes of the arguments in the polymorphic version vary widely, V8 has a more difficult time making optimizations to our code.
 
-In simple terms, when V8 can identify (a) that we call a function frequently, and (b) that the function gets called with the same types of arguments, V8 can create "shortcuts" for things like object property lookups, arithmetic, string operations, and more. 
+In simple terms, when V8 can identify (a) that we call a function frequently, and (b) that the function gets called with the same types of arguments, V8 can create "shortcuts" for things like object property lookups, arithmetic, string operations, and more.
 
-For a deeper look at how these "shortcuts" work I would recommend this article: [*What’s up with monomorphism?*](https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html) [by Vyacheslav Egorov](https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html).
+For a deeper look at how these "shortcuts" work I would recommend this article: [*What's up with monomorphism?* by Vyacheslav Egorov](https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html).
 
 # Pros and cons of polymorphic vs monomorphic functions
 
