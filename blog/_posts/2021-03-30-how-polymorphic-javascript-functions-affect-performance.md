@@ -245,9 +245,9 @@ Duration: 2955.01 milliseconds
 
 The monomorphic version of our function is about twice as fast as the polymorphic version, as there is less code to execute in the monomorphic version. But because the types and shapes of the arguments in the polymorphic version vary widely, V8 has a more difficult time making optimizations to our code.
 
-In simple terms, when V8 can identify (a) that we call a function frequently, and (b) that the function gets called with the same types of arguments, V8 can create “shortcuts” for things like object property lookups, arithmetic, string operations, and more. 
+In simple terms, when V8 can identify (a) that we call a function frequently, and (b) that the function gets called with the same types of arguments, V8 can create "shortcuts" for things like object property lookups, arithmetic, string operations, and more. 
 
-For a deeper look at how these “shortcuts” work I would recommend this article: [*What’s up with monomorphism?*](https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html) [by Vyacheslav Egorov](https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html).
+For a deeper look at how these "shortcuts" work I would recommend this article: [*What’s up with monomorphism?*](https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html) [by Vyacheslav Egorov](https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html).
 
 # Pros and cons of polymorphic vs monomorphic functions
 
@@ -255,7 +255,7 @@ Before you go off optimizing all of your code to be monomorphic, there are a few
 
 **Polymorphic function calls are not likely to be your performance bottleneck.** There are many other types of operations that contribute much more commonly to performance problems, like latent network calls, moving large amounts of data around in memory, disk i/o, complex database queries, to name just a few.
 
-**You will only run into performance issues with polymorphic functions if those functions are very, very “hot” (frequently run).** Only highly specialized applications, similar to our contrived examples above, will benefit from optimization at this level. If you have a polymorphic function that runs only a few times, there will be no benefit from rewriting it to be monomorphic.
+**You will only run into performance issues with polymorphic functions if those functions are very, very "hot" (frequently run).** Only highly specialized applications, similar to our contrived examples above, will benefit from optimization at this level. If you have a polymorphic function that runs only a few times, there will be no benefit from rewriting it to be monomorphic.
 
 **You will have more luck updating your code to be efficient rather than trying to optimize for the JavaScript engine.** In most cases, applying good software design principles and paying attention to the complexity of your code will take you further than focusing on the underlying runtime. Also, V8 and other engines are constantly getting faster, so some performance optimizations that work today may become irrelevant in a future version of the engine.
 
