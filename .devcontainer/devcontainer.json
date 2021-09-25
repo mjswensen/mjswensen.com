@@ -1,5 +1,8 @@
 {
   "name": "mjswensen.com",
   "image": "ruby:2.4",
-  "postCreateCommand": "bundle install"
+  "postCreateCommand": "bundle install",
+  "extensions": [
+    "streetsidesoftware.code-spell-checker"
+  ]
 }
