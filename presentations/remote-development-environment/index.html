@@ -42,140 +42,284 @@ location: Draper, UT
 
     <div
       id="advantages"
-      class="step slide-wrapper"
+      class="step slide"
       data-x="-1706"
       data-y="1761"
       data-scale="2"
     >
-      <div class="slide">
-        <h2>Advantages</h2>
-      </div>
+      <h2>Advantages</h2>
     </div>
     <div
       id="specialized-hardware"
-      class="step subslide"
-      data-x="-2466"
-      data-y="1601"
+      class="step sub-slide"
+      data-x="-2850"
+      data-y="1400"
     >
       <img
         alt="arrow pointing from laptop to server rack"
         src="images/hardware.svg"
       />
+      <span class="caption">Specialized hardware</span>
     </div>
     <div
       id="security"
-      class="step subslide"
-      data-x="-2466"
-      data-y="2261"
+      class="step sub-slide"
+      data-rel-x="0"
+      data-rel-y="800"
     >
       <img
         alt="locked lock"
         src="images/security.svg"
       />
+      <span class="caption">Security / intellectual property</span>
     </div>
     <div
-      id="co-location"
-      class="step subslide"
-      data-x="-966"
-      data-y="1601"
+      id="co-location-office"
+      class="step sub-slide"
+      data-rel-x="1500"
+      data-rel-y="-800"
     >
       <img
         alt="three co-located people with laptops"
         src="images/co-location-office.svg"
       />
+      <span class="caption">Office</span>
+    </div>
+    <div
+      id="co-location-remote"
+      class="step sub-slide"
+      data-rel-x="750"
+      data-rel-y="0"
+    >
       <img
         alt="three distributed people with co-located servers"
         src="images/co-location-remote.svg"
       />
+      <span class="caption">Remote</span>
     </div>
     <div
-      id="network"
-      class="step subslide"
-      data-x="-966"
-      data-y="2261"
+      id="network-laptop"
+      class="step sub-slide"
+      data-rel-x="-750"
+      data-rel-y="800"
     >
       <img
         alt="laptop connecting to three servers"
         src="images/network-laptop.svg"
       />
+      <span class="caption">Local environment</span>
+    </div>
+    <div
+      id="network-remote-env"
+      class="step sub-slide"
+      data-rel-x="850"
+      data-rel-y="0"
+    >
       <img
         alt="laptop connecting to one server connecting to three servers"
         src="images/network-remote-env.svg"
       />
+      <span class="caption">Remote environment</span>
     </div>
 
     <!-- Tradeoffs -->
 
     <div
       id="tradeoffs"
-      class="step slide-wrapper"
+      class="step slide"
       data-x="1903"
       data-y="2196"
       data-scale="1.5"
     >
-      <div class="slide">
-        <h2>Tradeoffs</h2>
-      </div>
+      <h2>Tradeoffs</h2>
     </div>
     <div
       id="tooling"
-      class="step subslide"
-      data-x="1333"
-      data-y="2054"
+      class="step sub-slide"
+      data-x="1100"
+      data-y="1950"
+      data-scale="0.75"
     >
-      tooling
+      <img
+        alt="sketch of VS Code UI"
+        src="images/vs-code.svg"
+      />
+      <span class="caption">Nascent tooling</span>
     </div>
     <div
       id="complexity"
-      class="step subslide"
-      data-x="1333"
-      data-y="2564"
+      class="step sub-slide"
+      data-rel-x="0"
+      data-rel-y="650"
+      data-scale="0.75"
     >
-      complexity
+      <img
+        alt="boxes with chaotic lines"
+        src="images/complexity.svg"
+      />
+      <span class="caption">Additional complexity</span>
     </div>
     <div
       id="offline"
-      class="step subslide"
-      data-x="2473"
-      data-y="2054"
+      class="step sub-slide"
+      data-rel-x="1400"
+      data-rel-y="-650"
+      data-scale="0.75"
     >
-      offline
+      <img
+        alt="computer disconnected from the internet"
+        src="images/offline.svg"
+      />
+      <span class="caption">Offline development</span>
     </div>
     <div
       id="change"
-      class="step subslide"
-      data-x="2473"
-      data-y="2564"
+      class="step sub-slide"
+      data-rel-x="0"
+      data-rel-y="650"
+      data-scale="0.75"
     >
-      change
+      <img
+        alt="delta symbol"
+        src="images/change.svg"
+      />
+      <span class="caption">Change is hard</span>
     </div>
 
     <!-- Architecture -->
 
     <div
       id="architecture"
-      class="step slide-wrapper"
+      class="step slide"
       data-x="0"
       data-y="4813"
       data-scale="3"
     >
-      <div class="slide">
-        <h2>Architecture</h2>
+      <h2>Architecture</h2>
+    </div>
+
+    <div
+      id="hybrid"
+      class="step sub-slide text"
+      data-rel-x="-1500"
+      data-rel-y="-650"
+      data-scale="1.5"
+    >
+      <h3 class="title">Hybrid option</h3>
+      <div>
+        <h4>Local</h4>
+        <ul>
+          <li>Editor</li>
+          <li>Git</li>
+          <li>Repository</li>
+          <li>Synchronization software (unison, rsync, etc.)</li>
+          <li>Browser</li>
+          <li>VPN client</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Remote</h4>
+        <ul>
+          <li>Synchronization software</li>
+          <li>Runtime dependencies (docker, etc.)</li>
+          <li>Build tools</li>
+        </ul>
       </div>
     </div>
 
+    <div
+      id="fully-remote"
+      class="step sub-slide text"
+      data-rel-x="0"
+      data-rel-y="700"
+      data-scale="1.5"
+    >
+      <h3 class="title">Fully remote option</h3>
+      <div>
+        <h4>Local</h4>
+        <ul>
+          <li>Editor client (VS Code, terminal, etc.)</li>
+          <li>Browser</li>
+          <li>VPN client</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Remote</h4>
+        <ul>
+          <li>Git</li>
+          <li>Repository</li>
+          <li>Runtime dependencies</li>
+          <li>Build tools</li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      id="vpn"
+      class="step sub-slide"
+      data-rel-x="3000"
+      data-rel-y="-700"
+      data-scale="1.5"
+    >
+      <img
+        alt="computer connecting to private network via VPN"
+        src="images/vpn.svg"
+      />
+      <span class="caption">VPN configuration</span>
+    </div>
+
+    <div
+      id="vpn-tips"
+      class="step sub-slide text"
+      data-rel-x="0"
+      data-rel-y="1300"
+      data-scale="1.5"
+    >
+      <h3 class="title">VPN tips</h3>
+      <ul>
+        <li>Use a managed VPN service</li>
+        <li>Split traffic for performance</li>
+      </ul>
+      <!-- 
+        From: https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html
+        "By default, when you have a Client VPN endpoint, all traffic from
+        clients is routed over the Client VPN tunnel. When you enable
+        split-tunnel on the Client VPN endpoint, we push the routes on the
+        Client VPN endpoint route table to the device that is connected to the
+        Client VPN endpoint. This ensures that only traffic with a destination
+        to the network matching a route from the Client VPN endpoint route
+        table is routed over the Client VPN tunnel."
+      -->
+      <img
+        src="images/vpn-split-traffic.svg"
+        alt="Computer with split internet traffic between VPN and internet"
+      />
+    </div>
+
+    <div
+      id="demo"
+      class="step sub-slide"
+      data-rel-x="-1500"
+      data-rel-y="900"
+      data-scale="1.5"
+    >
+      <img
+        alt="sketch of VS Code UI"
+        src="images/vs-code.svg"
+      />
+      <span class="caption">Demo</span>
+    </div>
+    
     <!-- Alternatives -->
 
     <div
       id="alternatives"
-      class="step slide-wrapper"
+      class="step slide"
       data-x="3611"
       data-y="5310"
       data-rotate-z="-90"
     >
-      <div class="slide">
-        <h2>Alternatives</h2>
-      </div>
+      <h2>Alternatives</h2>
     </div>
 
     <!-- Overview -->
