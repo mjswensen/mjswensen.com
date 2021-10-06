@@ -2,3 +2,4 @@
 source "https://rubygems.org"
 
 gem "jekyll"
+gem 'rqrcode', '~> 2.1'
