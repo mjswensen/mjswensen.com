@@ -5,6 +5,8 @@ layout: post
 excerpt: As part of my on-boarding as software engineer at Nuvi, I had the opportunity to read the classic book "Zen and the Art of Motorcycle Maintenance" by Robert M. Pirsig. While the book delves deeply into abstract philosophical concepts, there were a number of concrete principles that I felt had direct application to writing high-quality software.
 links:
   dev.to: https://dev.to/mjswensen/zen-and-the-art-of-software-engineering-h7p
+sitemap:
+  lastmod: 2021-10-06 19:08:03 MDT
 ---
 
 As part of my on-boarding as software engineer at [Nuvi](https://www.nuvi.com/), I had the opportunity to read the classic book _Zen and the Art of Motorcycle Maintenance: An Inquiry into Values_ by Robert M. Pirsig. While the book delves deeply into abstract philosophical concepts, there were a number of concrete principles that I felt had direct application to writing high-quality software.
@@ -13,7 +15,7 @@ As part of my on-boarding as software engineer at [Nuvi](https://www.nuvi.com/),
 
 Pirsig points out that a machine (or system or tool) really has no inherent efficacy; but rather its efficacy is measured by how satisfied we are with it. I thought this was a compelling point of view because it provides us with a useful measuring stick for our software. For example, I could build a beautiful UI that I believe to be streamlined and intuitive, but if our users have different needs, the tool is not effective for them.
 
-This also applies to developers as they build the software. The book discusses how the true artisan is actively involved in his or her work, being one with the material (the tools, technologies, and code), and has peace of mind when producing good work. If there isn't peace of mind, it could be a sign of subpar work or an ineffective environment.
+This also applies to developers as they build the software. The book discusses how the true artisan is actively involved in their work, being one with the material (the tools, technologies, and code), and has peace of mind when producing good work. If there isn't peace of mind, it could be a sign of subpar work or an ineffective environment.
 
 ## Being stuck isn't a bad thing
 
