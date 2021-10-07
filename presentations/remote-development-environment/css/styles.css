@@ -65,7 +65,7 @@ sitemap:
   --font-weight-heavy: 712;
   --font-weight-regular: 360;
 
-  /* Colors - https://coolors.co/312c2b-524948-57467b-7cb4b8-70f8ba-cafe48-fdfefb */
+  /* Colors - https://coolors.co/312c2b-524948-57467b-7cb4b8-70f8ba-cafe48-fdfefb-574ae2-7065e6 */
   
   --foreground: #312c2b;
   --foreground-alt: #524948;
@@ -87,6 +87,8 @@ sitemap:
     var(--background-b),
     0.8
   );
+  --link-color: #30A7C5;
+  --link-interaction-color: #53BBD5;
 }
 
 html,
@@ -141,7 +143,6 @@ h1 {
 
 .slide {
   padding: var(--size-regular);
-  background-color: var(--background-semi-transparent);
 }
 
 h2 {
@@ -186,6 +187,16 @@ h2::after {
   font-size: var(--size-large-1);
 }
 
+a:link,
+a:visited {
+  color: var(--link-color);
+}
+
+a:hover,
+a:active {
+  color: var(--link-interaction-color);
+}
+
 h3 {
   font-size: var(--size-large-2);
   font-weight: var(--font-weight-heavy);
@@ -204,6 +215,7 @@ ul {
 #wrap-up {
   display: flex;
   flex-direction: column;
+  background-color: var(--background-semi-transparent);
 }
 
 #wrap-up .content {
