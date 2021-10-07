@@ -884,6 +884,7 @@ code {
   height: var(--size);
   margin-top: var(--size-large-4);
   stroke: var(--jumbotron-scroll-hint-color);
+  filter: drop-shadow(0 0 4px var(--background-color));
 }
 
 /* Lists */
