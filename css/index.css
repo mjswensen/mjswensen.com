@@ -236,7 +236,7 @@
 :root {
   --ratio: calc(3 / 4);
   
-  --size-regular: 16px;
+  --size-regular: 18px;
 
   --size-small-1: calc(var(--size-regular) * var(--ratio));
   --size-small-2: calc(var(--size-small-1) * var(--ratio));
@@ -272,15 +272,15 @@
 /* Typography */
 
 @font-face {
-  font-family: 'Public Sans';
-  src: url('/fonts/Public-Sans-Roman-VF.ttf') format('truetype');
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-VariableFont_wdth-wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Public Sans';
-  src: url('/fonts/Public-Sans-Italic-VF.ttf') format('truetype');
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Italic-VariableFont_wdth-wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
 }
@@ -293,10 +293,10 @@
 }
 
 :root {
-  --font-family: 'Public Sans', sans-serif;
+  --font-family: 'Open Sans', sans-serif;
   --font-weight-light: 260;
-  --font-weight-normal: 320;
-  --font-weight-heavy: 725;
+  --font-weight-normal: 390;
+  --font-weight-heavy: 760;
 
   --mono-font-family: 'Fira Code', monospace;
   --mono-font-weight-normal: 350;
