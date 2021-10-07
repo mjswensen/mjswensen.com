@@ -1,7 +1,7 @@
 ---
 title: How to set up a powerful remote development environment that's as comfortable as localhost
 type: presentation
-description: TODO
+description: Advantages, tradeoffs, and tips for architecting the perfect remote development environment, as well as a sneak peek at GitHub's new Codespaces feature.
 date: 2021-10-08 11:20:00 MDT
 for: UtahJS 2021
 at: Slopes EVNTS Center
@@ -49,6 +49,11 @@ location: Draper, UT
     >
       <h2>Advantages</h2>
     </div>
+    <!-- 
+      - Example: I was working on a database migration and ran out of disk
+        space making backups, so with a few clicks in AWS Console I doubled
+        my disk capacity. Can't do that with a laptop.
+     -->
     <div
       id="specialized-hardware"
       class="step sub-slide"
@@ -59,7 +64,7 @@ location: Draper, UT
         alt="arrow pointing from laptop to server rack"
         src="images/hardware.svg"
       />
-      <span class="caption">Specialized hardware</span>
+      <span class="caption">Specialized hardware / flexibility</span>
     </div>
     <div
       id="security"
@@ -297,17 +302,19 @@ location: Draper, UT
     </div>
 
     <div
-      id="demo"
+      id="rviet-demo"
       class="step sub-slide"
       data-rel-x="-1500"
       data-rel-y="900"
-      data-scale="1.5"
     >
-      <img
-        alt="sketch of VS Code UI"
-        src="images/vs-code.svg"
-      />
-      <span class="caption">Demo</span>
+      <video
+        width="1920"
+        height="1080"
+        controls
+        preload
+      >
+        <source src="videos/rivet.mp4" type="video/mp4">
+      </video>
     </div>
     
     <!-- Alternatives -->
@@ -398,6 +405,23 @@ location: Draper, UT
     </div>
   </div>
   <script src="js/impress.js"></script>
-  <script>impress().init();</script>
+  <script>
+    const impressRoot = document.querySelector('#impress');
+    impressRoot.addEventListener(
+      'impress:stepenter',
+      function({ target: currentStep }) {
+        const video = currentStep.querySelector('video');
+        if (video) {
+          video.play();
+        }
+      }
+    );
+
+    impress().init();
+
+    window.addEventListener('resize', evt => {
+      console.log(`${window.innerWidth} x ${window.innerHeight}`);
+    });
+  </script>
 </body>
 </html>
