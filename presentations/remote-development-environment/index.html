@@ -28,6 +28,12 @@ location: Draper, UT
 
     <!-- Title -->
 
+    <!-- 
+      Just to be sure we're all on the same page: when I say "remote
+      development environment" I mean that rather than doing your day-to-day
+      work on your laptop, you do most or all of your work while connected to
+      some hardware that's running in the cloud.
+     -->
     <div
       id="title"
       class="step"
@@ -40,6 +46,11 @@ location: Draper, UT
 
     <!-- Advantages -->
 
+    <!-- 
+      Before we dive into the specifics of setting up a remote development
+      environment, let's provide some context as to why one might want to do
+      that and what the benefits and tradeoffs are.
+     -->
     <div
       id="advantages"
       class="step slide"
@@ -49,10 +60,17 @@ location: Draper, UT
     >
       <h2>Advantages</h2>
     </div>
+
     <!-- 
-      - Example: I was working on a database migration and ran out of disk
-        space making backups, so with a few clicks in AWS Console I doubled
-        my disk capacity. Can't do that with a laptop.
+      Not all of the applications we build today fit nicely into the 15"-
+      MacBook-Pro-with-16GB-of-RAM box. We may need extra GPU power for machine
+      learning, or any number of other use cases. Remote environments allow you
+      to pick just the right hardware for the job and even change it from time
+      to time depending on what you are working on. For example: I was working
+      on a database migration and ran out of disk space making backups, so with
+      a few clicks in AWS Console I added another half terabyte of storage to
+      give myself a bit of wiggle room. You can't do that with a laptop as
+      easily.
      -->
     <div
       id="specialized-hardware"
@@ -66,6 +84,13 @@ location: Draper, UT
       />
       <span class="caption">Specialized hardware / flexibility</span>
     </div>
+
+    <!-- 
+      Benefits from the employer's perspective: intellectual property like
+      source code and user data can remain un company infrastructure while
+      offering additional flexibility and choice to employees for their daily
+      workstation.
+     -->
     <div
       id="security"
       class="step sub-slide"
@@ -78,6 +103,13 @@ location: Draper, UT
       />
       <span class="caption">Security / intellectual property</span>
     </div>
+
+    <!-- 
+      One of the hallmark benefits of in-office working is the ability to tap
+      a teammate on the shoulder and have them review the work on your laptop
+      and collaborate on designs or solutions to problems. With the pandemic
+      causing many of us to work remotely, some of this benefit has been lost.
+     -->
     <div
       id="co-location-office"
       class="step sub-slide"
@@ -90,6 +122,12 @@ location: Draper, UT
       />
       <span class="caption">Office</span>
     </div>
+
+    <!-- 
+      Remote dev environments bring some of the collaborative properties back,
+      because you can point co-workers to a URL on your remote machine and ask
+      for feedback.
+     -->
     <div
       id="co-location-remote"
       class="step sub-slide"
@@ -102,6 +140,13 @@ location: Draper, UT
       />
       <span class="caption">Remote</span>
     </div>
+
+    <!-- 
+      When I set up remote environments for my teammates at Rivet, one of the
+      first benefits they see is increased performance for network operations.
+      In a traditional setup, your `yarn install`s and `git` operations have to
+      make the journey from the internet all the way to your laptop.
+     -->
     <div
       id="network-laptop"
       class="step sub-slide"
@@ -114,6 +159,12 @@ location: Draper, UT
       />
       <span class="caption">Local environment</span>
     </div>
+
+    <!-- 
+      When you co-locate your environment with the rest of the internet, those
+      operations become very fast. Only a small amount of data (your terminal
+      session) is streamed down to your laptop.
+     -->
     <div
       id="network-remote-env"
       class="step sub-slide"
@@ -129,6 +180,9 @@ location: Draper, UT
 
     <!-- Tradeoffs -->
 
+    <!-- 
+      No solution is a silver bullet; let's talk about some of the tradeoffs.
+     -->
     <div
       id="tradeoffs"
       class="step slide"
@@ -138,6 +192,20 @@ location: Draper, UT
     >
       <h2>Tradeoffs</h2>
     </div>
+
+    <!-- 
+      Since this is a relatively new trend, our favorite tools are still
+      evolving to provide adequate support for a remote setup. VS Code has
+      strong support with its new suite Remote Development extensions. This
+      link points to a Tweet from an engineer asking if PhpStorm supports a
+      remote set-up. JetBrains suggested X forwarding to stream the UI pixels
+      from server to client. The original poster pointed out the sluggish
+      scroll and asked if they might consider implementing a client-server
+      architecture. The response was "next question" with a sweaty smiley face
+      emoji. This was last year, so they can always change their mind; I
+      suspect that many will, following in VS Code's footsteps after seeing the
+      success of Codespaces and other similar products.
+     -->
     <div
       id="tooling"
       class="step sub-slide"
@@ -147,10 +215,15 @@ location: Draper, UT
     >
       <img
         alt="sketch of VS Code UI"
-        src="images/vs-code.svg"
+        src="images/tooling.svg"
       />
       <span class="caption"><a href="https://twitter.com/fideloper/status/1339363397524176896" target="_blank">Nascent tooling</a></span>
     </div>
+
+    <!-- 
+      Local development environments are relatively simple; remote environments
+      bring additional considerations around networking, security, DNS, etc.
+     -->
     <div
       id="complexity"
       class="step sub-slide"
@@ -164,6 +237,12 @@ location: Draper, UT
       />
       <span class="caption">Additional complexity</span>
     </div>
+
+    <!-- 
+      I don't think there are too many shops that try to maintain an offline-
+      capable developer experience, but that obviously goes out the window with
+      remote development environments.
+     -->
     <div
       id="offline"
       class="step sub-slide"
@@ -177,6 +256,10 @@ location: Draper, UT
       />
       <span class="caption">Offline development</span>
     </div>
+
+    <!-- 
+      We've been developing locally for a long time and change comes with friction.
+     -->
     <div
       id="change"
       class="step sub-slide"
@@ -193,6 +276,10 @@ location: Draper, UT
 
     <!-- Architecture -->
 
+    <!-- 
+      OK, so now let's talk about some practical tips for setting up a remote
+      development environment.
+     -->
     <div
       id="architecture"
       class="step slide"
@@ -203,6 +290,10 @@ location: Draper, UT
       <h2>Architecture</h2>
     </div>
 
+    <!-- 
+      I'll show two high-level examples that really actually represent a
+      spectrum of possibilities.
+     -->
     <div
       id="hybrid"
       class="step sub-slide text"
@@ -232,6 +323,11 @@ location: Draper, UT
       </div>
     </div>
 
+    <!-- 
+      This approach is recommended for its simplicity. It also allows for
+      maximizing the network performance and security benefits mentioned
+      previously.
+     -->
     <div
       id="fully-remote"
       class="step sub-slide text"
@@ -259,6 +355,15 @@ location: Draper, UT
       </div>
     </div>
 
+    <!-- 
+      If your machine is directly accessible via the internet, you'll have to
+      spend time securing it and allowlisting ports, etc. A better approach is
+      to create a VPC in the cloud that is protected by NAT, etc. in the same
+      way that your home or office network is. Then you add a VPN endpoint on
+      that network that allows you to connect to your environment as one "peer"
+      to another. That way you can open up debugging ports, expose your
+      database to GUI clients, etc. without worrying about intruders.
+     -->
     <div
       id="vpn"
       class="step sub-slide"
@@ -273,6 +378,16 @@ location: Draper, UT
       <span class="caption">VPN configuration</span>
     </div>
 
+    <!-- 
+      Using a managed VPN service will give you added reliability and reduces
+      the number of things you have to maintain. Since the VPN becomes a
+      critical piece of engineering daily workflow, you want it to be solid.
+      Also, set up split tunnelling on your VPN service. That way only traffic
+      to a particular block of IP addresses goes through the VPN, and the rest
+      goes directly to the internet. This helps performance, especially for
+      peer-to-peer connections like video calls. More on that here:
+      https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html
+     -->
     <div
       id="vpn-tips"
       class="step sub-slide text"
@@ -285,22 +400,16 @@ location: Draper, UT
         <li>Use a managed VPN service</li>
         <li>Split traffic for performance</li>
       </ul>
-      <!-- 
-        From: https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html
-        "By default, when you have a Client VPN endpoint, all traffic from
-        clients is routed over the Client VPN tunnel. When you enable
-        split-tunnel on the Client VPN endpoint, we push the routes on the
-        Client VPN endpoint route table to the device that is connected to the
-        Client VPN endpoint. This ensures that only traffic with a destination
-        to the network matching a route from the Client VPN endpoint route
-        table is routed over the Client VPN tunnel."
-      -->
       <img
         src="images/vpn-split-traffic.svg"
         alt="Computer with split internet traffic between VPN and internet"
       />
     </div>
 
+    <!-- 
+      Here's what my setup process looks like in the morning. It's not too
+      different from a local setup.
+     -->
     <div
       id="rviet-demo"
       class="step sub-slide"
@@ -316,9 +425,15 @@ location: Draper, UT
         <source src="videos/rivet.mp4" type="video/mp4">
       </video>
     </div>
-    
+
     <!-- Alternatives -->
 
+    <!-- 
+      There are of course commercial alternatives to setting this all up
+      yourself. Coder.com are the folks behind the popular VS Code server
+      docker container. GitHub also released their new Codespaces feature
+      for GitHub teams just in the last few weeks.
+     -->
     <div
       id="alternatives"
       class="step slide"
@@ -335,6 +450,20 @@ location: Draper, UT
       </ul>
     </div>
 
+    <!-- 
+      I wanted to see what Codespaces is all about as I was preparing for this
+      talk, so I went ahead and upgraded one of my free GitHub organizations to
+      a team plan subscription to try it out. After upgrading and sending an
+      email to the GitHub team to gain access, I was able to create and connect
+      to a new Codespace through the UI. After installing and configuring the
+      Codespaces extension, I was able to connect to it using my local VS Code
+      instance and run my unit test suite in the cloud. While the approach to
+      remote development environments that I've been talking about is akin to
+      putting your laptop in the cloud and using the same machine long-term,
+      Codespaces are meant to be temporary (somewhat like branches in git),
+      using a personal (but public for now) dotfiles repository to maintain
+      configuration preferences between environments.
+     -->
     <div
       id="codespaces-demo"
       class="step"
@@ -353,6 +482,14 @@ location: Draper, UT
       </video>
     </div>
 
+    <!-- 
+      I was about to commit some changes in my Codespace when I realized that I
+      like to sign my commits with PGP but didn't really feel comfortable
+      uploading my private key to a container that I don't control. And since
+      GitHub will only pull in public dotfiles repositories (for now), I
+      asked the director of engineering over Codespaces for a recommendation
+      but haven't yet heard anything back.
+     -->
     <div
       id="key-tweet"
       class="step sub-slide"
@@ -365,6 +502,10 @@ location: Draper, UT
 
     <!-- Conclusion -->
 
+    <!-- 
+      You can find the source code for this presentation along with additional
+      notes on GitHub.
+     -->
     <div
       id="wrap-up"
       class="step slide"
