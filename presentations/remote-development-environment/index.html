@@ -387,6 +387,9 @@ location: Draper, UT
       goes directly to the internet. This helps performance, especially for
       peer-to-peer connections like video calls. More on that here:
       https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html
+      Finally, you can add a DNS record that points a domain to your private IP
+      address. You won't be able to resolve it unless you are connected to the
+      VPN, and it's a nice convenience for connecting to your remote machine.
      -->
     <div
       id="vpn-tips"
@@ -399,6 +402,7 @@ location: Draper, UT
       <ul>
         <li>Use a managed VPN service</li>
         <li>Split traffic for performance</li>
+        <li>Point a domain to your private IP</li>
       </ul>
       <img
         src="images/vpn-split-traffic.svg"
@@ -407,14 +411,35 @@ location: Draper, UT
     </div>
 
     <!-- 
+      Once you've got all that set up, you connect to the VPN, connect to your
+      machine via SSH, and you're all set.
+     -->
+    <div
+      id="workflow"
+      class="step sub-slide text"
+      data-rel-x="-1500"
+      data-rel-y="700"
+    >
+      <h3 class="title">Workflow</h3>
+      <ol>
+        <li>Connect to the VPN</li>
+        <li>Connect to your machine via SSH</li>
+        <li>Profit</li>
+      </ol>
+    </div>
+
+    <!-- 
       Here's what my setup process looks like in the morning. It's not too
-      different from a local setup.
+      different from a local setup. Because of VS Code's client-server
+      architecture, even features like remote debugging of server processes or
+      browser JavaScript work great.
      -->
     <div
       id="rviet-demo"
       class="step sub-slide"
-      data-rel-x="-1500"
+      data-rel-x="0"
       data-rel-y="900"
+      data-scale="0.75"
     >
       <video
         width="1920"
@@ -422,6 +447,7 @@ location: Draper, UT
         controls
         preload
       >
+        <source src="videos/rivet.webm" type="video/webm">
         <source src="videos/rivet.mp4" type="video/mp4">
       </video>
     </div>
@@ -478,6 +504,7 @@ location: Draper, UT
         controls
         preload
       >
+        <source src="videos/codespaces.webm" type="video/webm">
         <source src="videos/codespaces.mp4" type="video/mp4">
       </video>
     </div>
@@ -566,3 +593,16 @@ location: Draper, UT
   </script>
 </body>
 </html>
+
+<!-- 
+  Video encoding notes
+  --------------------
+
+  Commands used:
+  - ffmpeg -i [INPUT FILE] -vcodec libx264 -an [OUTPUT_FILE.mp4]
+  - ffmpeg -i [INPUT FILE] -vcodec libvpx-vp9 -b:v 0 -crf 31 -pass 1 -an -f null /dev/null && ffmpeg -i [INPUT FILE] -vcodec libvpx-vp9 -b:v 0 -crf 31 -pass 2 -an [OUTPUT_FILE.webm]
+
+  Helpful links:
+  - https://caniuse.com/?search=video%20format
+  - https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
+ -->

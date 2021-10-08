@@ -212,6 +212,11 @@ ul {
   margin-left: var(--size-regular);
 }
 
+ol {
+  list-style-type: decimal;
+  margin-left: var(--size-regular);
+}
+
 #wrap-up {
   display: flex;
   flex-direction: column;
