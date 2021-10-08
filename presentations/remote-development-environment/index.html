@@ -197,14 +197,11 @@ location: Draper, UT
       Since this is a relatively new trend, our favorite tools are still
       evolving to provide adequate support for a remote setup. VS Code has
       strong support with its new suite Remote Development extensions. This
-      link points to a Tweet from an engineer asking if PhpStorm supports a
-      remote set-up. JetBrains suggested X forwarding to stream the UI pixels
-      from server to client. The original poster pointed out the sluggish
-      scroll and asked if they might consider implementing a client-server
-      architecture. The response was "next question" with a sweaty smiley face
-      emoji. This was last year, so they can always change their mind; I
-      suspect that many will, following in VS Code's footsteps after seeing the
-      success of Codespaces and other similar products.
+      link points to a Twitter exchange between an engineer wanting to use
+      PhpStorm in a remote development context. The best answer they have
+      for now is to use X forwarding or VNC or similar to stream the UI pixels
+      to your local machine, which is likely not going to yield a great
+      experience. The maturity of the tools is paramount.
      -->
     <div
       id="tooling"
@@ -483,12 +480,7 @@ location: Draper, UT
       email to the GitHub team to gain access, I was able to create and connect
       to a new Codespace through the UI. After installing and configuring the
       Codespaces extension, I was able to connect to it using my local VS Code
-      instance and run my unit test suite in the cloud. While the approach to
-      remote development environments that I've been talking about is akin to
-      putting your laptop in the cloud and using the same machine long-term,
-      Codespaces are meant to be temporary (somewhat like branches in git),
-      using a personal (but public for now) dotfiles repository to maintain
-      configuration preferences between environments.
+      instance and run my unit test suite in the cloud.
      -->
     <div
       id="codespaces-demo"
@@ -527,11 +519,35 @@ location: Draper, UT
       <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Hi <a href="https://twitter.com/corywilkerson?ref_src=twsrc%5Etfw">@corywilkerson</a> 👋 Playing around with Codespaces today. For engineers who like to sign their commits, what&#39;s the recommended workflow for getting keys into a Codespace?</p>&mdash; Matt Swensen (@mjswensen) <a href="https://twitter.com/mjswensen/status/1439283175683870720?ref_src=twsrc%5Etfw">September 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 
+    <!-- 
+      Codespaces has a different approach to the lifecycle and configuration of
+      a remote development environment. At Rivet we use long-running
+      environments that are really just like putting your laptop in the cloud.
+      Codespaces are designed to be treated as temporary, akin to git branches.
+      Both approaches are valid and can work well depending on your team and
+      workflow.
+     -->
+    <div
+      id="lifecycle"
+      class="step sub-slide text"
+      data-rel-x="600"
+      data-rel-y="0"
+      data-rotate-z="-90"
+    >
+      <h3 class="title">Remote environment lifecycle approaches</h3>
+      <ul>
+        <li>Ephemeral, throwaway environments</li>
+      </ul>
+      <ul>
+        <li>Long-running environments per engineer</li>
+      </ul>
+    </div>
+
     <!-- Conclusion -->
 
     <!-- 
-      You can find the source code for this presentation along with additional
-      notes on GitHub.
+      This presentation is available online at mjswensen.com if you want to
+      revisit any of the links, etc.
      -->
     <div
       id="wrap-up"
