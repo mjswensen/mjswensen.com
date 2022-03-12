@@ -4,6 +4,8 @@ date: 2022-03-11 08:16:41 MST
 tags: software
 layout: post
 excerpt: "There are a number of reasons you may wish to use HTTPS as part of your web application development workflow. Find out how to set up SSL locally."
+links:
+  dev.to: https://dev.to/mjswensen/how-to-develop-over-https-on-localhost-1cb5
 ---
 
 There are a number of reasons you may wish to use HTTPS as part of your web application development workflow:

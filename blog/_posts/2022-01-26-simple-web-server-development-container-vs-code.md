@@ -4,6 +4,8 @@ date: 2022-01-26 09:18:46 MST
 tags: software
 layout: post
 excerpt: Sometimes it's nice to have a lightweight development container that automatically serves the contents of a directory, for rapid prototyping or building static web pages—without having to setup a tool chain on your local environment or install web server software on your local machine.
+links:
+  dev.to: https://dev.to/mjswensen/how-to-set-up-a-simple-web-server-development-container-for-vs-code-5d45
 ---
 
 Sometimes it's nice to have a lightweight development container that automatically serves the contents of a directory, for rapid prototyping or building static web pages—without having to setup a tool chain on your local environment or install web server software (and its dependencies) on your local machine.
