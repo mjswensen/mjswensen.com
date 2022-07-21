@@ -40,5 +40,14 @@
 			"  date: ${3:YYYY-MM-DD}"
 		],
 		"description": "Adds canonical URL to the post frontmatter"
+	},
+	"Code snippet": {
+		"prefix": "codesnippet",
+		"body": [
+			"{% highlight ${1:lang} %}",
+			"${TM_SELECTED_TEXT}",
+			"{% endhighlight %}"
+		],
+		"description": "Surrounds the selected text in a code highlight section"
 	}
 }
