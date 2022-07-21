@@ -12,10 +12,10 @@ sitemap:
 ## Software
 
 - Editor: [Visual Studio Code](https://code.visualstudio.com/)
-- Editor theme: ["Future Pro" by Themer](https://themer.dev/?colors.dark.shade0=%23242225&colors.dark.shade7=%23D9D7DA&colors.dark.accent0=%23C25B5B&colors.dark.accent1=%23B06E4A&colors.dark.accent2=%23C19944&colors.dark.accent3=%2359A257&colors.dark.accent4=%2341A48B&colors.dark.accent5=%235B91B3&colors.dark.accent6=%239467AD&colors.dark.accent7=%23BB5D88&colors.light.shade0=%23E4E4E7&colors.light.shade7=%23333135&colors.light.accent0=%23A54A4A&colors.light.accent1=%23B06740&colors.light.accent2=%239A7932&colors.light.accent3=%23448943&colors.light.accent4=%233B7D6C&colors.light.accent5=%23407596&colors.light.accent6=%236A4D7A&colors.light.accent7=%23904C6A&activeColorSet=dark&calculateIntermediaryShades.dark=true&calculateIntermediaryShades.light=true)
-- Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- Editor theme: ["Future Pro" by Themer](https://themer.dev/future-pro)
+- Font: [Victor Mono](https://rubjo.github.io/victor-mono/)
 - Browser: [Brave](https://brave.com/)
 - PGP: [GPG Tools](https://gpgtools.org/)
 - Window manager: [Rectangle.app](https://rectangleapp.com/)
-- Development environment: [Docker](https://www.docker.com/) + [VS Code Remote Development extensions](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+- Development environments: [Docker](https://www.docker.com/) + [VS Code Remote Development extensions](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 - VPN client: [Tunnelblick](https://tunnelblick.net/)
