@@ -4,226 +4,226 @@
 /* Theme */
 
 :root {
-  --background-color: var(--light-shade0-rgb);
+  --background-color: var(--light-shade0);
   --background-mask-color: rgba(
-    var(--light-shade0-rgb-r),
-    var(--light-shade0-rgb-g),
-    var(--light-shade0-rgb-b),
+    var(--light-shade0-r),
+    var(--light-shade0-g),
+    var(--light-shade0-b),
     0.5
   );
-  --foreground-high-contrast-color: var(--light-shade7-rgb);
-  --foreground-low-contrast-color: var(--light-shade5-rgb);
-  --link-color: var(--light-accent4-rgb);
+  --foreground-high-contrast-color: var(--light-shade7);
+  --foreground-low-contrast-color: var(--light-shade5);
+  --link-color: var(--light-accent4);
   --link-background-color: rgba(
-    var(--light-accent4-rgb-r),
-    var(--light-accent4-rgb-g),
-    var(--light-accent4-rgb-b),
+    var(--light-accent4-r),
+    var(--light-accent4-g),
+    var(--light-accent4-b),
     0.15
   );
-  --link-interaction-color: var(--light-accent5-rgb);
+  --link-interaction-color: var(--light-accent5);
   --link-interaction-background-color: rgba(
-    var(--light-accent5-rgb-r),
-    var(--light-accent5-rgb-g),
-    var(--light-accent5-rgb-b),
+    var(--light-accent5-r),
+    var(--light-accent5-g),
+    var(--light-accent5-b),
     0.15
   );
-  --header-background-color: var(--light-shade7-rgb);
-  --header-gradient-color-1: var(--light-accent0-rgb);
-  --header-gradient-color-2: var(--light-accent4-rgb);
-  --header-gradient-color-3: var(--light-accent7-rgb);
+  --header-background-color: var(--light-shade7);
+  --header-gradient-color-1: var(--light-accent0);
+  --header-gradient-color-2: var(--light-accent4);
+  --header-gradient-color-3: var(--light-accent7);
   --header-gradient-color-3-transparent: rgba(
-    var(--light-accent7-rgb-r),
-    var(--light-accent7-rgb-g),
-    var(--light-accent7-rgb-b),
+    var(--light-accent7-r),
+    var(--light-accent7-g),
+    var(--light-accent7-b),
     0
   );
-  --header-link-color: var(--light-shade0-rgb);
-  --footer-background-color: var(--light-shade1-rgb);
-  --footer-foreground-color: var(--light-shade6-rgb);
-  --footer-logo-top-color: var(--light-shade2-rgb);
-  --footer-logo-left-color: var(--light-shade3-rgb);
-  --footer-logo-right-color: var(--light-shade4-rgb);
-  --jumbotron-glow-color-1: var(--light-accent2-rgb);
-  --jumbotron-glow-color-2: var(--light-accent7-rgb);
-  --jumbotron-glow-color-3: var(--light-accent4-rgb);
+  --header-link-color: var(--light-shade0);
+  --footer-background-color: var(--light-shade1);
+  --footer-foreground-color: var(--light-shade6);
+  --footer-logo-top-color: var(--light-shade2);
+  --footer-logo-left-color: var(--light-shade3);
+  --footer-logo-right-color: var(--light-shade4);
+  --jumbotron-glow-color-1: var(--light-accent2);
+  --jumbotron-glow-color-2: var(--light-accent7);
+  --jumbotron-glow-color-3: var(--light-accent4);
   --jumbotron-glow-color-3-transparent: rgba(
-    var(--light-accent4-rgb-r),
-    var(--light-accent4-rgb-g),
-    var(--light-accent4-rgb-b),
+    var(--light-accent4-r),
+    var(--light-accent4-g),
+    var(--light-accent4-b),
     0
   );
-  --jumbotron-scroll-hint-color: var(--light-shade2-rgb);
-  --rule-color-1: var(--light-accent2-rgb);
-  --rule-color-2: var(--light-accent0-rgb);
-  --blockquote-decoration-color: var(--light-shade1-rgb);
-  --table-border-color: var(--light-shade3-rgb);
-  --memoji-color-1: var(--light-accent2-rgb);
-  --memoji-color-2: var(--light-accent0-rgb);
+  --jumbotron-scroll-hint-color: var(--light-shade2);
+  --rule-color-1: var(--light-accent2);
+  --rule-color-2: var(--light-accent0);
+  --blockquote-decoration-color: var(--light-shade1);
+  --table-border-color: var(--light-shade3);
+  --memoji-color-1: var(--light-accent2);
+  --memoji-color-2: var(--light-accent0);
   --code-background-color: rgba(
-    var(--light-accent7-rgb-r),
-    var(--light-accent7-rgb-g),
-    var(--light-accent7-rgb-b),
+    var(--light-accent7-r),
+    var(--light-accent7-g),
+    var(--light-accent7-b),
     0.2
   );
   --highlight-background-color: rgba(
-    var(--light-shade1-rgb-r),
-    var(--light-shade1-rgb-g),
-    var(--light-shade1-rgb-b),
+    var(--light-shade1-r),
+    var(--light-shade1-g),
+    var(--light-shade1-b),
     0.25
   );
-  --code-shade0: var(--light-shade0-rgb);
-  --code-shade1: var(--light-shade1-rgb);
-  --code-shade2: var(--light-shade2-rgb);
-  --code-shade3: var(--light-shade3-rgb);
-  --code-shade4: var(--light-shade4-rgb);
-  --code-shade5: var(--light-shade5-rgb);
-  --code-shade6: var(--light-shade6-rgb);
-  --code-shade7: var(--light-shade7-rgb);
-  --code-accent0: var(--light-accent0-rgb);
-  --code-accent1: var(--light-accent1-rgb);
-  --code-accent2: var(--light-accent2-rgb);
-  --code-accent3: var(--light-accent3-rgb);
-  --code-accent4: var(--light-accent4-rgb);
-  --code-accent5: var(--light-accent5-rgb);
-  --code-accent6: var(--light-accent6-rgb);
-  --code-accent7: var(--light-accent7-rgb);
-  --open-source-background-color: var(--light-accent3-rgb);
-  --open-source-foreground-color: var(--light-shade0-rgb);
-  --update-accent-color: var(--light-accent2-rgb);
+  --code-shade0: var(--light-shade0);
+  --code-shade1: var(--light-shade1);
+  --code-shade2: var(--light-shade2);
+  --code-shade3: var(--light-shade3);
+  --code-shade4: var(--light-shade4);
+  --code-shade5: var(--light-shade5);
+  --code-shade6: var(--light-shade6);
+  --code-shade7: var(--light-shade7);
+  --code-accent0: var(--light-accent0);
+  --code-accent1: var(--light-accent1);
+  --code-accent2: var(--light-accent2);
+  --code-accent3: var(--light-accent3);
+  --code-accent4: var(--light-accent4);
+  --code-accent5: var(--light-accent5);
+  --code-accent6: var(--light-accent6);
+  --code-accent7: var(--light-accent7);
+  --open-source-background-color: var(--light-accent3);
+  --open-source-foreground-color: var(--light-shade0);
+  --update-accent-color: var(--light-accent2);
   --update-accent-background-color: rgba(
-    var(--light-accent2-rgb-r),
-    var(--light-accent2-rgb-g),
-    var(--light-accent2-rgb-b),
+    var(--light-accent2-r),
+    var(--light-accent2-g),
+    var(--light-accent2-b),
     0.05
   );
-  --tldr-accent-color: var(--light-accent3-rgb);
+  --tldr-accent-color: var(--light-accent3);
   --tldr-accent-background-color: rgba(
-    var(--light-accent3-rgb-r),
-    var(--light-accent3-rgb-g),
-    var(--light-accent3-rgb-b),
+    var(--light-accent3-r),
+    var(--light-accent3-g),
+    var(--light-accent3-b),
     0.1
   );
-  --tip-accent-color: var(--light-accent5-rgb);
+  --tip-accent-color: var(--light-accent5);
   --tip-accent-background-color: rgba(
-    var(--light-accent5-rgb-r),
-    var(--light-accent5-rgb-g),
-    var(--light-accent5-rgb-b),
+    var(--light-accent5-r),
+    var(--light-accent5-g),
+    var(--light-accent5-b),
     0.1
   );
-  --article-footer-border-color-1: var(--light-accent1-rgb);
-  --article-footer-border-color-2: var(--light-accent6-rgb);
+  --article-footer-border-color-1: var(--light-accent1);
+  --article-footer-border-color-2: var(--light-accent6);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: var(--dark-shade0-rgb);
+    --background-color: var(--dark-shade0);
     --background-mask-color: rgba(
-      var(--dark-shade0-rgb-r),
-      var(--dark-shade0-rgb-g),
-      var(--dark-shade0-rgb-b),
+      var(--dark-shade0-r),
+      var(--dark-shade0-g),
+      var(--dark-shade0-b),
       0.5
     );
-    --foreground-high-contrast-color: var(--dark-shade7-rgb);
-    --foreground-low-contrast-color: var(--dark-shade5-rgb);
-    --link-color: var(--dark-accent4-rgb);
+    --foreground-high-contrast-color: var(--dark-shade7);
+    --foreground-low-contrast-color: var(--dark-shade5);
+    --link-color: var(--dark-accent4);
     --link-background-color: rgba(
-      var(--dark-accent4-rgb-r),
-      var(--dark-accent4-rgb-g),
-      var(--dark-accent4-rgb-b),
+      var(--dark-accent4-r),
+      var(--dark-accent4-g),
+      var(--dark-accent4-b),
       0.15
     );
-    --link-interaction-color: var(--dark-accent5-rgb);
+    --link-interaction-color: var(--dark-accent5);
     --link-interaction-background-color: rgba(
-      var(--dark-accent5-rgb-r),
-      var(--dark-accent5-rgb-g),
-      var(--dark-accent5-rgb-b),
+      var(--dark-accent5-r),
+      var(--dark-accent5-g),
+      var(--dark-accent5-b),
       0.15
     );
-    --header-background-color: var(--dark-shade7-rgb);
-    --header-gradient-color-1: var(--dark-accent0-rgb);
-    --header-gradient-color-2: var(--dark-accent4-rgb);
-    --header-gradient-color-3: var(--dark-accent7-rgb);
+    --header-background-color: var(--dark-shade7);
+    --header-gradient-color-1: var(--dark-accent0);
+    --header-gradient-color-2: var(--dark-accent4);
+    --header-gradient-color-3: var(--dark-accent7);
     --header-gradient-color-3-transparent: rgba(
-      var(--dark-accent7-rgb-r),
-      var(--dark-accent7-rgb-g),
-      var(--dark-accent7-rgb-b),
+      var(--dark-accent7-r),
+      var(--dark-accent7-g),
+      var(--dark-accent7-b),
       0
     );
-    --header-link-color: var(--dark-shade0-rgb);
-    --footer-background-color: var(--dark-shade1-rgb);
-    --footer-foreground-color: var(--dark-shade6-rgb);
-    --footer-logo-top-color: var(--dark-shade4-rgb);
-    --footer-logo-left-color: var(--dark-shade3-rgb);
-    --footer-logo-right-color: var(--dark-shade2-rgb);
-    --jumbotron-scroll-hint-color: var(--dark-shade2-rgb);
-    --jumbotron-glow-color-1: var(--dark-accent2-rgb);
-    --jumbotron-glow-color-2: var(--dark-accent7-rgb);
-    --jumbotron-glow-color-3: var(--dark-accent4-rgb);
+    --header-link-color: var(--dark-shade0);
+    --footer-background-color: var(--dark-shade1);
+    --footer-foreground-color: var(--dark-shade6);
+    --footer-logo-top-color: var(--dark-shade4);
+    --footer-logo-left-color: var(--dark-shade3);
+    --footer-logo-right-color: var(--dark-shade2);
+    --jumbotron-scroll-hint-color: var(--dark-shade2);
+    --jumbotron-glow-color-1: var(--dark-accent2);
+    --jumbotron-glow-color-2: var(--dark-accent7);
+    --jumbotron-glow-color-3: var(--dark-accent4);
     --jumbotron-glow-color-3-transparent: rgba(
-      var(--dark-accent4-rgb-r),
-      var(--dark-accent4-rgb-g),
-      var(--dark-accent4-rgb-b),
+      var(--dark-accent4-r),
+      var(--dark-accent4-g),
+      var(--dark-accent4-b),
       0
     );
-    --rule-color-1: var(--dark-accent2-rgb);
-    --rule-color-2: var(--dark-accent0-rgb);
-    --blockquote-decoration-color: var(--dark-shade1-rgb);
-    --table-border-color: var(--dark-shade3-rgb);
-    --memoji-color-1: var(--dark-accent2-rgb);
-    --memoji-color-2: var(--dark-accent0-rgb);
+    --rule-color-1: var(--dark-accent2);
+    --rule-color-2: var(--dark-accent0);
+    --blockquote-decoration-color: var(--dark-shade1);
+    --table-border-color: var(--dark-shade3);
+    --memoji-color-1: var(--dark-accent2);
+    --memoji-color-2: var(--dark-accent0);
     --code-background-color: rgba(
-      var(--dark-accent7-rgb-r),
-      var(--dark-accent7-rgb-g),
-      var(--dark-accent7-rgb-b),
+      var(--dark-accent7-r),
+      var(--dark-accent7-g),
+      var(--dark-accent7-b),
       0.2
     );
     --highlight-background-color: rgba(
-      var(--dark-shade1-rgb-r),
-      var(--dark-shade1-rgb-g),
-      var(--dark-shade1-rgb-b),
+      var(--dark-shade1-r),
+      var(--dark-shade1-g),
+      var(--dark-shade1-b),
       0.25
     );
-    --code-shade0: var(--dark-shade0-rgb);
-    --code-shade1: var(--dark-shade1-rgb);
-    --code-shade2: var(--dark-shade2-rgb);
-    --code-shade3: var(--dark-shade3-rgb);
-    --code-shade4: var(--dark-shade4-rgb);
-    --code-shade5: var(--dark-shade5-rgb);
-    --code-shade6: var(--dark-shade6-rgb);
-    --code-shade7: var(--dark-shade7-rgb);
-    --code-accent0: var(--dark-accent0-rgb);
-    --code-accent1: var(--dark-accent1-rgb);
-    --code-accent2: var(--dark-accent2-rgb);
-    --code-accent3: var(--dark-accent3-rgb);
-    --code-accent4: var(--dark-accent4-rgb);
-    --code-accent5: var(--dark-accent5-rgb);
-    --code-accent6: var(--dark-accent6-rgb);
-    --code-accent7: var(--dark-accent7-rgb);
-    --open-source-background-color: var(--dark-accent3-rgb);
-    --open-source-foreground-color: var(--dark-shade0-rgb);
-    --update-accent-color: var(--dark-accent2-rgb);
+    --code-shade0: var(--dark-shade0);
+    --code-shade1: var(--dark-shade1);
+    --code-shade2: var(--dark-shade2);
+    --code-shade3: var(--dark-shade3);
+    --code-shade4: var(--dark-shade4);
+    --code-shade5: var(--dark-shade5);
+    --code-shade6: var(--dark-shade6);
+    --code-shade7: var(--dark-shade7);
+    --code-accent0: var(--dark-accent0);
+    --code-accent1: var(--dark-accent1);
+    --code-accent2: var(--dark-accent2);
+    --code-accent3: var(--dark-accent3);
+    --code-accent4: var(--dark-accent4);
+    --code-accent5: var(--dark-accent5);
+    --code-accent6: var(--dark-accent6);
+    --code-accent7: var(--dark-accent7);
+    --open-source-background-color: var(--dark-accent3);
+    --open-source-foreground-color: var(--dark-shade0);
+    --update-accent-color: var(--dark-accent2);
     --update-accent-background-color: rgba(
-      var(--dark-accent2-rgb-r),
-      var(--dark-accent2-rgb-g),
-      var(--dark-accent2-rgb-b),
+      var(--dark-accent2-r),
+      var(--dark-accent2-g),
+      var(--dark-accent2-b),
       0.05
     );
-    --tldr-accent-color: var(--dark-accent3-rgb);
+    --tldr-accent-color: var(--dark-accent3);
     --tldr-accent-background-color: rgba(
-      var(--dark-accent3-rgb-r),
-      var(--dark-accent3-rgb-g),
-      var(--dark-accent3-rgb-b),
+      var(--dark-accent3-r),
+      var(--dark-accent3-g),
+      var(--dark-accent3-b),
       0.1
     );
-    --tip-accent-color: var(--dark-accent5-rgb);
+    --tip-accent-color: var(--dark-accent5);
     --tip-accent-background-color: rgba(
-      var(--dark-accent5-rgb-r),
-      var(--dark-accent5-rgb-g),
-      var(--dark-accent5-rgb-b),
+      var(--dark-accent5-r),
+      var(--dark-accent5-g),
+      var(--dark-accent5-b),
       0.1
     );
-    --article-footer-border-color-1: var(--dark-accent1-rgb);
-    --article-footer-border-color-2: var(--dark-accent6-rgb);
+    --article-footer-border-color-1: var(--dark-accent1);
+    --article-footer-border-color-2: var(--dark-accent6);
   }
 }
 

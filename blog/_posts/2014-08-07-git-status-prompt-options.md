@@ -12,11 +12,11 @@ links:
 
 <style>
 :root {
-  --meta-color: var(--light-shade5-rgb);
+  --meta-color: var(--light-shade5);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --meta-color: var(--dark-shade5-rgb);
+    --meta-color: var(--dark-shade5);
   }
 }
 
