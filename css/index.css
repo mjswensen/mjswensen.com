@@ -834,8 +834,8 @@ code {
 /* Jumbotron */
 
 .jumbotron {
+  margin-top: var(--size-large-5);
   position: relative;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -878,17 +878,9 @@ code {
   margin-top: var(--size-large-2);
 }
 
-.jumbotron .scroll-hint {
-  --size: var(--size-large-2);
-  width: var(--size);
-  height: var(--size);
-  margin-top: var(--size-large-4);
-  stroke: var(--jumbotron-scroll-hint-color);
-  filter: drop-shadow(0 0 4px var(--background-color));
-}
-
 /* Lists */
 
+.posts,
 .projects,
 .presentations,
 .picks {
