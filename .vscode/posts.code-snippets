@@ -49,5 +49,18 @@
 			"{% endhighlight %}"
 		],
 		"description": "Surrounds the selected text in a code highlight section"
+	},
+	"Card": {
+		"prefix": "card",
+		"body": [
+			"<div class=\"cards ${1|updates,tldr,tip|}\">",
+			"  <div class=\"card\">",
+			"    <div class=\"card-title\">${2:title}</div>",
+			"    <div class=\"card-body\">",
+			"      <p>${0}</p>",
+			"    </div>",
+			"  </div>",
+			"</div>",
+		]
 	}
 }
