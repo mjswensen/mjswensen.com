@@ -3,10 +3,10 @@ title: How to set up a Wireguard VPN for personal use
 date: 2023-03-18 18:04:28 MDT
 tags: software
 layout: post
-excerpt: TODO
+excerpt: "VPNs are a great way to level up your privacy online. Here's how to set one up from scratch."
 ---
 
-In this article we'll configure a simple Wireguard VPN server and configure client devices to connect to it.
+VPNs are a great way to level up your privacy online. Here's how to set one up from scratch.
 
 ## Step 1: spin up and connect to your cloud server
 
