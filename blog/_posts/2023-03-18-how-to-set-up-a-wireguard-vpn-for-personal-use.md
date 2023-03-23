@@ -1,5 +1,5 @@
 ---
-title: How to set up a Wireguard VPN for personal use
+title: How to set up a WireGuard VPN for personal use
 date: 2023-03-18 18:04:28 MDT
 tags: software
 layout: post
@@ -10,7 +10,7 @@ VPNs are a great way to level up your privacy online. Here's how to set one up f
 
 ## Step 1: spin up and connect to your cloud server
 
-Using your cloud provider of choice, provision a new server instance. Since the VPN will be for personal use only, inexpensive instances will work fine. Select any operating system that Wireguard supports; we'll assume Ubuntu for this tutorial.
+Using your cloud provider of choice, provision a new server instance. Since the VPN will be for personal use only, inexpensive instances will work fine. Select any operating system that WireGuard supports; we'll assume Ubuntu for this tutorial.
 
 Connect to your server via SSH as the `root` user.
 
@@ -23,9 +23,9 @@ Connect to your server via SSH as the `root` user.
   </div>
 </div>
 
-## Step 2: install Wireguard
+## Step 2: install WireGuard
 
-If you picked Ubuntu for your server's OS, you can install Wireguard with one command:
+If you picked Ubuntu for your server's OS, you can install WireGuard with one command:
 
 {% highlight shell %}
 apt install wireguard
@@ -58,7 +58,7 @@ These are the keys your VPN server will use when encrypting traffic with your cl
 
 ## Step 4: create your server configuration file
 
-With Wireguard installed and keys generated, we're ready to create our VPN configuration.
+With WireGuard installed and keys generated, we're ready to create our VPN configuration.
 
 First, find the name of the public network interface:
 
@@ -93,7 +93,7 @@ Then run `sysctl -p` to load the new configuration.
 
 ## Step 6: allow UDP traffic
 
-Update the operating system firewall to allow traffic on the port specified in the Wireguard configuration:
+Update the operating system firewall to allow traffic on the port specified in the WireGuard configuration:
 
 {% highlight shell %}
 ufw allow 51820/udp
@@ -106,7 +106,7 @@ ufw disable
 ufw enable
 {% endhighlight %}
 
-## Step 7: configure the Wireguard server to start on boot
+## Step 7: configure the WireGuard server to start on boot
 
 {% highlight shell %}
 systemctl enable wg-quick@wg0.service
@@ -140,7 +140,7 @@ peer: <third client's public key>
 
 ## Step 9: configure clients
 
-Finally, configure your client devices to connect to your Wireguard VPN server. This process will be a little different depending on whether you are using the iOS app, Android app, or another Linux installation of Wireguard. Generally, though, your client configuration should look something like this:
+Finally, configure your client devices to connect to your WireGuard VPN server. This process will be a little different depending on whether you are using the iOS app, Android app, or another Linux installation of WireGuard. Generally, though, your client configuration should look something like this:
 
 {% highlight conf %}
 [Interface]
