@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: mjswensen.com
-Token: cfd8f8e2ed970bd523984100fbef7ef7fbdd67db669c6ec6b1aedcf0c3d5a829
