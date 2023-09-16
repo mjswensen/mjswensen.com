@@ -1,11 +1,11 @@
 ---
 title: "The single most important factor that differentiates front-end frameworks"
-date: 2023-06-10 23:14:49 MST
+date: 2023-06-10 23:14:49 MDT
 tags: software
 layout: post
 excerpt: "There are tons of blog posts on the internet about how frameworks differ and which one to pick for your next web project. Usually they cover a few aspects of the framework like syntax, development setup, and community size. This isn't one of those posts."
 sitemap:
-  lastmod: 2023-07-18 22:14:31 MST
+  lastmod: 2023-07-18 22:14:31 MDT
 canonical:
   name: themer.dev
   url: https://themer.dev/blog/the-single-most-important-factor-that-differentiates-front-end-frameworks
