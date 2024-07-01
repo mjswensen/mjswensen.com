@@ -17,5 +17,5 @@ sitemap:
 - Browser: [Vivaldi](https://vivaldi.com/)
 - PGP: [GPG Tools](https://gpgtools.org/)
 - Window manager: [Rectangle.app](https://rectangleapp.com/)
-- Development environments: [Docker](https://www.docker.com/) + [VS Code Remote Development extensions](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+- Development environments: [Docker](https://www.docker.com/) (via [colima](https://github.com/abiosoft/colima)) + [VS Code Remote Development extensions](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack); [Coder](https://coder.com)
 - VPN client: [Tunnelblick](https://tunnelblick.net/)
