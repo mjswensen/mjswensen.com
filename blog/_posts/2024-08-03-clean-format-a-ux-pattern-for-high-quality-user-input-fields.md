@@ -4,6 +4,8 @@ date: 2024-08-06 21:42:50 MDT
 tags: software
 layout: post
 excerpt: "Forms are at the core of how users get data into web applications. At Rivet, we've spent some time crafting what we believe is a nice balance between user-friendly, forgiving input fields and real-time validation and formatting."
+sitemap:
+  lastmod: 2024-08-12 10:21:07 MDT
 ---
 
 Forms are at the core of how users get data into web applications. And there are so, so many ways to get the UX of text input fields wrong. At Rivet, we've spent some time crafting what we believe is a nice balance between user-friendly, forgiving input fields and real-time validation and formatting.
@@ -93,4 +95,4 @@ So how do you determine how to implement your `clean()` and `format()` functions
 
 ## Conclusion
 
-Creating user-friendly input fields is a delicate balancing act. By separating the cleaned computer-friendly value from the user's raw input state, we ensure that they can type freely without interruptions, while maintaining data integrity and sending the correct data type to the outer application for optimistic use. After the user is done working we can present neatly formatted results. This approach can be applied to various types of input fields; wherever there needs to be some additional structure on top of raw text.
+Creating user-friendly input fields is a delicate balancing act. By separating the cleaned computer-friendly value from the user's raw input state, we ensure that they can type freely without interruptions, while also maintaining data integrity and sending the correct data type to the outer application for immediate use. After the user is done working we can present neatly formatted results. This approach can be applied to various types of input fields; wherever some additional structure is needed on top of the raw input text.
