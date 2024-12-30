@@ -2,7 +2,7 @@
   current: true
   description: A theme generator for editors, terminals, and desktop wallpaper.
   openSource: true
-  openSourceUrl: https://github.com/themerdev/themer
+  openSourceUrl: https://github.com/mjswensen/themer
   externalUrl: https://themer.dev
 - title: shoulders
   current: true

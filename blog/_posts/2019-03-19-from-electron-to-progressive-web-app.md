@@ -26,13 +26,13 @@ In this post I'd like to review my reasoning behind sunsetting an [Electron](htt
 
 # themer
 
-First a little context. My application, [themer](https://github.com/themerdev/themer), started off as a command-line tool built on Node.js. It uses a set of colors as input and produces matching themes for various text editors, terminal emulators, and other tools. However, actually _choosing_ the colors for your personalized theme was tedious and cumbersome. A friend suggested to me that I build a GUI to help ease this process and provide a tighter feedback loop when creating a personalized theme. Given that Electron bundles a Node.js runtime, and that I could therefore easily wrap my CLI in a "native" GUI for all platforms, an Electron app seemed like a perfect fit. themer's GUI was born:
+First a little context. My application, [themer](https://github.com/mjswensen/themer), started off as a command-line tool built on Node.js. It uses a set of colors as input and produces matching themes for various text editors, terminal emulators, and other tools. However, actually _choosing_ the colors for your personalized theme was tedious and cumbersome. A friend suggested to me that I build a GUI to help ease this process and provide a tighter feedback loop when creating a personalized theme. Given that Electron bundles a Node.js runtime, and that I could therefore easily wrap my CLI in a "native" GUI for all platforms, an Electron app seemed like a perfect fit. themer's GUI was born:
 
 ![themer's electron GUI](/blog/images/themer-gui.png)
 
 # The bug
 
-After spending a good amount of time building the GUI and wiring it up to my CLI running in Electron's Node process, I was able to bundle up the application installers and make them available for download on the [GitHub releases](https://github.com/themerdev/themer-gui/releases) page. It wasn't until after the application was downloaded about 10k times that I discovered [a really nasty bug](https://github.com/electron/electron/issues/13596) that caused Electron-based applications to crash when using the macOS native color picker:
+After spending a good amount of time building the GUI and wiring it up to my CLI running in Electron's Node process, I was able to bundle up the application installers and make them available for download on the [GitHub releases](https://github.com/mjswensen/themer-gui/releases) page. It wasn't until after the application was downloaded about 10k times that I discovered [a really nasty bug](https://github.com/electron/electron/issues/13596) that caused Electron-based applications to crash when using the macOS native color picker:
 
 <video controls autoplay loop>
   <source src="/blog/videos/themer-gui-crash.webm" type="video/webm">

@@ -48,7 +48,7 @@ This is what the status bar looks like now:
   <div class="card">
     <span class="card-title">Update 8/26/2017</span>
     <div class="card-body">
-      <p>It's been just over three years since I wrote this post, and I still use tmux every day. My custom tmux status bar theme has largely remained the same as outlined above, too. For the rest of my development environment, I recently built a tool called <a href="https://github.com/themerdev/themer"><code>themer</code></a> that greatly simplifies keeping a consistent theme between editors, terminals, other apps, and even desktop wallpaper. <a href="https://themer.dev">Check out <code>themer</code> here.</a></p>
+      <p>It's been just over three years since I wrote this post, and I still use tmux every day. My custom tmux status bar theme has largely remained the same as outlined above, too. For the rest of my development environment, I recently built a tool called <a href="https://github.com/mjswensen/themer"><code>themer</code></a> that greatly simplifies keeping a consistent theme between editors, terminals, other apps, and even desktop wallpaper. <a href="https://themer.dev">Check out <code>themer</code> here.</a></p>
     </div>
   </div>
 </div>
