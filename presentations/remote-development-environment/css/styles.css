@@ -232,7 +232,3 @@ ol {
   align-content: center;
   text-align: center;
 }
-
-.qr-code {
-  width: var(--size-large-9);
-}

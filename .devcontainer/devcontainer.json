@@ -1,8 +1,5 @@
 {
   "name": "mjswensen.com",
-  "image": "ruby:2.4",
-  "postCreateCommand": "bundle install",
-  "extensions": [
-    "streetsidesoftware.code-spell-checker"
-  ]
+  "image": "mcr.microsoft.com/devcontainers/jekyll",
+  "extensions": [ "streetsidesoftware.code-spell-checker" ]
 }
