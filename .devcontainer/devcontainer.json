@@ -1,5 +1,9 @@
 {
   "name": "mjswensen.com",
   "image": "mcr.microsoft.com/devcontainers/jekyll",
-  "extensions": [ "streetsidesoftware.code-spell-checker" ]
+  "customizations": {
+    "vscode": {
+      "extensions": [ "streetsidesoftware.code-spell-checker" ]
+    }
+  },
 }
