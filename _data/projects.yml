@@ -4,6 +4,11 @@
   openSource: true
   openSourceUrl: https://github.com/mjswensen/themer
   externalUrl: https://themer.dev
+- title: Polyominoes
+  current: true
+  description: A progressive web app implementation of the board game "Blockus" that works through SMS.
+  openSource: false
+  externalUrl: https://polyominoes.club
 - title: shoulders
   current: true
   description: View a list of your dependencies' open issues.
