@@ -67,7 +67,7 @@ When you scaffold a new Angular application, it appears that change detection ha
   template: `
     <div>
       <button (click)="count = count - 1">decrement</button>
-      <span>{{ count }}</span>
+      <span>{{"{{"}} count }}</span>
       <button (click)="count = count + 1">increment</button>
       <button (click)="incrementLater()">increment later</button>
     </div>
@@ -94,7 +94,7 @@ For applications of any reasonable size, this causes performance issues, since c
   template: `
     <div>
       <button (click)="count = count - 1">decrement</button>
-      <span>{{ count }}</span>
+      <span>{{"{{"}} count }}</span>
       <button (click)="count = count + 1">increment</button>
       <button (click)="incrementLater()">increment later</button>
     </div>
@@ -131,7 +131,7 @@ enum Action {
   template: `
     <div>
       <button (click)="update.next(Action.DECREMENT)">decrement</button>
-      <span>{{ count | async }}</span>
+      <span>{{"{{"}} count | async }}</span>
       <button (click)="update.next(Action.INCREMENT)">increment</button>
       <button (click)="update.next(Action.INCREMENT_LATER)">increment later</button>
     </div>
@@ -194,7 +194,7 @@ Confusingly, Vue has two different APIs that wrap the same underlying change det
 <template>
   <div>
     <button @click="decrement">decrement</button>
-    <span>{{ count }}</span>
+    <span>{{"{{"}} count }}</span>
     <button @click="increment">increment</button>
     <button @click="incrementLater">increment later</button>
   </div>
@@ -250,7 +250,7 @@ Alternatively, the "Composition API" is somewhat similar to React's hooks: a fra
 <template>
   <div>
     <button @click="decrement">decrement</button>
-    <span>{{ count }}</span>
+    <span>{{"{{"}} count }}</span>
     <button @click="increment">increment</button>
     <button @click="incrementLater">increment later</button>
   </div>
