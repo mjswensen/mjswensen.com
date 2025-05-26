@@ -19,3 +19,4 @@ sitemap:
 - PGP: [GPG Tools](https://gpgtools.org/)
 - Development environments: [Docker](https://www.docker.com/) (via [colima](https://github.com/abiosoft/colima)) + [VS Code Remote Development extensions](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack); [Coder](https://coder.com)
 - VPN client: [Tunnelblick](https://tunnelblick.net/)
+- Notes: [Anytype](https://anytype.io)
