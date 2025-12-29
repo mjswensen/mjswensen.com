@@ -37,7 +37,7 @@ So we don't rejoice because life is easy, or because answers come quickly. We re
 
 Jesus Christ did not come because humanity had proven itself worthy of rescue. He came because heaven does not abandon its children.
 
-This is where I want to slow down because I feel that it is critically important.
+This is where I want to slow down because I feel that it is critically important to understand.
 
 Christ did not come for humanity in the abstract. He came for people. For individuals with histories, contradictions, hopes, and fears. He came for you. Personally. With full awareness of who you are, with full awareness of what you carry, and full awareness of what you fear might disqualify you from His love. Because **you matter.**
 
