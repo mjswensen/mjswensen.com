@@ -1,9 +1,6 @@
 {
   "name": "mjswensen.com",
-  "image": "mcr.microsoft.com/devcontainers/jekyll",
-  "customizations": {
-    "vscode": {
-      "extensions": [ "streetsidesoftware.code-spell-checker" ]
-    }
-  },
+  "build": { "dockerfile": "./Dockerfile" },
+  "remoteUser": "ruby",
+  "forwardPorts": [4000]
 }
