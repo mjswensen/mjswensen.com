@@ -1,6 +1,8 @@
 {
   "name": "mjswensen.com",
-  "build": { "dockerfile": "./Dockerfile" },
-  "remoteUser": "ruby",
+  "image": "ghcr.io/mjswensen/devcontainer:sha-c966fbe",
+  "remoteUser": "mjs",
+  "containerUser": "mjs",
+  "postCreateCommand": "mise install && mise bootstrap",
   "forwardPorts": [4000]
 }

@@ -1,0 +1,11 @@
+[tools]
+ruby = "latest"
+
+[tasks.gem-install]
+run = "gem install bundler jekyll"
+
+[tasks.bootstrap]
+depends = ["gem-install"]
+
+[tasks.dev]
+run = "jekyll serve --watch"
