@@ -1,0 +1,73 @@
+---
+title: My Favorite CSS Grid Trick
+type: presentation
+description: "5-minute lightning talk: an intrinsically responsive grid in one line of CSS!"
+date: 2026-05-05 09:30:00 MDT
+for: Jump Engineering Teams
+at: Jump
+location: Draper, UT
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>My Favorite CSS Grid Trick</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #0a0a0a; overflow: hidden; }
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  #root { position: absolute; inset: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-screen-label="t=0:00"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="animations.jsx"></script>
+<script type="text/babel" src="scenes.jsx"></script>
+
+{% raw %}
+<script type="text/babel" data-presets="react">
+// ─── Timeline plan (seconds) ──────────────────────────────────────────────
+//  0  → 10   Scene 1  Intro: full code line
+// 10  → 32   Scene 2  grid-template-columns
+// 32  → 56   Scene 3  1fr
+// 56  → 86   Scene 4  minmax(X, 1fr)
+// 86  → 116  Scene 5  repeat(auto-fill, ...)
+// 116 → 148  Scene 6  min(3.75rem, 100%)
+// 148 → 200  Scene 7  Putting it all together
+// 200 → 220  Scene 8  Recap
+// total: 220s ≈ 3m 40s
+
+const TOTAL = 220;
+
+function App() {
+  return (
+    <div id="video-root" style={{ position: 'absolute', inset: 0 }} data-screen-label="t=0:00">
+      <Stage width={1920} height={1080} duration={TOTAL} background="#ffffff" persistKey="grid-breakdown-v1">
+        <ScreenLabelUpdater />
+
+        <Sprite start={0} end={10}><SceneIntro /></Sprite>
+        <Sprite start={10} end={32}><SceneProperty /></Sprite>
+        <Sprite start={32} end={56}><SceneFr /></Sprite>
+        <Sprite start={56} end={86}><SceneMinmax /></Sprite>
+        <Sprite start={86} end={116}><SceneAutoFill /></Sprite>
+        <Sprite start={116} end={148}><SceneNestedMin /></Sprite>
+        <Sprite start={148} end={200}><SceneFinal /></Sprite>
+        <Sprite start={200} end={220}><SceneOutro /></Sprite>
+      </Stage>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+{% endraw %}
+</body>
+</html>
