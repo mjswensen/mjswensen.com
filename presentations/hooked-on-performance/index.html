@@ -254,7 +254,16 @@ h2 code{font-weight:500;letter-spacing:-.04em}
 .trace-foot{display:flex;justify-content:space-between;gap:calc(var(--u)*2);flex-wrap:wrap;font-family:var(--mono);font-size:var(--fs-label);color:var(--muted);letter-spacing:.04em}
 .trace-foot b{color:var(--fg-2);font-weight:500}
 
-/* ---------- slide 7 (two builds) ---------- */
+/* ---------- slide 7 ---------- */
+.result{display:flex;align-items:flex-end;justify-content:center;flex-wrap:wrap;gap:calc(var(--u)*2) calc(var(--u)*3.2)}
+.result .m{display:flex;flex-direction:column;gap:calc(var(--u)*.8)}
+.result .v{font-size:var(--fs-hero);font-weight:600;letter-spacing:-.045em;line-height:.98;font-variant-numeric:tabular-nums}
+.result .v.was{color:var(--muted)}
+.result .v.now{color:var(--accent)}
+.result .to{font-size:var(--fs-h);color:var(--muted);padding-bottom:.25em}
+.result .chip{margin-bottom:.6em}
+
+/* ---------- slide 8 (two builds) ---------- */
 .lanes{display:grid;grid-template-columns:calc(var(--u)*11) minmax(0,1fr);row-gap:calc(var(--u)*1.1);column-gap:calc(var(--u)*1.6);margin-top:calc(var(--u)*1)}
 .events{grid-column:2;display:grid;grid-template-columns:4% 36% 36% 24%}
 .ev{border-left:1px dashed var(--line-strong);padding:0 calc(var(--u)*1.4) calc(var(--u)*.4);display:flex;flex-direction:column;gap:.4em}
@@ -282,7 +291,7 @@ h2 code{font-weight:500;letter-spacing:-.04em}
 .question{font-size:var(--fs-h);font-weight:600;letter-spacing:-.025em;margin:calc(var(--u)*2.4) 0 0;padding-left:calc(var(--u)*12.6);text-wrap:balance}
 .question em{font-style:normal;color:var(--accent)}
 
-/* ---------- slide 8 ---------- */
+/* ---------- slide 9 ---------- */
 .flow{display:grid;grid-template-columns:minmax(0,1fr) calc(var(--u)*8) minmax(0,1fr) calc(var(--u)*8) minmax(0,1fr);row-gap:calc(var(--u)*0);align-items:stretch;margin-top:calc(var(--u)*1)}
 .fnode{border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--panel);padding:calc(var(--u)*1.5);display:flex;flex-direction:column;gap:calc(var(--u)*.8);min-width:0}
 .fnode.mid{border-color:var(--accent-line);background:linear-gradient(var(--accent-soft),var(--accent-soft)),var(--panel)}
@@ -301,7 +310,7 @@ h2 code{font-weight:500;letter-spacing:-.04em}
 .annot{grid-column:5;align-self:start;margin-top:calc(var(--u)*4.4);border-style:solid;border-color:var(--accent-line)}
 .annot code,.bx code{font-size:.95em}
 
-/* ---------- slide 9 ---------- */
+/* ---------- slide 10 ---------- */
 .choose{width:100%;max-width:calc(var(--u)*86);border-collapse:separate;border-spacing:0;table-layout:fixed}
 .choose th{text-align:left;padding:0 calc(var(--u)*1.6) calc(var(--u)*1.1);font-weight:600;font-size:var(--fs-lead);vertical-align:bottom}
 .choose th .label{display:block;margin-bottom:.5em}
@@ -315,7 +324,7 @@ h2 code{font-weight:500;letter-spacing:-.04em}
   background:var(--accent-soft);border-radius:var(--radius);align-self:flex-start}
 .tradeoff svg{width:1.1em;height:1.1em;flex:none}
 
-/* ---------- slide 10 (two builds) ---------- */
+/* ---------- slide 11 (two builds) ---------- */
 .swap{display:grid;align-items:center;justify-items:start}
 .swap > *{grid-area:1/1}
 .shim-line{position:relative;display:inline-block}
@@ -326,7 +335,7 @@ h2 code{font-weight:500;letter-spacing:-.04em}
 .thanks .ty{font-size:var(--fs-lead);color:var(--fg-2)}
 .thanks .src{font-family:var(--mono);font-size:var(--fs-label);color:var(--muted);letter-spacing:.03em}
 
-/* ---------- slide 11 ---------- */
+/* ---------- slide 12 ---------- */
 .close{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:center;height:100%}
 .close .left{display:flex;flex-direction:column;gap:calc(var(--u)*2);min-width:0}
 .pkg{font-family:var(--mono);font-size:calc(var(--fs-h) * .92);font-weight:500;letter-spacing:-.035em;line-height:1.1;overflow-wrap:anywhere}
@@ -507,7 +516,7 @@ html[data-hop-preview] .toast{display:none}
   .bx-box.big,.bx-box.mid{min-width:0}
 }
 
-/* slide 7 DIY diff + slide 8 adoption */
+/* slide 8 DIY diff + slide 9 adoption */
 .swap7{justify-items:stretch;align-items:center}
 .diy-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.1);min-width:0}
 .diy-head{display:flex;align-items:center;gap:calc(var(--u)*.8);flex-wrap:wrap}
@@ -546,12 +555,6 @@ html[data-hop-preview] .toast{display:none}
   .pane.fs-adopt-sm{width:100%}
 }
 
-/* 6 -> 7 shared element: one real chunk request bar from the After trace */
-:root{--trace-y:#f0cd45;--trace-edge:#d3ae36;--trace-ink:#2a2611}
-.trace{container-type:inline-size}
-.req-anc{position:absolute;left:39.19%;width:24.95%;top:28.16%;height:2.12%;font-size:.632cqw;font-family:var(--sans)}
-.a-box > .a-trace{inset:0;border-radius:1px;background:var(--trace-y);box-shadow:inset 0 0 0 1px var(--trace-edge)}
-.a-box > .a-tl{left:.45em;top:50%;transform:translateY(-50%);font-family:var(--sans);color:var(--trace-ink);white-space:nowrap;line-height:1}
 .toast{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 16px);transform:translateX(-50%);z-index:8;font-family:var(--mono);font-size:var(--fs-label);
   background:var(--panel);color:var(--fg);border:1px solid var(--line-strong);border-radius:4px;padding:.6em 1em;box-shadow:var(--shadow);letter-spacing:.04em}
 
@@ -563,9 +566,9 @@ html[data-hop-preview] .toast{display:none}
   <div class="track" id="track">
 
     <!-- 1 -->
-    <section class="slide s-title" data-t="0:00-0:45" data-title="Hooked on Performance" aria-roledescription="slide" aria-label="1 of 11">
+    <section class="slide s-title" data-t="0:00-0:45" data-title="Hooked on Performance" aria-roledescription="slide" aria-label="1 of 12">
       <div class="pin"><div class="inner">
-        <div class="eyebrow" data-a="hud n=0"><span class="num">01</span><span>/ 11</span></div>
+        <div class="eyebrow" data-a="hud n=0"><span class="num">01</span><span>/ 12</span></div>
         <div class="title-block xf" data-in="left" data-d=".04">
           <h1 class="hero" data-a="brand l0=1">Hooked on<br><span class="em">Performance</span></h1>
           <p class="lead">Taming LiveView's JavaScript hooks at scale</p>
@@ -577,10 +580,10 @@ html[data-hop-preview] .toast{display:none}
     </section>
 
     <!-- 2 -->
-    <section class="slide" data-t="0:45-2:05" data-title="A fast response, a busy browser" aria-roledescription="slide" aria-label="2 of 11">
+    <section class="slide" data-t="0:45-2:05" data-title="A fast response, a busy browser" aria-roledescription="slide" aria-label="2 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=1"><span class="num">02</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=1"><span class="num">02</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03">A fast response, a busy browser</h2>
         </div>
         <div class="grow center-y">
@@ -618,10 +621,10 @@ html[data-hop-preview] .toast{display:none}
     </section>
 
     <!-- 3 -->
-    <section class="slide" data-t="2:05-3:25" data-title="The eager hook registry" data-move="bundle" aria-roledescription="slide" aria-label="3 of 11">
+    <section class="slide" data-t="2:05-3:25" data-title="The eager hook registry" data-move="bundle" aria-roledescription="slide" aria-label="3 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=2"><span class="num">03</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=2"><span class="num">03</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03">The eager hook registry</h2>
         </div>
         <div class="grow center-y">
@@ -645,10 +648,10 @@ html[data-hop-preview] .toast{display:none}
     </section>
 
     <!-- 4 -->
-    <section class="slide s-diff" data-t="3:25-5:00" data-title="lazy-hook" data-move="code1" aria-roledescription="slide" aria-label="4 of 11">
+    <section class="slide s-diff" data-t="3:25-5:00" data-title="lazy-hook" data-move="code1" aria-roledescription="slide" aria-label="4 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=3"><span class="num">04</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=3"><span class="num">04</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03"><code>lazy-hook</code></h2>
         </div>
         <div class="grow center-y">
@@ -671,10 +674,10 @@ html[data-hop-preview] .toast{display:none}
     </section>
 
     <!-- 5 -->
-    <section class="slide" data-t="5:00-6:20" data-title="Setup" data-move="bundle" aria-roledescription="slide" aria-label="5 of 11">
+    <section class="slide" data-t="5:00-6:20" data-title="Setup" data-move="bundle" aria-roledescription="slide" aria-label="5 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=4"><span class="num">05</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=4"><span class="num">05</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03">Setup</h2>
         </div>
         <div class="grow center-y" style="gap:calc(var(--u)*2.6)">
@@ -699,11 +702,11 @@ html[data-hop-preview] .toast{display:none}
     </section>
 
     <!-- 6: two builds -->
-    <section class="slide s-trace" data-span="2" style="--span:2" data-t="6:20-7:55" data-title="Before and after" data-move="bundle" aria-roledescription="slide" aria-label="6 of 11">
+    <section class="slide s-trace" data-span="2" style="--span:2" data-t="6:20-7:40" data-title="Before and after" data-move="bundle" aria-roledescription="slide" aria-label="6 of 12">
       <div class="pin"><div class="inner">
         <div class="trace-head">
           <div class="head">
-            <div class="eyebrow" data-a="hud n=5"><span class="num">06</span><span>/ 11</span></div>
+            <div class="eyebrow" data-a="hud n=5"><span class="num">06</span><span>/ 12</span></div>
             <h2 data-in="left" data-d=".03">Before and after</h2>
           </div>
           <div class="build-labels" data-in="left" data-d=".08">
@@ -719,7 +722,6 @@ html[data-hop-preview] .toast{display:none}
             <div class="hl h-before" data-a="bundle@0 hl=1 tag=1"></div>
             <div class="hl h-after-app" data-a="bundle@1 hl=1 tag=1"></div>
             <div class="hl h-after-chunks" data-a="chunk@0 o=0 hl=1 tag=1|chunk@1 hl=1 tag=1"></div>
-            <div class="req-anc" data-a="req@0 o=0 trace=1 tl=1|req@1 trace=1 tl=1"></div>
           </figure>
         </div>
         <div class="trace-foot" data-in="fade" data-d=".12">
@@ -729,11 +731,35 @@ html[data-hop-preview] .toast{display:none}
       </div></div>
     </section>
 
-    <!-- 7: two builds -->
-    <section class="slide s-life" data-span="2" style="--span:2" data-t="7:55-9:15" data-title="Loading across a lifecycle" data-move="req" aria-roledescription="slide" aria-label="7 of 11">
+    <!-- 7 -->
+    <section class="slide" data-t="7:40-7:55" data-title="The end result" aria-roledescription="slide" aria-label="7 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=6"><span class="num">07</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=6"><span class="num">07</span><span>/ 12</span></div>
+          <h2 data-in="left" data-d=".03">The end result</h2>
+        </div>
+        <div class="grow center-y" style="align-items:center">
+          <div class="center-y" style="gap:calc(var(--u)*2.4)">
+            <span class="label" data-in="fade" data-d=".05"><code>onload</code> event</span>
+            <div class="result">
+              <div class="m" data-in="up" data-d=".06"><span class="label">Before</span><span class="v was">5.4 s</span></div>
+              <span class="to" data-in="fade" data-d=".1" aria-hidden="true">→</span>
+              <div class="m" data-in="up" data-d=".12"><span class="label">After</span><span class="v now">2.4 s</span></div>
+              <span class="chip accent" data-in="scale" data-d=".18">−56%</span>
+            </div>
+          </div>
+        </div>
+        <div class="trace-foot" data-in="fade" data-d=".12">
+          <span><b>Production Jump application</b>, primary landing page, no CPU or network throttling</span>
+        </div>
+      </div></div>
+    </section>
+
+    <!-- 8: two builds -->
+    <section class="slide s-life" data-span="2" style="--span:2" data-t="7:55-9:15" data-title="Loading across a lifecycle" aria-roledescription="slide" aria-label="8 of 12">
+      <div class="pin"><div class="inner">
+        <div class="head">
+          <div class="eyebrow" data-a="hud n=7"><span class="num">08</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03">Loading across a lifecycle</h2>
         </div>
         <div class="grow center-y">
@@ -770,11 +796,11 @@ html[data-hop-preview] .toast{display:none}
       </div></div>
     </section>
 
-    <!-- 8 -->
-    <section class="slide s-placeholder" data-t="9:15-10:30" data-title="The placeholder handoff" data-move="diy" aria-roledescription="slide" aria-label="8 of 11">
+    <!-- 9 -->
+    <section class="slide s-placeholder" data-t="9:15-10:30" data-title="The placeholder handoff" data-move="diy" aria-roledescription="slide" aria-label="9 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=7"><span class="num">08</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=8"><span class="num">09</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03">The placeholder handoff</h2>
         </div>
         <div class="grow center-y s8-body">
@@ -805,11 +831,11 @@ html[data-hop-preview] .toast{display:none}
       </div></div>
     </section>
 
-    <!-- 9 -->
-    <section class="slide" data-t="10:30-12:05" data-title="Choosing hooks" aria-roledescription="slide" aria-label="9 of 11">
+    <!-- 10 -->
+    <section class="slide" data-t="10:30-12:05" data-title="Choosing hooks" aria-roledescription="slide" aria-label="10 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=8"><span class="num">09</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=9"><span class="num">10</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03">Choosing hooks</h2>
         </div>
         <div class="grow center-y" style="gap:calc(var(--u)*3)">
@@ -831,11 +857,11 @@ html[data-hop-preview] .toast{display:none}
       </div></div>
     </section>
 
-    <!-- 10: two builds -->
-    <section class="slide s-shim" data-span="2" style="--span:2" data-t="12:05-13:40" data-title="A cleaner integration" aria-roledescription="slide" aria-label="10 of 11">
+    <!-- 11: two builds -->
+    <section class="slide s-shim" data-span="2" style="--span:2" data-t="12:05-13:40" data-title="A cleaner integration" aria-roledescription="slide" aria-label="11 of 12">
       <div class="pin"><div class="inner">
         <div class="head">
-          <div class="eyebrow" data-a="hud n=9"><span class="num">10</span><span>/ 11</span></div>
+          <div class="eyebrow" data-a="hud n=10"><span class="num">11</span><span>/ 12</span></div>
           <h2 data-in="left" data-d=".03">A cleaner integration</h2>
         </div>
         <div class="grow center-y">
@@ -852,12 +878,12 @@ html[data-hop-preview] .toast{display:none}
       </div></div>
     </section>
 
-    <!-- 11 -->
-    <section class="slide" data-t="13:40-15:00" data-title="Remember lazy-hook" aria-roledescription="slide" aria-label="11 of 11">
+    <!-- 12 -->
+    <section class="slide" data-t="13:40-15:00" data-title="Remember lazy-hook" aria-roledescription="slide" aria-label="12 of 12">
       <div class="pin"><div class="inner">
         <div class="close">
           <div class="left">
-            <div class="eyebrow" data-a="hud n=10"><span class="num">11</span><span>/ 11</span></div>
+            <div class="eyebrow" data-a="hud n=11"><span class="num">12</span><span>/ 12</span></div>
             <h2 data-in="left" data-d=".03">Remember <code>lazy-hook</code></h2>
             <div class="pkg user-sel" data-in="left" data-d=".07">@jump-app/lazy-hook</div>
             <a class="repo" href="https://github.com/Jump-App/lazy-hook" target="_blank" rel="noopener" data-in="left" data-d=".1">github.com/Jump-App/lazy-hook</a>
@@ -886,7 +912,7 @@ html[data-hop-preview] .toast{display:none}
     <div class="strip" id="strip" role="group" aria-label="Slides"></div>
   </div>
   <button class="btn" id="next" type="button" aria-label="Next slide"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button>
-  <span class="count" id="count"><b>01</b> / 11</span>
+  <span class="count" id="count"><b>01</b> / 12</span>
   <button class="btn" id="theme-btn" type="button" aria-label="Switch light or dark theme">
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="5.6"/><path d="M8 2.4v11.2A5.6 5.6 0 0 0 8 2.4z" fill="currentColor"/></svg>
   </button>
@@ -940,6 +966,9 @@ const NOTES = [
           "After: Elixir is still delivering quickly (FCP), and now the user can enjoy it much sooner (LCP). The LiveView socket is running while we load in the larger hooks!",
           "And features they aren't using on this page are simply deferred until later.",
           "The page's startup work better matches the features it uses."],
+    next:"So what did that mean for real users?" },
+  { talk:["On our primary landing page in production, with no throttling, the onload event went from about 5.4 seconds to about 2.4 seconds.",
+          "That's three seconds sooner, a 56% reduction."],
     next:"You might be thinking: why do I need a library for this? Can't I just implement my hooks to be asynchronous?" },
   { talk:["You're right; you can import a heavy dependency inside mounted().",
           "But consider this sequence: mounting starts the import, the user navigates away, and then the import resolves. What do you do?",
@@ -1146,17 +1175,17 @@ function addActor(name, type, el, layer, extra) {
   const a = Object.assign({ name, type, el, layer: layer || layerDeck, anchors: new Array(N).fill(null), fixed: null }, extra || {});
   ACT[name] = a; actorList.push(a); return a;
 }
-function boxActor(name, label, tag, bar, tl = "") {
+function boxActor(name, label, tag, bar) {
   const el = document.createElement("div");
   el.className = "a-box";
-  el.innerHTML = `<span class="a-trace"></span><span class="a-fill"></span><span class="a-hatch"></span><span class="a-acc"></span><span class="a-dash"></span><span class="a-hl"></span>` +
-    `<span class="a-lab bx-h">${label}</span><span class="a-tag">${tag}</span><span class="a-bar">${bar}</span><span class="a-tl">${tl}</span>`;
-  const parts = {}; ["trace","fill","hatch","acc","dash","hl","lab","tag","bar","tl"].forEach(k => parts[k] = el.querySelector(".a-" + k));
+  el.innerHTML = `<span class="a-fill"></span><span class="a-hatch"></span><span class="a-acc"></span><span class="a-dash"></span><span class="a-hl"></span>` +
+    `<span class="a-lab bx-h">${label}</span><span class="a-tag">${tag}</span><span class="a-bar">${bar}</span>`;
+  const parts = {}; ["fill","hatch","acc","dash","hl","lab","tag","bar"].forEach(k => parts[k] = el.querySelector(".a-" + k));
   return addActor(name, "box", el, null, { parts });
 }
 boxActor("bundle", ICON_PKG + "app.js", "app.js", "");
 boxActor("chunk", ICON_CHUNK + "hook chunk", "separate hook chunks", "pending");
-boxActor("req", "", "", "pending", "chunk-D5AOXXL2.js (localhost)");
+boxActor("req", "", "", "pending");
 [["c-date","DatePicker",""],["c-editor","EditorHook"," accent"],["c-react","ReactThing",""]].forEach(([n, t, c]) => {
   const el = document.createElement("span"); el.className = "chip" + c; el.textContent = t; addActor(n, "chip", el);
 });
@@ -1169,11 +1198,11 @@ function layersActor(name, sources, layer) {
 layersActor("brand", [$(".hero"), $("#brand-slot")], layerTop);
 (() => {
   const el = document.createElement("div"); el.className = "eyebrow hud";
-  el.innerHTML = `<span class="num roll"><span class="strip">${secs.map(s => `<span>${String(s.i + 1).padStart(2, "0")}</span>`).join("")}</span></span><span>/ 11</span>`;
+  el.innerHTML = `<span class="num roll"><span class="strip">${secs.map(s => `<span>${String(s.i + 1).padStart(2, "0")}</span>`).join("")}</span></span><span>/ ${secs.length}</span>`;
   addActor("hud", "hud", el, null, { strips: [...el.querySelectorAll(".strip")] });
 })();
 
-/* trace scrub heads ride in their own overlay, stacked above the other actors, so the lifted chunk bar passes under them */
+/* trace scrub heads ride in their own overlay, stacked above the other actors */
 (() => {
   const el = document.createElement("div"); el.className = "scrub-layer";
   el.innerHTML = `<div class="scrub-clip sc-before"><div class="scrub" data-span="56.4"><span class="st">0.0 s</span></div></div>` +
@@ -1184,17 +1213,6 @@ layersActor("brand", [$(".hero"), $("#brand-slot")], layerTop);
 })();
 
 /* anchors: data-a="name[@build] key=value ...|..." */
-function setLiftVariant(on, announce) {
-  liftVariant = on;
-  const a = ACT.req, ts = secs.find(x => x.el.classList.contains("s-trace"));
-  if (!a.savedAnchors) a.savedAnchors = a.anchors.slice();
-  for (let j = 0; j < ts.span; j++) a.anchors[ts.k0 + j] = on ? a.savedAnchors[ts.k0 + j] : null;
-  try { localStorage.setItem("hop-67", on ? "lift" : "plain"); } catch (_) {}
-  if (announce) {
-    toast(on ? "Slide 6 → 7: chunk request lifts off" : "Slide 6 → 7: plain slide", 1600);
-  }
-  force = true; render();
-}
 document.querySelectorAll("[data-a]").forEach(el => {
   el.classList.add("anc");
   const sl = el.closest(".slide"); const s = secs.find(x => x.el === sl);
@@ -1273,7 +1291,7 @@ function lerpQ(A, B, t) {
   if (!("o" in out)) out.o = 1;
   return out;
 }
-const TEXT_PARTS = { lab: 1, tag: 1, bar: 1, tl: 1 };
+const TEXT_PARTS = { lab: 1, tag: 1, bar: 1 };
 function drawActor(a, R, Q, alpha = 1) {
   const e = a.el;
   e.classList.add("on");
@@ -1322,8 +1340,6 @@ function renderActors() {
       const ra = restRect(A), rb = restRect(B);
       R = { x: lerp(ra.x, rb.x, m), y: lerp(ra.y, rb.y, m), w: lerp(ra.w, rb.w, m), h: lerp(ra.h, rb.h, m) };
       Q = lerpQ(A.q, B.q, m);
-      /* the lifted chunk bar only shows once the wipe has uncovered it on the After trace */
-      if (a.name === "req" && A.sec === traceSec.i && B.sec === traceSec.i) Q.o = clamp((t - .6) / .08);
       drawActor(a, R, Q);
     } else if (A || B) {
       const an = A || B;
@@ -1431,8 +1447,8 @@ function apply(el, e, x, b, mvT) {
 }
 
 /* ---------------- render ---------------- */
-let curMove = null, liftVariant = true;
-function isMove(sec) { return !!sec.move && (sec.move !== "req" || liftVariant); }
+let curMove = null;
+function isMove(sec) { return !!sec.move; }
 function moveState() {
   if (reduce.matches) return null;
   const f = clamp(current / W, 0, N - 1), k = Math.floor(f), t = f - k;
@@ -1488,8 +1504,8 @@ function ui() {
     lastIdx = idx;
     const st = stops[idx], cs = secs[st.sec];
     secs.forEach(x => { x.seg.classList.toggle("on", x.i === cs.i); x.seg.classList.toggle("done", x.i < cs.i); });
-    $("#count").innerHTML = `<b>${String(cs.i + 1).padStart(2, "0")}</b> / 11${cs.span > 1 ? ` · ${st.build + 1}/${cs.span}` : ""}`;
-    live.textContent = `Slide ${cs.i + 1} of 11: ${cs.title}${cs.span > 1 ? `, build ${st.build + 1} of ${cs.span}` : ""}`;
+    $("#count").innerHTML = `<b>${String(cs.i + 1).padStart(2, "0")}</b> / ${secs.length}${cs.span > 1 ? ` · ${st.build + 1}/${cs.span}` : ""}`;
+    live.textContent = `Slide ${cs.i + 1} of ${secs.length}: ${cs.title}${cs.span > 1 ? `, build ${st.build + 1} of ${cs.span}` : ""}`;
     $("#prev").disabled = idx === 0; $("#next").disabled = idx === N - 1;
     sendNotesState();
   }
@@ -1514,7 +1530,7 @@ function notesState() {
     type: "hop:state", stop: idx, stops: N, sec: cs.i, secs: secs.length, build: st.build, span: cs.span,
     title: cs.title, t0: cs.t0, t1: cs.t1, purpose: n.purpose, talk: n.talk, cue: n.cue || "", next: n.next || "",
     nextTitle: ns ? (ns === cs ? `${cs.title} (build ${nx.build + 1} of ${cs.span})` : `${ns.i + 1}. ${ns.title}`) : "Done!",
-    vw: window.innerWidth, vh: window.innerHeight, lift: liftVariant,
+    vw: window.innerWidth, vh: window.innerHeight,
     theme: root.dataset.theme || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
   };
 }
@@ -1670,7 +1686,7 @@ footer .hint{margin:0 auto;font-family:var(--mono);font-size:12px;color:var(--mu
 </style></head><body>
 <header><span class="brand"><span class="sq"></span>Hooked on Performance · speaker notes</span><span class="link" id="link"><i></i><span id="linktx">Waiting for the presentation</span></span></header>
 <section class="top">
-  <div><div class="eyebrow"><span><b id="num">01</b> / <span id="of">11</span></span><span id="build"></span><span id="slot">0:00–0:45</span></div><h1 id="title">Hooked on Performance</h1></div>
+  <div><div class="eyebrow"><span><b id="num">01</b> / <span id="of">12</span></span><span id="build"></span><span id="slot">0:00–0:45</span></div><h1 id="title">Hooked on Performance</h1></div>
   <div class="clock"><div class="elapsed" id="elapsed">0:00</div><div class="pace" id="pace">Timer stopped · target 15:00</div>
     <div class="ctl"><button id="tgo" class="primary" type="button">Start timer</button><button id="treset" type="button">Reset</button></div></div>
 </section>
@@ -1714,7 +1730,7 @@ function notesApp(w, port, origin) {
     q("link").classList.remove("off"); q("linktx").textContent = "In sync with the presentation";
     w.document.title = `${s.sec + 1}. ${s.title} · Speaker notes`;
     if (s.vw && s.vh && (s.vw !== vw || s.vh !== vh)) { vw = s.vw; vh = s.vh; fitPreview(); }
-    pvState = { type: "hop:preview", stop: s.stop, theme: s.theme, lift: s.lift };
+    pvState = { type: "hop:preview", stop: s.stop, theme: s.theme };
     toPreview(pvState);
     tick();
   }
@@ -1815,7 +1831,6 @@ if (IS_PREVIEW) window.addEventListener("message", ev => {
   if (ev.source !== window.parent || !d || typeof d.type !== "string") return;
   if (d.type === "hop:preview") {
     if (d.theme === "light" || d.theme === "dark") root.dataset.theme = d.theme;
-    if (typeof d.lift === "boolean" && d.lift !== liftVariant) setLiftVariant(d.lift, false);
     tween = null; current = target = clamp(Math.round(d.stop), 0, N - 1) * W; force = true; render();
   } else if (d.type === "hop:ink") ink.handle(d);
 });
@@ -1976,7 +1991,6 @@ window.addEventListener("keydown", ev => {
     case " ": if (tag === "button" || tag === "a") return; goTo(ev.shiftKey ? i - 1 : i + 1); break;
     case "Home": goTo(0); break;
     case "End": goTo(N - 1); break;
-    case "v": case "V": setLiftVariant(!liftVariant, true); break;
     case "n": case "N": openNotes(); break;
     default: return;
   }
@@ -2012,7 +2026,6 @@ function fromHash() {
 }
 W = deck.clientWidth || window.innerWidth;
 layout();
-{ let v = "lift"; try { v = localStorage.getItem("hop-67") || "lift"; } catch (_) {} if (v === "plain") setLiftVariant(false, false); }
 current = target = fromHash() * W;
 force = true; render();
 let rz = 0;
