@@ -3,6 +3,9 @@ sitemap:
   exclude: true
 ---
 
+@use "sass:color";
+@use "sass:math";
+
 @import url("/css/reset.css");
 
 * {
@@ -35,7 +38,7 @@ $purple: hsl(287, 31%, 50%);
   }
   @if $n < 0 {
     @for $j from $n through -1 {
-      $mult: $mult / $prop;
+      $mult: math.div($mult, $prop);
     }
   }
   @return ($mult * $base);
@@ -68,8 +71,8 @@ h3 {
 
 a {
   &:link, &:visited { color: $main-color; }
-  &:hover { color: lighten($main-color, 10%); }
-  &:active { color: lighten($main-color, 20%); }
+  &:hover { color: color.adjust($main-color, $lightness: 10%); }
+  &:active { color: color.adjust($main-color, $lightness: 20%); }
 }
 
 .strike {

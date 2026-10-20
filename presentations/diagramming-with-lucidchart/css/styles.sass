@@ -3,6 +3,9 @@ sitemap:
   exclude: true
 ---
 
+@use "sass:color"
+@use "sass:math"
+
 @import url("/css/reset.css")
 
 *
@@ -16,18 +19,18 @@ sitemap:
 // Colors
 
 $accent: hsl(5, 52%, 56%)
-$accent-lighter: lighten($accent, 25%)
-$accent-light: lighten($accent, 5%)
-$accent-dark: darken($accent, 15%)
-$accent-darker: darken($accent, 25%)
+$accent-lighter: color.adjust($accent, $lightness: 25%)
+$accent-light: color.adjust($accent, $lightness: 5%)
+$accent-dark: color.adjust($accent, $lightness: -15%)
+$accent-darker: color.adjust($accent, $lightness: -25%)
 
-$almost-opaque-accent: transparentize($accent, 0.1)
+$almost-opaque-accent: color.adjust($accent, $alpha: -0.1)
 
 $gray: hsl(205, 2%, 50%)
-$gray-lighter: lighten($gray, 40%)
-$gray-light: lighten($gray, 20%)
-$gray-dark: darken($gray, 20%)
-$gray-darker: darken($gray, 40%)
+$gray-lighter: color.adjust($gray, $lightness: 40%)
+$gray-light: color.adjust($gray, $lightness: 20%)
+$gray-dark: color.adjust($gray, $lightness: -20%)
+$gray-darker: color.adjust($gray, $lightness: -40%)
 
 $almost-opaque-white: hsla(0, 100%, 100%, 0.95)
 
@@ -134,7 +137,7 @@ $transition-duration: 0.15s
 body
   @include serif
   font-size: $base-unit
-  line-height: (1 / $proportion)
+  line-height: math.div(1, $proportion)
   color: $gray-darker
 
 .fallback-message
@@ -188,7 +191,7 @@ a
   font-size: 0.5em
 
 h2
-  font-size: (1em / $proportion)
+  font-size: math.div(1em, $proportion)
   @include sans(true)
   margin-bottom: 1em
 
@@ -222,7 +225,7 @@ h2
 #conceptual-data-model
   .download
     font-size: ($proportion * $proportion * 1em)
-    margin-top: (1em / $proportion / $proportion)
+    margin-top: math.div(math.div(1em, $proportion), $proportion)
 
 #questions
   font-size: 2em

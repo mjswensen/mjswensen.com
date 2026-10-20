@@ -3,6 +3,8 @@ sitemap:
   exclude: true
 ---
 
+@use "sass:color";
+
 /**
  * Custom theme for BYU recruiting presentation, "Armchair Visual Design for Engineers"
  *
@@ -71,7 +73,7 @@ $heading4Size: 1.00em;
 
 // Links and actions
 $linkColor: #13DAEC;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColorHover: color.adjust($linkColor, $lightness: 20%);
 
 // Text selection
 $selectionBackgroundColor: #FF5E99;
@@ -102,8 +104,8 @@ $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 700;
 $linkColor: #f78d1e;
-$linkColorHover: lighten($linkColor, 15%);
-$selectionBackgroundColor: lighten($linkColor, 25%);
+$linkColorHover: color.adjust($linkColor, $lightness: 15%);
+$selectionBackgroundColor: color.adjust($linkColor, $lightness: 25%);
 
 $heading1Size: 2.37em;
 $heading2Size: 1.777em;
@@ -373,7 +375,7 @@ body {
 
 .reveal .roll span:after {
 	color: #fff;
-	background: darken( $linkColor, 15% );
+	background: color.adjust($linkColor, $lightness: -15%);
 }
 
 
