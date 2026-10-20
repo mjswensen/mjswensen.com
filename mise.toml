@@ -9,3 +9,6 @@ depends = ["gem-install"]
 
 [tasks.dev]
 run = "jekyll serve --watch"
+
+[tasks.build]
+run = "jekyll build"
