@@ -3,6 +3,8 @@ sitemap:
   exclude: true
 ---
 
+@use "sass:color"
+
 @import url("/css/reset.css")
 
 *
@@ -49,9 +51,9 @@ a
   &:link, &:visited
     color: $accent
   &:hover
-    color: lighten($accent, 10%)
+    color: color.adjust($accent, $lightness: 10%)
   &:active
-    color: darken($accent, 10%)
+    color: color.adjust($accent, $lightness: -10%)
 
 blockquote
   font-style: italic
