@@ -372,6 +372,7 @@ h2 code{font-weight:500;letter-spacing:-.04em}
     --pad-x:18px; --pad-y:28px; --bar-h:56px; --u:4px;
   }
   .inner{gap:22px;padding-bottom:40px}
+  .inner > *{flex-shrink:0}
   .title-side{display:none}
   .ghost{font-size:0}
   .ghost::after{content:"?";font-size:.8rem}
@@ -543,6 +544,7 @@ html[data-hop-preview] .toast{display:none}
 .scrub.flip .st{left:auto;right:calc(100% + 7px)}
 @media (prefers-reduced-motion: reduce){ .scrub{display:none} }
 @media (max-width: 760px){
+  .swap,.swap7{align-items:start}
   .code-cols{grid-template-columns:minmax(0,1fr)}
   .code-cols > .code + .code{border-left:0;border-top:1px solid var(--line)}
   .adopt{flex-direction:column;align-items:stretch;flex-wrap:nowrap}
