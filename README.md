@@ -7,7 +7,8 @@ Source code for [mjswensen.com](https://mjswensen.com/).
 From within the development container:
 
 ```sh
-jekyll serve --watch
+mise bootstrap
+mise dev
 ```
 
 The site will be available on http://localhost:4000.
